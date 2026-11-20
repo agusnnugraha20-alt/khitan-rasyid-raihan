@@ -2,56 +2,62 @@
 <html lang="id">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0" />
   <title>Walimatul Khitan — Rasyid &amp; Raihan</title>
-  <meta property="og:title" content="Walimatul Khitan — Rasyid &amp; Raihan" />
-  <meta property="og:description" content="Minggu, 20 Desember 2026 • Jl. Gg. Mm Adi, Dago Pojok, Bandung" />
+  <meta name="description" content="Undangan Tasyakuran Walimatul Khitan Rasyid Muhammad Athaya Rabbani &amp; Raihan Muhammad Athaya Rabbani — Minggu, 20 Desember 2026 di Dago Pojok, Bandung." />
+
+  <!-- Open Graph / WhatsApp Preview -->
   <meta property="og:type" content="website" />
+  <meta property="og:title" content="Walimatul Khitan — Rasyid &amp; Raihan" />
+  <meta property="og:description" content="Sampurasun • Minggu, 20 Desember 2026 • Jl. Gg. Mm Adi, Dago Pojok, Bandung. Kepada Yth. Bapak/Ibu/Saudara/i, kami mengundang kehadiran dan doa restu Anda." />
+  <meta property="og:image" content="https://lh3.googleusercontent.com/d/1gRLn7fyUA7b7QcgVUW4MAgUvag8Nt9Ro=w1200" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+
+  <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@600;700&amp;family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,600&amp;family=Plus+Jakarta+Sans:wght@400;500;600;700&amp;display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@700&family=Cormorant+Garamond:ital,wght@0,600;0,700;1,600&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" />
+
   <style>
     :root {
-      --bg-outer: #0c1f17;
+      --bg-outer: #0e241b;
       --bg-cream: #faf6f0;
-      --bg-card: #ffffff;
       --primary: #1b4332;
-      --primary-dark: #102a1f;
+      --primary-dark: #112b20;
       --accent: #c59b27;
-      --accent-light: #e8c766;
+      --accent-light: #e7c258;
       --accent-soft: #f5ebd1;
-      --text-main: #1c2520;
-      --text-muted: #56655d;
-      --border-gold: rgba(197, 155, 39, 0.38);
-      --shadow-card: 0 12px 32px rgba(16, 42, 31, 0.08);
+      --text-main: #1d2b24;
+      --text-muted: #5a6b62;
+      --border-gold: rgba(197, 155, 39, 0.35);
+      --card-bg: #ffffff;
     }
 
     body[data-theme="sogan"] {
-      --bg-outer: #24160e;
+      --bg-outer: #261710;
       --bg-cream: #fbf7f2;
-      --bg-card: #ffffff;
-      --primary: #4a2c18;
-      --primary-dark: #2e1a0d;
-      --accent: #b88428;
-      --accent-light: #e5b95c;
-      --accent-soft: #f5e8d3;
-      --text-main: #291d15;
-      --text-muted: #6b584b;
-      --border-gold: rgba(184, 132, 40, 0.4);
+      --primary: #4a2c1d;
+      --primary-dark: #2f1b11;
+      --accent: #c88a36;
+      --accent-light: #e6b467;
+      --accent-soft: #f6e8d5;
+      --text-main: #2b1d16;
+      --text-muted: #6e584d;
+      --border-gold: rgba(200, 138, 54, 0.35);
     }
 
-    body[data-theme="indigo"] {
-      --bg-outer: #0d1726;
-      --bg-cream: #f5f7fb;
-      --bg-card: #ffffff;
-      --primary: #192f4d;
-      --primary-dark: #0f1e33;
-      --accent: #c29838;
-      --accent-light: #e6c46c;
-      --accent-soft: #f2ead4;
-      --text-main: #182230;
-      --text-muted: #526073;
-      --border-gold: rgba(194, 152, 56, 0.38);
+    body[data-theme="pajajaran"] {
+      --bg-outer: #0e1c33;
+      --bg-cream: #f5f8fc;
+      --primary: #1a355b;
+      --primary-dark: #10223b;
+      --accent: #c59b27;
+      --accent-light: #e6c360;
+      --accent-soft: #e6eef8;
+      --text-main: #18263b;
+      --text-muted: #52637a;
+      --border-gold: rgba(197, 155, 39, 0.35);
     }
 
     * {
@@ -80,27 +86,26 @@
       min-height: 100vh;
       background-color: var(--bg-cream);
       position: relative;
-      box-shadow: 0 24px 64px rgba(0, 0, 0, 0.48);
+      box-shadow: 0 24px 60px rgba(0, 0, 0, 0.48);
       overflow-x: clip;
     }
 
-    /* Subtle Kawung & Mega Mendung pattern */
-    .batik-pattern {
+    .batik-bg {
       background-image:
-        radial-gradient(circle at 18% 15%, rgba(197, 155, 39, 0.09) 0%, transparent 42%),
-        radial-gradient(circle at 82% 75%, rgba(27, 67, 50, 0.07) 0%, transparent 45%);
+        radial-gradient(circle at 18% 18%, rgba(197, 155, 39, 0.08) 0%, transparent 45%),
+        radial-gradient(circle at 82% 82%, rgba(27, 67, 50, 0.07) 0%, transparent 45%);
     }
 
-    /* Top utility bar */
+    /* TOP UTILITY BAR - TERSEMBUNYI SECARA DEFAULT (HANYA MUNCUL DI ?admin=1) */
     .top-utility {
+      display: none;
       position: sticky;
       top: 0;
-      z-index: 40;
-      display: flex;
+      z-index: 50;
       justify-content: space-between;
       align-items: center;
       padding: 10px 14px;
-      background: rgba(250, 246, 240, 0.94);
+      background: rgba(250, 246, 240, 0.96);
       backdrop-filter: blur(10px);
       border-bottom: 1px solid var(--border-gold);
     }
@@ -117,19 +122,14 @@
       cursor: pointer;
       display: inline-flex;
       align-items: center;
-      justify-content: center;
       gap: 6px;
-      transition: transform 0.18s ease, background-color 0.18s ease, box-shadow 0.18s ease;
+      transition: all 0.2s ease;
       text-decoration: none;
     }
 
     .pill-btn:hover {
       background: var(--accent-soft);
       transform: translateY(-1px);
-    }
-
-    .pill-btn:active {
-      transform: translateY(0);
     }
 
     .pill-btn.primary {
@@ -142,19 +142,18 @@
       background: var(--primary-dark);
     }
 
-    /* Cover Screen */
+    /* COVER SCREEN */
     #cover {
-      min-height: calc(100vh - 49px);
-      padding: 28px 22px 38px;
+      min-height: 100vh;
+      padding: 36px 24px 44px;
       display: flex;
       flex-direction: column;
       align-items: center;
       justify-content: space-between;
       text-align: center;
-      background: linear-gradient(168deg, var(--primary-dark) 0%, var(--primary) 52%, var(--primary-dark) 100%);
+      background: linear-gradient(170deg, var(--primary-dark) 0%, var(--primary) 52%, var(--bg-outer) 100%);
       color: #faf6f0;
       position: relative;
-      z-index: 20;
     }
 
     #cover.opened {
@@ -164,59 +163,49 @@
     .sunda-badge {
       display: inline-block;
       padding: 6px 16px;
-      border: 1px solid rgba(232, 199, 102, 0.55);
+      border: 1px solid rgba(226, 188, 76, 0.55);
       border-radius: 999px;
       font-size: 11px;
       letter-spacing: 0.16em;
       text-transform: uppercase;
-      color: var(--accent-light);
-      background: rgba(255, 255, 255, 0.06);
+      color: #f3d786;
+      background: rgba(255, 255, 255, 0.05);
     }
 
-    .siger-emblem {
-      width: 118px;
-      height: 56px;
-      margin: 10px auto 4px;
-      display: block;
+    .siger-wrap {
+      margin: 14px auto 4px;
+      display: flex;
+      justify-content: center;
     }
 
     .cover-names {
-      margin: 8px 0;
-    }
-
-    .cover-subtitle {
-      font-size: 12px;
-      letter-spacing: 0.14em;
-      text-transform: uppercase;
-      color: #e6d8b0;
-      margin-bottom: 8px;
+      margin: 10px 0;
     }
 
     .cover-names h1 {
       font-family: 'Cormorant Garamond', serif;
-      font-size: 34px;
+      font-size: 36px;
       line-height: 1.12;
       font-weight: 700;
       color: #ffffff;
-      text-shadow: 0 4px 18px rgba(0, 0, 0, 0.32);
+      text-shadow: 0 4px 18px rgba(0, 0, 0, 0.3);
     }
 
     .amp-sunda {
       display: block;
       font-family: 'Cinzel Decorative', serif;
       font-size: 16px;
-      color: var(--accent-light);
+      color: #e7c258;
       margin: 6px 0;
     }
 
     .guest-box {
       width: 100%;
       background: rgba(255, 255, 255, 0.08);
-      border: 1px solid rgba(232, 199, 102, 0.48);
-      border-radius: 18px;
+      border: 1px solid rgba(231, 194, 88, 0.45);
+      border-radius: 16px;
       padding: 14px 16px;
       margin: 14px 0 20px;
-      backdrop-filter: blur(4px);
     }
 
     .guest-box small {
@@ -225,7 +214,7 @@
       color: #e6d8b0;
       letter-spacing: 0.08em;
       text-transform: uppercase;
-      margin-bottom: 5px;
+      margin-bottom: 4px;
     }
 
     .guest-box strong {
@@ -235,31 +224,28 @@
     }
 
     .open-btn {
-      width: 100%;
-      max-width: 260px;
-      background: linear-gradient(135deg, #e8c766 0%, #c59b27 100%);
+      background: linear-gradient(135deg, #dfba4e 0%, #c59b27 100%);
       color: #13291f;
       border: none;
       border-radius: 999px;
-      padding: 14px 28px;
-      font-family: inherit;
+      padding: 14px 30px;
       font-size: 14px;
       font-weight: 700;
       letter-spacing: 0.04em;
       cursor: pointer;
-      box-shadow: 0 10px 26px rgba(0, 0, 0, 0.32);
+      box-shadow: 0 10px 24px rgba(0, 0, 0, 0.28);
       transition: transform 0.2s ease, box-shadow 0.2s ease;
     }
 
     .open-btn:hover {
       transform: translateY(-2px);
-      box-shadow: 0 14px 30px rgba(0, 0, 0, 0.4);
+      box-shadow: 0 14px 28px rgba(0, 0, 0, 0.35);
     }
 
-    /* Main Content */
+    /* MAIN CONTENT */
     #invitation-main {
       display: none;
-      padding-bottom: 94px;
+      padding-bottom: 92px;
     }
 
     #invitation-main.active {
@@ -268,19 +254,13 @@
     }
 
     @keyframes fadeInUp {
-      from {
-        opacity: 0;
-        transform: translateY(14px);
-      }
-      to {
-        opacity: 1;
-        transform: translateY(0);
-      }
+      from { opacity: 0; transform: translateY(14px); }
+      to { opacity: 1; transform: translateY(0); }
     }
 
     section {
-      padding: 30px 20px;
-      border-bottom: 1px dashed rgba(197, 155, 39, 0.35);
+      padding: 28px 20px;
+      border-bottom: 1px dashed var(--border-gold);
     }
 
     .section-tag {
@@ -295,220 +275,189 @@
 
     .section-title {
       font-family: 'Cormorant Garamond', serif;
-      font-size: 30px;
-      line-height: 1.15;
+      font-size: 28px;
+      font-weight: 700;
       color: var(--primary);
       text-align: center;
-      margin-bottom: 12px;
-      font-weight: 700;
-    }
-
-    .ornament-divider {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      gap: 10px;
-      margin: 6px auto 16px;
-      color: var(--accent);
-    }
-
-    .ornament-divider::before,
-    .ornament-divider::after {
-      content: "";
-      height: 1px;
-      width: 56px;
-      background: linear-gradient(90deg, transparent, var(--accent), transparent);
+      margin-bottom: 10px;
     }
 
     .lead-text {
-      font-size: 14px;
-      line-height: 1.72;
+      font-size: 13.5px;
+      line-height: 1.65;
       color: var(--text-muted);
       text-align: center;
-    }
-
-    .doa-quote {
-      background: var(--accent-soft);
-      border-left: 3px solid var(--accent);
-      border-radius: 14px;
-      padding: 14px 16px;
-      margin-top: 16px;
-      font-size: 13px;
-      line-height: 1.65;
-      color: var(--primary-dark);
-      font-style: italic;
+      margin-bottom: 18px;
     }
 
     .card {
-      background: var(--bg-card);
+      background: var(--card-bg);
       border: 1px solid var(--border-gold);
-      border-radius: 20px;
-      padding: 20px;
-      box-shadow: var(--shadow-card);
-      margin-top: 16px;
+      border-radius: 18px;
+      padding: 18px 16px;
+      box-shadow: 0 8px 24px rgba(27, 67, 50, 0.05);
     }
 
-    /* Profiles */
+    /* PROFILE GRID */
     .profile-grid {
       display: grid;
       grid-template-columns: 1fr 1fr;
-      gap: 14px;
-      margin-top: 18px;
+      gap: 12px;
+      margin-bottom: 14px;
     }
 
     .profile-card {
-      background: #ffffff;
+      background: var(--card-bg);
       border: 1px solid var(--border-gold);
       border-radius: 18px;
-      padding: 12px;
+      padding: 12px 10px 14px;
       text-align: center;
-      box-shadow: var(--shadow-card);
-      cursor: pointer;
-      transition: transform 0.2s ease;
-    }
-
-    .profile-card:hover {
-      transform: translateY(-2px);
+      box-shadow: 0 6px 18px rgba(0, 0, 0, 0.04);
     }
 
     .arch-frame {
       width: 100%;
       aspect-ratio: 3 / 4;
-      border-radius: 999px 999px 18px 18px;
+      border-radius: 999px 999px 14px 14px;
       overflow: hidden;
       border: 2px solid var(--accent);
       background: var(--accent-soft);
       margin-bottom: 10px;
-      position: relative;
     }
 
     .arch-frame img {
       width: 100%;
       height: 100%;
       object-fit: cover;
-      object-position: center 15%;
+      object-position: center 20%;
       display: block;
     }
 
     .profile-name {
       font-family: 'Cormorant Garamond', serif;
-      font-size: 19px;
+      font-size: 18px;
+      line-height: 1.2;
       font-weight: 700;
       color: var(--primary);
-      line-height: 1.2;
+      margin-bottom: 4px;
     }
 
     .profile-role {
       font-size: 11px;
-      color: var(--text-muted);
-      margin-top: 4px;
+      font-weight: 600;
+      color: #9b7614;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
     }
 
-    /* Countdown */
+    /* COUNTDOWN */
     .countdown-grid {
       display: grid;
       grid-template-columns: repeat(4, 1fr);
       gap: 8px;
-      margin-top: 16px;
+      margin-bottom: 16px;
     }
 
     .cd-box {
       background: var(--primary);
       color: #ffffff;
+      border: 1px solid var(--accent);
       border-radius: 14px;
-      padding: 12px 6px;
+      padding: 10px 6px;
       text-align: center;
-      border: 1px solid rgba(232, 199, 102, 0.45);
     }
 
     .cd-num {
-      font-size: 22px;
-      font-weight: 700;
-      color: var(--accent-light);
       display: block;
+      font-size: 20px;
+      font-weight: 700;
+      color: #f4d67c;
     }
 
     .cd-label {
       font-size: 10px;
       text-transform: uppercase;
       letter-spacing: 0.08em;
-      opacity: 0.9;
+      opacity: 0.85;
     }
 
-    /* Rundown list */
-    .rundown-list {
-      margin-top: 14px;
-      border-top: 1px solid var(--border-gold);
-      padding-top: 12px;
-      text-align: left;
+    /* GALLERY: FAMILY LANDSCAPE FULL + CHILDREN GRID */
+    .family-stack {
       display: flex;
       flex-direction: column;
-      gap: 8px;
-    }
-
-    .rundown-row {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      font-size: 12.5px;
-      padding: 7px 10px;
-      border-radius: 10px;
-      background: var(--bg-cream);
-    }
-
-    .rundown-time {
-      font-weight: 700;
-      color: var(--primary);
-    }
-
-    /* Gallery */
-    .gallery-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
       gap: 12px;
-      margin-top: 16px;
+      margin-bottom: 12px;
     }
 
-    .gallery-item {
+    .family-item {
+      position: relative;
       border-radius: 16px;
       overflow: hidden;
       border: 1px solid var(--border-gold);
-      background: #ffffff;
-      box-shadow: var(--shadow-card);
+      background: #13291f;
+      aspect-ratio: 16 / 9;
       cursor: pointer;
+    }
+
+    .family-item img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center 22%;
+      display: block;
+      transition: transform 0.35s ease;
+    }
+
+    .family-item:hover img {
+      transform: scale(1.03);
+    }
+
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 10px;
+    }
+
+    .gallery-item {
       position: relative;
+      border-radius: 14px;
+      overflow: hidden;
+      border: 1px solid var(--border-gold);
+      background: #13291f;
+      aspect-ratio: 3 / 4;
+      cursor: pointer;
     }
 
     .gallery-item img {
       width: 100%;
-      aspect-ratio: 3 / 4;
+      height: 100%;
       object-fit: cover;
-      object-position: center top;
+      object-position: center 20%;
       display: block;
-      transition: transform 0.3s ease;
+      transition: transform 0.35s ease;
     }
 
     .gallery-item:hover img {
-      transform: scale(1.03);
+      transform: scale(1.04);
     }
 
     .gallery-cap {
-      padding: 8px 10px;
+      position: absolute;
+      inset: auto 0 0 0;
+      padding: 18px 10px 8px;
+      background: linear-gradient(to top, rgba(14, 36, 27, 0.85), transparent);
+      color: #faf6f0;
       font-size: 11px;
       font-weight: 600;
-      color: var(--primary);
-      background: #ffffff;
-      text-align: center;
     }
 
-    /* Gift / Bank */
+    /* BANK BOX */
     .bank-box {
-      background: linear-gradient(135deg, var(--primary-dark) 0%, var(--primary) 100%);
-      color: #ffffff;
+      background: linear-gradient(145deg, var(--primary) 0%, var(--primary-dark) 100%);
+      color: #faf6f0;
+      border: 1px solid var(--accent);
       border-radius: 18px;
-      padding: 20px 18px;
-      border: 1px solid rgba(232, 199, 102, 0.52);
-      margin-top: 14px;
+      padding: 20px 16px;
       text-align: center;
     }
 
@@ -516,11 +465,11 @@
       font-size: 24px;
       font-weight: 700;
       letter-spacing: 0.08em;
-      color: var(--accent-light);
-      margin: 8px 0 4px;
+      color: #f4d67c;
+      margin: 6px 0 4px;
     }
 
-    /* Form & Wishes */
+    /* FORMS */
     .form-group {
       margin-bottom: 12px;
       text-align: left;
@@ -538,46 +487,33 @@
       width: 100%;
       padding: 10px 12px;
       border-radius: 12px;
-      border: 1px solid #cfd8d2;
+      border: 1px solid var(--border-gold);
       font-family: inherit;
       font-size: 13px;
-      background: #ffffff;
       color: var(--text-main);
+      background: #ffffff;
     }
 
     .form-control:focus {
-      outline: none;
+      outline: 2px solid var(--accent);
       border-color: var(--accent);
     }
 
-    .wish-stats {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      margin-top: 16px;
-      padding: 8px 12px;
-      background: var(--accent-soft);
-      border-radius: 12px;
-      font-size: 12px;
-      font-weight: 600;
-      color: var(--primary);
-    }
-
+    /* WISH LIST */
     .wish-list {
-      margin-top: 12px;
+      margin-top: 16px;
       display: flex;
       flex-direction: column;
       gap: 10px;
-      max-height: 290px;
+      max-height: 280px;
       overflow-y: auto;
     }
 
     .wish-item {
       background: var(--bg-cream);
       border: 1px solid var(--border-gold);
-      border-radius: 14px;
-      padding: 12px;
-      text-align: left;
+      border-radius: 12px;
+      padding: 10px 12px;
     }
 
     .wish-header {
@@ -586,116 +522,84 @@
       align-items: center;
       gap: 8px;
       margin-bottom: 4px;
+      font-size: 12.5px;
+      color: var(--primary);
     }
 
     .wish-badge {
       font-size: 10px;
       font-weight: 700;
-      padding: 3px 8px;
+      padding: 2px 8px;
       border-radius: 999px;
       background: var(--accent-soft);
       color: var(--primary);
     }
 
-    /* Footer */
-    .footer-sunda {
-      padding: 28px 20px 36px;
-      text-align: center;
-      background: var(--primary-dark);
-      color: #e6d8b0;
-    }
-
-    /* Bottom Nav - hidden until invitation opens */
+    /* BOTTOM NAV - TERSEMBUNYI SAAT DI SAMPUL */
     .bottom-nav {
       display: none;
       position: fixed;
-      bottom: 0;
+      bottom: 12px;
       left: 50%;
       transform: translateX(-50%);
-      width: 100%;
-      max-width: 460px;
-      background: rgba(255, 255, 255, 0.96);
+      width: calc(100% - 28px);
+      max-width: 430px;
+      background: rgba(250, 246, 240, 0.95);
       backdrop-filter: blur(10px);
-      border-top: 1px solid var(--border-gold);
-      grid-template-columns: repeat(5, 1fr);
-      padding: 8px 4px;
-      z-index: 35;
+      border: 1px solid var(--accent);
+      border-radius: 999px;
+      padding: 8px 14px;
+      justify-content: space-around;
+      z-index: 40;
+      box-shadow: 0 10px 26px rgba(0, 0, 0, 0.22);
     }
 
-    .bottom-nav.visible {
-      display: grid;
+    .bottom-nav.active {
+      display: flex;
     }
 
     .bottom-nav a {
       text-decoration: none;
       color: var(--text-muted);
-      font-size: 11px;
-      font-weight: 600;
-      text-align: center;
-      padding: 4px 2px;
+      font-size: 11.5px;
+      font-weight: 700;
+      padding: 4px 8px;
     }
 
     .bottom-nav a:hover {
       color: var(--primary);
     }
 
-    /* Floating Audio - hidden until invitation opens */
+    /* AUDIO FAB - TERSEMBUNYI SAAT DI SAMPUL */
     .audio-fab {
       display: none;
       position: fixed;
       right: 16px;
-      bottom: 64px;
-      z-index: 40;
+      bottom: 66px;
+      z-index: 45;
       width: 44px;
       height: 44px;
       border-radius: 50%;
       border: 1px solid var(--accent);
       background: var(--primary);
-      color: var(--accent-light);
-      font-size: 16px;
+      color: #f4d67c;
+      font-size: 17px;
       cursor: pointer;
       box-shadow: 0 8px 20px rgba(0, 0, 0, 0.28);
       align-items: center;
       justify-content: center;
     }
 
-    .audio-fab.visible {
+    .audio-fab.active {
       display: flex;
     }
 
-    /* Toast Notification */
-    .toast-banner {
-      position: fixed;
-      top: 58px;
-      left: 50%;
-      transform: translateX(-50%) translateY(-16px);
-      background: var(--primary-dark);
-      color: #ffffff;
-      border: 1px solid var(--accent);
-      padding: 9px 16px;
-      border-radius: 999px;
-      font-size: 12px;
-      font-weight: 600;
-      z-index: 90;
-      opacity: 0;
-      pointer-events: none;
-      transition: opacity 0.25s ease, transform 0.25s ease;
-      box-shadow: 0 10px 24px rgba(0, 0, 0, 0.25);
-      max-width: 90%;
-      text-align: center;
-    }
-
-    .toast-banner.show {
-      opacity: 1;
-      transform: translateX(-50%) translateY(0);
-    }
-
-    /* Modal / Drawer */
+    /* MODAL */
     .modal-backdrop {
       display: none;
       position: fixed;
       inset: 0;
-      background: rgba(10, 22, 16, 0.74);
+      background: rgba(10, 22, 16, 0.76);
       z-index: 70;
       justify-content: center;
       align-items: center;
@@ -757,65 +661,71 @@
 
     .lightbox-img {
       width: 100%;
-      max-height: 68vh;
+      max-height: 70vh;
       object-fit: contain;
       border-radius: 14px;
       background: #102a1f;
     }
 
-    .bulk-list {
-      margin-top: 10px;
-      display: flex;
-      flex-direction: column;
-      gap: 6px;
-      max-height: 170px;
-      overflow-y: auto;
+    .toast {
+      position: fixed;
+      top: 18px;
+      left: 50%;
+      transform: translateX(-50%) translateY(-20px);
+      background: var(--primary-dark);
+      color: #f4d67c;
+      border: 1px solid var(--accent);
+      padding: 9px 16px;
+      border-radius: 999px;
+      font-size: 12px;
+      font-weight: 600;
+      z-index: 90;
+      opacity: 0;
+      pointer-events: none;
+      transition: all 0.25s ease;
     }
 
-    .bulk-row {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      gap: 8px;
-      background: #ffffff;
-      border: 1px solid var(--border-gold);
-      border-radius: 10px;
-      padding: 7px 10px;
-      font-size: 12px;
+    .toast.show {
+      opacity: 1;
+      transform: translateX(-50%) translateY(0);
     }
   </style>
 </head>
 <body data-theme="royal">
-  <div id="toast" class="toast-banner" role="status" aria-live="polite"></div>
+  <div id="toast" class="toast"></div>
 
-  <div class="app-shell batik-pattern">
-    <div class="top-utility">
-      <button type="button" id="btn-open-panel" class="pill-btn primary">
-        <span>⚙️ Panel Template &amp; Link Tamu</span>
+  <div class="app-shell batik-bg">
+    <!-- TOP BAR ADMIN (HANYA TAMPIL JIKA URL MEMILIKI ?admin=1) -->
+    <div class="top-utility" id="admin-topbar">
+      <button type="button" class="pill-btn primary" id="btn-open-admin">
+        ⚙ Panel Template &amp; Link Tamu
       </button>
-      <span id="status-badge" style="font-size:11px; color:var(--text-muted); font-weight:600;">Sunda Edition</span>
+      <span id="theme-badge" style="font-size:12px; font-weight:700; color:var(--primary);">Royal Sunda</span>
     </div>
 
-    <!-- COVER -->
+    <!-- COVER SCREEN -->
     <div id="cover">
-      <div>
+      <div style="width:100%;">
         <span class="sunda-badge">Sampurasun • Walimatul Khitan</span>
-        <!-- Mahkota Siger Sunda SVG -->
-        <svg class="siger-emblem" viewBox="0 0 240 110" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-          <path d="M120 14C126 36 144 52 172 56C194 59 212 50 226 36C220 62 198 80 166 84C144 87 128 82 120 74C112 82 96 87 74 84C42 80 20 62 14 36C28 50 46 59 68 56C96 52 114 36 120 14Z" stroke="#E8C766" stroke-width="3" fill="rgba(232,199,102,0.14)"/>
-          <circle cx="120" cy="48" r="7" fill="#E8C766"/>
-          <circle cx="88" cy="64" r="4.5" fill="#E8C766"/>
-          <circle cx="152" cy="64" r="4.5" fill="#E8C766"/>
-          <path d="M54 94H186" stroke="#E8C766" stroke-width="2" stroke-linecap="round" stroke-dasharray="4 6"/>
-        </svg>
+        <div class="siger-wrap" id="siger-trigger" title="Walimatul Khitan">
+          <svg width="118" height="44" viewBox="0 0 120 46" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <path d="M8 34C22 34 38 22 60 6C82 22 98 34 112 34C102 40 82 42 60 42C38 42 18 40 8 34Z" stroke="#E7C258" stroke-width="2" fill="rgba(231,194,88,0.12)"/>
+            <circle cx="60" cy="24" r="3.5" fill="#E7C258"/>
+            <circle cx="42" cy="29" r="2.2" fill="#E7C258"/>
+            <circle cx="78" cy="29" r="2.2" fill="#E7C258"/>
+            <path d="M24 44H96" stroke="#E7C258" stroke-width="1.4" stroke-dasharray="3 3"/>
+          </svg>
+        </div>
       </div>
 
       <div class="cover-names">
-        <p class="cover-subtitle">Undangan Tasyakuran Khitanan</p>
+        <p style="font-size:12.5px; letter-spacing:0.14em; text-transform:uppercase; color:#e6d8b0; margin-bottom:10px;">
+          Undangan Tasyakuran Khitanan
+        </p>
         <h1 id="cover-child-1">Rasyid Muhammad Athaya Rabbani</h1>
         <span class="amp-sunda">&amp;</span>
         <h1 id="cover-child-2">Raihan Muhammad Athaya Rabbani</h1>
-        <p id="cover-date" style="margin-top:14px; font-size:14px; color:#f4d67c; font-weight:600;">
+        <p id="cover-date" style="margin-top:16px; font-size:14.5px; color:#f4d67c; font-weight:600;">
           Minggu, 20 Desember 2026
         </p>
       </div>
@@ -825,7 +735,7 @@
           <small>Kepada Yth. Bapak / Ibu / Saudara/i</small>
           <strong id="guest-name-display">Tamu Undangan</strong>
         </div>
-        <button type="button" id="btn-open-invitation" class="open-btn">
+        <button type="button" class="open-btn" id="btn-open-invitation">
           Buka Undangan
         </button>
       </div>
@@ -837,23 +747,22 @@
       <section id="profil">
         <div class="section-tag">Bismillahirrahmanirrahim</div>
         <h2 class="section-title">Putra-Putra Kami</h2>
-        <div class="ornament-divider">❖</div>
         <p class="lead-text" id="opening-text">
           Assalamu’alaikum Warahmatullahi Wabarakatuh. Dengan memohon rahmat dan ridho Allah SWT, kami bermaksud menyelenggarakan Walimatul Khitan putra-putra kami:
         </p>
 
         <div class="profile-grid">
-          <div class="profile-card" data-lightbox-idx="0">
+          <div class="profile-card">
             <div class="arch-frame">
-              <img id="img-rasyid-profile" alt="Rasyid Muhammad Athaya Rabbani" loading="eager" />
+              <img id="img-rasyid-profile" data-drive-id="13vOUCRAsltqH55jwHVLbnKL15MLetPgx" alt="Rasyid Muhammad Athaya Rabbani" loading="eager" />
             </div>
             <div class="profile-name" id="name-rasyid">Rasyid Muhammad Athaya Rabbani</div>
             <div class="profile-role" id="role-rasyid">Putra Pertama</div>
           </div>
 
-          <div class="profile-card" data-lightbox-idx="1">
+          <div class="profile-card">
             <div class="arch-frame">
-              <img id="img-raihan-profile" alt="Raihan Muhammad Athaya Rabbani" loading="eager" />
+              <img id="img-raihan-profile" data-drive-id="1-DK0TVwYyw1qFlLRMq_8eBeRrDtJB1Nx" alt="Raihan Muhammad Athaya Rabbani" loading="eager" />
             </div>
             <div class="profile-name" id="name-raihan">Raihan Muhammad Athaya Rabbani</div>
             <div class="profile-role" id="role-raihan">Putra Kedua</div>
@@ -862,15 +771,11 @@
 
         <div class="card" style="text-align:center;">
           <small style="font-size:11px; text-transform:uppercase; letter-spacing:0.1em; color:var(--text-muted);">
-            Putra dari Pasangan
+            Keluarga Besar Orang Tua
           </small>
           <p id="parents-display" style="font-family:'Cormorant Garamond',serif; font-size:22px; font-weight:700; color:var(--primary); margin-top:4px;">
             Bapak Riza Arvan Rabbani &amp; Ibu Siska Noeryulia
           </p>
-        </div>
-
-        <div class="doa-quote">
-          “Ya Allah, muliakanlah kedua putra kami ini dengan cahaya Al-Qur’an, lapangkan hatinya dalam menuntut ilmu, jadikanlah anak yang sholeh, berbakti kepada orang tua, serta bermanfaat bagi agama, nusa, dan bangsa.”
         </div>
       </section>
 
@@ -878,7 +783,6 @@
       <section id="acara">
         <div class="section-tag">Wanci &amp; Tempat</div>
         <h2 class="section-title">Waktu &amp; Lokasi Acara</h2>
-        <div class="ornament-divider">❖</div>
         <p class="lead-text">
           Merupakan suatu kehormatan dan kebahagiaan bagi kami apabila Bapak/Ibu/Saudara/i berkenan hadir memberikan doa restu.
         </p>
@@ -891,7 +795,7 @@
         </div>
 
         <div class="card" style="text-align:center;">
-          <p style="font-weight:700; color:var(--primary); font-size:17px;" id="event-day-date">
+          <p style="font-weight:700; color:var(--primary); font-size:16px;" id="event-day-date">
             Minggu, 20 Desember 2026
           </p>
           <p style="font-size:13px; color:var(--text-muted); margin:4px 0 12px;" id="event-time">
@@ -908,48 +812,52 @@
             <a id="maps-link" href="https://maps.app.goo.gl/Cf7Pqj61greFxXCi9" target="_blank" rel="noopener noreferrer" class="pill-btn primary">
               📍 Buka Google Maps
             </a>
-            <button type="button" id="btn-download-ics" class="pill-btn">
-              📅 Simpan ke Kalender
+            <button type="button" class="pill-btn" id="btn-copy-address">
+              📋 Salin Alamat
             </button>
-          </div>
-
-          <div class="rundown-list">
-            <div class="rundown-row">
-              <span class="rundown-time">09.00 – 10.30 WIB</span>
-              <span>Pembukaan &amp; Doa Bersama</span>
-            </div>
-            <div class="rundown-row">
-              <span class="rundown-time">10.30 – Selesai</span>
-              <span>Ramah Tamah &amp; Jamuan Tamu</span>
-            </div>
+            <button type="button" class="pill-btn" id="btn-download-ics">
+              📅 Simpan Kalender
+            </button>
           </div>
         </div>
       </section>
 
       <!-- GALERI -->
       <section id="galeri">
-        <div class="section-tag">Potret Ananda</div>
-        <h2 class="section-title">Galeri Rasyid &amp; Raihan</h2>
-        <div class="ornament-divider">❖</div>
+        <div class="section-tag">Potret Keluarga &amp; Ananda</div>
+        <h2 class="section-title">Galeri Kebahagiaan</h2>
         <p class="lead-text">
-          Ketuk foto untuk memperbesar tampilan potret <em>closeup</em> maupun <em>full body</em>.
+          Ketuk foto untuk memperbesar tampilan penuh.
         </p>
 
+        <!-- FOTO KELUARGA LANDSCAPE PENUH (1 BARIS 1 FOTO) -->
+        <div class="family-stack">
+          <div class="family-item" data-lb-index="0">
+            <img id="gal-0" data-drive-id="1gRLn7fyUA7b7QcgVUW4MAgUvag8Nt9Ro" alt="Keluarga Besar Riza &amp; Siska" loading="lazy" />
+            <div class="gallery-cap">Keluarga Besar • Riza &amp; Siska</div>
+          </div>
+          <div class="family-item" data-lb-index="1">
+            <img id="gal-1" data-drive-id="109_3OZ_n9TlY5GKNVYJ5jVq9qs1ElKNL" alt="Kebersamaan Keluarga" loading="lazy" />
+            <div class="gallery-cap">Kebersamaan Keluarga</div>
+          </div>
+        </div>
+
+        <!-- FOTO ANANDA 2 KOLOM -->
         <div class="gallery-grid">
-          <div class="gallery-item" data-lightbox-idx="0">
-            <img id="gal-0" alt="Rasyid Closeup" loading="lazy" />
+          <div class="gallery-item" data-lb-index="2">
+            <img id="gal-2" data-drive-id="13vOUCRAsltqH55jwHVLbnKL15MLetPgx" alt="Rasyid Closeup" loading="lazy" />
             <div class="gallery-cap">Rasyid • Closeup</div>
           </div>
-          <div class="gallery-item" data-lightbox-idx="1">
-            <img id="gal-1" alt="Raihan Closeup" loading="lazy" />
+          <div class="gallery-item" data-lb-index="3">
+            <img id="gal-3" data-drive-id="1-DK0TVwYyw1qFlLRMq_8eBeRrDtJB1Nx" alt="Raihan Closeup" loading="lazy" />
             <div class="gallery-cap">Raihan • Closeup</div>
           </div>
-          <div class="gallery-item" data-lightbox-idx="2">
-            <img id="gal-2" alt="Rasyid Full Body" loading="lazy" />
+          <div class="gallery-item" data-lb-index="4">
+            <img id="gal-4" data-drive-id="1DYdHiyj0CcqC5UQrAMsNSnDeY4c-ZE5h" alt="Rasyid Full Body" loading="lazy" />
             <div class="gallery-cap">Rasyid • Full Body</div>
           </div>
-          <div class="gallery-item" data-lightbox-idx="3">
-            <img id="gal-3" alt="Raihan Full Body" loading="lazy" />
+          <div class="gallery-item" data-lb-index="5">
+            <img id="gal-5" data-drive-id="1l3dgCH8xK5T4dXeiqnnVgpWqdSocbXsu" alt="Raihan Full Body" loading="lazy" />
             <div class="gallery-cap">Raihan • Full Body</div>
           </div>
         </div>
@@ -958,34 +866,23 @@
       <!-- AMPLOP DIGITAL -->
       <section id="amplop">
         <div class="section-tag">Tanda Kasih</div>
-        <h2 class="section-title">Amplop Digital &amp; Kado</h2>
-        <div class="ornament-divider">❖</div>
+        <h2 class="section-title">Amplop Digital</h2>
         <p class="lead-text">
           Doa restu Anda merupakan karunia yang sangat berarti bagi kami. Apabila berkenan mengirimkan tanda kasih, dapat melalui rekening berikut:
         </p>
 
         <div class="bank-box">
-          <div style="font-size:12px; opacity:0.88; text-transform:uppercase; letter-spacing:0.12em;" id="bank-name">
+          <div style="font-size:12px; opacity:0.85; text-transform:uppercase; letter-spacing:0.1em;" id="bank-name">
             Bank BNI
           </div>
           <div class="bank-acc" id="bank-number">0350353081</div>
-          <div style="font-size:13px; margin-bottom:14px;" id="bank-holder">
+          <div style="font-size:13px; margin-bottom:12px;" id="bank-holder">
             a.n. Riza Arvan Rabbani
           </div>
-          <button type="button" id="btn-copy-bank" class="pill-btn">
+          <button type="button" class="pill-btn" id="btn-copy-bank">
             📋 Salin No. Rekening
           </button>
           <div id="copy-note" class="status-note">Nomor rekening berhasil disalin.</div>
-        </div>
-
-        <div class="card" style="text-align:center;">
-          <strong style="font-size:13px; color:var(--primary); display:block; margin-bottom:4px;">Alamat Pengiriman Kado Fisik</strong>
-          <p id="gift-address-text" style="font-size:12.5px; color:var(--text-muted); margin-bottom:10px;">
-            Jl. Gg. Mm Adi, Dago Pojok, Bandung
-          </p>
-          <button type="button" id="btn-copy-address" class="pill-btn">
-            🏠 Salin Alamat Rumah
-          </button>
         </div>
       </section>
 
@@ -993,7 +890,6 @@
       <section id="rsvp">
         <div class="section-tag">Konfirmasi &amp; Doa</div>
         <h2 class="section-title">RSVP &amp; Ucapan</h2>
-        <div class="ornament-divider">❖</div>
         <p class="lead-text">
           Sampaikan konfirmasi kehadiran serta untaian doa terbaik untuk Rasyid &amp; Raihan.
         </p>
@@ -1029,23 +925,18 @@
               <textarea id="rsvp-message" rows="3" class="form-control" placeholder="Tulis doa terbaik untuk ananda Rasyid &amp; Raihan..." required></textarea>
             </div>
 
-            <button type="submit" class="pill-btn primary" style="width:100%; padding:11px;">
+            <button type="submit" id="rsvp-submit-btn" class="pill-btn primary" style="width:100%; justify-content:center; padding:11px;">
               Kirim Konfirmasi &amp; Ucapan
             </button>
           </form>
 
           <div id="rsvp-status" class="status-note"></div>
 
-          <div class="wish-stats">
-            <span>Buku Doa &amp; Ucapan</span>
-            <span id="wish-counter">1 Ucapan</span>
-          </div>
-
           <div class="wish-list" id="wish-list">
             <div class="wish-item">
               <div class="wish-header">
                 <strong>Keluarga Besar Dago Pojok</strong>
-                <span class="wish-badge">Hadir</span>
+                <span class="wish-badge">Insya Allah Hadir</span>
               </div>
               <p style="font-size:12.5px; color:var(--text-muted); line-height:1.5;">
                 Mugiya janten murangkalih anu soleh, pinter, sareng bagja dunya akherat kanggo Rasyid &amp; Raihan.
@@ -1054,96 +945,96 @@
           </div>
         </div>
       </section>
-
-      <!-- FOOTER -->
-      <footer class="footer-sunda">
-        <p style="font-size:12px; letter-spacing:0.12em; text-transform:uppercase; color:var(--accent-light); margin-bottom:6px;">
-          Hatur Nuhun
-        </p>
-        <p style="font-family:'Cormorant Garamond',serif; font-size:22px; font-weight:700; color:#ffffff; margin-bottom:6px;" id="footer-parents">
-          Bapak Riza Arvan Rabbani &amp; Ibu Siska Noeryulia
-        </p>
-        <p style="font-size:12px; opacity:0.85;">
-          Wassalamu’alaikum Warahmatullahi Wabarakatuh
-        </p>
-      </footer>
     </main>
 
     <!-- BOTTOM NAV -->
-    <nav id="bottom-nav" class="bottom-nav" aria-label="Navigasi Undangan">
+    <nav class="bottom-nav" id="bottom-nav" aria-label="Navigasi Undangan">
       <a href="#profil">Profil</a>
       <a href="#acara">Acara</a>
       <a href="#galeri">Galeri</a>
-      <a href="#amplop">Amplop</a>
       <a href="#rsvp">RSVP</a>
     </nav>
 
     <!-- AUDIO BUTTON -->
-    <button type="button" class="audio-fab" id="audio-btn" title="Putar / Jeda Musik Latar">
+    <button type="button" class="audio-fab" id="audio-btn" title="Musik Latar">
       ♪
     </button>
   </div>
 
-  <!-- MODAL: PANEL TEMPLATE & LINK TAMU -->
-  <div class="modal-backdrop" id="panel-modal">
+  <!-- AUDIO ELEMENT -->
+  <audio id="bg-audio" loop preload="none"></audio>
+
+  <!-- LIGHTBOX MODAL -->
+  <div class="modal-backdrop" id="lightbox-modal">
+    <div class="modal-panel" style="text-align:center;">
+      <img id="lightbox-img" class="lightbox-img" src="" alt="Pratinjau Foto" />
+      <p id="lightbox-caption" style="font-size:13px; font-weight:700; color:var(--primary); margin:10px 0;"></p>
+      <div style="display:flex; justify-content:center; gap:8px;">
+        <button type="button" class="pill-btn" id="lb-prev">◀ Sebelumnya</button>
+        <button type="button" class="pill-btn primary" id="lb-close">Tutup</button>
+        <button type="button" class="pill-btn" id="lb-next">Berikutnya ▶</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ADMIN MODAL (HANYA AKTIF DI MODE ADMIN) -->
+  <div class="modal-backdrop" id="admin-modal">
     <div class="modal-panel">
       <div style="display:flex; justify-content:space-between; align-items:center;">
-        <h3 style="font-size:17px; color:var(--primary);">Panel Template &amp; Link Tamu</h3>
-        <button type="button" id="btn-close-panel" class="pill-btn">✕</button>
+        <h3 style="font-family:'Cormorant Garamond',serif; font-size:22px; color:var(--primary);">
+          Panel Admin &amp; Link Tamu
+        </h3>
+        <button type="button" class="pill-btn" id="btn-close-admin">✕</button>
       </div>
 
       <div class="tab-row">
         <button type="button" class="tab-btn active" id="tab-link-btn">Link Tamu WA</button>
-        <button type="button" class="tab-btn" id="tab-config-btn">Edit Template Reusable</button>
+        <button type="button" class="tab-btn" id="tab-config-btn">Konfigurasi Template</button>
       </div>
 
       <!-- TAB 1: LINK TAMU -->
       <div id="tab-link-content">
         <div class="form-group">
-          <label for="base-url-input">URL Dasar Undangan (URL Vercel Anda)</label>
-          <input type="text" id="base-url-input" class="form-control" placeholder="https://nama-project.vercel.app" />
+          <label for="base-url-input">URL Dasar Undangan (Otomatis terdeteksi)</label>
+          <input type="text" id="base-url-input" class="form-control" placeholder="https://khitan-rasyid-raihan.vercel.app" />
         </div>
 
         <div class="form-group">
-          <label for="guest-input">Nama Tamu Satuan</label>
+          <label for="guest-input">Nama Tamu</label>
           <input type="text" id="guest-input" class="form-control" placeholder="Contoh: Teh Ratna &amp; Suami" />
         </div>
 
         <div class="form-group">
-          <label for="generated-link">Tautan Personal Tamu</label>
+          <label for="generated-link">Tautan Personal Tamu (Bersih tanpa tombol admin)</label>
           <input type="text" id="generated-link" class="form-control" readonly />
         </div>
 
-        <div style="display:flex; gap:8px; flex-wrap:wrap; margin-bottom:14px;">
-          <button type="button" id="btn-copy-guest-link" class="pill-btn">Salin Link</button>
-          <button type="button" id="btn-send-wa" class="pill-btn primary">Kirim ke WhatsApp</button>
+        <div style="display:flex; gap:8px; flex-wrap:wrap;">
+          <button type="button" class="pill-btn" id="btn-copy-guest-link">Salin Link</button>
+          <button type="button" class="pill-btn primary" id="btn-send-wa">Kirim ke WhatsApp</button>
         </div>
         <div id="link-note" class="status-note">Tautan personal berhasil disalin.</div>
-
-        <hr style="border:none; border-top:1px dashed var(--border-gold); margin:14px 0;" />
-
-        <div class="form-group">
-          <label for="bulk-guests-input">Generator Banyak Tamu Sekaligus (1 nama per baris)</label>
-          <textarea id="bulk-guests-input" rows="3" class="form-control" placeholder="Keluarga Kang Dedi&#10;Ibu Hj. Siti Aminah&#10;Rekan Kerja Dago"></textarea>
-        </div>
-        <button type="button" id="btn-generate-bulk" class="pill-btn" style="width:100%;">Buat Daftar Link Tamu</button>
-        <div id="bulk-list" class="bulk-list"></div>
       </div>
 
       <!-- TAB 2: KONFIGURASI REUSABLE -->
       <div id="tab-config-content" style="display:none;">
         <div class="form-group">
-          <label for="cfg-theme">Palet Tema Sunda (Reusable)</label>
+          <label for="cfg-theme">Tema Warna Sunda</label>
           <select id="cfg-theme" class="form-control">
-            <option value="royal">Royal Sunda (Hijau Zamrud &amp; Emas)</option>
-            <option value="sogan">Sogan Priangan (Cokelat Batik &amp; Krem)</option>
-            <option value="indigo">Keraton Pajajaran (Biru Nila &amp; Emas)</option>
+            <option value="royal">Royal Sunda (Hijau Zamrud)</option>
+            <option value="sogan">Sogan Priangan (Cokelat Batik)</option>
+            <option value="pajajaran">Keraton Pajajaran (Biru Nila)</option>
           </select>
         </div>
 
         <div class="form-group">
           <label for="cfg-webhook">Webhook RSVP URL (Google Apps Script /exec)</label>
           <input type="text" id="cfg-webhook" class="form-control" placeholder="https://script.google.com/macros/s/.../exec" />
+        </div>
+
+        <div class="form-group">
+          <label for="cfg-audio">URL Audio MP3 Kustom (atau ID Google Drive)</label>
+          <input type="text" id="cfg-audio" class="form-control" placeholder="1keqRaV_USf7mfRBw95nuYLrXaROAyP3U atau ./islamic.mp3" />
         </div>
 
         <div class="form-group">
@@ -1162,12 +1053,7 @@
         </div>
 
         <div class="form-group">
-          <label for="cfg-date-label">Teks Hari &amp; Tanggal</label>
-          <input type="text" id="cfg-date-label" class="form-control" />
-        </div>
-
-        <div class="form-group">
-          <label for="cfg-date-iso">Target Hitung Mundur (ISO)</label>
+          <label for="cfg-date-iso">Tanggal &amp; Jam Acara (ISO)</label>
           <input type="text" id="cfg-date-iso" class="form-control" />
         </div>
 
@@ -1182,259 +1068,255 @@
         </div>
 
         <div class="form-group">
-          <label for="cfg-bank-name">Nama Bank / E-Wallet</label>
+          <label for="cfg-bank-name">Nama Bank</label>
           <input type="text" id="cfg-bank-name" class="form-control" />
         </div>
 
         <div class="form-group">
-          <label for="cfg-bank">No. Rekening Amplop Digital</label>
+          <label for="cfg-bank">Nomor Rekening</label>
           <input type="text" id="cfg-bank" class="form-control" />
         </div>
 
+        <div class="form-group">
+          <label for="cfg-bank-holder">Nama Pemilik Rekening</label>
+          <input type="text" id="cfg-bank-holder" class="form-control" />
+        </div>
+
         <div style="display:flex; gap:8px; flex-wrap:wrap;">
-          <button type="button" id="btn-save-config" class="pill-btn primary">Terapkan Perubahan</button>
-          <button type="button" id="btn-download-html" class="pill-btn">Unduh index.html</button>
+          <button type="button" class="pill-btn primary" id="btn-save-config">Terapkan Perubahan</button>
+          <button type="button" class="pill-btn" id="btn-download-html">Unduh index.html</button>
         </div>
         <div id="cfg-note" class="status-note">Konfigurasi berhasil diterapkan.</div>
       </div>
     </div>
   </div>
 
-  <!-- MODAL: LIGHTBOX GALERI -->
-  <div class="modal-backdrop" id="lightbox-modal">
-    <div class="modal-panel" id="lightbox-panel">
-      <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:10px;">
-        <strong id="lightbox-title" style="color:var(--primary); font-size:14px;">Pratinjau Foto</strong>
-        <button type="button" id="btn-close-lightbox" class="pill-btn">✕</button>
-      </div>
-      <img id="lightbox-img" class="lightbox-img" alt="Pratinjau Galeri" />
-      <div style="display:flex; justify-content:space-between; margin-top:12px;">
-        <button type="button" id="btn-prev-photo" class="pill-btn">← Sebelumnya</button>
-        <button type="button" id="btn-next-photo" class="pill-btn">Berikutnya →</button>
-      </div>
-    </div>
-  </div>
-
   <script>
-    const NL = String.fromCharCode(10);
-    const CRLF = String.fromCharCode(13, 10);
-
-    const EVENT_CONFIG = {
+    /* CONFIG_START */
+    var EVENT_CONFIG = {
       theme: "royal",
+      rsvpWebhookUrl: "https://script.google.com/macros/s/AKfycbx52FO8p40NnAbxhQPxaqVl_3EKwFCtiaYCleo_N5eADLf1U8xx8faLpYExoW8ctbL0UA/exec",
+      audioSource: "1keqRaV_USf7mfRBw95nuYLrXaROAyP3U",
       child1: "Rasyid Muhammad Athaya Rabbani",
-      role1: "Putra Pertama",
       child2: "Raihan Muhammad Athaya Rabbani",
-      role2: "Putra Kedua",
       parents: "Bapak Riza Arvan Rabbani & Ibu Siska Noeryulia",
-      eventDateLabel: "Minggu, 20 Desember 2026",
+      eventDateDisplay: "Minggu, 20 Desember 2026",
+      eventTimeDisplay: "Pukul 09.00 WIB – Selesai",
       eventDateISO: "2026-12-20T09:00:00+07:00",
-      eventTime: "Pukul 09.00 WIB – Selesai",
       venue: "Kediaman Keluarga",
       address: "Jl. Gg. Mm Adi, Dago Pojok, Bandung",
       mapsUrl: "https://maps.app.goo.gl/Cf7Pqj61greFxXCi9",
       bankName: "Bank BNI",
       bankNumber: "0350353081",
-      bankHolder: "a.n. Riza Arvan Rabbani",
-      rsvpWebhookUrl: "https://script.google.com/macros/s/AKfycbx52FO8p40NnAbxhQPxaqVl_3EKwFCtiaYCleo_N5eADLf1U8xx8faLpYExoW8ctbL0UA/exec",
-      photos: [
-        { driveId: "13vOUCRAsltqH55jwHVLbnKL15MLetPgx", label: "Rasyid • Closeup" },
-        { driveId: "1-DK0TVwYyw1qFlLRMq_8eBeRrDtJB1Nx", label: "Raihan • Closeup" },
-        { driveId: "1DYdHiyj0CcqC5UQrAMsNSnDeY4c-ZE5h", label: "Rasyid • Full Body" },
-        { driveId: "1l3dgCH8xK5T4dXeiqnnVgpWqdSocbXsu", label: "Raihan • Full Body" }
-      ]
+      bankHolder: "a.n. Riza Arvan Rabbani"
     };
+    /* CONFIG_END */
 
-    let currentLightboxIdx = 0;
+    var cleanHtmlSnapshot = "";
+    var isAdminMode = false;
+    var isAudioPlaying = false;
+    var currentLightboxIndex = 0;
+
+    var GALLERY_ITEMS = [
+      { id: "1gRLn7fyUA7b7QcgVUW4MAgUvag8Nt9Ro", caption: "Keluarga Besar • Riza & Siska" },
+      { id: "109_3OZ_n9TlY5GKNVYJ5jVq9qs1ElKNL", caption: "Kebersamaan Keluarga" },
+      { id: "13vOUCRAsltqH55jwHVLbnKL15MLetPgx", caption: "Rasyid • Closeup" },
+      { id: "1-DK0TVwYyw1qFlLRMq_8eBeRrDtJB1Nx", caption: "Raihan • Closeup" },
+      { id: "1DYdHiyj0CcqC5UQrAMsNSnDeY4c-ZE5h", caption: "Rasyid • Full Body" },
+      { id: "1l3dgCH8xK5T4dXeiqnnVgpWqdSocbXsu", caption: "Raihan • Full Body" }
+    ];
 
     function showToast(msg) {
-      const el = document.getElementById("toast");
-      if (!el) return;
-      el.textContent = msg;
-      el.classList.add("show");
-      clearTimeout(el._timer);
-      el._timer = setTimeout(function () {
-        el.classList.remove("show");
-      }, 2600);
+      var t = document.getElementById("toast");
+      if (!t) return;
+      t.textContent = msg;
+      t.classList.add("show");
+      setTimeout(function () {
+        t.classList.remove("show");
+      }, 2400);
     }
 
-    function createFallbackAvatar(label) {
-      const initial = (label || "A").charAt(0).toUpperCase();
-      const svg = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 400"><rect width="300" height="400" fill="#1b4332"/><circle cx="150" cy="145" r="54" fill="#e8c766"/><path d="M70 330c12-62 52-94 80-94s68 32 80 94" fill="#e8c766"/><text x="150" y="160" font-size="44" font-family="serif" font-weight="bold" fill="#1b4332" text-anchor="middle">${initial}</text></svg>`;
-      return "data:image/svg+xml;charset=UTF-8," + encodeURIComponent(svg);
+    function escapeHTML(str) {
+      return String(str)
+        .replace(/&/g, "&amp;")
+        .replace(/</g, "&lt;")
+        .replace(/>/g, "&gt;")
+        .replace(/"/g, "&quot;")
+        .replace(/'/g, "&#39;");
     }
 
-    function getDriveUrls(id) {
-      return [
-        "https://lh3.googleusercontent.com/d/" + id,
-        "https://drive.google.com/thumbnail?id=" + id + "&sz=w1200",
-        "https://drive.google.com/uc?export=view&id=" + id
-      ];
+    function initAdminSeparation() {
+      var params = new URLSearchParams(window.location.search);
+      isAdminMode = params.get("admin") === "1";
+      var topBar = document.getElementById("admin-topbar");
+      var adminModal = document.getElementById("admin-modal");
+
+      if (isAdminMode) {
+        if (topBar) topBar.style.display = "flex";
+      } else {
+        if (topBar) topBar.remove();
+        if (adminModal) adminModal.remove();
+      }
     }
 
-    function setDriveImageWithFallback(imgEl, id, label) {
-      if (!imgEl) return;
-      const urls = getDriveUrls(id);
-      let attempt = 0;
-      imgEl.onerror = function () {
-        attempt++;
-        if (attempt < urls.length) {
-          imgEl.src = urls[attempt];
-        } else {
-          imgEl.onerror = null;
-          imgEl.src = createFallbackAvatar(label);
-        }
-      };
-      imgEl.src = urls[0];
+    function initGuestName() {
+      var params = new URLSearchParams(window.location.search);
+      var guest = params.get("to");
+      var displayEl = document.getElementById("guest-name-display");
+      var rsvpNameEl = document.getElementById("rsvp-name");
+      if (guest && guest.trim() !== "") {
+        var cleanGuest = guest.trim();
+        if (displayEl) displayEl.textContent = cleanGuest;
+        if (rsvpNameEl) rsvpNameEl.value = cleanGuest;
+      }
     }
 
-    function initPhotos() {
-      const profile1 = document.getElementById("img-rasyid-profile");
-      const profile2 = document.getElementById("img-raihan-profile");
-      setDriveImageWithFallback(profile1, EVENT_CONFIG.photos[0].driveId, "Rasyid");
-      setDriveImageWithFallback(profile2, EVENT_CONFIG.photos[1].driveId, "Raihan");
-
-      EVENT_CONFIG.photos.forEach(function (p, idx) {
-        const el = document.getElementById("gal-" + idx);
-        if (el) {
-          setDriveImageWithFallback(el, p.driveId, p.label);
-          el.alt = p.label;
-        }
+    function applyDriveImages() {
+      var imgs = document.querySelectorAll("img[data-drive-id]");
+      imgs.forEach(function (img) {
+        var fileId = img.getAttribute("data-drive-id");
+        var urls = [
+          "https://lh3.googleusercontent.com/d/" + fileId + "=w1000",
+          "https://drive.google.com/thumbnail?id=" + fileId + "&sz=w1000",
+          "https://drive.google.com/uc?export=view&id=" + fileId
+        ];
+        var attempt = 0;
+        img.onerror = function () {
+          attempt++;
+          if (attempt < urls.length) {
+            img.src = urls[attempt];
+          }
+        };
+        img.src = urls[0];
       });
     }
 
-    function applyGuestFromURL() {
-      const params = new URLSearchParams(window.location.search);
-      const toParam = params.get("to");
-      const guestEl = document.getElementById("guest-name-display");
-      const guestInput = document.getElementById("guest-input");
-      const rsvpName = document.getElementById("rsvp-name");
-      if (toParam && toParam.trim()) {
-        const cleanName = toParam.trim();
-        if (guestEl) guestEl.textContent = cleanName;
-        if (guestInput) guestInput.value = cleanName;
-        if (rsvpName) rsvpName.value = cleanName;
+    function applyEventConfigToDOM() {
+      document.body.setAttribute("data-theme", EVENT_CONFIG.theme || "royal");
+      var badgeMap = { royal: "Royal Sunda", sogan: "Sogan Priangan", pajajaran: "Keraton Pajajaran" };
+      var badgeEl = document.getElementById("theme-badge");
+      if (badgeEl) badgeEl.textContent = badgeMap[EVENT_CONFIG.theme] || "Royal Sunda";
+
+      var setText = function (id, val) {
+        var el = document.getElementById(id);
+        if (el) el.textContent = val;
+      };
+
+      setText("cover-child-1", EVENT_CONFIG.child1);
+      setText("cover-child-2", EVENT_CONFIG.child2);
+      setText("name-rasyid", EVENT_CONFIG.child1);
+      setText("name-raihan", EVENT_CONFIG.child2);
+      setText("parents-display", EVENT_CONFIG.parents);
+      setText("cover-date", EVENT_CONFIG.eventDateDisplay);
+      setText("event-day-date", EVENT_CONFIG.eventDateDisplay);
+      setText("event-time", EVENT_CONFIG.eventTimeDisplay);
+      setText("event-venue", EVENT_CONFIG.venue);
+      setText("event-address", EVENT_CONFIG.address);
+      setText("bank-name", EVENT_CONFIG.bankName);
+      setText("bank-number", EVENT_CONFIG.bankNumber);
+      setText("bank-holder", EVENT_CONFIG.bankHolder);
+
+      var mapsEl = document.getElementById("maps-link");
+      if (mapsEl) mapsEl.href = EVENT_CONFIG.mapsUrl;
+    }
+
+    function startCountdown() {
+      function tick() {
+        var target = new Date(EVENT_CONFIG.eventDateISO).getTime();
+        var now = Date.now();
+        var diff = Math.max(0, target - now);
+
+        var days = Math.floor(diff / (1000 * 60 * 60 * 24));
+        var hours = Math.floor((diff / (1000 * 60 * 60)) % 24);
+        var mins = Math.floor((diff / 1000 / 60) % 60);
+        var secs = Math.floor((diff / 1000) % 60);
+
+        var pad = function (n) { return n < 10 ? "0" + n : String(n); };
+        var dEl = document.getElementById("cd-days");
+        if (dEl) {
+          dEl.textContent = pad(days);
+          document.getElementById("cd-hours").textContent = pad(hours);
+          document.getElementById("cd-mins").textContent = pad(mins);
+          document.getElementById("cd-secs").textContent = pad(secs);
+        }
+      }
+      tick();
+      setInterval(tick, 1000);
+    }
+
+    function resolveAudioSources(src) {
+      if (!src) return [];
+      if (src.indexOf("http") === 0 || src.indexOf("./") === 0 || src.indexOf("/") === 0) {
+        return [src];
+      }
+      return [
+        "https://docs.google.com/uc?export=open&id=" + src,
+        "https://drive.google.com/uc?export=download&id=" + src
+      ];
+    }
+
+    function playBackgroundAudio() {
+      var audio = document.getElementById("bg-audio");
+      var btn = document.getElementById("audio-btn");
+      if (!audio) return;
+
+      var sources = resolveAudioSources(EVENT_CONFIG.audioSource);
+      if (sources.length === 0) return;
+
+      var idx = 0;
+      function trySource(i) {
+        if (i >= sources.length) return;
+        audio.src = sources[i];
+        var playPromise = audio.play();
+        if (playPromise !== undefined) {
+          playPromise.then(function () {
+            isAudioPlaying = true;
+            if (btn) btn.textContent = "❚❚";
+          }).catch(function () {
+            trySource(i + 1);
+          });
+        }
+      }
+
+      if (!audio.src) {
+        trySource(idx);
+      } else {
+        audio.play().then(function () {
+          isAudioPlaying = true;
+          if (btn) btn.textContent = "❚❚";
+        }).catch(function () {});
+      }
+    }
+
+    function toggleAudio() {
+      var audio = document.getElementById("bg-audio");
+      var btn = document.getElementById("audio-btn");
+      if (!audio) return;
+      if (isAudioPlaying) {
+        audio.pause();
+        isAudioPlaying = false;
+        if (btn) btn.textContent = "♪";
+      } else {
+        playBackgroundAudio();
       }
     }
 
     function openInvitation() {
-      const cover = document.getElementById("cover");
-      const main = document.getElementById("invitation-main");
-      const nav = document.getElementById("bottom-nav");
-      const audioFab = document.getElementById("audio-btn");
+      var cover = document.getElementById("cover");
+      var main = document.getElementById("invitation-main");
+      var nav = document.getElementById("bottom-nav");
+      var audioBtn = document.getElementById("audio-btn");
 
       if (cover) cover.classList.add("opened");
       if (main) main.classList.add("active");
-      if (nav) nav.classList.add("visible");
-      if (audioFab) audioFab.classList.add("visible");
+      if (nav) nav.classList.add("active");
+      if (audioBtn) audioBtn.classList.add("active");
 
       window.scrollTo({ top: 0, behavior: "smooth" });
-      startSundaneseAudio();
+      playBackgroundAudio();
     }
 
-    // Subtle Sundanese pentatonic synth via Web Audio API
-    let audioCtx = null;
-    let isPlaying = false;
-    let audioTimer = null;
-
-    function startSundaneseAudio() {
-      if (isPlaying) return;
-      const AudioContextClass = window.AudioContext || window.webkitAudioContext;
-      if (!AudioContextClass) return;
-      try {
-        if (!audioCtx) audioCtx = new AudioContextClass();
-        if (audioCtx.state === "suspended") audioCtx.resume();
-
-        const notes = [293.66, 329.63, 392.00, 440.00, 587.33, 440.00, 392.00, 329.63];
-        let step = 0;
-
-        function playNote() {
-          if (!isPlaying || !audioCtx) return;
-          const osc = audioCtx.createOscillator();
-          const gain = audioCtx.createGain();
-          osc.type = "triangle";
-          osc.frequency.setValueAtTime(notes[step % notes.length], audioCtx.currentTime);
-
-          gain.gain.setValueAtTime(0.001, audioCtx.currentTime);
-          gain.gain.exponentialRampToValueAtTime(0.025, audioCtx.currentTime + 0.08);
-          gain.gain.exponentialRampToValueAtTime(0.0008, audioCtx.currentTime + 1.15);
-
-          osc.connect(gain);
-          gain.connect(audioCtx.destination);
-          osc.start();
-          osc.stop(audioCtx.currentTime + 1.2);
-          step++;
-        }
-
-        isPlaying = true;
-        const btn = document.getElementById("audio-btn");
-        if (btn) btn.textContent = "❚❚";
-        playNote();
-        audioTimer = setInterval(playNote, 950);
-      } catch (e) {
-        isPlaying = false;
-      }
-    }
-
-    function stopSundaneseAudio() {
-      isPlaying = false;
-      clearInterval(audioTimer);
-      const btn = document.getElementById("audio-btn");
-      if (btn) btn.textContent = "♪";
-    }
-
-    function toggleAudio() {
-      if (isPlaying) {
-        stopSundaneseAudio();
-        showToast("Musik latar dijeda");
-      } else {
-        startSundaneseAudio();
-        showToast("Musik latar diputar");
-      }
-    }
-
-    function updateCountdown() {
-      const target = new Date(EVENT_CONFIG.eventDateISO).getTime();
-      const now = Date.now();
-      const diff = Math.max(0, target - now);
-
-      const days = Math.floor(diff / (1000 * 60 * 60 * 24));
-      const hours = Math.floor((diff / (1000 * 60 * 60)) % 24);
-      const mins = Math.floor((diff / (1000 * 60)) % 60);
-      const secs = Math.floor((diff / 1000) % 60);
-
-      document.getElementById("cd-days").textContent = String(days).padStart(2, "0");
-      document.getElementById("cd-hours").textContent = String(hours).padStart(2, "0");
-      document.getElementById("cd-mins").textContent = String(mins).padStart(2, "0");
-      document.getElementById("cd-secs").textContent = String(secs).padStart(2, "0");
-    }
-
-    function downloadICS() {
-      const icsLines = [
-        "BEGIN:VCALENDAR",
-        "VERSION:2.0",
-        "BEGIN:VEVENT",
-        "SUMMARY:Walimatul Khitan - " + EVENT_CONFIG.child1 + " & " + EVENT_CONFIG.child2,
-        "DTSTART:20261220T020000Z",
-        "DTEND:20261220T090000Z",
-        "LOCATION:" + EVENT_CONFIG.address,
-        "DESCRIPTION:Walimatul Khitan putra-putra " + EVENT_CONFIG.parents,
-        "END:VEVENT",
-        "END:VCALENDAR"
-      ];
-      const icsContent = icsLines.join(CRLF);
-      const blob = new Blob([icsContent], { type: "text/calendar;charset=utf-8" });
-      const url = URL.createObjectURL(blob);
-      const a = document.createElement("a");
-      a.href = url;
-      a.download = "walimatul-khitan-rasyid-raihan.ics";
-      document.body.appendChild(a);
-      a.click();
-      document.body.removeChild(a);
-      URL.revokeObjectURL(url);
-      showToast("File kalender (.ics) diunduh");
-    }
-
-    function copyTextSafe(text, successMsg) {
+    function copyToClipboard(text, successMsg) {
       if (navigator.clipboard && navigator.clipboard.writeText) {
         navigator.clipboard.writeText(text).then(function () {
           showToast(successMsg);
@@ -1447,365 +1329,333 @@
     }
 
     function fallbackCopy(text, successMsg) {
-      const ta = document.createElement("textarea");
+      var ta = document.createElement("textarea");
       ta.value = text;
-      ta.style.position = "fixed";
-      ta.style.opacity = "0";
       document.body.appendChild(ta);
       ta.select();
-      try {
-        document.execCommand("copy");
-        showToast(successMsg);
-      } catch (e) {
-        showToast("Silakan salin manual: " + text);
-      }
+      document.execCommand("copy");
       document.body.removeChild(ta);
+      showToast(successMsg);
     }
 
-    function updateWishCounter() {
-      const count = document.querySelectorAll("#wish-list .wish-item").length;
-      const el = document.getElementById("wish-counter");
-      if (el) el.textContent = count + " Ucapan";
+    function downloadICS() {
+      var NL = String.fromCharCode(13, 10);
+      var icsLines = [
+        "BEGIN:VCALENDAR",
+        "VERSION:2.0",
+        "PRODID:-//Walimatul Khitan//Rasyid & Raihan//ID",
+        "BEGIN:VEVENT",
+        "DTSTART:20261220T020000Z",
+        "DTEND:20261220T070000Z",
+        "SUMMARY:Walimatul Khitan " + EVENT_CONFIG.child1 + " & " + EVENT_CONFIG.child2,
+        "LOCATION:" + EVENT_CONFIG.address,
+        "DESCRIPTION:Undangan Tasyakuran Walimatul Khitan putra Bapak Riza Arvan Rabbani & Ibu Siska Noeryulia.",
+        "END:VEVENT",
+        "END:VCALENDAR"
+      ];
+      var blob = new Blob([icsLines.join(NL)], { type: "text/calendar;charset=utf-8" });
+      var url = URL.createObjectURL(blob);
+      var a = document.createElement("a");
+      a.href = url;
+      a.download = "Walimatul-Khitan-Rasyid-Raihan.ics";
+      document.body.appendChild(a);
+      a.click();
+      document.body.removeChild(a);
+      URL.revokeObjectURL(url);
+      showToast("File kalender diunduh.");
+    }
+
+    function openLightbox(index) {
+      currentLightboxIndex = index;
+      updateLightboxView();
+      document.getElementById("lightbox-modal").classList.add("open");
+    }
+
+    function updateLightboxView() {
+      var item = GALLERY_ITEMS[currentLightboxIndex];
+      if (!item) return;
+      var img = document.getElementById("lightbox-img");
+      var cap = document.getElementById("lightbox-caption");
+      img.src = "https://lh3.googleusercontent.com/d/" + item.id + "=w1400";
+      cap.textContent = item.caption;
+    }
+
+    function renderWishItem(name, attendance, message) {
+      var list = document.getElementById("wish-list");
+      if (!list) return;
+      var labelMap = {
+        "Hadir": "Insya Allah Hadir",
+        "Ragu": "Masih Menyesuaikan",
+        "Tidak Hadir": "Belum Dapat Hadir"
+      };
+      var div = document.createElement("div");
+      div.className = "wish-item";
+      div.innerHTML =
+        '<div class="wish-header">' +
+          "<strong>" + escapeHTML(name) + "</strong>" +
+          '<span class="wish-badge">' + escapeHTML(labelMap[attendance] || attendance) + "</span>" +
+        "</div>" +
+        '<p style="font-size:12.5px; color:var(--text-muted); line-height:1.5;">' +
+          escapeHTML(message) +
+        "</p>";
+      list.insertBefore(div, list.firstChild);
     }
 
     function loadSavedWishes() {
       try {
-        const raw = localStorage.getItem("khitan_wishes_v1");
-        if (!raw) return;
-        const items = JSON.parse(raw);
-        if (!Array.isArray(items)) return;
-        items.forEach(function (w) {
-          appendWishDOM(w.name, w.attendance, w.guests, w.message, false);
+        var saved = JSON.parse(localStorage.getItem("khitan_wishes_v1") || "[]");
+        saved.forEach(function (w) {
+          renderWishItem(w.name, w.attendance, w.message);
         });
-        updateWishCounter();
       } catch (e) {}
-    }
-
-    function appendWishDOM(name, attendance, guests, message, prepend) {
-      const list = document.getElementById("wish-list");
-      if (!list) return;
-      const item = document.createElement("div");
-      item.className = "wish-item";
-      item.innerHTML =
-        '<div class="wish-header">' +
-        "<strong>" + escapeHTML(name) + "</strong>" +
-        '<span class="wish-badge">' + escapeHTML(attendance) + " • " + escapeHTML(String(guests)) + " org</span>" +
-        "</div>" +
-        '<p style="font-size:12.5px; color:var(--text-muted); line-height:1.5;">' + escapeHTML(message) + "</p>";
-      if (prepend) list.prepend(item);
-      else list.appendChild(item);
-    }
-
-    async function submitRSVP(e) {
-      e.preventDefault();
-      const name = document.getElementById("rsvp-name").value.trim();
-      const attendance = document.getElementById("rsvp-attendance").value;
-      const guests = document.getElementById("rsvp-guests").value;
-      const message = document.getElementById("rsvp-message").value.trim();
-      const statusEl = document.getElementById("rsvp-status");
-
-      appendWishDOM(name, attendance, guests, message, true);
-      updateWishCounter();
-
-      try {
-        const existing = JSON.parse(localStorage.getItem("khitan_wishes_v1") || "[]");
-        existing.unshift({ name: name, attendance: attendance, guests: guests, message: message });
-        localStorage.setItem("khitan_wishes_v1", JSON.stringify(existing.slice(0, 30)));
-      } catch (err) {}
 
       if (EVENT_CONFIG.rsvpWebhookUrl) {
-        try {
-          await fetch(EVENT_CONFIG.rsvpWebhookUrl, {
-            method: "POST",
-            mode: "no-cors",
-            headers: { "Content-Type": "application/json" },
-            body: JSON.stringify({ name: name, attendance: attendance, guests: guests, message: message })
-          });
-          statusEl.textContent = "Hatur nuhun! Konfirmasi & doa Anda telah terkirim ke Google Sheets.";
-          showToast("RSVP & doa terkirim!");
-        } catch (err) {
-          statusEl.textContent = "Ucapan tampil di halaman, namun pengiriman ke webhook gagal.";
-        }
-      } else {
-        statusEl.textContent = "Hatur nuhun! Ucapan & doa Anda telah tersimpan di buku tamu.";
-        showToast("Ucapan & doa ditambahkan!");
+        fetch(EVENT_CONFIG.rsvpWebhookUrl)
+          .then(function (r) { return r.json(); })
+          .then(function (res) {
+            if (res && Array.isArray(res.wishes)) {
+              res.wishes.slice().reverse().forEach(function (w) {
+                renderWishItem(w.name, w.attendance, w.message);
+              });
+            }
+          })
+          .catch(function () {});
       }
-
-      statusEl.classList.add("show");
-      e.target.reset();
     }
 
-    function escapeHTML(str) {
-      return String(str).replace(/[&<>"']/g, function (m) {
-        return {
-          "&": "&amp;",
-          "<": "&lt;",
-          ">": "&gt;",
-          '"': "&quot;",
-          "'": "&#39;"
-        }[m];
-      });
+    function handleRSVPSubmit(e) {
+      e.preventDefault();
+      var btn = document.getElementById("rsvp-submit-btn");
+      var statusEl = document.getElementById("rsvp-status");
+      var name = document.getElementById("rsvp-name").value.trim();
+      var attendance = document.getElementById("rsvp-attendance").value;
+      var guests = document.getElementById("rsvp-guests").value;
+      var message = document.getElementById("rsvp-message").value.trim();
+
+      if (!name || !message) return;
+      btn.disabled = true;
+      btn.textContent = "Mengirim...";
+
+      var payload = { name: name, attendance: attendance, guests: guests, message: message };
+
+      try {
+        var existing = JSON.parse(localStorage.getItem("khitan_wishes_v1") || "[]");
+        existing.push(payload);
+        localStorage.setItem("khitan_wishes_v1", JSON.stringify(existing.slice(-30)));
+      } catch (err) {}
+
+      renderWishItem(name, attendance, message);
+
+      if (EVENT_CONFIG.rsvpWebhookUrl) {
+        fetch(EVENT_CONFIG.rsvpWebhookUrl, {
+          method: "POST",
+          mode: "no-cors",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify(payload)
+        }).finally(function () {
+          btn.disabled = false;
+          btn.textContent = "Kirim Konfirmasi & Ucapan";
+          document.getElementById("rsvp-message").value = "";
+          statusEl.textContent = "Terima kasih, konfirmasi dan doa Anda telah tercatat.";
+          statusEl.classList.add("show");
+        });
+      } else {
+        btn.disabled = false;
+        btn.textContent = "Kirim Konfirmasi & Ucapan";
+        document.getElementById("rsvp-message").value = "";
+        statusEl.textContent = "Terima kasih, ucapan Anda telah ditampilkan.";
+        statusEl.classList.add("show");
+      }
     }
 
-    function openPanel(tab) {
-      const currentBase = window.location.origin && window.location.origin !== "null"
-        ? window.location.origin + window.location.pathname
-        : "";
-      document.getElementById("base-url-input").value = currentBase;
+    /* ADMIN PANEL FUNCTIONS */
+    function initAdminPanel() {
+      if (!isAdminMode) return;
+
+      var cleanBase = window.location.origin + window.location.pathname;
+      if (cleanBase.indexOf("file://") === 0) {
+        cleanBase = "https://khitan-rasyid-raihan.vercel.app";
+      }
+      document.getElementById("base-url-input").value = cleanBase;
+      updateGeneratedGuestLink();
+
       document.getElementById("cfg-theme").value = EVENT_CONFIG.theme || "royal";
-      document.getElementById("cfg-webhook").value = EVENT_CONFIG.rsvpWebhookUrl;
+      document.getElementById("cfg-webhook").value = EVENT_CONFIG.rsvpWebhookUrl || "";
+      document.getElementById("cfg-audio").value = EVENT_CONFIG.audioSource || "";
       document.getElementById("cfg-child1").value = EVENT_CONFIG.child1;
       document.getElementById("cfg-child2").value = EVENT_CONFIG.child2;
       document.getElementById("cfg-parents").value = EVENT_CONFIG.parents;
-      document.getElementById("cfg-date-label").value = EVENT_CONFIG.eventDateLabel;
       document.getElementById("cfg-date-iso").value = EVENT_CONFIG.eventDateISO;
       document.getElementById("cfg-address").value = EVENT_CONFIG.address;
       document.getElementById("cfg-maps").value = EVENT_CONFIG.mapsUrl;
       document.getElementById("cfg-bank-name").value = EVENT_CONFIG.bankName;
       document.getElementById("cfg-bank").value = EVENT_CONFIG.bankNumber;
-      updateGeneratedLink();
-      switchTab(tab || "link");
-      document.getElementById("panel-modal").classList.add("open");
+      document.getElementById("cfg-bank-holder").value = EVENT_CONFIG.bankHolder;
     }
 
-    function closeModal(id) {
-      const el = document.getElementById(id);
-      if (el) el.classList.remove("open");
+    function updateGeneratedGuestLink() {
+      var base = document.getElementById("base-url-input").value.trim().replace(/\/+$/, "");
+      var guest = document.getElementById("guest-input").value.trim();
+      var link = guest ? base + "/?to=" + encodeURIComponent(guest) : base + "/";
+      document.getElementById("generated-link").value = link;
     }
 
-    function switchTab(tab) {
-      const isLink = tab === "link";
-      document.getElementById("tab-link-btn").classList.toggle("active", isLink);
-      document.getElementById("tab-config-btn").classList.toggle("active", !isLink);
-      document.getElementById("tab-link-content").style.display = isLink ? "block" : "none";
-      document.getElementById("tab-config-content").style.display = isLink ? "none" : "block";
+    function sendGuestWhatsApp() {
+      var guest = document.getElementById("guest-input").value.trim() || "Bapak/Ibu/Saudara/i";
+      var link = document.getElementById("generated-link").value;
+      var NL = String.fromCharCode(10);
+      var msg =
+        "Sampurasun 🙏✨" + NL +
+        "Assalamu’alaikum Warahmatullahi Wabarakatuh" + NL + NL +
+        "Kepada Yth. *" + guest + "*" + NL + NL +
+        "Dengan memohon rahmat dan ridho Allah SWT, kami mengundang Bapak/Ibu/Saudara/i untuk hadir pada acara *Walimatul Khitan* putra-putra kami:" + NL +
+        "👦 *" + EVENT_CONFIG.child1 + "*" + NL +
+        "👦 *" + EVENT_CONFIG.child2 + "*" + NL + NL +
+        "📅 " + EVENT_CONFIG.eventDateDisplay + NL +
+        "⏰ " + EVENT_CONFIG.eventTimeDisplay + NL +
+        "📍 " + EVENT_CONFIG.address + NL + NL +
+        "🔗 *Buka Undangan Digital:*" + NL +
+        link + NL + NL +
+        "Hatur nuhun atas kehadiran dan doa restunya." + NL +
+        "*" + EVENT_CONFIG.parents + "*";
+
+      window.open("https://wa.me/?text=" + encodeURIComponent(msg), "_blank");
     }
 
-    function buildPersonalUrl(guestName) {
-      const rawBase = document.getElementById("base-url-input").value.trim() || window.location.href.split("?")[0];
-      const base = rawBase.replace(/\/$/, "");
-      return guestName ? base + "/?to=" + encodeURIComponent(guestName) : base;
-    }
-
-    function updateGeneratedLink() {
-      const guest = document.getElementById("guest-input").value.trim();
-      document.getElementById("generated-link").value = buildPersonalUrl(guest);
-    }
-
-    function buildWAMessage(guest, link) {
-      return [
-        "Sampurasun 🙏✨",
-        "Assalamu'alaikum Warahmatullahi Wabarakatuh",
-        "",
-        "Kepada Yth. " + (guest || "Bapak/Ibu/Saudara/i"),
-        "Kami mengundang kehadiran & doa restu pada Walimatul Khitan putra-putra kami:",
-        "• " + EVENT_CONFIG.child1,
-        "• " + EVENT_CONFIG.child2,
-        "",
-        "📅 " + EVENT_CONFIG.eventDateLabel,
-        "⏰ " + EVENT_CONFIG.eventTime,
-        "📍 " + EVENT_CONFIG.address,
-        "",
-        "Buka undangan digital:",
-        link,
-        "",
-        "Hatur nuhun,",
-        EVENT_CONFIG.parents
-      ].join(NL);
-    }
-
-    function sendWhatsApp() {
-      const guest = document.getElementById("guest-input").value.trim() || "Bapak/Ibu/Saudara/i";
-      const link = document.getElementById("generated-link").value;
-      const text = buildWAMessage(guest, link);
-      window.open("https://wa.me/?text=" + encodeURIComponent(text), "_blank", "noopener,noreferrer");
-    }
-
-    function generateBulkLinks() {
-      const raw = document.getElementById("bulk-guests-input").value;
-      const names = raw.split(/\r?\n/).map(function (s) { return s.trim(); }).filter(Boolean);
-      const container = document.getElementById("bulk-list");
-      container.innerHTML = "";
-      if (!names.length) {
-        showToast("Masukkan minimal 1 nama tamu");
-        return;
-      }
-      names.forEach(function (name) {
-        const link = buildPersonalUrl(name);
-        const row = document.createElement("div");
-        row.className = "bulk-row";
-
-        const label = document.createElement("span");
-        label.textContent = name;
-        label.style.fontWeight = "600";
-
-        const actions = document.createElement("div");
-        actions.style.display = "flex";
-        actions.style.gap = "6px";
-
-        const copyBtn = document.createElement("button");
-        copyBtn.type = "button";
-        copyBtn.className = "pill-btn";
-        copyBtn.textContent = "Salin";
-        copyBtn.addEventListener("click", function () {
-          copyTextSafe(link, "Link untuk " + name + " disalin");
-        });
-
-        const waBtn = document.createElement("button");
-        waBtn.type = "button";
-        waBtn.className = "pill-btn primary";
-        waBtn.textContent = "WA";
-        waBtn.addEventListener("click", function () {
-          const msg = buildWAMessage(name, link);
-          window.open("https://wa.me/?text=" + encodeURIComponent(msg), "_blank", "noopener,noreferrer");
-        });
-
-        actions.appendChild(copyBtn);
-        actions.appendChild(waBtn);
-        row.appendChild(label);
-        row.appendChild(actions);
-        container.appendChild(row);
-      });
-      showToast(names.length + " tautan tamu berhasil dibuat");
-    }
-
-    function applyTheme(themeKey) {
-      document.body.setAttribute("data-theme", themeKey || "royal");
-      const badge = document.getElementById("status-badge");
-      const labels = {
-        royal: "Royal Sunda",
-        sogan: "Sogan Priangan",
-        indigo: "Keraton Pajajaran"
-      };
-      if (badge) badge.textContent = labels[themeKey] || "Sunda Edition";
-    }
-
-    function saveConfig() {
+    function saveAdminConfig() {
       EVENT_CONFIG.theme = document.getElementById("cfg-theme").value;
       EVENT_CONFIG.rsvpWebhookUrl = document.getElementById("cfg-webhook").value.trim();
-      EVENT_CONFIG.child1 = document.getElementById("cfg-child1").value.trim() || EVENT_CONFIG.child1;
-      EVENT_CONFIG.child2 = document.getElementById("cfg-child2").value.trim() || EVENT_CONFIG.child2;
-      EVENT_CONFIG.parents = document.getElementById("cfg-parents").value.trim() || EVENT_CONFIG.parents;
-      EVENT_CONFIG.eventDateLabel = document.getElementById("cfg-date-label").value.trim() || EVENT_CONFIG.eventDateLabel;
-      EVENT_CONFIG.eventDateISO = document.getElementById("cfg-date-iso").value.trim() || EVENT_CONFIG.eventDateISO;
-      EVENT_CONFIG.address = document.getElementById("cfg-address").value.trim() || EVENT_CONFIG.address;
-      EVENT_CONFIG.mapsUrl = document.getElementById("cfg-maps").value.trim() || EVENT_CONFIG.mapsUrl;
-      EVENT_CONFIG.bankName = document.getElementById("cfg-bank-name").value.trim() || EVENT_CONFIG.bankName;
-      EVENT_CONFIG.bankNumber = document.getElementById("cfg-bank").value.trim() || EVENT_CONFIG.bankNumber;
+      EVENT_CONFIG.audioSource = document.getElementById("cfg-audio").value.trim();
+      EVENT_CONFIG.child1 = document.getElementById("cfg-child1").value.trim();
+      EVENT_CONFIG.child2 = document.getElementById("cfg-child2").value.trim();
+      EVENT_CONFIG.parents = document.getElementById("cfg-parents").value.trim();
+      EVENT_CONFIG.eventDateISO = document.getElementById("cfg-date-iso").value.trim();
+      EVENT_CONFIG.address = document.getElementById("cfg-address").value.trim();
+      EVENT_CONFIG.mapsUrl = document.getElementById("cfg-maps").value.trim();
+      EVENT_CONFIG.bankName = document.getElementById("cfg-bank-name").value.trim();
+      EVENT_CONFIG.bankNumber = document.getElementById("cfg-bank").value.trim();
+      EVENT_CONFIG.bankHolder = document.getElementById("cfg-bank-holder").value.trim();
 
-      applyTheme(EVENT_CONFIG.theme);
-      document.getElementById("cover-child-1").textContent = EVENT_CONFIG.child1;
-      document.getElementById("cover-child-2").textContent = EVENT_CONFIG.child2;
-      document.getElementById("name-rasyid").textContent = EVENT_CONFIG.child1;
-      document.getElementById("name-raihan").textContent = EVENT_CONFIG.child2;
-      document.getElementById("parents-display").textContent = EVENT_CONFIG.parents;
-      document.getElementById("footer-parents").textContent = EVENT_CONFIG.parents;
-      document.getElementById("cover-date").textContent = EVENT_CONFIG.eventDateLabel;
-      document.getElementById("event-day-date").textContent = EVENT_CONFIG.eventDateLabel;
-      document.getElementById("event-address").textContent = EVENT_CONFIG.address;
-      document.getElementById("gift-address-text").textContent = EVENT_CONFIG.address;
-      document.getElementById("maps-link").href = EVENT_CONFIG.mapsUrl;
-      document.getElementById("bank-name").textContent = EVENT_CONFIG.bankName;
-      document.getElementById("bank-number").textContent = EVENT_CONFIG.bankNumber;
-
-      updateCountdown();
-      const note = document.getElementById("cfg-note");
+      applyEventConfigToDOM();
+      var note = document.getElementById("cfg-note");
+      note.textContent = "Perubahan diterapkan! Klik 'Unduh index.html' untuk menyimpan permanen ke file.";
       note.classList.add("show");
-      showToast("Konfigurasi template diterapkan");
     }
 
     function downloadUpdatedHTML() {
-      saveConfig();
-      const updatedConfigScript = "const EVENT_CONFIG = " + JSON.stringify(EVENT_CONFIG, null, 2) + ";";
-      const clonedDoc = document.documentElement.cloneNode(true);
-      const coverEl = clonedDoc.querySelector("#cover");
-      const mainEl = clonedDoc.querySelector("#invitation-main");
-      const navEl = clonedDoc.querySelector("#bottom-nav");
-      const audioEl = clonedDoc.querySelector("#audio-btn");
-      const panelEl = clonedDoc.querySelector("#panel-modal");
-      const lbEl = clonedDoc.querySelector("#lightbox-modal");
-      if (coverEl) coverEl.classList.remove("opened");
-      if (mainEl) mainEl.classList.remove("active");
-      if (navEl) navEl.classList.remove("visible");
-      if (audioEl) audioEl.classList.remove("visible");
-      if (panelEl) panelEl.classList.remove("open");
-      if (lbEl) lbEl.classList.remove("open");
+      saveAdminConfig();
+      var startMarker = "/* CONFIG_START */";
+      var endMarker = "/* CONFIG_END */";
+      var sIdx = cleanHtmlSnapshot.indexOf(startMarker);
+      var eIdx = cleanHtmlSnapshot.indexOf(endMarker);
 
-      let source = "<!DOCTYPE html>" + NL + clonedDoc.outerHTML;
-      source = source.replace(/const EVENT_CONFIG = \{[\s\S]*?\n    \};/, updatedConfigScript);
-      const blob = new Blob([source], { type: "text/html;charset=utf-8" });
-      const url = URL.createObjectURL(blob);
-      const a = document.createElement("a");
+      if (sIdx === -1 || eIdx === -1) {
+        showToast("Gagal memproses template HTML.");
+        return;
+      }
+
+      var NL = String.fromCharCode(10);
+      var newConfigBlock =
+        startMarker + NL +
+        "    var EVENT_CONFIG = " + JSON.stringify(EVENT_CONFIG, null, 6) + ";" + NL +
+        "    ";
+
+      var updatedHTML =
+        cleanHtmlSnapshot.slice(0, sIdx) +
+        newConfigBlock +
+        cleanHtmlSnapshot.slice(eIdx);
+
+      var blob = new Blob([updatedHTML], { type: "text/html;charset=utf-8" });
+      var url = URL.createObjectURL(blob);
+      var a = document.createElement("a");
       a.href = url;
       a.download = "index.html";
       document.body.appendChild(a);
       a.click();
       document.body.removeChild(a);
       URL.revokeObjectURL(url);
-      showToast("Berkas index.html siap deploy diunduh");
-    }
-
-    function openLightbox(idx) {
-      const total = EVENT_CONFIG.photos.length;
-      currentLightboxIdx = ((idx % total) + total) % total;
-      const photo = EVENT_CONFIG.photos[currentLightboxIdx];
-      if (!photo) return;
-      document.getElementById("lightbox-title").textContent = photo.label;
-      setDriveImageWithFallback(document.getElementById("lightbox-img"), photo.driveId, photo.label);
-      document.getElementById("lightbox-modal").classList.add("open");
-    }
-
-    function bindEvents() {
-      document.getElementById("btn-open-invitation").addEventListener("click", openInvitation);
-      document.getElementById("btn-open-panel").addEventListener("click", function () { openPanel("link"); });
-      document.getElementById("btn-close-panel").addEventListener("click", function () { closeModal("panel-modal"); });
-      document.getElementById("tab-link-btn").addEventListener("click", function () { switchTab("link"); });
-      document.getElementById("tab-config-btn").addEventListener("click", function () { switchTab("config"); });
-      document.getElementById("base-url-input").addEventListener("input", updateGeneratedLink);
-      document.getElementById("guest-input").addEventListener("input", updateGeneratedLink);
-      document.getElementById("btn-copy-guest-link").addEventListener("click", function () {
-        copyTextSafe(document.getElementById("generated-link").value, "Link personal tamu disalin!");
-      });
-      document.getElementById("btn-send-wa").addEventListener("click", sendWhatsApp);
-      document.getElementById("btn-generate-bulk").addEventListener("click", generateBulkLinks);
-      document.getElementById("btn-save-config").addEventListener("click", saveConfig);
-      document.getElementById("btn-download-html").addEventListener("click", downloadUpdatedHTML);
-      document.getElementById("btn-download-ics").addEventListener("click", downloadICS);
-      document.getElementById("btn-copy-bank").addEventListener("click", function () {
-        copyTextSafe(EVENT_CONFIG.bankNumber, "No. Rekening " + EVENT_CONFIG.bankNumber + " disalin!");
-      });
-      document.getElementById("btn-copy-address").addEventListener("click", function () {
-        copyTextSafe(EVENT_CONFIG.address, "Alamat rumah disalin!");
-      });
-      document.getElementById("rsvp-form").addEventListener("submit", submitRSVP);
-      document.getElementById("audio-btn").addEventListener("click", toggleAudio);
-
-      document.querySelectorAll("[data-lightbox-idx]").forEach(function (el) {
-        el.addEventListener("click", function () {
-          const idx = parseInt(el.getAttribute("data-lightbox-idx"), 10) || 0;
-          openLightbox(idx);
-        });
-      });
-
-      document.getElementById("btn-close-lightbox").addEventListener("click", function () { closeModal("lightbox-modal"); });
-      document.getElementById("lightbox-modal").addEventListener("click", function (e) {
-        if (e.target.id === "lightbox-modal") closeModal("lightbox-modal");
-      });
-      document.getElementById("panel-modal").addEventListener("click", function (e) {
-        if (e.target.id === "panel-modal") closeModal("panel-modal");
-      });
-      document.getElementById("btn-prev-photo").addEventListener("click", function () { openLightbox(currentLightboxIdx - 1); });
-      document.getElementById("btn-next-photo").addEventListener("click", function () { openLightbox(currentLightboxIdx + 1); });
+      showToast("File index.html terbaru berhasil diunduh.");
     }
 
     document.addEventListener("DOMContentLoaded", function () {
-      applyTheme(EVENT_CONFIG.theme);
-      initPhotos();
-      applyGuestFromURL();
+      cleanHtmlSnapshot = "<!DOCTYPE html>" + String.fromCharCode(10) + document.documentElement.outerHTML;
+
+      initAdminSeparation();
+      initGuestName();
+      applyEventConfigToDOM();
+      applyDriveImages();
+      startCountdown();
       loadSavedWishes();
-      updateCountdown();
-      setInterval(updateCountdown, 1000);
-      bindEvents();
+      initAdminPanel();
+
+      document.getElementById("btn-open-invitation").addEventListener("click", openInvitation);
+      document.getElementById("audio-btn").addEventListener("click", toggleAudio);
+      document.getElementById("btn-download-ics").addEventListener("click", downloadICS);
+      document.getElementById("btn-copy-address").addEventListener("click", function () {
+        copyToClipboard(EVENT_CONFIG.address, "Alamat lokasi berhasil disalin.");
+      });
+      document.getElementById("btn-copy-bank").addEventListener("click", function () {
+        copyToClipboard(EVENT_CONFIG.bankNumber, "Nomor rekening berhasil disalin.");
+        var note = document.getElementById("copy-note");
+        if (note) note.classList.add("show");
+      });
+      document.getElementById("rsvp-form").addEventListener("submit", handleRSVPSubmit);
+
+      document.querySelectorAll("[data-lb-index]").forEach(function (el) {
+        el.addEventListener("click", function () {
+          openLightbox(parseInt(el.getAttribute("data-lb-index"), 10));
+        });
+      });
+      document.getElementById("lb-prev").addEventListener("click", function () {
+        currentLightboxIndex = (currentLightboxIndex - 1 + GALLERY_ITEMS.length) % GALLERY_ITEMS.length;
+        updateLightboxView();
+      });
+      document.getElementById("lb-next").addEventListener("click", function () {
+        currentLightboxIndex = (currentLightboxIndex + 1) % GALLERY_ITEMS.length;
+        updateLightboxView();
+      });
+      document.getElementById("lb-close").addEventListener("click", function () {
+        document.getElementById("lightbox-modal").classList.remove("open");
+      });
+
+      if (isAdminMode) {
+        document.getElementById("btn-open-admin").addEventListener("click", function () {
+          document.getElementById("admin-modal").classList.add("open");
+        });
+        document.getElementById("btn-close-admin").addEventListener("click", function () {
+          document.getElementById("admin-modal").classList.remove("open");
+        });
+        document.getElementById("tab-link-btn").addEventListener("click", function () {
+          document.getElementById("tab-link-btn").classList.add("active");
+          document.getElementById("tab-config-btn").classList.remove("active");
+          document.getElementById("tab-link-content").style.display = "block";
+          document.getElementById("tab-config-content").style.display = "none";
+        });
+        document.getElementById("tab-config-btn").addEventListener("click", function () {
+          document.getElementById("tab-config-btn").classList.add("active");
+          document.getElementById("tab-link-btn").classList.remove("active");
+          document.getElementById("tab-config-content").style.display = "block";
+          document.getElementById("tab-link-content").style.display = "none";
+        });
+        document.getElementById("base-url-input").addEventListener("input", updateGeneratedGuestLink);
+        document.getElementById("guest-input").addEventListener("input", updateGeneratedGuestLink);
+        document.getElementById("btn-copy-guest-link").addEventListener("click", function () {
+          copyToClipboard(document.getElementById("generated-link").value, "Link tamu berhasil disalin.");
+          document.getElementById("link-note").classList.add("show");
+        });
+        document.getElementById("btn-send-wa").addEventListener("click", sendGuestWhatsApp);
+        document.getElementById("btn-save-config").addEventListener("click", saveAdminConfig);
+        document.getElementById("btn-download-html").addEventListener("click", downloadUpdatedHTML);
+      }
+
+      document.addEventListener("visibilitychange", function () {
+        var audio = document.getElementById("bg-audio");
+        if (document.hidden && audio && isAudioPlaying) {
+          audio.pause();
+        } else if (!document.hidden && audio && isAudioPlaying) {
+          audio.play().catch(function () {});
+        }
+      });
     });
   </script>
 </body>
