@@ -3,12 +3,12 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0" />
-  <title>Walimatul Khitan — Rasyid &amp; Raihan</title>
-  <meta name="description" content="Undangan Tasyakuran Walimatul Khitan Rasyid Muhammad Athaya Rabbani &amp; Raihan Muhammad Athaya Rabbani — Minggu, 20 Desember 2026 di Dago Pojok, Bandung." />
+  <title>Walimatul Khitan — Rasyid &amp; Rayhan</title>
+  <meta name="description" content="Undangan Tasyakuran Walimatul Khitan Rasyid Muhammad Athaya Rabbani &amp; Rayhan Muhammad Alif Rabbani — Minggu, 20 Desember 2026 di Dago Pojok, Bandung." />
 
   <!-- Open Graph / WhatsApp Preview -->
   <meta property="og:type" content="website" />
-  <meta property="og:title" content="Walimatul Khitan — Rasyid &amp; Raihan" />
+  <meta property="og:title" content="Walimatul Khitan — Rasyid &amp; Rayhan" />
   <meta property="og:description" content="Sampurasun • Minggu, 20 Desember 2026 • Jl. Gg. Mm Adi, Dago Pojok, Bandung. Kepada Yth. Bapak/Ibu/Saudara/i, kami mengundang kehadiran dan doa restu Anda." />
   <meta property="og:image" content="https://lh3.googleusercontent.com/d/1gRLn7fyUA7b7QcgVUW4MAgUvag8Nt9Ro=w1200" />
   <meta property="og:image:width" content="1200" />
@@ -17,7 +17,7 @@
   <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@700&family=Cormorant+Garamond:ital,wght@0,600;0,700;1,600&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,400;0,700;1,400&family=Cinzel+Decorative:wght@700&family=Cormorant+Garamond:ital,wght@0,600;0,700;1,600&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" />
 
   <style>
     :root {
@@ -96,7 +96,7 @@
         radial-gradient(circle at 82% 82%, rgba(27, 67, 50, 0.07) 0%, transparent 45%);
     }
 
-    /* TOP UTILITY BAR - TERSEMBUNYI SECARA DEFAULT (HANYA MUNCUL DI ?admin=1) */
+    /* TOP UTILITY BAR - HANYA MUNCUL DI ?admin=ariska123 */
     .top-utility {
       display: none;
       position: sticky;
@@ -176,6 +176,8 @@
       margin: 14px auto 4px;
       display: flex;
       justify-content: center;
+      cursor: pointer;
+      user-select: none;
     }
 
     .cover-names {
@@ -184,7 +186,7 @@
 
     .cover-names h1 {
       font-family: 'Cormorant Garamond', serif;
-      font-size: 36px;
+      font-size: 35px;
       line-height: 1.12;
       font-weight: 700;
       color: #ffffff;
@@ -228,7 +230,7 @@
       color: #13291f;
       border: none;
       border-radius: 999px;
-      padding: 14px 30px;
+      padding: 14px 32px;
       font-size: 14px;
       font-weight: 700;
       letter-spacing: 0.04em;
@@ -256,6 +258,17 @@
     @keyframes fadeInUp {
       from { opacity: 0; transform: translateY(14px); }
       to { opacity: 1; transform: translateY(0); }
+    }
+
+    .reveal-item {
+      opacity: 0;
+      transform: translateY(16px);
+      transition: opacity 0.55s ease, transform 0.55s ease;
+    }
+
+    .reveal-item.visible {
+      opacity: 1;
+      transform: translateY(0);
     }
 
     section {
@@ -296,6 +309,66 @@
       border-radius: 18px;
       padding: 18px 16px;
       box-shadow: 0 8px 24px rgba(27, 67, 50, 0.05);
+    }
+
+    /* QURANIC QUOTE CARD */
+    .quran-card {
+      background: linear-gradient(160deg, var(--primary-dark) 0%, var(--primary) 100%);
+      color: #faf6f0;
+      border: 1px solid var(--accent);
+      border-radius: 20px;
+      padding: 22px 18px;
+      text-align: center;
+      position: relative;
+      box-shadow: 0 12px 28px rgba(17, 43, 32, 0.18);
+    }
+
+    .quran-ornament {
+      color: #e7c258;
+      font-size: 13px;
+      letter-spacing: 0.25em;
+      margin-bottom: 10px;
+      display: block;
+    }
+
+    .quran-arabic {
+      font-family: 'Amiri', serif;
+      font-size: 23px;
+      line-height: 1.95;
+      color: #f6df97;
+      direction: rtl;
+      margin-bottom: 12px;
+      font-weight: 700;
+    }
+
+    .quran-translation {
+      font-family: 'Cormorant Garamond', serif;
+      font-style: italic;
+      font-size: 16.5px;
+      line-height: 1.55;
+      color: #ffffff;
+      margin-bottom: 8px;
+    }
+
+    .quran-ref {
+      display: inline-block;
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: #e7c258;
+      padding: 3px 12px;
+      border: 1px solid rgba(231, 194, 88, 0.4);
+      border-radius: 999px;
+      margin-bottom: 10px;
+    }
+
+    .quran-note {
+      font-size: 12px;
+      line-height: 1.6;
+      color: rgba(250, 246, 240, 0.85);
+      border-top: 1px dashed rgba(231, 194, 88, 0.3);
+      padding-top: 10px;
     }
 
     /* PROFILE GRID */
@@ -499,13 +572,26 @@
       border-color: var(--accent);
     }
 
-    /* WISH LIST */
-    .wish-list {
+    /* WISH LIST & STATS */
+    .wish-stats {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
       margin-top: 16px;
+      padding: 8px 12px;
+      background: var(--accent-soft);
+      border-radius: 12px;
+      font-size: 11.5px;
+      font-weight: 700;
+      color: var(--primary);
+    }
+
+    .wish-list {
+      margin-top: 10px;
       display: flex;
       flex-direction: column;
       gap: 10px;
-      max-height: 280px;
+      max-height: 290px;
       overflow-y: auto;
     }
 
@@ -577,10 +663,10 @@
       right: 16px;
       bottom: 66px;
       z-index: 45;
-      width: 44px;
-      height: 44px;
+      width: 46px;
+      height: 46px;
       border-radius: 50%;
-      border: 1px solid var(--accent);
+      border: 1.5px solid var(--accent);
       background: var(--primary);
       color: #f4d67c;
       font-size: 17px;
@@ -588,10 +674,21 @@
       box-shadow: 0 8px 20px rgba(0, 0, 0, 0.28);
       align-items: center;
       justify-content: center;
+      transition: transform 0.2s ease;
     }
 
     .audio-fab.active {
       display: flex;
+    }
+
+    .audio-fab.playing {
+      animation: pulseGold 2.2s infinite;
+    }
+
+    @keyframes pulseGold {
+      0% { box-shadow: 0 0 0 0 rgba(197, 155, 39, 0.55); }
+      70% { box-shadow: 0 0 0 10px rgba(197, 155, 39, 0); }
+      100% { box-shadow: 0 0 0 0 rgba(197, 155, 39, 0); }
     }
 
     /* MODAL */
@@ -695,10 +792,10 @@
   <div id="toast" class="toast"></div>
 
   <div class="app-shell batik-bg">
-    <!-- TOP BAR ADMIN (HANYA TAMPIL JIKA URL MEMILIKI ?admin=1) -->
+    <!-- TOP BAR ADMIN (HANYA TAMPIL JIKA URL MEMILIKI ?admin=ariska123) -->
     <div class="top-utility" id="admin-topbar">
       <button type="button" class="pill-btn primary" id="btn-open-admin">
-        ⚙ Panel Template &amp; Link Tamu
+        ⚙ Panel Admin &amp; Link Tamu
       </button>
       <span id="theme-badge" style="font-size:12px; font-weight:700; color:var(--primary);">Royal Sunda</span>
     </div>
@@ -724,7 +821,7 @@
         </p>
         <h1 id="cover-child-1">Rasyid Muhammad Athaya Rabbani</h1>
         <span class="amp-sunda">&amp;</span>
-        <h1 id="cover-child-2">Raihan Muhammad Athaya Rabbani</h1>
+        <h1 id="cover-child-2">Rayhan Muhammad Alif Rabbani</h1>
         <p id="cover-date" style="margin-top:16px; font-size:14.5px; color:#f4d67c; font-weight:600;">
           Minggu, 20 Desember 2026
         </p>
@@ -743,6 +840,24 @@
 
     <!-- MAIN INVITATION -->
     <main id="invitation-main">
+      <!-- KUTIPAN AYAT AL-QUR'AN TENTANG KHITAN / MILLAH IBRAHIM -->
+      <section id="ayat">
+        <div class="section-tag">Kalam Ilahi • Syariat Fitrah</div>
+        <div class="quran-card reveal-item">
+          <span class="quran-ornament">✦ ﷽ ✦</span>
+          <p class="quran-arabic" lang="ar">
+            ثُمَّ أَوْحَيْنَآ إِلَيْكَ أَنِ ٱتَّبِعْ مِلَّةَ إِبْرَٰهِيمَ حَنِيفًا ۖ وَمَا كَانَ مِنَ ٱلْمُشْرِكِينَ
+          </p>
+          <p class="quran-translation">
+            “Kemudian Kami wahyukan kepadamu (Muhammad): ‘Ikutilah agama Ibrahim seorang yang hanif (lurus),’ dan bukanlah dia termasuk orang-orang yang mempersekutukan Tuhan.”
+          </p>
+          <span class="quran-ref">QS. An-Nahl [16] : 123</span>
+          <p class="quran-note">
+            Khitan merupakan bagian dari syariat fitrah dan sunnah Nabi Ibrahim ‘Alaihissalam sebagai ikhtiar menjaga kesucian diri serta ketaatan putra-putra kami dalam menapaki masa aqil baligh.
+          </p>
+        </div>
+      </section>
+
       <!-- PROFIL ANANDA -->
       <section id="profil">
         <div class="section-tag">Bismillahirrahmanirrahim</div>
@@ -751,25 +866,25 @@
           Assalamu’alaikum Warahmatullahi Wabarakatuh. Dengan memohon rahmat dan ridho Allah SWT, kami bermaksud menyelenggarakan Walimatul Khitan putra-putra kami:
         </p>
 
-        <div class="profile-grid">
+        <div class="profile-grid reveal-item">
           <div class="profile-card">
             <div class="arch-frame">
               <img id="img-rasyid-profile" data-drive-id="13vOUCRAsltqH55jwHVLbnKL15MLetPgx" alt="Rasyid Muhammad Athaya Rabbani" loading="eager" />
             </div>
-            <div class="profile-name" id="name-rasyid">Rasyid Muhammad Athaya Rabbani</div>
+            <div class="profile-name" id="name-rasyid">Rasyid Muhammad Aufar Rabbani</div>
             <div class="profile-role" id="role-rasyid">Putra Kedua Kami</div>
           </div>
 
           <div class="profile-card">
             <div class="arch-frame">
-              <img id="img-raihan-profile" data-drive-id="1-DK0TVwYyw1qFlLRMq_8eBeRrDtJB1Nx" alt="Raihan Muhammad Athaya Rabbani" loading="eager" />
+              <img id="img-raihan-profile" data-drive-id="1-DK0TVwYyw1qFlLRMq_8eBeRrDtJB1Nx" alt="Rayhan Muhammad Alif Rabbani" loading="eager" />
             </div>
-            <div class="profile-name" id="name-raihan">Raihan Muhammad Athaya Rabbani</div>
+            <div class="profile-name" id="name-raihan">Rayhan Muhammad Alif Rabbani</div>
             <div class="profile-role" id="role-raihan">Putra Ketiga Kami</div>
           </div>
         </div>
 
-        <div class="card" style="text-align:center;">
+        <div class="card reveal-item" style="text-align:center;">
           <small style="font-size:11px; text-transform:uppercase; letter-spacing:0.1em; color:var(--text-muted);">
             Keluarga Besar Orang Tua
           </small>
@@ -781,20 +896,20 @@
 
       <!-- WAKTU & LOKASI -->
       <section id="acara">
-        <div class="section-tag">Wanci &amp; Tempat</div>
+        <div class="section-tag">Detail &amp; Agenda</div>
         <h2 class="section-title">Waktu &amp; Lokasi Acara</h2>
         <p class="lead-text">
           Merupakan suatu kehormatan dan kebahagiaan bagi kami apabila Bapak/Ibu/Saudara/i berkenan hadir memberikan doa restu.
         </p>
 
-        <div class="countdown-grid" aria-label="Hitung Mundur Acara">
+        <div class="countdown-grid reveal-item" aria-label="Hitung Mundur Acara">
           <div class="cd-box"><span class="cd-num" id="cd-days">00</span><span class="cd-label">Hari</span></div>
           <div class="cd-box"><span class="cd-num" id="cd-hours">00</span><span class="cd-label">Jam</span></div>
           <div class="cd-box"><span class="cd-num" id="cd-mins">00</span><span class="cd-label">Menit</span></div>
           <div class="cd-box"><span class="cd-num" id="cd-secs">00</span><span class="cd-label">Detik</span></div>
         </div>
 
-        <div class="card" style="text-align:center;">
+        <div class="card reveal-item" style="text-align:center;">
           <p style="font-weight:700; color:var(--primary); font-size:16px;" id="event-day-date">
             Minggu, 20 Desember 2026
           </p>
@@ -815,8 +930,11 @@
             <button type="button" class="pill-btn" id="btn-copy-address">
               📋 Salin Alamat
             </button>
+            <a id="gcal-link" href="#" target="_blank" rel="noopener noreferrer" class="pill-btn">
+              🗓 Google Calendar
+            </a>
             <button type="button" class="pill-btn" id="btn-download-ics">
-              📅 Simpan Kalender
+              📅 File Kalender (.ics)
             </button>
           </div>
         </div>
@@ -831,10 +949,10 @@
         </p>
 
         <!-- FOTO KELUARGA LANDSCAPE PENUH (1 BARIS 1 FOTO) -->
-        <div class="family-stack">
+        <div class="family-stack reveal-item">
           <div class="family-item" data-lb-index="0">
-            <img id="gal-0" data-drive-id="1gRLn7fyUA7b7QcgVUW4MAgUvag8Nt9Ro" alt="Keluarga Besar Riza &amp; Siska" loading="lazy" />
-            <div class="gallery-cap">Keluarga Besar • Riza &amp; Siska</div>
+            <img id="gal-0" data-drive-id="1gRLn7fyUA7b7QcgVUW4MAgUvag8Nt9Ro" alt="Keluarga Besar Bpk. Riza &amp; Ibu Siska" loading="lazy" />
+            <div class="gallery-cap">Keluarga Besar • Bpk.Riza &amp; Ibu.Siska</div>
           </div>
           <div class="family-item" data-lb-index="1">
             <img id="gal-1" data-drive-id="109_3OZ_n9TlY5GKNVYJ5jVq9qs1ElKNL" alt="Kebersamaan Keluarga" loading="lazy" />
@@ -843,22 +961,22 @@
         </div>
 
         <!-- FOTO ANANDA 2 KOLOM -->
-        <div class="gallery-grid">
+        <div class="gallery-grid reveal-item">
           <div class="gallery-item" data-lb-index="2">
-            <img id="gal-2" data-drive-id="13vOUCRAsltqH55jwHVLbnKL15MLetPgx" alt="Rasyid Closeup" loading="lazy" />
-            <div class="gallery-cap">Rasyid • Closeup</div>
+            <img id="gal-2" data-drive-id="13vOUCRAsltqH55jwHVLbnKL15MLetPgx" alt="Rasyid" loading="lazy" />
+            <div class="gallery-cap">Rasyid</div>
           </div>
           <div class="gallery-item" data-lb-index="3">
-            <img id="gal-3" data-drive-id="1-DK0TVwYyw1qFlLRMq_8eBeRrDtJB1Nx" alt="Raihan Closeup" loading="lazy" />
-            <div class="gallery-cap">Raihan • Closeup</div>
+            <img id="gal-3" data-drive-id="1-DK0TVwYyw1qFlLRMq_8eBeRrDtJB1Nx" alt="Raihan" loading="lazy" />
+            <div class="gallery-cap">Raihan</div>
           </div>
           <div class="gallery-item" data-lb-index="4">
-            <img id="gal-4" data-drive-id="1DYdHiyj0CcqC5UQrAMsNSnDeY4c-ZE5h" alt="Rasyid Full Body" loading="lazy" />
-            <div class="gallery-cap">Rasyid • Full Body</div>
+            <img id="gal-4" data-drive-id="1DYdHiyj0CcqC5UQrAMsNSnDeY4c-ZE5h" alt="Rasyid" loading="lazy" />
+            <div class="gallery-cap">Rasyid</div>
           </div>
           <div class="gallery-item" data-lb-index="5">
-            <img id="gal-5" data-drive-id="1l3dgCH8xK5T4dXeiqnnVgpWqdSocbXsu" alt="Raihan Full Body" loading="lazy" />
-            <div class="gallery-cap">Raihan • Full Body</div>
+            <img id="gal-5" data-drive-id="1l3dgCH8xK5T4dXeiqnnVgpWqdSocbXsu" alt="Raihan" loading="lazy" />
+            <div class="gallery-cap">Raihan</div>
           </div>
         </div>
       </section>
@@ -871,7 +989,7 @@
           Doa restu Anda merupakan karunia yang sangat berarti bagi kami. Apabila berkenan mengirimkan tanda kasih, dapat melalui rekening berikut:
         </p>
 
-        <div class="bank-box">
+        <div class="bank-box reveal-item">
           <div style="font-size:12px; opacity:0.85; text-transform:uppercase; letter-spacing:0.1em;" id="bank-name">
             Bank BRI
           </div>
@@ -891,10 +1009,10 @@
         <div class="section-tag">Konfirmasi &amp; Doa</div>
         <h2 class="section-title">RSVP &amp; Ucapan</h2>
         <p class="lead-text">
-          Sampaikan konfirmasi kehadiran serta untaian doa terbaik untuk Rasyid &amp; Raihan.
+          Sampaikan konfirmasi kehadiran serta untaian doa terbaik untuk Rasyid &amp; Rayhan.
         </p>
 
-        <div class="card">
+        <div class="card reveal-item">
           <form id="rsvp-form">
             <div class="form-group">
               <label for="rsvp-name">Nama Lengkap</label>
@@ -922,7 +1040,7 @@
 
             <div class="form-group">
               <label for="rsvp-message">Ucapan &amp; Doa</label>
-              <textarea id="rsvp-message" rows="3" class="form-control" placeholder="Tulis doa terbaik untuk ananda Rasyid &amp; Raihan..." required></textarea>
+              <textarea id="rsvp-message" rows="3" class="form-control" placeholder="Tulis doa terbaik untuk ananda Rasyid &amp; Rayhan..." required></textarea>
             </div>
 
             <button type="submit" id="rsvp-submit-btn" class="pill-btn primary" style="width:100%; justify-content:center; padding:11px;">
@@ -932,6 +1050,11 @@
 
           <div id="rsvp-status" class="status-note"></div>
 
+          <div class="wish-stats" id="wish-stats">
+            <span id="stat-total">💌 1 Doa &amp; Ucapan</span>
+            <span id="stat-hadir">✅ 1 Konfirmasi Hadir</span>
+          </div>
+
           <div class="wish-list" id="wish-list">
             <div class="wish-item">
               <div class="wish-header">
@@ -939,7 +1062,7 @@
                 <span class="wish-badge">Insya Allah Hadir</span>
               </div>
               <p style="font-size:12.5px; color:var(--text-muted); line-height:1.5;">
-                Mugiya janten murangkalih anu soleh, pinter, sareng bagja dunya akherat kanggo Rasyid &amp; Raihan.
+                Mugiya janten murangkalih anu soleh, pinter, sareng bagja dunya akherat kanggo Rasyid &amp; Rayhan.
               </p>
             </div>
           </div>
@@ -949,6 +1072,7 @@
 
     <!-- BOTTOM NAV -->
     <nav class="bottom-nav" id="bottom-nav" aria-label="Navigasi Undangan">
+      <a href="#ayat">Ayat</a>
       <a href="#profil">Profil</a>
       <a href="#acara">Acara</a>
       <a href="#galeri">Galeri</a>
@@ -962,7 +1086,7 @@
   </div>
 
   <!-- AUDIO ELEMENT -->
-  <audio id="bg-audio" loop preload="none"></audio>
+  <audio id="bg-audio" loop preload="none" playsinline></audio>
 
   <!-- LIGHTBOX MODAL -->
   <div class="modal-backdrop" id="lightbox-modal">
@@ -977,7 +1101,7 @@
     </div>
   </div>
 
-  <!-- ADMIN MODAL (HANYA AKTIF DI MODE ADMIN) -->
+  <!-- ADMIN MODAL (HANYA AKTIF DI MODE ADMIN ?admin=ariska123) -->
   <div class="modal-backdrop" id="admin-modal">
     <div class="modal-panel">
       <div style="display:flex; justify-content:space-between; align-items:center;">
@@ -996,7 +1120,7 @@
       <div id="tab-link-content">
         <div class="form-group">
           <label for="base-url-input">URL Dasar Undangan (Otomatis terdeteksi)</label>
-          <input type="text" id="base-url-input" class="form-control" placeholder="https://khitan-rasyid-raihan.vercel.app" />
+          <input type="text" id="base-url-input" class="form-control" placeholder="https://wanara.vercel.app" />
         </div>
 
         <div class="form-group">
@@ -1005,15 +1129,23 @@
         </div>
 
         <div class="form-group">
-          <label for="generated-link">Tautan Personal Tamu (Bersih tanpa tombol admin)</label>
+          <label for="generated-link">Tautan Personal Tamu (Bersih tanpa akses admin)</label>
           <input type="text" id="generated-link" class="form-control" readonly />
         </div>
 
-        <div style="display:flex; gap:8px; flex-wrap:wrap;">
-          <button type="button" class="pill-btn" id="btn-copy-guest-link">Salin Link</button>
+        <div style="display:flex; gap:8px; flex-wrap:wrap; margin-bottom:12px;">
+          <button type="button" class="pill-btn" id="btn-copy-guest-link">Salin Link Tamu</button>
           <button type="button" class="pill-btn primary" id="btn-send-wa">Kirim ke WhatsApp</button>
         </div>
         <div id="link-note" class="status-note">Tautan personal berhasil disalin.</div>
+
+        <div class="form-group" style="margin-top:14px; padding-top:12px; border-top:1px dashed var(--border-gold);">
+          <label for="admin-secret-link">Tautan Khusus Admin Anda (Simpan pribadi)</label>
+          <div style="display:flex; gap:6px;">
+            <input type="text" id="admin-secret-link" class="form-control" readonly />
+            <button type="button" class="pill-btn" id="btn-copy-admin-link">Salin</button>
+          </div>
+        </div>
       </div>
 
       <!-- TAB 2: KONFIGURASI REUSABLE -->
@@ -1032,19 +1164,9 @@
           <input type="text" id="cfg-webhook" class="form-control" placeholder="https://script.google.com/macros/s/.../exec" />
         </div>
 
-        <!-- <div class="form-group">
-          <label for="cfg-audio">URL Audio MP3 Kustom (atau ID Google Drive)</label>
-          <input type="text" id="cfg-audio" class="form-control" placeholder="1keqRaV_USf7mfRBw95nuYLrXaROAyP3U atau ./islamic.mp3" />
-        </div> -->
-
         <div class="form-group">
-          <label for="cfg-audio">URL Audio MP3 Kustom</label>
-          <input
-            type="text"
-            id="cfg-audio"
-            class="form-control"
-            value="https://drive.google.com/uc?export=download&id=1ehg4CFVjquvmxBqp0B1PvF1wg-JWXAA1"
-          />
+          <label for="cfg-audio">Link Google Drive Audio / URL MP3 Kustom</label>
+          <input type="text" id="cfg-audio" class="form-control" placeholder="ID Drive atau https://drive.google.com/... atau ./sholawat.mp3" />
         </div>
 
         <div class="form-group">
@@ -1053,8 +1175,18 @@
         </div>
 
         <div class="form-group">
+          <label for="cfg-role1">Keterangan Ananda 1</label>
+          <input type="text" id="cfg-role1" class="form-control" />
+        </div>
+
+        <div class="form-group">
           <label for="cfg-child2">Nama Ananda 2</label>
           <input type="text" id="cfg-child2" class="form-control" />
+        </div>
+
+        <div class="form-group">
+          <label for="cfg-role2">Keterangan Ananda 2</label>
+          <input type="text" id="cfg-role2" class="form-control" />
         </div>
 
         <div class="form-group">
@@ -1106,9 +1238,11 @@
     var EVENT_CONFIG = {
       theme: "royal",
       rsvpWebhookUrl: "https://script.google.com/macros/s/AKfycbx52FO8p40NnAbxhQPxaqVl_3EKwFCtiaYCleo_N5eADLf1U8xx8faLpYExoW8ctbL0UA/exec",
-      audioSource: "1keqRaV_USf7mfRBw95nuYLrXaROAyP3U",
+      audioSource: "1ehg4CFVjquvmxBqp0B1PvF1wg-JWXAA1",
       child1: "Rasyid Muhammad Athaya Rabbani",
+      role1: "Putra Kedua Kami",
       child2: "Rayhan Muhammad Alif Rabbani",
+      role2: "Putra Ketiga Kami",
       parents: "Bapak Riza Arvan Rabbani & Ibu Siska Noeryulia",
       eventDateDisplay: "Minggu, 20 Desember 2026",
       eventTimeDisplay: "Pukul 09.00 WIB – Selesai",
@@ -1122,10 +1256,19 @@
     };
     /* CONFIG_END */
 
+    var ADMIN_SECRET_KEY = "ariska123";
     var cleanHtmlSnapshot = "";
     var isAdminMode = false;
     var isAudioPlaying = false;
+    var activeAudioMode = "none"; // "mp3" | "synth" | "none"
+    var audioSourceIndex = 0;
+    var audioSourcesList = [];
+    var synthCtx = null;
+    var synthTimer = null;
     var currentLightboxIndex = 0;
+    var renderedWishKeys = {};
+    var totalWishesCount = 1;
+    var totalHadirCount = 1;
 
     var GALLERY_ITEMS = [
       { id: "1gRLn7fyUA7b7QcgVUW4MAgUvag8Nt9Ro", caption: "Keluarga Besar • Bpk.Riza & Ibu.Siska" },
@@ -1143,7 +1286,7 @@
       t.classList.add("show");
       setTimeout(function () {
         t.classList.remove("show");
-      }, 2400);
+      }, 2500);
     }
 
     function escapeHTML(str) {
@@ -1157,7 +1300,7 @@
 
     function initAdminSeparation() {
       var params = new URLSearchParams(window.location.search);
-      isAdminMode = params.get("admin") === "1";
+      isAdminMode = params.get("admin") === ADMIN_SECRET_KEY;
       var topBar = document.getElementById("admin-topbar");
       var adminModal = document.getElementById("admin-modal");
 
@@ -1166,6 +1309,27 @@
       } else {
         if (topBar) topBar.remove();
         if (adminModal) adminModal.remove();
+      }
+
+      // Pintasan rahasia 5x ketuk pada mahkota Siger di sampul untuk membuka mode admin
+      var siger = document.getElementById("siger-trigger");
+      if (siger && !isAdminMode) {
+        var tapCount = 0;
+        var tapTimer = null;
+        siger.addEventListener("click", function () {
+          tapCount++;
+          clearTimeout(tapTimer);
+          tapTimer = setTimeout(function () { tapCount = 0; }, 1600);
+          if (tapCount >= 5) {
+            tapCount = 0;
+            var code = window.prompt("Masukkan kode akses admin:");
+            if (code === ADMIN_SECRET_KEY) {
+              var url = new URL(window.location.href);
+              url.searchParams.set("admin", ADMIN_SECRET_KEY);
+              window.location.href = url.toString();
+            }
+          }
+        });
       }
     }
 
@@ -1201,6 +1365,25 @@
       });
     }
 
+    function updateGoogleCalendarLink() {
+      var gcalEl = document.getElementById("gcal-link");
+      if (!gcalEl) return;
+      var startObj = new Date(EVENT_CONFIG.eventDateISO);
+      if (isNaN(startObj.getTime())) startObj = new Date("2026-12-20T09:00:00+07:00");
+      var endObj = new Date(startObj.getTime() + 5 * 60 * 60 * 1000);
+      var fmt = function (d) {
+        return d.toISOString().replace(/[-:]/g, "").split(".")[0] + "Z";
+      };
+      var title = "Walimatul Khitan " + EVENT_CONFIG.child1 + " & " + EVENT_CONFIG.child2;
+      var details = "Undangan Tasyakuran Walimatul Khitan putra " + EVENT_CONFIG.parents + ".";
+      gcalEl.href =
+        "https://calendar.google.com/calendar/render?action=TEMPLATE" +
+        "&text=" + encodeURIComponent(title) +
+        "&dates=" + fmt(startObj) + "/" + fmt(endObj) +
+        "&details=" + encodeURIComponent(details) +
+        "&location=" + encodeURIComponent(EVENT_CONFIG.address);
+    }
+
     function applyEventConfigToDOM() {
       document.body.setAttribute("data-theme", EVENT_CONFIG.theme || "royal");
       var badgeMap = { royal: "Royal Sunda", sogan: "Sogan Priangan", pajajaran: "Keraton Pajajaran" };
@@ -1209,13 +1392,15 @@
 
       var setText = function (id, val) {
         var el = document.getElementById(id);
-        if (el) el.textContent = val;
+        if (el && val) el.textContent = val;
       };
 
       setText("cover-child-1", EVENT_CONFIG.child1);
       setText("cover-child-2", EVENT_CONFIG.child2);
       setText("name-rasyid", EVENT_CONFIG.child1);
+      setText("role-rasyid", EVENT_CONFIG.role1 || "Putra Kedua Kami");
       setText("name-raihan", EVENT_CONFIG.child2);
+      setText("role-raihan", EVENT_CONFIG.role2 || "Putra Ketiga Kami");
       setText("parents-display", EVENT_CONFIG.parents);
       setText("cover-date", EVENT_CONFIG.eventDateDisplay);
       setText("event-day-date", EVENT_CONFIG.eventDateDisplay);
@@ -1228,6 +1413,7 @@
 
       var mapsEl = document.getElementById("maps-link");
       if (mapsEl) mapsEl.href = EVENT_CONFIG.mapsUrl;
+      updateGoogleCalendarLink();
     }
 
     function startCountdown() {
@@ -1254,58 +1440,157 @@
       setInterval(tick, 1000);
     }
 
+    /* MULTI-ENDPOINT GOOGLE DRIVE AUDIO + FALLBACK KECAPI SULING */
+    function extractDriveId(input) {
+      if (!input) return "";
+      var s = input.trim();
+      var m1 = s.match(/\/file\/d\/([a-zA-Z0-9_-]+)/);
+      if (m1 && m1[1]) return m1[1];
+      var m2 = s.match(/[?&]id=([a-zA-Z0-9_-]+)/);
+      if (m2 && m2[1]) return m2[1];
+      if (/^[a-zA-Z0-9_-]{20,}$/.test(s)) return s;
+      return "";
+    }
+
     function resolveAudioSources(src) {
       if (!src) return [];
-      if (src.indexOf("http") === 0 || src.indexOf("./") === 0 || src.indexOf("/") === 0) {
-        return [src];
+      var s = src.trim();
+      if (s.indexOf("./") === 0 || s.indexOf("/") === 0) {
+        return [s];
       }
-      return [
-        "https://docs.google.com/uc?export=open&id=" + src,
-        "https://drive.google.com/uc?export=download&id=" + src
-      ];
+      var driveId = extractDriveId(s);
+      if (driveId) {
+        return [
+          "https://drive.usercontent.google.com/download?id=" + driveId + "&export=download&confirm=t",
+          "https://docs.google.com/uc?export=open&id=" + driveId,
+          "https://drive.google.com/uc?export=download&id=" + driveId
+        ];
+      }
+      if (s.indexOf("http") === 0) {
+        return [s];
+      }
+      return [];
+    }
+
+    function updateAudioButtonUI(playing) {
+      var btn = document.getElementById("audio-btn");
+      if (!btn) return;
+      if (playing) {
+        btn.textContent = "❚❚";
+        btn.classList.add("playing");
+      } else {
+        btn.textContent = "♪";
+        btn.classList.remove("playing");
+      }
+    }
+
+    function startSundaneseFallbackSynth() {
+      try {
+        var AudioCtx = window.AudioContext || window.webkitAudioContext;
+        if (!AudioCtx) return;
+        if (!synthCtx) synthCtx = new AudioCtx();
+        if (synthCtx.state === "suspended") synthCtx.resume();
+        if (synthTimer) clearInterval(synthTimer);
+
+        // Tangga nada Pelog / Degung Sunda (lembut & menenangkan)
+        var notes = [293.66, 329.63, 392.00, 440.00, 523.25, 587.33, 440.00, 392.00];
+        var step = 0;
+
+        function pluckNote() {
+          if (!isAudioPlaying || activeAudioMode !== "synth" || !synthCtx) return;
+          var now = synthCtx.currentTime;
+          var osc = synthCtx.createOscillator();
+          var gain = synthCtx.createGain();
+          osc.type = "sine";
+          osc.frequency.setValueAtTime(notes[step % notes.length], now);
+          gain.gain.setValueAtTime(0.001, now);
+          gain.gain.exponentialRampToValueAtTime(0.045, now + 0.08);
+          gain.gain.exponentialRampToValueAtTime(0.0008, now + 1.4);
+          osc.connect(gain);
+          gain.connect(synthCtx.destination);
+          osc.start(now);
+          osc.stop(now + 1.45);
+          step++;
+        }
+
+        activeAudioMode = "synth";
+        isAudioPlaying = true;
+        updateAudioButtonUI(true);
+        pluckNote();
+        synthTimer = setInterval(pluckNote, 1300);
+      } catch (e) {}
+    }
+
+    function stopSundaneseFallbackSynth() {
+      if (synthTimer) {
+        clearInterval(synthTimer);
+        synthTimer = null;
+      }
+    }
+
+    function tryNextAudioEndpoint() {
+      var audio = document.getElementById("bg-audio");
+      if (!audio) return;
+
+      if (audioSourceIndex >= audioSourcesList.length) {
+        startSundaneseFallbackSynth();
+        return;
+      }
+
+      var candidateUrl = audioSourcesList[audioSourceIndex];
+      audioSourceIndex++;
+      audio.src = candidateUrl;
+      audio.load();
+
+      var playPromise = audio.play();
+      if (playPromise !== undefined) {
+        playPromise.then(function () {
+          activeAudioMode = "mp3";
+          isAudioPlaying = true;
+          updateAudioButtonUI(true);
+        }).catch(function () {
+          tryNextAudioEndpoint();
+        });
+      }
     }
 
     function playBackgroundAudio() {
       var audio = document.getElementById("bg-audio");
-      var btn = document.getElementById("audio-btn");
       if (!audio) return;
 
-      var sources = resolveAudioSources(EVENT_CONFIG.audioSource);
-      if (sources.length === 0) return;
-
-      var idx = 0;
-      function trySource(i) {
-        if (i >= sources.length) return;
-        audio.src = sources[i];
-        var playPromise = audio.play();
-        if (playPromise !== undefined) {
-          playPromise.then(function () {
-            isAudioPlaying = true;
-            if (btn) btn.textContent = "❚❚";
-          }).catch(function () {
-            trySource(i + 1);
-          });
-        }
-      }
-
-      if (!audio.src) {
-        trySource(idx);
-      } else {
+      if (activeAudioMode === "mp3" && audio.src) {
         audio.play().then(function () {
           isAudioPlaying = true;
-          if (btn) btn.textContent = "❚❚";
-        }).catch(function () {});
+          updateAudioButtonUI(true);
+        }).catch(function () {
+          audioSourceIndex = 0;
+          audioSourcesList = resolveAudioSources(EVENT_CONFIG.audioSource);
+          tryNextAudioEndpoint();
+        });
+        return;
+      }
+
+      if (activeAudioMode === "synth") {
+        startSundaneseFallbackSynth();
+        return;
+      }
+
+      audioSourcesList = resolveAudioSources(EVENT_CONFIG.audioSource);
+      audioSourceIndex = 0;
+      if (audioSourcesList.length === 0) {
+        startSundaneseFallbackSynth();
+      } else {
+        tryNextAudioEndpoint();
       }
     }
 
     function toggleAudio() {
       var audio = document.getElementById("bg-audio");
-      var btn = document.getElementById("audio-btn");
-      if (!audio) return;
       if (isAudioPlaying) {
-        audio.pause();
+        if (audio) audio.pause();
+        stopSundaneseFallbackSynth();
         isAudioPlaying = false;
-        if (btn) btn.textContent = "♪";
+        updateAudioButtonUI(false);
       } else {
         playBackgroundAudio();
       }
@@ -1324,6 +1609,7 @@
 
       window.scrollTo({ top: 0, behavior: "smooth" });
       playBackgroundAudio();
+      triggerScrollReveal();
     }
 
     function copyToClipboard(text, successMsg) {
@@ -1349,17 +1635,24 @@
     }
 
     function downloadICS() {
+      var startObj = new Date(EVENT_CONFIG.eventDateISO);
+      if (isNaN(startObj.getTime())) startObj = new Date("2026-12-20T09:00:00+07:00");
+      var endObj = new Date(startObj.getTime() + 5 * 60 * 60 * 1000);
+      var fmt = function (d) {
+        return d.toISOString().replace(/[-:]/g, "").split(".")[0] + "Z";
+      };
+
       var NL = String.fromCharCode(13, 10);
       var icsLines = [
         "BEGIN:VCALENDAR",
         "VERSION:2.0",
-        "PRODID:-//Walimatul Khitan//Rasyid & Raihan//ID",
+        "PRODID:-//Walimatul Khitan//Rasyid & Rayhan//ID",
         "BEGIN:VEVENT",
-        "DTSTART:20261220T020000Z",
-        "DTEND:20261220T070000Z",
+        "DTSTART:" + fmt(startObj),
+        "DTEND:" + fmt(endObj),
         "SUMMARY:Walimatul Khitan " + EVENT_CONFIG.child1 + " & " + EVENT_CONFIG.child2,
         "LOCATION:" + EVENT_CONFIG.address,
-        "DESCRIPTION:Undangan Tasyakuran Walimatul Khitan putra Bapak Riza Arvan Rabbani & Ibu Siska Noeryulia.",
+        "DESCRIPTION:Undangan Tasyakuran Walimatul Khitan putra " + EVENT_CONFIG.parents + ".",
         "END:VEVENT",
         "END:VCALENDAR"
       ];
@@ -1367,12 +1660,12 @@
       var url = URL.createObjectURL(blob);
       var a = document.createElement("a");
       a.href = url;
-      a.download = "Walimatul-Khitan-Rasyid-Raihan.ics";
+      a.download = "Walimatul-Khitan-Rasyid-Rayhan.ics";
       document.body.appendChild(a);
       a.click();
       document.body.removeChild(a);
       URL.revokeObjectURL(url);
-      showToast("File kalender diunduh.");
+      showToast("File kalender (.ics) diunduh.");
     }
 
     function openLightbox(index) {
@@ -1390,9 +1683,25 @@
       cap.textContent = item.caption;
     }
 
+    function updateWishStatsUI() {
+      var totalEl = document.getElementById("stat-total");
+      var hadirEl = document.getElementById("stat-hadir");
+      if (totalEl) totalEl.textContent = "💌 " + totalWishesCount + " Doa & Ucapan";
+      if (hadirEl) hadirEl.textContent = "✅ " + totalHadirCount + " Konfirmasi Hadir";
+    }
+
     function renderWishItem(name, attendance, message) {
       var list = document.getElementById("wish-list");
       if (!list) return;
+
+      var key = (name + "|" + message).toLowerCase().trim();
+      if (renderedWishKeys[key]) return;
+      renderedWishKeys[key] = true;
+
+      totalWishesCount++;
+      if (attendance === "Hadir") totalHadirCount++;
+      updateWishStatsUI();
+
       var labelMap = {
         "Hadir": "Insya Allah Hadir",
         "Ragu": "Masih Menyesuaikan",
@@ -1478,14 +1787,32 @@
       }
     }
 
+    function triggerScrollReveal() {
+      var items = document.querySelectorAll(".reveal-item");
+      if (!("IntersectionObserver" in window)) {
+        items.forEach(function (el) { el.classList.add("visible"); });
+        return;
+      }
+      var observer = new IntersectionObserver(function (entries) {
+        entries.forEach(function (entry) {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("visible");
+            observer.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.12 });
+      items.forEach(function (el) { observer.observe(el); });
+    }
+
     /* ADMIN PANEL FUNCTIONS */
     function initAdminPanel() {
       if (!isAdminMode) return;
 
       var cleanBase = window.location.origin + window.location.pathname;
       if (cleanBase.indexOf("file://") === 0) {
-        cleanBase = "https://khitan-rasyid-raihan.vercel.app";
+        cleanBase = "https://wanara.vercel.app";
       }
+      cleanBase = cleanBase.replace(/\/+$/, "");
       document.getElementById("base-url-input").value = cleanBase;
       updateGeneratedGuestLink();
 
@@ -1493,7 +1820,9 @@
       document.getElementById("cfg-webhook").value = EVENT_CONFIG.rsvpWebhookUrl || "";
       document.getElementById("cfg-audio").value = EVENT_CONFIG.audioSource || "";
       document.getElementById("cfg-child1").value = EVENT_CONFIG.child1;
+      document.getElementById("cfg-role1").value = EVENT_CONFIG.role1 || "Putra Kedua Kami";
       document.getElementById("cfg-child2").value = EVENT_CONFIG.child2;
+      document.getElementById("cfg-role2").value = EVENT_CONFIG.role2 || "Putra Ketiga Kami";
       document.getElementById("cfg-parents").value = EVENT_CONFIG.parents;
       document.getElementById("cfg-date-iso").value = EVENT_CONFIG.eventDateISO;
       document.getElementById("cfg-address").value = EVENT_CONFIG.address;
@@ -1508,6 +1837,8 @@
       var guest = document.getElementById("guest-input").value.trim();
       var link = guest ? base + "/?to=" + encodeURIComponent(guest) : base + "/";
       document.getElementById("generated-link").value = link;
+      var adminSecretEl = document.getElementById("admin-secret-link");
+      if (adminSecretEl) adminSecretEl.value = base + "/?admin=" + ADMIN_SECRET_KEY;
     }
 
     function sendGuestWhatsApp() {
@@ -1537,7 +1868,9 @@
       EVENT_CONFIG.rsvpWebhookUrl = document.getElementById("cfg-webhook").value.trim();
       EVENT_CONFIG.audioSource = document.getElementById("cfg-audio").value.trim();
       EVENT_CONFIG.child1 = document.getElementById("cfg-child1").value.trim();
+      EVENT_CONFIG.role1 = document.getElementById("cfg-role1").value.trim();
       EVENT_CONFIG.child2 = document.getElementById("cfg-child2").value.trim();
+      EVENT_CONFIG.role2 = document.getElementById("cfg-role2").value.trim();
       EVENT_CONFIG.parents = document.getElementById("cfg-parents").value.trim();
       EVENT_CONFIG.eventDateISO = document.getElementById("cfg-date-iso").value.trim();
       EVENT_CONFIG.address = document.getElementById("cfg-address").value.trim();
@@ -1547,6 +1880,18 @@
       EVENT_CONFIG.bankHolder = document.getElementById("cfg-bank-holder").value.trim();
 
       applyEventConfigToDOM();
+
+      // Muat ulang sumber audio jika diubah admin
+      var audio = document.getElementById("bg-audio");
+      if (audio) {
+        audio.pause();
+        audio.removeAttribute("src");
+      }
+      stopSundaneseFallbackSynth();
+      activeAudioMode = "none";
+      isAudioPlaying = false;
+      updateAudioButtonUI(false);
+
       var note = document.getElementById("cfg-note");
       note.textContent = "Perubahan diterapkan! Klik 'Unduh index.html' untuk menyimpan permanen ke file.";
       note.classList.add("show");
@@ -1598,6 +1943,16 @@
       loadSavedWishes();
       initAdminPanel();
 
+      // Tangani error stream <audio> agar otomatis pindah ke endpoint berikutnya
+      var bgAudio = document.getElementById("bg-audio");
+      if (bgAudio) {
+        bgAudio.addEventListener("error", function () {
+          if (activeAudioMode !== "synth") {
+            tryNextAudioEndpoint();
+          }
+        });
+      }
+
       document.getElementById("btn-open-invitation").addEventListener("click", openInvitation);
       document.getElementById("audio-btn").addEventListener("click", toggleAudio);
       document.getElementById("btn-download-ics").addEventListener("click", downloadICS);
@@ -1611,6 +1966,8 @@
       });
       document.getElementById("rsvp-form").addEventListener("submit", handleRSVPSubmit);
 
+      // Lightbox controls + Touch Swipe + Keyboard
+      var lbModal = document.getElementById("lightbox-modal");
       document.querySelectorAll("[data-lb-index]").forEach(function (el) {
         el.addEventListener("click", function () {
           openLightbox(parseInt(el.getAttribute("data-lb-index"), 10));
@@ -1625,15 +1982,52 @@
         updateLightboxView();
       });
       document.getElementById("lb-close").addEventListener("click", function () {
-        document.getElementById("lightbox-modal").classList.remove("open");
+        lbModal.classList.remove("open");
+      });
+      lbModal.addEventListener("click", function (ev) {
+        if (ev.target === lbModal) lbModal.classList.remove("open");
+      });
+
+      var touchStartX = 0;
+      lbModal.addEventListener("touchstart", function (ev) {
+        if (ev.changedTouches && ev.changedTouches[0]) touchStartX = ev.changedTouches[0].screenX;
+      }, { passive: true });
+      lbModal.addEventListener("touchend", function (ev) {
+        if (!ev.changedTouches || !ev.changedTouches[0]) return;
+        var dx = ev.changedTouches[0].screenX - touchStartX;
+        if (Math.abs(dx) > 45) {
+          if (dx < 0) {
+            currentLightboxIndex = (currentLightboxIndex + 1) % GALLERY_ITEMS.length;
+          } else {
+            currentLightboxIndex = (currentLightboxIndex - 1 + GALLERY_ITEMS.length) % GALLERY_ITEMS.length;
+          }
+          updateLightboxView();
+        }
+      }, { passive: true });
+
+      document.addEventListener("keydown", function (ev) {
+        if (!lbModal.classList.contains("open")) return;
+        if (ev.key === "Escape") lbModal.classList.remove("open");
+        if (ev.key === "ArrowLeft") {
+          currentLightboxIndex = (currentLightboxIndex - 1 + GALLERY_ITEMS.length) % GALLERY_ITEMS.length;
+          updateLightboxView();
+        }
+        if (ev.key === "ArrowRight") {
+          currentLightboxIndex = (currentLightboxIndex + 1) % GALLERY_ITEMS.length;
+          updateLightboxView();
+        }
       });
 
       if (isAdminMode) {
+        var adminModalEl = document.getElementById("admin-modal");
         document.getElementById("btn-open-admin").addEventListener("click", function () {
-          document.getElementById("admin-modal").classList.add("open");
+          adminModalEl.classList.add("open");
         });
         document.getElementById("btn-close-admin").addEventListener("click", function () {
-          document.getElementById("admin-modal").classList.remove("open");
+          adminModalEl.classList.remove("open");
+        });
+        adminModalEl.addEventListener("click", function (ev) {
+          if (ev.target === adminModalEl) adminModalEl.classList.remove("open");
         });
         document.getElementById("tab-link-btn").addEventListener("click", function () {
           document.getElementById("tab-link-btn").classList.add("active");
@@ -1653,6 +2047,9 @@
           copyToClipboard(document.getElementById("generated-link").value, "Link tamu berhasil disalin.");
           document.getElementById("link-note").classList.add("show");
         });
+        document.getElementById("btn-copy-admin-link").addEventListener("click", function () {
+          copyToClipboard(document.getElementById("admin-secret-link").value, "Link admin rahasia disalin.");
+        });
         document.getElementById("btn-send-wa").addEventListener("click", sendGuestWhatsApp);
         document.getElementById("btn-save-config").addEventListener("click", saveAdminConfig);
         document.getElementById("btn-download-html").addEventListener("click", downloadUpdatedHTML);
@@ -1660,10 +2057,15 @@
 
       document.addEventListener("visibilitychange", function () {
         var audio = document.getElementById("bg-audio");
-        if (document.hidden && audio && isAudioPlaying) {
-          audio.pause();
-        } else if (!document.hidden && audio && isAudioPlaying) {
-          audio.play().catch(function () {});
+        if (document.hidden && isAudioPlaying) {
+          if (audio) audio.pause();
+          stopSundaneseFallbackSynth();
+        } else if (!document.hidden && isAudioPlaying) {
+          if (activeAudioMode === "mp3" && audio) {
+            audio.play().catch(function () {});
+          } else if (activeAudioMode === "synth") {
+            startSundaneseFallbackSynth();
+          }
         }
       });
     });
