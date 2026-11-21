@@ -4,12 +4,12 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0" />
   <title>Walimatul Khitan — Rasyid &amp; Rayhan</title>
-  <meta name="description" content="Undangan Tasyakuran Walimatul Khitan Rasyid Muhammad Athaya Rabbani &amp; Rayhan Muhammad Alif Rabbani — Minggu, 20 Desember 2026 di Dago Pojok, Bandung." />
+  <meta name="description" content="Undangan Tasyakuran Walimatul Khitan Rasyid Muhammad Aufar Rabbani &amp; Rayhan Muhammad Alif Rabbani — Minggu, 20 Desember 2026 di Dago Pojok, Bandung." />
 
   <!-- Open Graph / WhatsApp Preview -->
   <meta property="og:type" content="website" />
   <meta property="og:title" content="Walimatul Khitan — Rasyid &amp; Rayhan" />
-  <meta property="og:description" content="Sampurasun • Minggu, 20 Desember 2026 • Jl. Gg. Mm Adi, Dago Pojok, Bandung. Kepada Yth. Bapak/Ibu/Saudara/i, kami mengundang kehadiran dan doa restu Anda." />
+  <meta property="og:description" content="Sampurasun • Minggu, 20 Desember 2026 • Jl. Gg. Mm Adi, Dago Pojok, Bandung (Masuk gang belok kanan terus belok kiri sampai ada lapang, sebelah rumah kayu). Kepada Yth. Bapak/Ibu/Saudara/i, kami mengundang kehadiran dan doa restu Anda." />
   <meta property="og:image" content="https://lh3.googleusercontent.com/d/1gRLn7fyUA7b7QcgVUW4MAgUvag8Nt9Ro=w1200" />
   <meta property="og:image:width" content="1200" />
   <meta property="og:image:height" content="630" />
@@ -247,7 +247,7 @@
     /* MAIN CONTENT */
     #invitation-main {
       display: none;
-      padding-bottom: 92px;
+      padding-bottom: 110px;
     }
 
     #invitation-main.active {
@@ -454,6 +454,38 @@
       opacity: 0.85;
     }
 
+    /* ADDRESS LANDMARK NOTE CALLOUT */
+    .address-note-box {
+      background: var(--accent-soft);
+      border: 1px solid var(--border-gold);
+      border-left: 4px solid var(--accent);
+      border-radius: 12px;
+      padding: 11px 14px;
+      margin: 12px auto 16px;
+      text-align: left;
+      max-width: 365px;
+      box-shadow: 0 4px 12px rgba(197, 155, 39, 0.08);
+    }
+
+    .address-note-title {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--primary);
+      margin-bottom: 4px;
+    }
+
+    .address-note-text {
+      font-size: 12.5px;
+      line-height: 1.55;
+      color: var(--text-main);
+      font-weight: 600;
+    }
+
     /* GALLERY: FAMILY LANDSCAPE FULL + CHILDREN GRID */
     .family-stack {
       display: flex;
@@ -577,6 +609,8 @@
       display: flex;
       justify-content: space-between;
       align-items: center;
+      flex-wrap: wrap;
+      gap: 6px;
       margin-top: 16px;
       padding: 8px 12px;
       background: var(--accent-soft);
@@ -586,12 +620,36 @@
       color: var(--primary);
     }
 
+    .wish-subbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-top: 8px;
+      font-size: 11px;
+      color: var(--text-muted);
+    }
+
+    .wish-refresh-btn {
+      border: 1px solid var(--border-gold);
+      background: #ffffff;
+      color: var(--primary);
+      font-size: 11px;
+      font-weight: 600;
+      padding: 3px 9px;
+      border-radius: 999px;
+      cursor: pointer;
+    }
+
+    .wish-refresh-btn:hover {
+      background: var(--accent-soft);
+    }
+
     .wish-list {
       margin-top: 10px;
       display: flex;
       flex-direction: column;
       gap: 10px;
-      max-height: 290px;
+      max-height: 360px;
       overflow-y: auto;
     }
 
@@ -619,6 +677,7 @@
       border-radius: 999px;
       background: var(--accent-soft);
       color: var(--primary);
+      white-space: nowrap;
     }
 
     /* BOTTOM NAV - TERSEMBUNYI SAAT DI SAMPUL */
@@ -683,6 +742,49 @@
 
     .audio-fab.playing {
       animation: pulseGold 2.2s infinite;
+    }
+
+    /* GOOGLE DRIVE AUDIO DOCK (AKTIF OTOMATIS JIKA STREAM LANGSUNG DIBLOKIR BROWSER) */
+    .drive-audio-dock {
+      display: none;
+      position: fixed;
+      left: 50%;
+      bottom: 62px;
+      transform: translateX(-50%);
+      width: calc(100% - 32px);
+      max-width: 420px;
+      z-index: 46;
+      background: var(--primary-dark);
+      border: 1.5px solid var(--accent);
+      border-radius: 16px;
+      padding: 6px 10px;
+      box-shadow: 0 12px 28px rgba(0, 0, 0, 0.35);
+      align-items: center;
+      gap: 8px;
+    }
+
+    .drive-audio-dock.open {
+      display: flex;
+    }
+
+    .drive-audio-dock iframe {
+      flex: 1;
+      height: 54px;
+      border: none;
+      border-radius: 10px;
+      background: #162e23;
+    }
+
+    .dock-close-btn {
+      background: rgba(255, 255, 255, 0.12);
+      color: #f4d67c;
+      border: 1px solid rgba(231, 194, 88, 0.4);
+      border-radius: 50%;
+      width: 28px;
+      height: 28px;
+      font-size: 12px;
+      cursor: pointer;
+      flex-shrink: 0;
     }
 
     @keyframes pulseGold {
@@ -819,7 +921,7 @@
         <p style="font-size:12.5px; letter-spacing:0.14em; text-transform:uppercase; color:#e6d8b0; margin-bottom:10px;">
           Undangan Tasyakuran Khitanan
         </p>
-        <h1 id="cover-child-1">Rasyid Muhammad Athaya Rabbani</h1>
+        <h1 id="cover-child-1">Rasyid Muhammad Aufar Rabbani</h1>
         <span class="amp-sunda">&amp;</span>
         <h1 id="cover-child-2">Rayhan Muhammad Alif Rabbani</h1>
         <p id="cover-date" style="margin-top:16px; font-size:14.5px; color:#f4d67c; font-weight:600;">
@@ -869,7 +971,7 @@
         <div class="profile-grid reveal-item">
           <div class="profile-card">
             <div class="arch-frame">
-              <img id="img-rasyid-profile" data-drive-id="13vOUCRAsltqH55jwHVLbnKL15MLetPgx" alt="Rasyid Muhammad Athaya Rabbani" loading="eager" />
+              <img id="img-rasyid-profile" data-drive-id="13vOUCRAsltqH55jwHVLbnKL15MLetPgx" alt="Rasyid Muhammad Aufar Rabbani" loading="eager" />
             </div>
             <div class="profile-name" id="name-rasyid">Rasyid Muhammad Aufar Rabbani</div>
             <div class="profile-role" id="role-rasyid">Putra Kedua Kami</div>
@@ -916,12 +1018,20 @@
           <p style="font-size:13px; color:var(--text-muted); margin:4px 0 12px;" id="event-time">
             Pukul 09.00 WIB – Selesai
           </p>
-          <p style="font-size:13.5px; font-weight:700; color:var(--text-main);" id="event-venue">
+          <p style="font-size:14px; font-weight:700; color:var(--text-main);" id="event-venue">
             Kediaman Keluarga
           </p>
-          <p style="font-size:13px; color:var(--text-muted); margin-bottom:14px;" id="event-address">
+          <p style="font-size:13px; color:var(--text-muted); margin-top:2px;" id="event-address">
             Jl. Gg. Mm Adi, Dago Pojok, Bandung
           </p>
+
+          <!-- CATATAN / PATOKAN RUTE LOKASI -->
+          <div class="address-note-box" id="address-note-wrap">
+            <div class="address-note-title">🧭 Patokan / Catatan Lokasi</div>
+            <p class="address-note-text" id="event-address-note">
+              Masuk gang belok kanan terus belok kiri sampai ada lapang, sebelah rumah kayu.
+            </p>
+          </div>
 
           <div style="display:flex; flex-wrap:wrap; justify-content:center; gap:8px;">
             <a id="maps-link" href="https://maps.app.goo.gl/Cf7Pqj61greFxXCi9" target="_blank" rel="noopener noreferrer" class="pill-btn primary">
@@ -1051,18 +1161,19 @@
           <div id="rsvp-status" class="status-note"></div>
 
           <div class="wish-stats" id="wish-stats">
-            <span id="stat-total">💌 1 Doa &amp; Ucapan</span>
-            <span id="stat-hadir">✅ 1 Konfirmasi Hadir</span>
+            <span id="stat-total">💌 0 Doa &amp; Ucapan</span>
+            <span id="stat-hadir">✅ 0 Konfirmasi Hadir</span>
+          </div>
+
+          <div class="wish-subbar">
+            <span id="sync-status-label">Menampilkan 10 ucapan terbaru</span>
+            <button type="button" class="wish-refresh-btn" id="btn-refresh-wishes">↻ Segarkan</button>
           </div>
 
           <div class="wish-list" id="wish-list">
-            <div class="wish-item">
-              <div class="wish-header">
-                <strong>Keluarga Besar Dago Pojok</strong>
-                <span class="wish-badge">Insya Allah Hadir</span>
-              </div>
-              <p style="font-size:12.5px; color:var(--text-muted); line-height:1.5;">
-                Mugiya janten murangkalih anu soleh, pinter, sareng bagja dunya akherat kanggo Rasyid &amp; Rayhan.
+            <div class="wish-item" id="wish-placeholder">
+              <p style="font-size:12.5px; color:var(--text-muted); text-align:center;">
+                Memuat 10 doa &amp; ucapan terbaru...
               </p>
             </div>
           </div>
@@ -1079,14 +1190,20 @@
       <a href="#rsvp">RSVP</a>
     </nav>
 
+    <!-- MINI PLAYER GOOGLE DRIVE (CADANGAN OTOMATIS JIKA STREAM LANGSUNG DIBLOKIR BROWSER) -->
+    <div class="drive-audio-dock" id="drive-audio-dock">
+      <iframe id="drive-audio-iframe" allow="autoplay" title="Pemutar Sholawat"></iframe>
+      <button type="button" class="dock-close-btn" id="btn-close-dock" title="Sembunyikan Pemutar">✕</button>
+    </div>
+
     <!-- AUDIO BUTTON -->
-    <button type="button" class="audio-fab" id="audio-btn" title="Musik Latar">
+    <button type="button" class="audio-fab" id="audio-btn" title="Musik Sholawat">
       ♪
     </button>
   </div>
 
   <!-- AUDIO ELEMENT -->
-  <audio id="bg-audio" loop preload="none" playsinline></audio>
+  <audio id="bg-audio" loop preload="auto" playsinline></audio>
 
   <!-- LIGHTBOX MODAL -->
   <div class="modal-backdrop" id="lightbox-modal">
@@ -1205,6 +1322,11 @@
         </div>
 
         <div class="form-group">
+          <label for="cfg-address-note">Patokan / Catatan Rute Lokasi</label>
+          <textarea id="cfg-address-note" rows="2" class="form-control"></textarea>
+        </div>
+
+        <div class="form-group">
           <label for="cfg-maps">Link Google Maps</label>
           <input type="text" id="cfg-maps" class="form-control" />
         </div>
@@ -1239,7 +1361,7 @@
       theme: "royal",
       rsvpWebhookUrl: "https://script.google.com/macros/s/AKfycbx52FO8p40NnAbxhQPxaqVl_3EKwFCtiaYCleo_N5eADLf1U8xx8faLpYExoW8ctbL0UA/exec",
       audioSource: "1ehg4CFVjquvmxBqp0B1PvF1wg-JWXAA1",
-      child1: "Rasyid Muhammad Athaya Rabbani",
+      child1: "Rasyid Muhammad Aufar Rabbani",
       role1: "Putra Kedua Kami",
       child2: "Rayhan Muhammad Alif Rabbani",
       role2: "Putra Ketiga Kami",
@@ -1249,6 +1371,7 @@
       eventDateISO: "2026-12-20T09:00:00+07:00",
       venue: "Kediaman Keluarga",
       address: "Jl. Gg. Mm Adi, Dago Pojok, Bandung",
+      addressNote: "Masuk gang belok kanan terus belok kiri sampai ada lapang, sebelah rumah kayu.",
       mapsUrl: "https://maps.app.goo.gl/Cf7Pqj61greFxXCi9",
       bankName: "Bank BRI",
       bankNumber: "067401004442506",
@@ -1257,18 +1380,17 @@
     /* CONFIG_END */
 
     var ADMIN_SECRET_KEY = "ariska123";
+    var MAX_DISPLAY_WISHES = 10;
     var cleanHtmlSnapshot = "";
     var isAdminMode = false;
     var isAudioPlaying = false;
-    var activeAudioMode = "none"; // "mp3" | "synth" | "none"
+    var activeAudioMode = "none"; // "native" | "drive-dock" | "none"
     var audioSourceIndex = 0;
     var audioSourcesList = [];
-    var synthCtx = null;
-    var synthTimer = null;
+    var currentDriveAudioId = "";
     var currentLightboxIndex = 0;
-    var renderedWishKeys = {};
-    var totalWishesCount = 1;
-    var totalHadirCount = 1;
+    var wishesState = [];
+    var sheetStats = { total: 0, hadir: 0 };
 
     var GALLERY_ITEMS = [
       { id: "1gRLn7fyUA7b7QcgVUW4MAgUvag8Nt9Ro", caption: "Keluarga Besar • Bpk.Riza & Ibu.Siska" },
@@ -1286,7 +1408,7 @@
       t.classList.add("show");
       setTimeout(function () {
         t.classList.remove("show");
-      }, 2500);
+      }, 2800);
     }
 
     function escapeHTML(str) {
@@ -1311,7 +1433,6 @@
         if (adminModal) adminModal.remove();
       }
 
-      // Pintasan rahasia 5x ketuk pada mahkota Siger di sampul untuk membuka mode admin
       var siger = document.getElementById("siger-trigger");
       if (siger && !isAdminMode) {
         var tapCount = 0;
@@ -1375,7 +1496,8 @@
         return d.toISOString().replace(/[-:]/g, "").split(".")[0] + "Z";
       };
       var title = "Walimatul Khitan " + EVENT_CONFIG.child1 + " & " + EVENT_CONFIG.child2;
-      var details = "Undangan Tasyakuran Walimatul Khitan putra " + EVENT_CONFIG.parents + ".";
+      var notePart = EVENT_CONFIG.addressNote ? " (Patokan: " + EVENT_CONFIG.addressNote + ")" : "";
+      var details = "Undangan Tasyakuran Walimatul Khitan putra " + EVENT_CONFIG.parents + "." + notePart;
       gcalEl.href =
         "https://calendar.google.com/calendar/render?action=TEMPLATE" +
         "&text=" + encodeURIComponent(title) +
@@ -1392,7 +1514,7 @@
 
       var setText = function (id, val) {
         var el = document.getElementById(id);
-        if (el && val) el.textContent = val;
+        if (el && val !== undefined) el.textContent = val;
       };
 
       setText("cover-child-1", EVENT_CONFIG.child1);
@@ -1407,9 +1529,15 @@
       setText("event-time", EVENT_CONFIG.eventTimeDisplay);
       setText("event-venue", EVENT_CONFIG.venue);
       setText("event-address", EVENT_CONFIG.address);
+      setText("event-address-note", EVENT_CONFIG.addressNote || "");
       setText("bank-name", EVENT_CONFIG.bankName);
       setText("bank-number", EVENT_CONFIG.bankNumber);
       setText("bank-holder", EVENT_CONFIG.bankHolder);
+
+      var noteWrap = document.getElementById("address-note-wrap");
+      if (noteWrap) {
+        noteWrap.style.display = (EVENT_CONFIG.addressNote && EVENT_CONFIG.addressNote.trim() !== "") ? "block" : "none";
+      }
 
       var mapsEl = document.getElementById("maps-link");
       if (mapsEl) mapsEl.href = EVENT_CONFIG.mapsUrl;
@@ -1440,7 +1568,9 @@
       setInterval(tick, 1000);
     }
 
-    /* MULTI-ENDPOINT GOOGLE DRIVE AUDIO + FALLBACK KECAPI SULING */
+    /* =====================================================================
+       PEMUTAR SHOLAWAT.MP3 ASLI (PRIORITAS LOKAL + GOOGLE DRIVE STREAM + PLAYER)
+       ===================================================================== */
     function extractDriveId(input) {
       if (!input) return "";
       var s = input.trim();
@@ -1453,23 +1583,31 @@
     }
 
     function resolveAudioSources(src) {
-      if (!src) return [];
-      var s = src.trim();
+      var candidates = [];
+      var s = (src || "").trim();
+      currentDriveAudioId = "";
+
       if (s.indexOf("./") === 0 || s.indexOf("/") === 0) {
-        return [s];
+        candidates.push(s);
+        return candidates;
       }
+
       var driveId = extractDriveId(s);
       if (driveId) {
-        return [
-          "https://drive.usercontent.google.com/download?id=" + driveId + "&export=download&confirm=t",
-          "https://docs.google.com/uc?export=open&id=" + driveId,
-          "https://drive.google.com/uc?export=download&id=" + driveId
-        ];
+        currentDriveAudioId = driveId;
+        // 1. Cek jika sholawat.mp3 sudah diunggah sejajar di Vercel/GitHub (instan & 100% bebas blokir)
+        candidates.push("./sholawat.mp3");
+        // 2. Jalur direct stream Google Drive
+        candidates.push("https://docs.google.com/uc?export=download&id=" + driveId);
+        candidates.push("https://drive.usercontent.google.com/download?id=" + driveId + "&export=download&confirm=t");
+        candidates.push("https://drive.google.com/uc?export=open&id=" + driveId);
+        return candidates;
       }
+
       if (s.indexOf("http") === 0) {
-        return [s];
+        candidates.push(s);
       }
-      return [];
+      return candidates;
     }
 
     function updateAudioButtonUI(playing) {
@@ -1484,48 +1622,25 @@
       }
     }
 
-    function startSundaneseFallbackSynth() {
-      try {
-        var AudioCtx = window.AudioContext || window.webkitAudioContext;
-        if (!AudioCtx) return;
-        if (!synthCtx) synthCtx = new AudioCtx();
-        if (synthCtx.state === "suspended") synthCtx.resume();
-        if (synthTimer) clearInterval(synthTimer);
-
-        // Tangga nada Pelog / Degung Sunda (lembut & menenangkan)
-        var notes = [293.66, 329.63, 392.00, 440.00, 523.25, 587.33, 440.00, 392.00];
-        var step = 0;
-
-        function pluckNote() {
-          if (!isAudioPlaying || activeAudioMode !== "synth" || !synthCtx) return;
-          var now = synthCtx.currentTime;
-          var osc = synthCtx.createOscillator();
-          var gain = synthCtx.createGain();
-          osc.type = "sine";
-          osc.frequency.setValueAtTime(notes[step % notes.length], now);
-          gain.gain.setValueAtTime(0.001, now);
-          gain.gain.exponentialRampToValueAtTime(0.045, now + 0.08);
-          gain.gain.exponentialRampToValueAtTime(0.0008, now + 1.4);
-          osc.connect(gain);
-          gain.connect(synthCtx.destination);
-          osc.start(now);
-          osc.stop(now + 1.45);
-          step++;
-        }
-
-        activeAudioMode = "synth";
-        isAudioPlaying = true;
-        updateAudioButtonUI(true);
-        pluckNote();
-        synthTimer = setInterval(pluckNote, 1300);
-      } catch (e) {}
+    function openDriveAudioDock(driveId) {
+      var dock = document.getElementById("drive-audio-dock");
+      var iframe = document.getElementById("drive-audio-iframe");
+      if (!dock || !iframe || !driveId) return;
+      iframe.src = "https://drive.google.com/file/d/" + driveId + "/preview?autoplay=1";
+      dock.classList.add("open");
+      activeAudioMode = "drive-dock";
+      isAudioPlaying = true;
+      updateAudioButtonUI(true);
     }
 
-    function stopSundaneseFallbackSynth() {
-      if (synthTimer) {
-        clearInterval(synthTimer);
-        synthTimer = null;
-      }
+    function closeDriveAudioDock() {
+      var dock = document.getElementById("drive-audio-dock");
+      var iframe = document.getElementById("drive-audio-iframe");
+      if (iframe) iframe.src = "about:blank";
+      if (dock) dock.classList.remove("open");
+      activeAudioMode = "none";
+      isAudioPlaying = false;
+      updateAudioButtonUI(false);
     }
 
     function tryNextAudioEndpoint() {
@@ -1533,7 +1648,14 @@
       if (!audio) return;
 
       if (audioSourceIndex >= audioSourcesList.length) {
-        startSundaneseFallbackSynth();
+        // Jika browser memblokir <audio> langsung dari Drive, buka Google Drive Official Player untuk sholawat.mp3
+        if (currentDriveAudioId) {
+          openDriveAudioDock(currentDriveAudioId);
+        } else {
+          isAudioPlaying = false;
+          updateAudioButtonUI(false);
+          showToast("Ketuk tombol musik untuk memutar sholawat.mp3");
+        }
         return;
       }
 
@@ -1545,7 +1667,7 @@
       var playPromise = audio.play();
       if (playPromise !== undefined) {
         playPromise.then(function () {
-          activeAudioMode = "mp3";
+          activeAudioMode = "native";
           isAudioPlaying = true;
           updateAudioButtonUI(true);
         }).catch(function () {
@@ -1558,7 +1680,7 @@
       var audio = document.getElementById("bg-audio");
       if (!audio) return;
 
-      if (activeAudioMode === "mp3" && audio.src) {
+      if (activeAudioMode === "native" && audio.src) {
         audio.play().then(function () {
           isAudioPlaying = true;
           updateAudioButtonUI(true);
@@ -1570,16 +1692,14 @@
         return;
       }
 
-      if (activeAudioMode === "synth") {
-        startSundaneseFallbackSynth();
+      if (activeAudioMode === "drive-dock" && currentDriveAudioId) {
+        openDriveAudioDock(currentDriveAudioId);
         return;
       }
 
       audioSourcesList = resolveAudioSources(EVENT_CONFIG.audioSource);
       audioSourceIndex = 0;
-      if (audioSourcesList.length === 0) {
-        startSundaneseFallbackSynth();
-      } else {
+      if (audioSourcesList.length > 0) {
         tryNextAudioEndpoint();
       }
     }
@@ -1587,10 +1707,13 @@
     function toggleAudio() {
       var audio = document.getElementById("bg-audio");
       if (isAudioPlaying) {
-        if (audio) audio.pause();
-        stopSundaneseFallbackSynth();
-        isAudioPlaying = false;
-        updateAudioButtonUI(false);
+        if (activeAudioMode === "native" && audio) {
+          audio.pause();
+          isAudioPlaying = false;
+          updateAudioButtonUI(false);
+        } else if (activeAudioMode === "drive-dock") {
+          closeDriveAudioDock();
+        }
       } else {
         playBackgroundAudio();
       }
@@ -1642,6 +1765,7 @@
         return d.toISOString().replace(/[-:]/g, "").split(".")[0] + "Z";
       };
 
+      var fullLoc = EVENT_CONFIG.address + (EVENT_CONFIG.addressNote ? " (" + EVENT_CONFIG.addressNote + ")" : "");
       var NL = String.fromCharCode(13, 10);
       var icsLines = [
         "BEGIN:VCALENDAR",
@@ -1651,7 +1775,7 @@
         "DTSTART:" + fmt(startObj),
         "DTEND:" + fmt(endObj),
         "SUMMARY:Walimatul Khitan " + EVENT_CONFIG.child1 + " & " + EVENT_CONFIG.child2,
-        "LOCATION:" + EVENT_CONFIG.address,
+        "LOCATION:" + fullLoc,
         "DESCRIPTION:Undangan Tasyakuran Walimatul Khitan putra " + EVENT_CONFIG.parents + ".",
         "END:VEVENT",
         "END:VCALENDAR"
@@ -1683,63 +1807,140 @@
       cap.textContent = item.caption;
     }
 
-    function updateWishStatsUI() {
+    /* =====================================================================
+       SINKRONISASI RSVP & 10 UCAPAN TERATAS DARI GOOGLE APPS SCRIPT
+       ===================================================================== */
+    function renderTop10Wishes(items, customStats) {
+      var list = document.getElementById("wish-list");
       var totalEl = document.getElementById("stat-total");
       var hadirEl = document.getElementById("stat-hadir");
-      if (totalEl) totalEl.textContent = "💌 " + totalWishesCount + " Doa & Ucapan";
-      if (hadirEl) hadirEl.textContent = "✅ " + totalHadirCount + " Konfirmasi Hadir";
-    }
-
-    function renderWishItem(name, attendance, message) {
-      var list = document.getElementById("wish-list");
       if (!list) return;
 
-      var key = (name + "|" + message).toLowerCase().trim();
-      if (renderedWishKeys[key]) return;
-      renderedWishKeys[key] = true;
+      var top10 = (items || []).slice(0, MAX_DISPLAY_WISHES);
+      var totalCount = (customStats && typeof customStats.total === "number") ? customStats.total : items.length;
+      var hadirCount = (customStats && typeof customStats.hadir === "number")
+        ? customStats.hadir
+        : items.filter(function (w) { return w.attendance === "Hadir"; }).length;
 
-      totalWishesCount++;
-      if (attendance === "Hadir") totalHadirCount++;
-      updateWishStatsUI();
+      if (totalEl) totalEl.textContent = "💌 " + totalCount + " Doa & Ucapan";
+      if (hadirEl) hadirEl.textContent = "✅ " + hadirCount + " Konfirmasi Hadir";
+
+      list.innerHTML = "";
+      if (top10.length === 0) {
+        list.innerHTML =
+          '<div class="wish-item">' +
+            '<p style="font-size:12.5px; color:var(--text-muted); text-align:center;">' +
+              "Belum ada ucapan. Jadilah yang pertama mengirimkan doa restu untuk Rasyid &amp; Rayhan." +
+            "</p>" +
+          "</div>";
+        return;
+      }
 
       var labelMap = {
         "Hadir": "Insya Allah Hadir",
         "Ragu": "Masih Menyesuaikan",
         "Tidak Hadir": "Belum Dapat Hadir"
       };
-      var div = document.createElement("div");
-      div.className = "wish-item";
-      div.innerHTML =
-        '<div class="wish-header">' +
-          "<strong>" + escapeHTML(name) + "</strong>" +
-          '<span class="wish-badge">' + escapeHTML(labelMap[attendance] || attendance) + "</span>" +
-        "</div>" +
-        '<p style="font-size:12.5px; color:var(--text-muted); line-height:1.5;">' +
-          escapeHTML(message) +
-        "</p>";
-      list.insertBefore(div, list.firstChild);
+
+      top10.forEach(function (w) {
+        var div = document.createElement("div");
+        div.className = "wish-item";
+        div.innerHTML =
+          '<div class="wish-header">' +
+            "<strong>" + escapeHTML(w.name) + "</strong>" +
+            '<span class="wish-badge">' + escapeHTML(labelMap[w.attendance] || w.attendance) + "</span>" +
+          "</div>" +
+          '<p style="font-size:12.5px; color:var(--text-muted); line-height:1.5;">' +
+            escapeHTML(w.message) +
+          "</p>";
+        list.appendChild(div);
+      });
+    }
+
+    function applySheetResponse(res) {
+      if (!res || !Array.isArray(res.wishes)) return;
+      var deduped = [];
+      var seen = {};
+      res.wishes.forEach(function (w) {
+        if (!w || !w.name || !w.message) return;
+        var key = (w.name + "|" + w.message).toLowerCase().trim();
+        if (!seen[key]) {
+          seen[key] = true;
+          deduped.push({
+            name: String(w.name),
+            attendance: String(w.attendance || "Hadir"),
+            guests: String(w.guests || "1"),
+            message: String(w.message)
+          });
+        }
+      });
+
+      wishesState = deduped;
+      sheetStats = {
+        total: typeof res.totalWishes === "number" ? res.totalWishes : deduped.length,
+        hadir: typeof res.totalHadir === "number"
+          ? res.totalHadir
+          : deduped.filter(function (x) { return x.attendance === "Hadir"; }).length
+      };
+
+      try {
+        localStorage.setItem("khitan_wishes_v2", JSON.stringify(deduped.slice(0, MAX_DISPLAY_WISHES)));
+      } catch (e) {}
+
+      renderTop10Wishes(deduped, sheetStats);
+      var syncLabel = document.getElementById("sync-status-label");
+      if (syncLabel) syncLabel.textContent = "🟢 Tersinkron • 10 ucapan teratas";
+    }
+
+    function loadWishesViaJSONP(baseUrl) {
+      var cbName = "khitanJsonpCb_" + Date.now();
+      var script = document.createElement("script");
+      window[cbName] = function (data) {
+        applySheetResponse(data);
+        delete window[cbName];
+        if (script.parentNode) script.parentNode.removeChild(script);
+      };
+      script.onerror = function () {
+        delete window[cbName];
+        if (script.parentNode) script.parentNode.removeChild(script);
+      };
+      var sep = baseUrl.indexOf("?") === -1 ? "?" : "&";
+      script.src = baseUrl + sep + "action=list&limit=" + MAX_DISPLAY_WISHES + "&callback=" + cbName + "&t=" + Date.now();
+      document.body.appendChild(script);
+    }
+
+    function fetchLiveWishesFromSheet() {
+      var syncLabel = document.getElementById("sync-status-label");
+      if (!EVENT_CONFIG.rsvpWebhookUrl) {
+        if (syncLabel) syncLabel.textContent = "Menampilkan 10 ucapan terbaru";
+        return;
+      }
+
+      if (syncLabel) syncLabel.textContent = "Menyinkronkan data Google Sheets...";
+      var sep = EVENT_CONFIG.rsvpWebhookUrl.indexOf("?") === -1 ? "?" : "&";
+      var url = EVENT_CONFIG.rsvpWebhookUrl + sep + "action=list&limit=" + MAX_DISPLAY_WISHES + "&t=" + Date.now();
+
+      fetch(url, { method: "GET", redirect: "follow" })
+        .then(function (r) { return r.json(); })
+        .then(function (res) {
+          applySheetResponse(res);
+        })
+        .catch(function () {
+          // Cadangan JSONP jika fetch lintas-domain redirect diblokir browser
+          loadWishesViaJSONP(EVENT_CONFIG.rsvpWebhookUrl);
+        });
     }
 
     function loadSavedWishes() {
       try {
-        var saved = JSON.parse(localStorage.getItem("khitan_wishes_v1") || "[]");
-        saved.forEach(function (w) {
-          renderWishItem(w.name, w.attendance, w.message);
-        });
+        var cached = JSON.parse(localStorage.getItem("khitan_wishes_v2") || "[]");
+        if (Array.isArray(cached) && cached.length > 0) {
+          wishesState = cached;
+          renderTop10Wishes(cached);
+        }
       } catch (e) {}
 
-      if (EVENT_CONFIG.rsvpWebhookUrl) {
-        fetch(EVENT_CONFIG.rsvpWebhookUrl)
-          .then(function (r) { return r.json(); })
-          .then(function (res) {
-            if (res && Array.isArray(res.wishes)) {
-              res.wishes.slice().reverse().forEach(function (w) {
-                renderWishItem(w.name, w.attendance, w.message);
-              });
-            }
-          })
-          .catch(function () {});
-      }
+      fetchLiveWishesFromSheet();
     }
 
     function handleRSVPSubmit(e) {
@@ -1757,26 +1958,32 @@
 
       var payload = { name: name, attendance: attendance, guests: guests, message: message };
 
-      try {
-        var existing = JSON.parse(localStorage.getItem("khitan_wishes_v1") || "[]");
-        existing.push(payload);
-        localStorage.setItem("khitan_wishes_v1", JSON.stringify(existing.slice(-30)));
-      } catch (err) {}
+      // Tampilkan langsung di urutan teratas (maksimal 10 teratas)
+      wishesState.unshift(payload);
+      sheetStats.total = Math.max(sheetStats.total + 1, wishesState.length);
+      if (attendance === "Hadir") {
+        sheetStats.hadir = Math.max(sheetStats.hadir + 1, 1);
+      }
+      renderTop10Wishes(wishesState, sheetStats);
 
-      renderWishItem(name, attendance, message);
+      try {
+        localStorage.setItem("khitan_wishes_v2", JSON.stringify(wishesState.slice(0, MAX_DISPLAY_WISHES)));
+      } catch (err) {}
 
       if (EVENT_CONFIG.rsvpWebhookUrl) {
         fetch(EVENT_CONFIG.rsvpWebhookUrl, {
           method: "POST",
           mode: "no-cors",
-          headers: { "Content-Type": "application/json" },
+          headers: { "Content-Type": "text/plain;charset=utf-8" },
           body: JSON.stringify(payload)
         }).finally(function () {
           btn.disabled = false;
           btn.textContent = "Kirim Konfirmasi & Ucapan";
           document.getElementById("rsvp-message").value = "";
-          statusEl.textContent = "Terima kasih, konfirmasi dan doa Anda telah tercatat.";
+          statusEl.textContent = "Terima kasih, konfirmasi dan doa Anda telah tersimpan di Google Sheets.";
           statusEl.classList.add("show");
+          // Sinkron ulang 10 teratas dari Google Sheets setelah 1,8 detik
+          setTimeout(fetchLiveWishesFromSheet, 1800);
         });
       } else {
         btn.disabled = false;
@@ -1826,6 +2033,7 @@
       document.getElementById("cfg-parents").value = EVENT_CONFIG.parents;
       document.getElementById("cfg-date-iso").value = EVENT_CONFIG.eventDateISO;
       document.getElementById("cfg-address").value = EVENT_CONFIG.address;
+      document.getElementById("cfg-address-note").value = EVENT_CONFIG.addressNote || "";
       document.getElementById("cfg-maps").value = EVENT_CONFIG.mapsUrl;
       document.getElementById("cfg-bank-name").value = EVENT_CONFIG.bankName;
       document.getElementById("cfg-bank").value = EVENT_CONFIG.bankNumber;
@@ -1845,6 +2053,7 @@
       var guest = document.getElementById("guest-input").value.trim() || "Bapak/Ibu/Saudara/i";
       var link = document.getElementById("generated-link").value;
       var NL = String.fromCharCode(10);
+      var noteLine = EVENT_CONFIG.addressNote ? ("🧭 _Patokan: " + EVENT_CONFIG.addressNote + "_" + NL) : "";
       var msg =
         "Sampurasun 🙏✨" + NL +
         "Assalamu’alaikum Warahmatullahi Wabarakatuh" + NL + NL +
@@ -1854,7 +2063,8 @@
         "👦 *" + EVENT_CONFIG.child2 + "*" + NL + NL +
         "📅 " + EVENT_CONFIG.eventDateDisplay + NL +
         "⏰ " + EVENT_CONFIG.eventTimeDisplay + NL +
-        "📍 " + EVENT_CONFIG.address + NL + NL +
+        "📍 " + EVENT_CONFIG.address + NL +
+        noteLine + NL +
         "🔗 *Buka Undangan Digital:*" + NL +
         link + NL + NL +
         "Hatur nuhun atas kehadiran dan doa restunya." + NL +
@@ -1874,6 +2084,7 @@
       EVENT_CONFIG.parents = document.getElementById("cfg-parents").value.trim();
       EVENT_CONFIG.eventDateISO = document.getElementById("cfg-date-iso").value.trim();
       EVENT_CONFIG.address = document.getElementById("cfg-address").value.trim();
+      EVENT_CONFIG.addressNote = document.getElementById("cfg-address-note").value.trim();
       EVENT_CONFIG.mapsUrl = document.getElementById("cfg-maps").value.trim();
       EVENT_CONFIG.bankName = document.getElementById("cfg-bank-name").value.trim();
       EVENT_CONFIG.bankNumber = document.getElementById("cfg-bank").value.trim();
@@ -1881,13 +2092,12 @@
 
       applyEventConfigToDOM();
 
-      // Muat ulang sumber audio jika diubah admin
       var audio = document.getElementById("bg-audio");
       if (audio) {
         audio.pause();
         audio.removeAttribute("src");
       }
-      stopSundaneseFallbackSynth();
+      closeDriveAudioDock();
       activeAudioMode = "none";
       isAudioPlaying = false;
       updateAudioButtonUI(false);
@@ -1943,11 +2153,10 @@
       loadSavedWishes();
       initAdminPanel();
 
-      // Tangani error stream <audio> agar otomatis pindah ke endpoint berikutnya
       var bgAudio = document.getElementById("bg-audio");
       if (bgAudio) {
         bgAudio.addEventListener("error", function () {
-          if (activeAudioMode !== "synth") {
+          if (activeAudioMode !== "drive-dock") {
             tryNextAudioEndpoint();
           }
         });
@@ -1955,9 +2164,11 @@
 
       document.getElementById("btn-open-invitation").addEventListener("click", openInvitation);
       document.getElementById("audio-btn").addEventListener("click", toggleAudio);
+      document.getElementById("btn-close-dock").addEventListener("click", closeDriveAudioDock);
       document.getElementById("btn-download-ics").addEventListener("click", downloadICS);
       document.getElementById("btn-copy-address").addEventListener("click", function () {
-        copyToClipboard(EVENT_CONFIG.address, "Alamat lokasi berhasil disalin.");
+        var fullAddr = EVENT_CONFIG.address + (EVENT_CONFIG.addressNote ? " (Patokan: " + EVENT_CONFIG.addressNote + ")" : "");
+        copyToClipboard(fullAddr, "Alamat & patokan lokasi berhasil disalin.");
       });
       document.getElementById("btn-copy-bank").addEventListener("click", function () {
         copyToClipboard(EVENT_CONFIG.bankNumber, "Nomor rekening berhasil disalin.");
@@ -1965,6 +2176,10 @@
         if (note) note.classList.add("show");
       });
       document.getElementById("rsvp-form").addEventListener("submit", handleRSVPSubmit);
+      document.getElementById("btn-refresh-wishes").addEventListener("click", function () {
+        fetchLiveWishesFromSheet();
+        showToast("Memuat ulang 10 ucapan terbaru...");
+      });
 
       // Lightbox controls + Touch Swipe + Keyboard
       var lbModal = document.getElementById("lightbox-modal");
@@ -2057,15 +2272,10 @@
 
       document.addEventListener("visibilitychange", function () {
         var audio = document.getElementById("bg-audio");
-        if (document.hidden && isAudioPlaying) {
-          if (audio) audio.pause();
-          stopSundaneseFallbackSynth();
-        } else if (!document.hidden && isAudioPlaying) {
-          if (activeAudioMode === "mp3" && audio) {
-            audio.play().catch(function () {});
-          } else if (activeAudioMode === "synth") {
-            startSundaneseFallbackSynth();
-          }
+        if (document.hidden && isAudioPlaying && activeAudioMode === "native" && audio) {
+          audio.pause();
+        } else if (!document.hidden && isAudioPlaying && activeAudioMode === "native" && audio) {
+          audio.play().catch(function () {});
         }
       });
     });
