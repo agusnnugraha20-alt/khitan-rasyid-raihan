@@ -101,7 +101,7 @@
       display: none;
       position: sticky;
       top: 0;
-      z-index: 50;
+      z-index: 60;
       justify-content: space-between;
       align-items: center;
       padding: 10px 14px;
@@ -142,7 +142,12 @@
       background: var(--primary-dark);
     }
 
-    /* COVER SCREEN */
+    .pill-btn.sm {
+      font-size: 11px;
+      padding: 5px 10px;
+    }
+
+    /* COVER SCREEN + CURTAIN SLIDE-UP TRANSITION */
     #cover {
       min-height: 100vh;
       padding: 36px 24px 44px;
@@ -154,11 +159,38 @@
       background: linear-gradient(170deg, var(--primary-dark) 0%, var(--primary) 52%, var(--bg-outer) 100%);
       color: #faf6f0;
       position: relative;
+      z-index: 30;
+      transition: transform 0.72s cubic-bezier(0.77, 0, 0.175, 1), opacity 0.6s ease;
+      will-change: transform, opacity;
+    }
+
+    #cover.opening {
+      position: fixed;
+      top: 0;
+      left: 50%;
+      width: 100%;
+      max-width: 460px;
+      transform: translate(-50%, -102%);
+      opacity: 0;
+      pointer-events: none;
     }
 
     #cover.opened {
       display: none;
     }
+
+    /* ORNAMEN SUDUT SUNDA DI SAMPUL */
+    .cover-corner {
+      position: absolute;
+      width: 54px;
+      height: 54px;
+      pointer-events: none;
+      opacity: 0.65;
+    }
+    .cover-corner.tl { top: 14px; left: 14px; }
+    .cover-corner.tr { top: 14px; right: 14px; transform: scaleX(-1); }
+    .cover-corner.bl { bottom: 14px; left: 14px; transform: scaleY(-1); }
+    .cover-corner.br { bottom: 14px; right: 14px; transform: scale(-1, -1); }
 
     .sunda-badge {
       display: inline-block;
@@ -208,6 +240,7 @@
       border-radius: 16px;
       padding: 14px 16px;
       margin: 14px 0 20px;
+      backdrop-filter: blur(4px);
     }
 
     .guest-box small {
@@ -247,16 +280,16 @@
     /* MAIN CONTENT */
     #invitation-main {
       display: none;
-      padding-bottom: 110px;
+      padding-bottom: 115px;
     }
 
     #invitation-main.active {
       display: block;
-      animation: fadeInUp 0.55s ease;
+      animation: fadeInUp 0.65s ease;
     }
 
     @keyframes fadeInUp {
-      from { opacity: 0; transform: translateY(14px); }
+      from { opacity: 0; transform: translateY(16px); }
       to { opacity: 1; transform: translateY(0); }
     }
 
@@ -272,8 +305,17 @@
     }
 
     section {
-      padding: 28px 20px;
-      border-bottom: 1px dashed var(--border-gold);
+      padding: 28px 20px 24px;
+      position: relative;
+    }
+
+    /* PEMBATAS MOTIF KAWUNG / SUNDA ANTAR SECTION */
+    .sunda-divider {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 4px 24px;
+      opacity: 0.72;
     }
 
     .section-tag {
@@ -371,6 +413,33 @@
       padding-top: 10px;
     }
 
+    /* SKELETON SHIMMER UNTUK FOTO */
+    .shimmer-box {
+      position: relative;
+      background: linear-gradient(110deg, var(--accent-soft) 25%, #fff9eb 45%, var(--accent-soft) 65%);
+      background-size: 220% 100%;
+      animation: skeletonShimmer 1.5s infinite linear;
+    }
+
+    .shimmer-box.loaded {
+      animation: none;
+      background: var(--accent-soft);
+    }
+
+    .shimmer-box img {
+      opacity: 0;
+      transition: opacity 0.45s ease, transform 0.35s ease;
+    }
+
+    .shimmer-box.loaded img {
+      opacity: 1;
+    }
+
+    @keyframes skeletonShimmer {
+      0% { background-position: 200% 0; }
+      100% { background-position: -200% 0; }
+    }
+
     /* PROFILE GRID */
     .profile-grid {
       display: grid;
@@ -394,7 +463,6 @@
       border-radius: 999px 999px 14px 14px;
       overflow: hidden;
       border: 2px solid var(--accent);
-      background: var(--accent-soft);
       margin-bottom: 10px;
     }
 
@@ -423,7 +491,7 @@
       letter-spacing: 0.08em;
     }
 
-    /* COUNTDOWN */
+    /* COUNTDOWN & BANNER HARI-H */
     .countdown-grid {
       display: grid;
       grid-template-columns: repeat(4, 1fr);
@@ -454,16 +522,44 @@
       opacity: 0.85;
     }
 
-    /* ADDRESS LANDMARK NOTE CALLOUT */
+    .hari-h-banner {
+      display: none;
+      background: linear-gradient(135deg, var(--primary-dark), var(--primary));
+      color: #faf6f0;
+      border: 1.5px solid var(--accent);
+      border-radius: 16px;
+      padding: 14px 16px;
+      text-align: center;
+      margin-bottom: 16px;
+      box-shadow: 0 8px 20px rgba(27, 67, 50, 0.14);
+    }
+
+    .hari-h-banner.show {
+      display: block;
+    }
+
+    .hari-h-banner strong {
+      display: block;
+      color: #f4d67c;
+      font-size: 14px;
+      margin-bottom: 3px;
+    }
+
+    .hari-h-banner span {
+      font-size: 12px;
+      opacity: 0.92;
+    }
+
+    /* ADDRESS LANDMARK NOTE CALLOUT + 4-STEP ROUTE FLOW */
     .address-note-box {
       background: var(--accent-soft);
       border: 1px solid var(--border-gold);
       border-left: 4px solid var(--accent);
-      border-radius: 12px;
-      padding: 11px 14px;
-      margin: 12px auto 16px;
+      border-radius: 14px;
+      padding: 12px 14px;
+      margin: 14px auto 16px;
       text-align: left;
-      max-width: 365px;
+      max-width: 380px;
       box-shadow: 0 4px 12px rgba(197, 155, 39, 0.08);
     }
 
@@ -476,14 +572,57 @@
       letter-spacing: 0.08em;
       text-transform: uppercase;
       color: var(--primary);
-      margin-bottom: 4px;
+      margin-bottom: 8px;
+    }
+
+    .route-steps-flow {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 5px;
+      margin-bottom: 8px;
+    }
+
+    .route-step-chip {
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+      background: #ffffff;
+      border: 1px solid var(--border-gold);
+      border-radius: 8px;
+      padding: 4px 8px;
+      font-size: 11.5px;
+      font-weight: 700;
+      color: var(--primary);
+    }
+
+    .route-step-num {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 16px;
+      height: 16px;
+      border-radius: 50%;
+      background: var(--primary);
+      color: #f4d67c;
+      font-size: 10px;
+      font-weight: 700;
+      flex-shrink: 0;
+    }
+
+    .route-step-arrow {
+      font-size: 11px;
+      font-weight: 700;
+      color: #9b7614;
     }
 
     .address-note-text {
-      font-size: 12.5px;
-      line-height: 1.55;
-      color: var(--text-main);
-      font-weight: 600;
+      font-size: 12px;
+      line-height: 1.5;
+      color: var(--text-muted);
+      font-weight: 500;
+      border-top: 1px dashed var(--border-gold);
+      padding-top: 6px;
     }
 
     /* GALLERY: FAMILY LANDSCAPE FULL + CHILDREN GRID */
@@ -499,7 +638,6 @@
       border-radius: 16px;
       overflow: hidden;
       border: 1px solid var(--border-gold);
-      background: #13291f;
       aspect-ratio: 16 / 9;
       cursor: pointer;
     }
@@ -510,7 +648,6 @@
       object-fit: cover;
       object-position: center 22%;
       display: block;
-      transition: transform 0.35s ease;
     }
 
     .family-item:hover img {
@@ -528,7 +665,6 @@
       border-radius: 14px;
       overflow: hidden;
       border: 1px solid var(--border-gold);
-      background: #13291f;
       aspect-ratio: 3 / 4;
       cursor: pointer;
     }
@@ -539,7 +675,6 @@
       object-fit: cover;
       object-position: center 20%;
       display: block;
-      transition: transform 0.35s ease;
     }
 
     .gallery-item:hover img {
@@ -556,22 +691,76 @@
       font-weight: 600;
     }
 
-    /* BANK BOX */
-    .bank-box {
-      background: linear-gradient(145deg, var(--primary) 0%, var(--primary-dark) 100%);
+    /* VIRTUAL BANK CARD & OPTIONAL E-WALLET/QRIS */
+    .bank-card-virtual {
+      position: relative;
+      overflow: hidden;
+      background: linear-gradient(135deg, var(--primary-dark) 0%, var(--primary) 58%, #255842 100%);
       color: #faf6f0;
-      border: 1px solid var(--accent);
-      border-radius: 18px;
-      padding: 20px 16px;
-      text-align: center;
+      border: 1.5px solid var(--accent);
+      border-radius: 20px;
+      padding: 20px 18px;
+      text-align: left;
+      box-shadow: 0 14px 30px rgba(17, 43, 32, 0.22);
+    }
+
+    .bank-card-virtual::after {
+      content: "";
+      position: absolute;
+      right: -32px;
+      bottom: -32px;
+      width: 140px;
+      height: 140px;
+      border-radius: 50%;
+      border: 18px solid rgba(231, 194, 88, 0.08);
+      pointer-events: none;
+    }
+
+    .bank-card-top {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 14px;
+    }
+
+    .bank-chip {
+      width: 36px;
+      height: 26px;
+      border-radius: 6px;
+      background: linear-gradient(135deg, #f3d786 0%, #c59b27 100%);
+      border: 1px solid rgba(255, 255, 255, 0.45);
+      position: relative;
+    }
+
+    .bank-chip::before {
+      content: "";
+      position: absolute;
+      inset: 5px 8px;
+      border: 1px solid rgba(19, 41, 31, 0.35);
+      border-radius: 2px;
     }
 
     .bank-acc {
-      font-size: 24px;
+      font-size: 22px;
       font-weight: 700;
-      letter-spacing: 0.08em;
+      letter-spacing: 0.09em;
       color: #f4d67c;
       margin: 6px 0 4px;
+      font-variant-numeric: tabular-nums;
+    }
+
+    .ewallet-card {
+      margin-top: 12px;
+      background: var(--card-bg);
+      border: 1px solid var(--border-gold);
+      border-radius: 16px;
+      padding: 14px 16px;
+      text-align: center;
+      display: none;
+    }
+
+    .ewallet-card.show {
+      display: block;
     }
 
     /* FORMS */
@@ -680,7 +869,15 @@
       white-space: nowrap;
     }
 
-    /* BOTTOM NAV - TERSEMBUNYI SAAT DI SAMPUL */
+    .wish-time {
+      display: inline-block;
+      margin-top: 5px;
+      font-size: 10.5px;
+      color: var(--text-muted);
+      opacity: 0.85;
+    }
+
+    /* BOTTOM NAV + SCROLL-SPY ACTIVE INDICATOR */
     .bottom-nav {
       display: none;
       position: fixed;
@@ -689,11 +886,11 @@
       transform: translateX(-50%);
       width: calc(100% - 28px);
       max-width: 430px;
-      background: rgba(250, 246, 240, 0.95);
+      background: rgba(250, 246, 240, 0.96);
       backdrop-filter: blur(10px);
       border: 1px solid var(--accent);
       border-radius: 999px;
-      padding: 8px 14px;
+      padding: 6px 10px;
       justify-content: space-around;
       z-index: 40;
       box-shadow: 0 10px 26px rgba(0, 0, 0, 0.22);
@@ -708,14 +905,21 @@
       color: var(--text-muted);
       font-size: 11.5px;
       font-weight: 700;
-      padding: 4px 8px;
+      padding: 5px 10px;
+      border-radius: 999px;
+      transition: all 0.2s ease;
     }
 
     .bottom-nav a:hover {
       color: var(--primary);
     }
 
-    /* AUDIO FAB - TERSEMBUNYI SAAT DI SAMPUL */
+    .bottom-nav a.nav-active {
+      background: var(--primary);
+      color: #f4d67c;
+    }
+
+    /* AUDIO FAB + MINI EQUALIZER */
     .audio-fab {
       display: none;
       position: fixed;
@@ -744,7 +948,38 @@
       animation: pulseGold 2.2s infinite;
     }
 
-    /* GOOGLE DRIVE AUDIO DOCK (AKTIF OTOMATIS JIKA STREAM LANGSUNG DIBLOKIR BROWSER) */
+    .eq-bars {
+      display: none;
+      align-items: flex-end;
+      gap: 2.5px;
+      height: 15px;
+    }
+
+    .audio-fab.playing .eq-bars {
+      display: inline-flex;
+    }
+
+    .audio-fab.playing .note-icon {
+      display: none;
+    }
+
+    .eq-bar {
+      width: 3px;
+      background: #f4d67c;
+      border-radius: 2px;
+      animation: eqDance 0.85s ease-in-out infinite;
+    }
+
+    .eq-bar:nth-child(1) { height: 7px; animation-delay: 0s; }
+    .eq-bar:nth-child(2) { height: 14px; animation-delay: 0.2s; }
+    .eq-bar:nth-child(3) { height: 9px; animation-delay: 0.4s; }
+
+    @keyframes eqDance {
+      0%, 100% { height: 5px; }
+      50% { height: 15px; }
+    }
+
+    /* GOOGLE DRIVE AUDIO DOCK */
     .drive-audio-dock {
       display: none;
       position: fixed;
@@ -844,6 +1079,56 @@
       color: #ffffff;
     }
 
+    /* ADMIN RECAP & BULK GUEST LIST */
+    .admin-recap-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 6px;
+      background: var(--accent-soft);
+      border: 1px solid var(--border-gold);
+      border-radius: 14px;
+      padding: 10px 8px;
+      margin: 10px 0 12px;
+      text-align: center;
+    }
+
+    .admin-recap-item strong {
+      display: block;
+      font-size: 16px;
+      color: var(--primary);
+    }
+
+    .admin-recap-item span {
+      font-size: 10px;
+      color: var(--text-muted);
+      font-weight: 600;
+    }
+
+    .bulk-list-wrap {
+      margin-top: 10px;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      max-height: 230px;
+      overflow-y: auto;
+    }
+
+    .bulk-guest-card {
+      background: #ffffff;
+      border: 1px solid var(--border-gold);
+      border-radius: 12px;
+      padding: 9px 10px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .bulk-guest-card.sent {
+      background: #f0f9f4;
+      border-color: rgba(27, 67, 50, 0.35);
+    }
+
     .status-note {
       font-size: 12px;
       margin-top: 8px;
@@ -904,6 +1189,28 @@
 
     <!-- COVER SCREEN -->
     <div id="cover">
+      <!-- ORNAMEN SUDUT SUNDA SVG -->
+      <svg class="cover-corner tl" viewBox="0 0 60 60" fill="none" aria-hidden="true">
+        <path d="M4 54V16C4 9.37258 9.37258 4 16 4H54" stroke="#E7C258" stroke-width="1.6"/>
+        <path d="M10 42V18C10 13.5817 13.5817 10 18 10H42" stroke="#E7C258" stroke-width="1" stroke-dasharray="3 3"/>
+        <circle cx="16" cy="16" r="3" fill="#E7C258"/>
+      </svg>
+      <svg class="cover-corner tr" viewBox="0 0 60 60" fill="none" aria-hidden="true">
+        <path d="M4 54V16C4 9.37258 9.37258 4 16 4H54" stroke="#E7C258" stroke-width="1.6"/>
+        <path d="M10 42V18C10 13.5817 13.5817 10 18 10H42" stroke="#E7C258" stroke-width="1" stroke-dasharray="3 3"/>
+        <circle cx="16" cy="16" r="3" fill="#E7C258"/>
+      </svg>
+      <svg class="cover-corner bl" viewBox="0 0 60 60" fill="none" aria-hidden="true">
+        <path d="M4 54V16C4 9.37258 9.37258 4 16 4H54" stroke="#E7C258" stroke-width="1.6"/>
+        <path d="M10 42V18C10 13.5817 13.5817 10 18 10H42" stroke="#E7C258" stroke-width="1" stroke-dasharray="3 3"/>
+        <circle cx="16" cy="16" r="3" fill="#E7C258"/>
+      </svg>
+      <svg class="cover-corner br" viewBox="0 0 60 60" fill="none" aria-hidden="true">
+        <path d="M4 54V16C4 9.37258 9.37258 4 16 4H54" stroke="#E7C258" stroke-width="1.6"/>
+        <path d="M10 42V18C10 13.5817 13.5817 10 18 10H42" stroke="#E7C258" stroke-width="1" stroke-dasharray="3 3"/>
+        <circle cx="16" cy="16" r="3" fill="#E7C258"/>
+      </svg>
+
       <div style="width:100%;">
         <span class="sunda-badge">Sampurasun • Walimatul Khitan</span>
         <div class="siger-wrap" id="siger-trigger" title="Walimatul Khitan">
@@ -943,7 +1250,7 @@
     <!-- MAIN INVITATION -->
     <main id="invitation-main">
       <!-- KUTIPAN AYAT AL-QUR'AN TENTANG KHITAN / MILLAH IBRAHIM -->
-      <section id="ayat">
+      <section id="ayat" data-spy-section="ayat">
         <div class="section-tag">Kalam Ilahi • Syariat Fitrah</div>
         <div class="quran-card reveal-item">
           <span class="quran-ornament">✦ ﷽ ✦</span>
@@ -960,8 +1267,19 @@
         </div>
       </section>
 
+      <!-- PEMBATAS MOTIF KAWUNG SUNDA -->
+      <div class="sunda-divider" aria-hidden="true">
+        <svg width="240" height="18" viewBox="0 0 240 18" fill="none">
+          <line x1="0" y1="9" x2="94" y2="9" stroke="#C59B27" stroke-opacity="0.45" stroke-dasharray="3 3"/>
+          <path d="M120 2L126 9L120 16L114 9Z" stroke="#C59B27" stroke-width="1.3" fill="rgba(197,155,39,0.15)"/>
+          <circle cx="104" cy="9" r="2.2" fill="#C59B27"/>
+          <circle cx="136" cy="9" r="2.2" fill="#C59B27"/>
+          <line x1="146" y1="9" x2="240" y2="9" stroke="#C59B27" stroke-opacity="0.45" stroke-dasharray="3 3"/>
+        </svg>
+      </div>
+
       <!-- PROFIL ANANDA -->
-      <section id="profil">
+      <section id="profil" data-spy-section="profil">
         <div class="section-tag">Bismillahirrahmanirrahim</div>
         <h2 class="section-title">Putra-Putra Kami</h2>
         <p class="lead-text" id="opening-text">
@@ -970,7 +1288,7 @@
 
         <div class="profile-grid reveal-item">
           <div class="profile-card">
-            <div class="arch-frame">
+            <div class="arch-frame shimmer-box">
               <img id="img-rasyid-profile" data-drive-id="13vOUCRAsltqH55jwHVLbnKL15MLetPgx" alt="Rasyid Muhammad Aufar Rabbani" loading="eager" />
             </div>
             <div class="profile-name" id="name-rasyid">Rasyid Muhammad Aufar Rabbani</div>
@@ -978,7 +1296,7 @@
           </div>
 
           <div class="profile-card">
-            <div class="arch-frame">
+            <div class="arch-frame shimmer-box">
               <img id="img-raihan-profile" data-drive-id="1-DK0TVwYyw1qFlLRMq_8eBeRrDtJB1Nx" alt="Rayhan Muhammad Alif Rabbani" loading="eager" />
             </div>
             <div class="profile-name" id="name-raihan">Rayhan Muhammad Alif Rabbani</div>
@@ -996,15 +1314,32 @@
         </div>
       </section>
 
+      <!-- PEMBATAS MOTIF KAWUNG SUNDA -->
+      <div class="sunda-divider" aria-hidden="true">
+        <svg width="240" height="18" viewBox="0 0 240 18" fill="none">
+          <line x1="0" y1="9" x2="94" y2="9" stroke="#C59B27" stroke-opacity="0.45" stroke-dasharray="3 3"/>
+          <path d="M120 2L126 9L120 16L114 9Z" stroke="#C59B27" stroke-width="1.3" fill="rgba(197,155,39,0.15)"/>
+          <circle cx="104" cy="9" r="2.2" fill="#C59B27"/>
+          <circle cx="136" cy="9" r="2.2" fill="#C59B27"/>
+          <line x1="146" y1="9" x2="240" y2="9" stroke="#C59B27" stroke-opacity="0.45" stroke-dasharray="3 3"/>
+        </svg>
+      </div>
+
       <!-- WAKTU & LOKASI -->
-      <section id="acara">
+      <section id="acara" data-spy-section="acara">
         <div class="section-tag">Detail &amp; Agenda</div>
         <h2 class="section-title">Waktu &amp; Lokasi Acara</h2>
         <p class="lead-text">
           Merupakan suatu kehormatan dan kebahagiaan bagi kami apabila Bapak/Ibu/Saudara/i berkenan hadir memberikan doa restu.
         </p>
 
-        <div class="countdown-grid reveal-item" aria-label="Hitung Mundur Acara">
+        <!-- BANNER HARI-H OTOMATIS SAAT COUNTDOWN 0 -->
+        <div class="hari-h-banner" id="hari-h-banner">
+          <strong>✨ Alhamdulillah, Hari Bahagia Telah Tiba ✨</strong>
+          <span>Terima kasih atas kehadiran &amp; doa restu Bapak/Ibu/Saudara/i di lokasi acara.</span>
+        </div>
+
+        <div class="countdown-grid reveal-item" id="countdown-grid" aria-label="Hitung Mundur Acara">
           <div class="cd-box"><span class="cd-num" id="cd-days">00</span><span class="cd-label">Hari</span></div>
           <div class="cd-box"><span class="cd-num" id="cd-hours">00</span><span class="cd-label">Jam</span></div>
           <div class="cd-box"><span class="cd-num" id="cd-mins">00</span><span class="cd-label">Menit</span></div>
@@ -1025,9 +1360,18 @@
             Jl. Gg. Mm Adi, Dago Pojok, Bandung
           </p>
 
-          <!-- CATATAN / PATOKAN RUTE LOKASI -->
+          <!-- CATATAN / PATOKAN RUTE LOKASI (4 LANGKAH BERPANAH + TEKS LENGKAP) -->
           <div class="address-note-box" id="address-note-wrap">
             <div class="address-note-title">🧭 Patokan / Catatan Lokasi</div>
+            <div class="route-steps-flow" id="route-steps-flow">
+              <span class="route-step-chip"><span class="route-step-num">1</span> Masuk gang</span>
+              <span class="route-step-arrow">➔</span>
+              <span class="route-step-chip"><span class="route-step-num">2</span> Belok kanan</span>
+              <span class="route-step-arrow">➔</span>
+              <span class="route-step-chip"><span class="route-step-num">3</span> Belok kiri sampai lapang</span>
+              <span class="route-step-arrow">➔</span>
+              <span class="route-step-chip"><span class="route-step-num">4</span> Sebelah rumah kayu</span>
+            </div>
             <p class="address-note-text" id="event-address-note">
               Masuk gang belok kanan terus belok kiri sampai ada lapang, sebelah rumah kayu.
             </p>
@@ -1050,8 +1394,19 @@
         </div>
       </section>
 
+      <!-- PEMBATAS MOTIF KAWUNG SUNDA -->
+      <div class="sunda-divider" aria-hidden="true">
+        <svg width="240" height="18" viewBox="0 0 240 18" fill="none">
+          <line x1="0" y1="9" x2="94" y2="9" stroke="#C59B27" stroke-opacity="0.45" stroke-dasharray="3 3"/>
+          <path d="M120 2L126 9L120 16L114 9Z" stroke="#C59B27" stroke-width="1.3" fill="rgba(197,155,39,0.15)"/>
+          <circle cx="104" cy="9" r="2.2" fill="#C59B27"/>
+          <circle cx="136" cy="9" r="2.2" fill="#C59B27"/>
+          <line x1="146" y1="9" x2="240" y2="9" stroke="#C59B27" stroke-opacity="0.45" stroke-dasharray="3 3"/>
+        </svg>
+      </div>
+
       <!-- GALERI -->
-      <section id="galeri">
+      <section id="galeri" data-spy-section="galeri">
         <div class="section-tag">Potret Keluarga &amp; Ananda</div>
         <h2 class="section-title">Galeri Kebahagiaan</h2>
         <p class="lead-text">
@@ -1060,11 +1415,11 @@
 
         <!-- FOTO KELUARGA LANDSCAPE PENUH (1 BARIS 1 FOTO) -->
         <div class="family-stack reveal-item">
-          <div class="family-item" data-lb-index="0">
+          <div class="family-item shimmer-box" data-lb-index="0">
             <img id="gal-0" data-drive-id="1gRLn7fyUA7b7QcgVUW4MAgUvag8Nt9Ro" alt="Keluarga Besar Bpk. Riza &amp; Ibu Siska" loading="lazy" />
             <div class="gallery-cap">Keluarga Besar • Bpk.Riza &amp; Ibu.Siska</div>
           </div>
-          <div class="family-item" data-lb-index="1">
+          <div class="family-item shimmer-box" data-lb-index="1">
             <img id="gal-1" data-drive-id="109_3OZ_n9TlY5GKNVYJ5jVq9qs1ElKNL" alt="Kebersamaan Keluarga" loading="lazy" />
             <div class="gallery-cap">Kebersamaan Keluarga</div>
           </div>
@@ -1072,50 +1427,92 @@
 
         <!-- FOTO ANANDA 2 KOLOM -->
         <div class="gallery-grid reveal-item">
-          <div class="gallery-item" data-lb-index="2">
+          <div class="gallery-item shimmer-box" data-lb-index="2">
             <img id="gal-2" data-drive-id="13vOUCRAsltqH55jwHVLbnKL15MLetPgx" alt="Rasyid" loading="lazy" />
             <div class="gallery-cap">Rasyid</div>
           </div>
-          <div class="gallery-item" data-lb-index="3">
+          <div class="gallery-item shimmer-box" data-lb-index="3">
             <img id="gal-3" data-drive-id="1-DK0TVwYyw1qFlLRMq_8eBeRrDtJB1Nx" alt="Raihan" loading="lazy" />
             <div class="gallery-cap">Raihan</div>
           </div>
-          <div class="gallery-item" data-lb-index="4">
+          <div class="gallery-item shimmer-box" data-lb-index="4">
             <img id="gal-4" data-drive-id="1DYdHiyj0CcqC5UQrAMsNSnDeY4c-ZE5h" alt="Rasyid" loading="lazy" />
             <div class="gallery-cap">Rasyid</div>
           </div>
-          <div class="gallery-item" data-lb-index="5">
+          <div class="gallery-item shimmer-box" data-lb-index="5">
             <img id="gal-5" data-drive-id="1l3dgCH8xK5T4dXeiqnnVgpWqdSocbXsu" alt="Raihan" loading="lazy" />
             <div class="gallery-cap">Raihan</div>
           </div>
         </div>
       </section>
 
-      <!-- AMPLOP DIGITAL -->
-      <section id="amplop">
+      <!-- PEMBATAS MOTIF KAWUNG SUNDA -->
+      <div class="sunda-divider" aria-hidden="true">
+        <svg width="240" height="18" viewBox="0 0 240 18" fill="none">
+          <line x1="0" y1="9" x2="94" y2="9" stroke="#C59B27" stroke-opacity="0.45" stroke-dasharray="3 3"/>
+          <path d="M120 2L126 9L120 16L114 9Z" stroke="#C59B27" stroke-width="1.3" fill="rgba(197,155,39,0.15)"/>
+          <circle cx="104" cy="9" r="2.2" fill="#C59B27"/>
+          <circle cx="136" cy="9" r="2.2" fill="#C59B27"/>
+          <line x1="146" y1="9" x2="240" y2="9" stroke="#C59B27" stroke-opacity="0.45" stroke-dasharray="3 3"/>
+        </svg>
+      </div>
+
+      <!-- AMPLOP DIGITAL (KARTU PERBANKAN VIRTUAL + OPSIONAL E-WALLET) -->
+      <section id="amplop" data-spy-section="amplop">
         <div class="section-tag">Tanda Kasih</div>
         <h2 class="section-title">Amplop Digital</h2>
         <p class="lead-text">
           Doa restu Anda merupakan karunia yang sangat berarti bagi kami. Apabila berkenan mengirimkan tanda kasih, dapat melalui rekening berikut:
         </p>
 
-        <div class="bank-box reveal-item">
-          <div style="font-size:12px; opacity:0.85; text-transform:uppercase; letter-spacing:0.1em;" id="bank-name">
-            Bank BRI
+        <div class="bank-card-virtual reveal-item">
+          <div class="bank-card-top">
+            <div class="bank-chip" aria-hidden="true"></div>
+            <span style="font-size:13px; font-weight:700; letter-spacing:0.12em; text-transform:uppercase; color:#f4d67c;" id="bank-name">
+              Bank BRI
+            </span>
           </div>
+          <small style="display:block; font-size:10px; letter-spacing:0.1em; text-transform:uppercase; opacity:0.75;">
+            Nomor Rekening
+          </small>
           <div class="bank-acc" id="bank-number">067401004442506</div>
-          <div style="font-size:13px; margin-bottom:12px;" id="bank-holder">
-            a.n. Siska Noeryulia
+          <div style="display:flex; justify-content:space-between; align-items:center; gap:8px; margin-top:10px; flex-wrap:wrap;">
+            <span style="font-size:13px; font-weight:600;" id="bank-holder">
+              a.n. Siska Noeryulia
+            </span>
+            <button type="button" class="pill-btn" id="btn-copy-bank">
+              📋 Salin Rekening
+            </button>
           </div>
-          <button type="button" class="pill-btn" id="btn-copy-bank">
-            📋 Salin No. Rekening
-          </button>
           <div id="copy-note" class="status-note">Nomor rekening berhasil disalin.</div>
+        </div>
+
+        <!-- KARTU OPSIONAL E-WALLET / QRIS (TAMPIL OTOMATIS JIKA DIISI DI PANEL ADMIN) -->
+        <div class="ewallet-card reveal-item" id="ewallet-card-wrap">
+          <small style="font-size:11px; text-transform:uppercase; letter-spacing:0.1em; color:#9b7614; font-weight:700;" id="ewallet-name">
+            E-Wallet
+          </small>
+          <div style="font-size:19px; font-weight:700; color:var(--primary); margin:4px 0 2px;" id="ewallet-number"></div>
+          <div style="font-size:12.5px; color:var(--text-muted); margin-bottom:10px;" id="ewallet-holder"></div>
+          <button type="button" class="pill-btn primary sm" id="btn-copy-ewallet">
+            📋 Salin Nomor E-Wallet
+          </button>
         </div>
       </section>
 
+      <!-- PEMBATAS MOTIF KAWUNG SUNDA -->
+      <div class="sunda-divider" aria-hidden="true">
+        <svg width="240" height="18" viewBox="0 0 240 18" fill="none">
+          <line x1="0" y1="9" x2="94" y2="9" stroke="#C59B27" stroke-opacity="0.45" stroke-dasharray="3 3"/>
+          <path d="M120 2L126 9L120 16L114 9Z" stroke="#C59B27" stroke-width="1.3" fill="rgba(197,155,39,0.15)"/>
+          <circle cx="104" cy="9" r="2.2" fill="#C59B27"/>
+          <circle cx="136" cy="9" r="2.2" fill="#C59B27"/>
+          <line x1="146" y1="9" x2="240" y2="9" stroke="#C59B27" stroke-opacity="0.45" stroke-dasharray="3 3"/>
+        </svg>
+      </div>
+
       <!-- RSVP & UCAPAN -->
-      <section id="rsvp">
+      <section id="rsvp" data-spy-section="rsvp">
         <div class="section-tag">Konfirmasi &amp; Doa</div>
         <h2 class="section-title">RSVP &amp; Ucapan</h2>
         <p class="lead-text">
@@ -1181,13 +1578,13 @@
       </section>
     </main>
 
-    <!-- BOTTOM NAV -->
+    <!-- BOTTOM NAV (DENGAN SCROLL-SPY AKTIF) -->
     <nav class="bottom-nav" id="bottom-nav" aria-label="Navigasi Undangan">
-      <a href="#ayat">Ayat</a>
-      <a href="#profil">Profil</a>
-      <a href="#acara">Acara</a>
-      <a href="#galeri">Galeri</a>
-      <a href="#rsvp">RSVP</a>
+      <a href="#ayat" data-nav-target="ayat" class="nav-active">Ayat</a>
+      <a href="#profil" data-nav-target="profil">Profil</a>
+      <a href="#acara" data-nav-target="acara">Acara</a>
+      <a href="#galeri" data-nav-target="galeri">Galeri</a>
+      <a href="#rsvp" data-nav-target="rsvp">RSVP</a>
     </nav>
 
     <!-- MINI PLAYER GOOGLE DRIVE (CADANGAN OTOMATIS JIKA STREAM LANGSUNG DIBLOKIR BROWSER) -->
@@ -1196,9 +1593,14 @@
       <button type="button" class="dock-close-btn" id="btn-close-dock" title="Sembunyikan Pemutar">✕</button>
     </div>
 
-    <!-- AUDIO BUTTON -->
+    <!-- AUDIO BUTTON DENGAN EQUALIZER MINI -->
     <button type="button" class="audio-fab" id="audio-btn" title="Musik Sholawat">
-      ♪
+      <span class="note-icon">♪</span>
+      <span class="eq-bars" aria-hidden="true">
+        <span class="eq-bar"></span>
+        <span class="eq-bar"></span>
+        <span class="eq-bar"></span>
+      </span>
     </button>
   </div>
 
@@ -1228,12 +1630,28 @@
         <button type="button" class="pill-btn" id="btn-close-admin">✕</button>
       </div>
 
+      <!-- REKAP ESTIMASI KEHADIRAN & PORSI TAMU DARI GOOGLE SHEETS -->
+      <div class="admin-recap-grid" id="admin-recap-grid">
+        <div class="admin-recap-item">
+          <strong id="admin-stat-wishes">0</strong>
+          <span>Total Ucapan</span>
+        </div>
+        <div class="admin-recap-item">
+          <strong id="admin-stat-hadir">0</strong>
+          <span>Keluarga Hadir</span>
+        </div>
+        <div class="admin-recap-item">
+          <strong id="admin-stat-pax">0</strong>
+          <span>Estimasi Porsi</span>
+        </div>
+      </div>
+
       <div class="tab-row">
         <button type="button" class="tab-btn active" id="tab-link-btn">Link Tamu WA</button>
         <button type="button" class="tab-btn" id="tab-config-btn">Konfigurasi Template</button>
       </div>
 
-      <!-- TAB 1: LINK TAMU -->
+      <!-- TAB 1: LINK TAMU (SATUAN + MASSAL / BULK) -->
       <div id="tab-link-content">
         <div class="form-group">
           <label for="base-url-input">URL Dasar Undangan (Otomatis terdeteksi)</label>
@@ -1241,7 +1659,7 @@
         </div>
 
         <div class="form-group">
-          <label for="guest-input">Nama Tamu</label>
+          <label for="guest-input">Kirim Satuan — Nama Tamu</label>
           <input type="text" id="guest-input" class="form-control" placeholder="Contoh: Teh Ratna &amp; Suami" />
         </div>
 
@@ -1250,11 +1668,25 @@
           <input type="text" id="generated-link" class="form-control" readonly />
         </div>
 
-        <div style="display:flex; gap:8px; flex-wrap:wrap; margin-bottom:12px;">
+        <div style="display:flex; gap:8px; flex-wrap:wrap; margin-bottom:14px;">
           <button type="button" class="pill-btn" id="btn-copy-guest-link">Salin Link Tamu</button>
           <button type="button" class="pill-btn primary" id="btn-send-wa">Kirim ke WhatsApp</button>
         </div>
         <div id="link-note" class="status-note">Tautan personal berhasil disalin.</div>
+
+        <!-- GENERATOR LINK TAMU MASSAL (BULK WHATSAPP LIST) -->
+        <div style="margin-top:14px; padding-top:12px; border-top:1px dashed var(--border-gold);">
+          <div class="form-group" style="margin-bottom:8px;">
+            <label for="bulk-guests-input">Generator Link Massal (1 baris = 1 nama tamu)</label>
+            <textarea id="bulk-guests-input" rows="4" class="form-control" placeholder="Contoh:&#10;Keluarga Besar Kang Asep&#10;Teh Ratna &amp; Suami&#10;Bapak H. Dedi &amp; Ibu"></textarea>
+          </div>
+          <div style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:6px;">
+            <button type="button" class="pill-btn primary sm" id="btn-generate-bulk">Buat Daftar Link</button>
+            <span id="bulk-sent-counter" style="font-size:11px; font-weight:700; color:var(--primary);">Terkirim: 0 / 0</span>
+            <button type="button" class="pill-btn sm" id="btn-reset-bulk-sent">Reset Tanda</button>
+          </div>
+          <div class="bulk-list-wrap" id="bulk-list-container"></div>
+        </div>
 
         <div class="form-group" style="margin-top:14px; padding-top:12px; border-top:1px dashed var(--border-gold);">
           <label for="admin-secret-link">Tautan Khusus Admin Anda (Simpan pribadi)</label>
@@ -1346,6 +1778,21 @@
           <input type="text" id="cfg-bank-holder" class="form-control" />
         </div>
 
+        <div class="form-group">
+          <label for="cfg-ewallet-name">Nama E-Wallet Opsional (Kosongkan jika tidak dipakai)</label>
+          <input type="text" id="cfg-ewallet-name" class="form-control" placeholder="Contoh: DANA / GoPay / BCA" />
+        </div>
+
+        <div class="form-group">
+          <label for="cfg-ewallet-number">Nomor E-Wallet / Rekening Tambahan</label>
+          <input type="text" id="cfg-ewallet-number" class="form-control" placeholder="0812xxxxxxxx" />
+        </div>
+
+        <div class="form-group">
+          <label for="cfg-ewallet-holder">Atas Nama E-Wallet</label>
+          <input type="text" id="cfg-ewallet-holder" class="form-control" placeholder="a.n. Siska Noeryulia" />
+        </div>
+
         <div style="display:flex; gap:8px; flex-wrap:wrap;">
           <button type="button" class="pill-btn primary" id="btn-save-config">Terapkan Perubahan</button>
           <button type="button" class="pill-btn" id="btn-download-html">Unduh index.html</button>
@@ -1375,7 +1822,10 @@
       mapsUrl: "https://maps.app.goo.gl/Cf7Pqj61greFxXCi9",
       bankName: "Bank BRI",
       bankNumber: "067401004442506",
-      bankHolder: "a.n. Siska Noeryulia"
+      bankHolder: "a.n. Siska Noeryulia",
+      ewalletName: "",
+      ewalletNumber: "",
+      ewalletHolder: ""
     };
     /* CONFIG_END */
 
@@ -1390,7 +1840,7 @@
     var currentDriveAudioId = "";
     var currentLightboxIndex = 0;
     var wishesState = [];
-    var sheetStats = { total: 0, hadir: 0 };
+    var sheetStats = { total: 0, hadir: 0, pax: 0 };
 
     var GALLERY_ITEMS = [
       { id: "1gRLn7fyUA7b7QcgVUW4MAgUvag8Nt9Ro", caption: "Keluarga Besar • Bpk.Riza & Ibu.Siska" },
@@ -1418,6 +1868,23 @@
         .replace(/>/g, "&gt;")
         .replace(/"/g, "&quot;")
         .replace(/'/g, "&#39;");
+    }
+
+    function formatRelativeTime(isoStr) {
+      if (!isoStr) return "";
+      var date = new Date(isoStr);
+      if (isNaN(date.getTime())) return "";
+      var diffSec = Math.floor((Date.now() - date.getTime()) / 1000);
+      if (diffSec < 60) return "Baru saja";
+      var diffMin = Math.floor(diffSec / 60);
+      if (diffMin < 60) return diffMin + " menit lalu";
+      var diffHour = Math.floor(diffMin / 60);
+      if (diffHour < 24) return diffHour + " jam lalu";
+      var diffDay = Math.floor(diffHour / 24);
+      if (diffDay === 1) return "Kemarin";
+      if (diffDay < 7) return diffDay + " hari lalu";
+      var months = ["Jan", "Feb", "Mar", "Apr", "Mei", "Jun", "Jul", "Agu", "Sep", "Okt", "Nov", "Des"];
+      return date.getDate() + " " + months[date.getMonth()] + " " + date.getFullYear();
     }
 
     function initAdminSeparation() {
@@ -1476,14 +1943,56 @@
           "https://drive.google.com/uc?export=view&id=" + fileId
         ];
         var attempt = 0;
+        img.onload = function () {
+          if (img.parentElement) {
+            img.parentElement.classList.add("loaded");
+          }
+        };
         img.onerror = function () {
           attempt++;
           if (attempt < urls.length) {
             img.src = urls[attempt];
+          } else if (img.parentElement) {
+            img.parentElement.classList.add("loaded");
           }
         };
         img.src = urls[0];
+        if (img.complete && img.naturalWidth > 0 && img.parentElement) {
+          img.parentElement.classList.add("loaded");
+        }
       });
+    }
+
+    function renderRouteStepsFlow(noteText) {
+      var flowWrap = document.getElementById("route-steps-flow");
+      if (!flowWrap) return;
+      var clean = (noteText || "").trim().replace(/\.$/, "");
+      if (!clean) {
+        flowWrap.innerHTML = "";
+        return;
+      }
+
+      var defaultPhrase = "Masuk gang belok kanan terus belok kiri sampai ada lapang, sebelah rumah kayu";
+      var steps = [];
+      if (clean.toLowerCase() === defaultPhrase.toLowerCase()) {
+        steps = [
+          "Masuk gang",
+          "Belok kanan",
+          "Belok kiri sampai lapang",
+          "Sebelah rumah kayu"
+        ];
+      } else if (clean.indexOf("->") !== -1) {
+        steps = clean.split("->").map(function (s) { return s.trim(); }).filter(Boolean);
+      } else if (clean.indexOf(",") !== -1) {
+        steps = clean.split(",").map(function (s) { return s.trim(); }).filter(Boolean);
+      } else {
+        steps = [clean];
+      }
+
+      flowWrap.innerHTML = steps.map(function (step, idx) {
+        var chip = '<span class="route-step-chip"><span class="route-step-num">' + (idx + 1) + '</span> ' + escapeHTML(step) + '</span>';
+        return idx < steps.length - 1 ? chip + '<span class="route-step-arrow">➔</span>' : chip;
+      }).join("");
     }
 
     function updateGoogleCalendarLink() {
@@ -1536,7 +2045,23 @@
 
       var noteWrap = document.getElementById("address-note-wrap");
       if (noteWrap) {
-        noteWrap.style.display = (EVENT_CONFIG.addressNote && EVENT_CONFIG.addressNote.trim() !== "") ? "block" : "none";
+        var hasNote = EVENT_CONFIG.addressNote && EVENT_CONFIG.addressNote.trim() !== "";
+        noteWrap.style.display = hasNote ? "block" : "none";
+        if (hasNote) renderRouteStepsFlow(EVENT_CONFIG.addressNote);
+      }
+
+      // E-Wallet Opsional
+      var ewWrap = document.getElementById("ewallet-card-wrap");
+      if (ewWrap) {
+        var hasEw = EVENT_CONFIG.ewalletNumber && EVENT_CONFIG.ewalletNumber.trim() !== "";
+        if (hasEw) {
+          ewWrap.classList.add("show");
+          setText("ewallet-name", EVENT_CONFIG.ewalletName || "E-Wallet");
+          setText("ewallet-number", EVENT_CONFIG.ewalletNumber);
+          setText("ewallet-holder", EVENT_CONFIG.ewalletHolder || "");
+        } else {
+          ewWrap.classList.remove("show");
+        }
       }
 
       var mapsEl = document.getElementById("maps-link");
@@ -1549,6 +2074,18 @@
         var target = new Date(EVENT_CONFIG.eventDateISO).getTime();
         var now = Date.now();
         var diff = Math.max(0, target - now);
+
+        var cdGrid = document.getElementById("countdown-grid");
+        var hariHBanner = document.getElementById("hari-h-banner");
+
+        if (diff === 0) {
+          if (cdGrid) cdGrid.style.display = "none";
+          if (hariHBanner) hariHBanner.classList.add("show");
+          return;
+        } else {
+          if (cdGrid) cdGrid.style.display = "grid";
+          if (hariHBanner) hariHBanner.classList.remove("show");
+        }
 
         var days = Math.floor(diff / (1000 * 60 * 60 * 24));
         var hours = Math.floor((diff / (1000 * 60 * 60)) % 24);
@@ -1595,9 +2132,7 @@
       var driveId = extractDriveId(s);
       if (driveId) {
         currentDriveAudioId = driveId;
-        // 1. Cek jika sholawat.mp3 sudah diunggah sejajar di Vercel/GitHub (instan & 100% bebas blokir)
         candidates.push("./sholawat.mp3");
-        // 2. Jalur direct stream Google Drive
         candidates.push("https://docs.google.com/uc?export=download&id=" + driveId);
         candidates.push("https://drive.usercontent.google.com/download?id=" + driveId + "&export=download&confirm=t");
         candidates.push("https://drive.google.com/uc?export=open&id=" + driveId);
@@ -1614,11 +2149,11 @@
       var btn = document.getElementById("audio-btn");
       if (!btn) return;
       if (playing) {
-        btn.textContent = "❚❚";
         btn.classList.add("playing");
+        btn.setAttribute("aria-label", "Jeda Musik Sholawat");
       } else {
-        btn.textContent = "♪";
         btn.classList.remove("playing");
+        btn.setAttribute("aria-label", "Putar Musik Sholawat");
       }
     }
 
@@ -1648,7 +2183,6 @@
       if (!audio) return;
 
       if (audioSourceIndex >= audioSourcesList.length) {
-        // Jika browser memblokir <audio> langsung dari Drive, buka Google Drive Official Player untuk sholawat.mp3
         if (currentDriveAudioId) {
           openDriveAudioDock(currentDriveAudioId);
         } else {
@@ -1725,14 +2259,22 @@
       var nav = document.getElementById("bottom-nav");
       var audioBtn = document.getElementById("audio-btn");
 
-      if (cover) cover.classList.add("opened");
       if (main) main.classList.add("active");
       if (nav) nav.classList.add("active");
       if (audioBtn) audioBtn.classList.add("active");
 
+      if (cover) {
+        cover.classList.add("opening");
+        setTimeout(function () {
+          cover.classList.remove("opening");
+          cover.classList.add("opened");
+        }, 720);
+      }
+
       window.scrollTo({ top: 0, behavior: "smooth" });
       playBackgroundAudio();
       triggerScrollReveal();
+      initScrollSpy();
     }
 
     function copyToClipboard(text, successMsg) {
@@ -1810,6 +2352,16 @@
     /* =====================================================================
        SINKRONISASI RSVP & 10 UCAPAN TERATAS DARI GOOGLE APPS SCRIPT
        ===================================================================== */
+    function updateAdminRecapUI() {
+      if (!isAdminMode) return;
+      var wEl = document.getElementById("admin-stat-wishes");
+      var hEl = document.getElementById("admin-stat-hadir");
+      var pEl = document.getElementById("admin-stat-pax");
+      if (wEl) wEl.textContent = String(sheetStats.total || 0);
+      if (hEl) hEl.textContent = String(sheetStats.hadir || 0);
+      if (pEl) pEl.textContent = String(sheetStats.pax || sheetStats.hadir || 0) + " Org";
+    }
+
     function renderTop10Wishes(items, customStats) {
       var list = document.getElementById("wish-list");
       var totalEl = document.getElementById("stat-total");
@@ -1824,6 +2376,7 @@
 
       if (totalEl) totalEl.textContent = "💌 " + totalCount + " Doa & Ucapan";
       if (hadirEl) hadirEl.textContent = "✅ " + hadirCount + " Konfirmasi Hadir";
+      updateAdminRecapUI();
 
       list.innerHTML = "";
       if (top10.length === 0) {
@@ -1843,6 +2396,8 @@
       };
 
       top10.forEach(function (w) {
+        var relTime = formatRelativeTime(w.timestamp);
+        var timeHtml = relTime ? '<span class="wish-time">🕒 ' + escapeHTML(relTime) + "</span>" : "";
         var div = document.createElement("div");
         div.className = "wish-item";
         div.innerHTML =
@@ -1852,7 +2407,8 @@
           "</div>" +
           '<p style="font-size:12.5px; color:var(--text-muted); line-height:1.5;">' +
             escapeHTML(w.message) +
-          "</p>";
+          "</p>" +
+          timeHtml;
         list.appendChild(div);
       });
     }
@@ -1861,16 +2417,22 @@
       if (!res || !Array.isArray(res.wishes)) return;
       var deduped = [];
       var seen = {};
+      var computedPax = 0;
+
       res.wishes.forEach(function (w) {
         if (!w || !w.name || !w.message) return;
         var key = (w.name + "|" + w.message).toLowerCase().trim();
         if (!seen[key]) {
           seen[key] = true;
+          var att = String(w.attendance || "Hadir");
+          var gCount = parseInt(w.guests, 10) || 1;
+          if (att === "Hadir") computedPax += gCount;
           deduped.push({
             name: String(w.name),
-            attendance: String(w.attendance || "Hadir"),
+            attendance: att,
             guests: String(w.guests || "1"),
-            message: String(w.message)
+            message: String(w.message),
+            timestamp: w.timestamp ? String(w.timestamp) : ""
           });
         }
       });
@@ -1880,11 +2442,12 @@
         total: typeof res.totalWishes === "number" ? res.totalWishes : deduped.length,
         hadir: typeof res.totalHadir === "number"
           ? res.totalHadir
-          : deduped.filter(function (x) { return x.attendance === "Hadir"; }).length
+          : deduped.filter(function (x) { return x.attendance === "Hadir"; }).length,
+        pax: typeof res.totalPax === "number" ? res.totalPax : computedPax
       };
 
       try {
-        localStorage.setItem("khitan_wishes_v2", JSON.stringify(deduped.slice(0, MAX_DISPLAY_WISHES)));
+        localStorage.setItem("khitan_wishes_v3", JSON.stringify(deduped.slice(0, MAX_DISPLAY_WISHES)));
       } catch (e) {}
 
       renderTop10Wishes(deduped, sheetStats);
@@ -1926,14 +2489,13 @@
           applySheetResponse(res);
         })
         .catch(function () {
-          // Cadangan JSONP jika fetch lintas-domain redirect diblokir browser
           loadWishesViaJSONP(EVENT_CONFIG.rsvpWebhookUrl);
         });
     }
 
     function loadSavedWishes() {
       try {
-        var cached = JSON.parse(localStorage.getItem("khitan_wishes_v2") || "[]");
+        var cached = JSON.parse(localStorage.getItem("khitan_wishes_v3") || "[]");
         if (Array.isArray(cached) && cached.length > 0) {
           wishesState = cached;
           renderTop10Wishes(cached);
@@ -1956,18 +2518,24 @@
       btn.disabled = true;
       btn.textContent = "Mengirim...";
 
-      var payload = { name: name, attendance: attendance, guests: guests, message: message };
+      var payload = {
+        name: name,
+        attendance: attendance,
+        guests: guests,
+        message: message,
+        timestamp: new Date().toISOString()
+      };
 
-      // Tampilkan langsung di urutan teratas (maksimal 10 teratas)
       wishesState.unshift(payload);
       sheetStats.total = Math.max(sheetStats.total + 1, wishesState.length);
       if (attendance === "Hadir") {
         sheetStats.hadir = Math.max(sheetStats.hadir + 1, 1);
+        sheetStats.pax = (sheetStats.pax || 0) + (parseInt(guests, 10) || 1);
       }
       renderTop10Wishes(wishesState, sheetStats);
 
       try {
-        localStorage.setItem("khitan_wishes_v2", JSON.stringify(wishesState.slice(0, MAX_DISPLAY_WISHES)));
+        localStorage.setItem("khitan_wishes_v3", JSON.stringify(wishesState.slice(0, MAX_DISPLAY_WISHES)));
       } catch (err) {}
 
       if (EVENT_CONFIG.rsvpWebhookUrl) {
@@ -1982,7 +2550,6 @@
           document.getElementById("rsvp-message").value = "";
           statusEl.textContent = "Terima kasih, konfirmasi dan doa Anda telah tersimpan di Google Sheets.";
           statusEl.classList.add("show");
-          // Sinkron ulang 10 teratas dari Google Sheets setelah 1,8 detik
           setTimeout(fetchLiveWishesFromSheet, 1800);
         });
       } else {
@@ -2011,7 +2578,145 @@
       items.forEach(function (el) { observer.observe(el); });
     }
 
-    /* ADMIN PANEL FUNCTIONS */
+    function initScrollSpy() {
+      var sections = document.querySelectorAll("[data-spy-section]");
+      var navLinks = document.querySelectorAll(".bottom-nav a[data-nav-target]");
+      if (!sections.length || !navLinks.length) return;
+
+      function onScroll() {
+        var currentId = "ayat";
+        var scrollPos = window.scrollY + window.innerHeight * 0.35;
+        sections.forEach(function (sec) {
+          if (sec.offsetTop <= scrollPos) {
+            currentId = sec.getAttribute("data-spy-section");
+          }
+        });
+        navLinks.forEach(function (a) {
+          if (a.getAttribute("data-nav-target") === currentId) {
+            a.classList.add("nav-active");
+          } else {
+            a.classList.remove("nav-active");
+          }
+        });
+      }
+
+      window.addEventListener("scroll", onScroll, { passive: true });
+      onScroll();
+    }
+
+    /* =====================================================================
+       ADMIN PANEL + GENERATOR LINK TAMU MASSAL (BULK WHATSAPP LIST)
+       ===================================================================== */
+    function getSentGuestsMap() {
+      try {
+        return JSON.parse(localStorage.getItem("khitan_sent_guests_v1") || "{}");
+      } catch (e) {
+        return {};
+      }
+    }
+
+    function setGuestSentStatus(guestName, isSent) {
+      var map = getSentGuestsMap();
+      var key = guestName.toLowerCase().trim();
+      if (isSent) {
+        map[key] = true;
+      } else {
+        delete map[key];
+      }
+      try {
+        localStorage.setItem("khitan_sent_guests_v1", JSON.stringify(map));
+      } catch (e) {}
+    }
+
+    function buildWhatsAppUrlForGuest(guestName, personalLink) {
+      var NL = String.fromCharCode(10);
+      var noteLine = EVENT_CONFIG.addressNote ? ("🧭 _Patokan: " + EVENT_CONFIG.addressNote + "_" + NL) : "";
+      var msg =
+        "Sampurasun 🙏✨" + NL +
+        "Assalamu’alaikum Warahmatullahi Wabarakatuh" + NL + NL +
+        "Kepada Yth. *" + guestName + "*" + NL + NL +
+        "Dengan memohon rahmat dan ridho Allah SWT, kami mengundang Bapak/Ibu/Saudara/i untuk hadir pada acara *Walimatul Khitan* putra-putra kami:" + NL +
+        "👦 *" + EVENT_CONFIG.child1 + "*" + NL +
+        "👦 *" + EVENT_CONFIG.child2 + "*" + NL + NL +
+        "📅 " + EVENT_CONFIG.eventDateDisplay + NL +
+        "⏰ " + EVENT_CONFIG.eventTimeDisplay + NL +
+        "📍 " + EVENT_CONFIG.address + NL +
+        noteLine + NL +
+        "🔗 *Buka Undangan Digital:*" + NL +
+        personalLink + NL + NL +
+        "Hatur nuhun atas kehadiran dan doa restunya." + NL +
+        "*" + EVENT_CONFIG.parents + "*";
+      return "https://wa.me/?text=" + encodeURIComponent(msg);
+    }
+
+    function renderBulkGuestList() {
+      var textarea = document.getElementById("bulk-guests-input");
+      var container = document.getElementById("bulk-list-container");
+      var counterEl = document.getElementById("bulk-sent-counter");
+      if (!textarea || !container) return;
+
+      var base = document.getElementById("base-url-input").value.trim().replace(/\/+$/, "");
+      var lines = textarea.value.split(/\r?\n/).map(function (l) { return l.trim(); }).filter(Boolean);
+      var sentMap = getSentGuestsMap();
+
+      container.innerHTML = "";
+      var sentCount = 0;
+
+      lines.forEach(function (guestName) {
+        var key = guestName.toLowerCase().trim();
+        var isSent = !!sentMap[key];
+        if (isSent) sentCount++;
+
+        var personalLink = base + "/?to=" + encodeURIComponent(guestName);
+        var card = document.createElement("div");
+        card.className = "bulk-guest-card" + (isSent ? " sent" : "");
+
+        var infoDiv = document.createElement("div");
+        infoDiv.style.minWidth = "0";
+        infoDiv.style.flex = "1";
+        infoDiv.innerHTML =
+          '<div style="font-size:12.5px; font-weight:700; color:var(--primary); white-space:nowrap; overflow:hidden; text-overflow:ellipsis;">' +
+            (isSent ? "✅ " : "") + escapeHTML(guestName) +
+          "</div>" +
+          '<div style="font-size:10.5px; color:var(--text-muted); white-space:nowrap; overflow:hidden; text-overflow:ellipsis;">' +
+            escapeHTML(personalLink) +
+          "</div>";
+
+        var actionsDiv = document.createElement("div");
+        actionsDiv.style.display = "flex";
+        actionsDiv.style.gap = "5px";
+        actionsDiv.style.flexShrink = "0";
+
+        var copyBtn = document.createElement("button");
+        copyBtn.type = "button";
+        copyBtn.className = "pill-btn sm";
+        copyBtn.textContent = "Salin";
+        copyBtn.addEventListener("click", function () {
+          copyToClipboard(personalLink, "Link untuk " + guestName + " disalin.");
+        });
+
+        var waBtn = document.createElement("button");
+        waBtn.type = "button";
+        waBtn.className = "pill-btn primary sm";
+        waBtn.textContent = isSent ? "Kirim Ulang" : "Kirim WA";
+        waBtn.addEventListener("click", function () {
+          setGuestSentStatus(guestName, true);
+          renderBulkGuestList();
+          window.open(buildWhatsAppUrlForGuest(guestName, personalLink), "_blank");
+        });
+
+        actionsDiv.appendChild(copyBtn);
+        actionsDiv.appendChild(waBtn);
+        card.appendChild(infoDiv);
+        card.appendChild(actionsDiv);
+        container.appendChild(card);
+      });
+
+      if (counterEl) {
+        counterEl.textContent = "Terkirim: " + sentCount + " / " + lines.length;
+      }
+    }
+
     function initAdminPanel() {
       if (!isAdminMode) return;
 
@@ -2022,6 +2727,7 @@
       cleanBase = cleanBase.replace(/\/+$/, "");
       document.getElementById("base-url-input").value = cleanBase;
       updateGeneratedGuestLink();
+      updateAdminRecapUI();
 
       document.getElementById("cfg-theme").value = EVENT_CONFIG.theme || "royal";
       document.getElementById("cfg-webhook").value = EVENT_CONFIG.rsvpWebhookUrl || "";
@@ -2038,6 +2744,9 @@
       document.getElementById("cfg-bank-name").value = EVENT_CONFIG.bankName;
       document.getElementById("cfg-bank").value = EVENT_CONFIG.bankNumber;
       document.getElementById("cfg-bank-holder").value = EVENT_CONFIG.bankHolder;
+      document.getElementById("cfg-ewallet-name").value = EVENT_CONFIG.ewalletName || "";
+      document.getElementById("cfg-ewallet-number").value = EVENT_CONFIG.ewalletNumber || "";
+      document.getElementById("cfg-ewallet-holder").value = EVENT_CONFIG.ewalletHolder || "";
     }
 
     function updateGeneratedGuestLink() {
@@ -2052,25 +2761,7 @@
     function sendGuestWhatsApp() {
       var guest = document.getElementById("guest-input").value.trim() || "Bapak/Ibu/Saudara/i";
       var link = document.getElementById("generated-link").value;
-      var NL = String.fromCharCode(10);
-      var noteLine = EVENT_CONFIG.addressNote ? ("🧭 _Patokan: " + EVENT_CONFIG.addressNote + "_" + NL) : "";
-      var msg =
-        "Sampurasun 🙏✨" + NL +
-        "Assalamu’alaikum Warahmatullahi Wabarakatuh" + NL + NL +
-        "Kepada Yth. *" + guest + "*" + NL + NL +
-        "Dengan memohon rahmat dan ridho Allah SWT, kami mengundang Bapak/Ibu/Saudara/i untuk hadir pada acara *Walimatul Khitan* putra-putra kami:" + NL +
-        "👦 *" + EVENT_CONFIG.child1 + "*" + NL +
-        "👦 *" + EVENT_CONFIG.child2 + "*" + NL + NL +
-        "📅 " + EVENT_CONFIG.eventDateDisplay + NL +
-        "⏰ " + EVENT_CONFIG.eventTimeDisplay + NL +
-        "📍 " + EVENT_CONFIG.address + NL +
-        noteLine + NL +
-        "🔗 *Buka Undangan Digital:*" + NL +
-        link + NL + NL +
-        "Hatur nuhun atas kehadiran dan doa restunya." + NL +
-        "*" + EVENT_CONFIG.parents + "*";
-
-      window.open("https://wa.me/?text=" + encodeURIComponent(msg), "_blank");
+      window.open(buildWhatsAppUrlForGuest(guest, link), "_blank");
     }
 
     function saveAdminConfig() {
@@ -2089,6 +2780,9 @@
       EVENT_CONFIG.bankName = document.getElementById("cfg-bank-name").value.trim();
       EVENT_CONFIG.bankNumber = document.getElementById("cfg-bank").value.trim();
       EVENT_CONFIG.bankHolder = document.getElementById("cfg-bank-holder").value.trim();
+      EVENT_CONFIG.ewalletName = document.getElementById("cfg-ewallet-name").value.trim();
+      EVENT_CONFIG.ewalletNumber = document.getElementById("cfg-ewallet-number").value.trim();
+      EVENT_CONFIG.ewalletHolder = document.getElementById("cfg-ewallet-holder").value.trim();
 
       applyEventConfigToDOM();
 
@@ -2175,6 +2869,11 @@
         var note = document.getElementById("copy-note");
         if (note) note.classList.add("show");
       });
+      document.getElementById("btn-copy-ewallet").addEventListener("click", function () {
+        if (EVENT_CONFIG.ewalletNumber) {
+          copyToClipboard(EVENT_CONFIG.ewalletNumber, "Nomor E-Wallet berhasil disalin.");
+        }
+      });
       document.getElementById("rsvp-form").addEventListener("submit", handleRSVPSubmit);
       document.getElementById("btn-refresh-wishes").addEventListener("click", function () {
         fetchLiveWishesFromSheet();
@@ -2236,6 +2935,7 @@
       if (isAdminMode) {
         var adminModalEl = document.getElementById("admin-modal");
         document.getElementById("btn-open-admin").addEventListener("click", function () {
+          updateAdminRecapUI();
           adminModalEl.classList.add("open");
         });
         document.getElementById("btn-close-admin").addEventListener("click", function () {
@@ -2256,7 +2956,10 @@
           document.getElementById("tab-config-content").style.display = "block";
           document.getElementById("tab-link-content").style.display = "none";
         });
-        document.getElementById("base-url-input").addEventListener("input", updateGeneratedGuestLink);
+        document.getElementById("base-url-input").addEventListener("input", function () {
+          updateGeneratedGuestLink();
+          renderBulkGuestList();
+        });
         document.getElementById("guest-input").addEventListener("input", updateGeneratedGuestLink);
         document.getElementById("btn-copy-guest-link").addEventListener("click", function () {
           copyToClipboard(document.getElementById("generated-link").value, "Link tamu berhasil disalin.");
@@ -2266,6 +2969,17 @@
           copyToClipboard(document.getElementById("admin-secret-link").value, "Link admin rahasia disalin.");
         });
         document.getElementById("btn-send-wa").addEventListener("click", sendGuestWhatsApp);
+
+        document.getElementById("btn-generate-bulk").addEventListener("click", function () {
+          renderBulkGuestList();
+          showToast("Daftar link tamu massal siap dikirim.");
+        });
+        document.getElementById("btn-reset-bulk-sent").addEventListener("click", function () {
+          try { localStorage.removeItem("khitan_sent_guests_v1"); } catch (e) {}
+          renderBulkGuestList();
+          showToast("Tanda terkirim berhasil direset.");
+        });
+
         document.getElementById("btn-save-config").addEventListener("click", saveAdminConfig);
         document.getElementById("btn-download-html").addEventListener("click", downloadUpdatedHTML);
       }
