@@ -2,74 +2,59 @@
 <html lang="id">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Walimatul Khitan — Rasyid &amp; Rayhan</title>
-  <meta name="description" content="Undangan Tasyakuran Walimatul Khitan Rasyid Muhammad Aufar Rabbani &amp; Rayhan Muhammad Alif Rabbani — Minggu, 20 Desember 2026 di Dago Pojok, Bandung." />
-
-  <!-- Open Graph / WhatsApp Preview -->
-  <meta property="og:type" content="website" />
+  <meta name="description" content="Undangan Digital Walimatul Khitan Rasyid Muhammad Aufar Rabbani &amp; Rayhan Muhammad Alif Rabbani — Minggu, 20 Desember 2026" />
   <meta property="og:title" content="Walimatul Khitan — Rasyid &amp; Rayhan" />
-  <meta property="og:description" content="Sampurasun • Minggu, 20 Desember 2026 • Jl. Gg. Mm Adi, Dago Pojok, Bandung (Masuk gang belok kanan terus belok kiri sampai ada lapang, sebelah rumah kayu). Kepada Yth. Bapak/Ibu/Saudara/i, kami mengundang kehadiran dan doa restu Anda." />
-  <meta property="og:image" content="https://lh3.googleusercontent.com/d/1gRLn7fyUA7b7QcgVUW4MAgUvag8Nt9Ro=w1200" />
-  <meta property="og:image:width" content="1200" />
-  <meta property="og:image:height" content="630" />
-
-  <!-- Google Fonts -->
+  <meta property="og:description" content="Minggu, 20 Desember 2026 | Pukul 09.00 WIB – Selesai | Kediaman Keluarga Bapak Riza Arvan Rabbani &amp; Ibu Siska Noeryulia" />
+  <meta property="og:type" content="website" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,400;0,700;1,400&family=Cinzel+Decorative:wght@700&family=Cormorant+Garamond:ital,wght@0,600;0,700;1,600&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" />
-
   <style>
     :root {
       --bg-outer: #0e241b;
       --bg-cream: #faf6f0;
+      --bg-card: #ffffff;
       --primary: #1b4332;
       --primary-dark: #112b20;
       --accent: #c59b27;
-      --accent-light: #e7c258;
-      --accent-soft: #f5ebd1;
+      --accent-light: #e5c158;
+      --accent-soft: #f6eed8;
+      --border-gold: rgba(197, 155, 39, 0.38);
       --text-main: #1d2b24;
       --text-muted: #5a6b62;
-      --border-gold: rgba(197, 155, 39, 0.35);
-      --card-bg: #ffffff;
+      --shadow-card: 0 10px 28px rgba(17, 43, 32, 0.08);
     }
 
-    body[data-theme="sogan"] {
-      --bg-outer: #261710;
+    body.theme-sogan {
+      --bg-outer: #261810;
       --bg-cream: #fbf7f2;
-      --primary: #4a2c1d;
-      --primary-dark: #2f1b11;
-      --accent: #c88a36;
-      --accent-light: #e6b467;
-      --accent-soft: #f6e8d5;
-      --text-main: #2b1d16;
-      --text-muted: #6e584d;
-      --border-gold: rgba(200, 138, 54, 0.35);
+      --primary: #5c3a21;
+      --primary-dark: #3d2514;
+      --accent: #b8862d;
+      --accent-light: #dfb35a;
+      --accent-soft: #f4ead8;
+      --border-gold: rgba(184, 134, 45, 0.38);
+      --text-main: #2c1e16;
+      --text-muted: #6e5a4f;
     }
 
-    body[data-theme="pajajaran"] {
-      --bg-outer: #0e1c33;
-      --bg-cream: #f5f8fc;
-      --primary: #1a355b;
-      --primary-dark: #10223b;
+    body.theme-keraton {
+      --bg-outer: #0d1b2a;
+      --bg-cream: #f6f8fb;
+      --primary: #1b365d;
+      --primary-dark: #10233f;
       --accent: #c59b27;
-      --accent-light: #e6c360;
-      --accent-soft: #e6eef8;
-      --text-main: #18263b;
-      --text-muted: #52637a;
-      --border-gold: rgba(197, 155, 39, 0.35);
+      --accent-light: #e7c565;
+      --accent-soft: #f3ecd9;
+      --border-gold: rgba(197, 155, 39, 0.38);
+      --text-main: #1a2738;
+      --text-muted: #55657a;
     }
 
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
-
-    html {
-      scroll-behavior: smooth;
-    }
-
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
     body {
       font-family: 'Plus Jakarta Sans', sans-serif;
       background: radial-gradient(circle at top, var(--primary) 0%, var(--bg-outer) 78%);
@@ -77,7 +62,7 @@
       min-height: 100vh;
       display: flex;
       justify-content: center;
-      padding: 0;
+      overflow-x: hidden;
     }
 
     .app-shell {
@@ -86,29 +71,26 @@
       min-height: 100vh;
       background-color: var(--bg-cream);
       position: relative;
-      box-shadow: 0 24px 60px rgba(0, 0, 0, 0.48);
+      box-shadow: 0 24px 64px rgba(0, 0, 0, 0.5);
       overflow-x: clip;
     }
 
-    .batik-bg {
-      background-image:
-        radial-gradient(circle at 18% 18%, rgba(197, 155, 39, 0.08) 0%, transparent 45%),
-        radial-gradient(circle at 82% 82%, rgba(27, 67, 50, 0.07) 0%, transparent 45%);
-    }
-
-    /* TOP UTILITY BAR - HANYA MUNCUL DI ?admin=ariska123 */
-    .top-utility {
+    /* Admin Floating Bar (Only visible when ?admin=ariska123) */
+    .admin-bar {
       display: none;
       position: sticky;
       top: 0;
-      z-index: 60;
+      z-index: 50;
       justify-content: space-between;
       align-items: center;
       padding: 10px 14px;
-      background: rgba(250, 246, 240, 0.96);
+      background: rgba(17, 43, 32, 0.96);
+      color: #faf6f0;
       backdrop-filter: blur(10px);
-      border-bottom: 1px solid var(--border-gold);
+      border-bottom: 1px solid var(--accent);
+      font-size: 12px;
     }
+    .admin-bar.visible { display: flex; }
 
     .pill-btn {
       border: 1px solid var(--border-gold);
@@ -117,80 +99,68 @@
       font-family: inherit;
       font-size: 12px;
       font-weight: 600;
-      padding: 7px 13px;
+      padding: 8px 14px;
       border-radius: 999px;
       cursor: pointer;
       display: inline-flex;
       align-items: center;
+      justify-content: center;
       gap: 6px;
-      transition: all 0.2s ease;
       text-decoration: none;
+      transition: transform 0.2s ease, background 0.2s ease, box-shadow 0.2s ease;
     }
-
     .pill-btn:hover {
       background: var(--accent-soft);
       transform: translateY(-1px);
     }
-
     .pill-btn.primary {
       background: var(--primary);
       color: #ffffff;
       border-color: var(--primary);
     }
-
     .pill-btn.primary:hover {
       background: var(--primary-dark);
     }
-
-    .pill-btn.sm {
-      font-size: 11px;
-      padding: 5px 10px;
+    .pill-btn.gold {
+      background: linear-gradient(135deg, #dfba4e 0%, #c59b27 100%);
+      color: #13291f;
+      border: none;
+      font-weight: 700;
     }
 
-    /* COVER SCREEN + CURTAIN SLIDE-UP TRANSITION */
+    /* COVER SCREEN WITH CURTAIN SLIDE-UP */
     #cover {
+      position: relative;
       min-height: 100vh;
-      padding: 36px 24px 44px;
+      padding: 34px 24px 44px;
       display: flex;
       flex-direction: column;
       align-items: center;
       justify-content: space-between;
       text-align: center;
-      background: linear-gradient(170deg, var(--primary-dark) 0%, var(--primary) 52%, var(--bg-outer) 100%);
+      background: linear-gradient(168deg, var(--primary-dark) 0%, var(--primary) 52%, #0d2219 100%);
       color: #faf6f0;
-      position: relative;
-      z-index: 30;
-      transition: transform 0.72s cubic-bezier(0.77, 0, 0.175, 1), opacity 0.6s ease;
-      will-change: transform, opacity;
+      z-index: 40;
+      transition: transform 0.85s cubic-bezier(0.22, 1, 0.36, 1), opacity 0.7s ease;
     }
-
-    #cover.opening {
-      position: fixed;
-      top: 0;
-      left: 50%;
-      width: 100%;
-      max-width: 460px;
-      transform: translate(-50%, -102%);
+    #cover.curtain-up {
+      transform: translateY(-105%);
       opacity: 0;
       pointer-events: none;
     }
+    #cover.hidden { display: none; }
 
-    #cover.opened {
-      display: none;
-    }
-
-    /* ORNAMEN SUDUT SUNDA DI SAMPUL */
-    .cover-corner {
+    .corner-ornament {
       position: absolute;
-      width: 54px;
-      height: 54px;
+      width: 68px;
+      height: 68px;
       pointer-events: none;
-      opacity: 0.65;
+      opacity: 0.55;
     }
-    .cover-corner.tl { top: 14px; left: 14px; }
-    .cover-corner.tr { top: 14px; right: 14px; transform: scaleX(-1); }
-    .cover-corner.bl { bottom: 14px; left: 14px; transform: scaleY(-1); }
-    .cover-corner.br { bottom: 14px; right: 14px; transform: scale(-1, -1); }
+    .corner-tl { top: 12px; left: 12px; }
+    .corner-tr { top: 12px; right: 12px; transform: scaleX(-1); }
+    .corner-bl { bottom: 12px; left: 12px; transform: scaleY(-1); }
+    .corner-br { bottom: 12px; right: 12px; transform: scale(-1, -1); }
 
     .sunda-badge {
       display: inline-block;
@@ -201,36 +171,45 @@
       letter-spacing: 0.16em;
       text-transform: uppercase;
       color: #f3d786;
-      background: rgba(255, 255, 255, 0.05);
+      background: rgba(255, 255, 255, 0.06);
+      margin-top: 8px;
     }
 
     .siger-wrap {
-      margin: 14px auto 4px;
-      display: flex;
-      justify-content: center;
-      cursor: pointer;
-      user-select: none;
+      margin: 12px auto 4px;
+      width: 110px;
+      opacity: 0.92;
     }
 
-    .cover-names {
-      margin: 10px 0;
+    .cover-names { margin: 8px 0; }
+    .cover-subtitle {
+      font-size: 12px;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: #e6d8b0;
+      margin-bottom: 10px;
     }
-
     .cover-names h1 {
       font-family: 'Cormorant Garamond', serif;
       font-size: 35px;
       line-height: 1.12;
       font-weight: 700;
       color: #ffffff;
-      text-shadow: 0 4px 18px rgba(0, 0, 0, 0.3);
+      text-shadow: 0 4px 18px rgba(0, 0, 0, 0.35);
     }
-
     .amp-sunda {
       display: block;
       font-family: 'Cinzel Decorative', serif;
       font-size: 16px;
       color: #e7c258;
       margin: 6px 0;
+    }
+    .cover-date {
+      margin-top: 14px;
+      font-size: 14px;
+      color: #f4d67c;
+      font-weight: 600;
+      letter-spacing: 0.03em;
     }
 
     .guest-box {
@@ -240,9 +219,8 @@
       border-radius: 16px;
       padding: 14px 16px;
       margin: 14px 0 20px;
-      backdrop-filter: blur(4px);
+      backdrop-filter: blur(6px);
     }
-
     .guest-box small {
       display: block;
       font-size: 11px;
@@ -251,7 +229,6 @@
       text-transform: uppercase;
       margin-bottom: 4px;
     }
-
     .guest-box strong {
       font-size: 18px;
       color: #ffffff;
@@ -259,63 +236,57 @@
     }
 
     .open-btn {
-      background: linear-gradient(135deg, #dfba4e 0%, #c59b27 100%);
+      background: linear-gradient(135deg, #e2be53 0%, #c59b27 100%);
       color: #13291f;
       border: none;
       border-radius: 999px;
-      padding: 14px 32px;
+      padding: 14px 30px;
+      font-family: inherit;
       font-size: 14px;
       font-weight: 700;
       letter-spacing: 0.04em;
       cursor: pointer;
-      box-shadow: 0 10px 24px rgba(0, 0, 0, 0.28);
+      box-shadow: 0 10px 26px rgba(0, 0, 0, 0.32);
       transition: transform 0.2s ease, box-shadow 0.2s ease;
     }
-
     .open-btn:hover {
       transform: translateY(-2px);
-      box-shadow: 0 14px 28px rgba(0, 0, 0, 0.35);
+      box-shadow: 0 14px 30px rgba(0, 0, 0, 0.4);
     }
 
     /* MAIN CONTENT */
     #invitation-main {
       display: none;
-      padding-bottom: 115px;
+      padding-bottom: 96px;
     }
-
     #invitation-main.active {
       display: block;
       animation: fadeInUp 0.65s ease;
     }
-
     @keyframes fadeInUp {
-      from { opacity: 0; transform: translateY(16px); }
+      from { opacity: 0; transform: translateY(14px); }
       to { opacity: 1; transform: translateY(0); }
     }
 
-    .reveal-item {
-      opacity: 0;
-      transform: translateY(16px);
-      transition: opacity 0.55s ease, transform 0.55s ease;
-    }
-
-    .reveal-item.visible {
-      opacity: 1;
-      transform: translateY(0);
-    }
-
     section {
-      padding: 28px 20px 24px;
+      padding: 30px 20px;
       position: relative;
     }
 
-    /* PEMBATAS MOTIF KAWUNG / SUNDA ANTAR SECTION */
-    .sunda-divider {
+    .kawung-divider {
       display: flex;
       align-items: center;
       justify-content: center;
-      padding: 4px 24px;
+      gap: 10px;
+      padding: 0 24px;
       opacity: 0.72;
+    }
+    .kawung-divider::before,
+    .kawung-divider::after {
+      content: "";
+      flex: 1;
+      height: 1px;
+      background: linear-gradient(90deg, transparent, var(--accent), transparent);
     }
 
     .section-tag {
@@ -327,448 +298,402 @@
       text-align: center;
       margin-bottom: 6px;
     }
-
     .section-title {
       font-family: 'Cormorant Garamond', serif;
-      font-size: 28px;
-      font-weight: 700;
+      font-size: 30px;
+      line-height: 1.15;
       color: var(--primary);
       text-align: center;
-      margin-bottom: 10px;
-    }
-
-    .lead-text {
-      font-size: 13.5px;
-      line-height: 1.65;
-      color: var(--text-muted);
-      text-align: center;
-      margin-bottom: 18px;
-    }
-
-    .card {
-      background: var(--card-bg);
-      border: 1px solid var(--border-gold);
-      border-radius: 18px;
-      padding: 18px 16px;
-      box-shadow: 0 8px 24px rgba(27, 67, 50, 0.05);
-    }
-
-    /* QURANIC QUOTE CARD */
-    .quran-card {
-      background: linear-gradient(160deg, var(--primary-dark) 0%, var(--primary) 100%);
-      color: #faf6f0;
-      border: 1px solid var(--accent);
-      border-radius: 20px;
-      padding: 22px 18px;
-      text-align: center;
-      position: relative;
-      box-shadow: 0 12px 28px rgba(17, 43, 32, 0.18);
-    }
-
-    .quran-ornament {
-      color: #e7c258;
-      font-size: 13px;
-      letter-spacing: 0.25em;
-      margin-bottom: 10px;
-      display: block;
-    }
-
-    .quran-arabic {
-      font-family: 'Amiri', serif;
-      font-size: 23px;
-      line-height: 1.95;
-      color: #f6df97;
-      direction: rtl;
       margin-bottom: 12px;
       font-weight: 700;
     }
-
-    .quran-translation {
-      font-family: 'Cormorant Garamond', serif;
-      font-style: italic;
-      font-size: 16.5px;
-      line-height: 1.55;
-      color: #ffffff;
-      margin-bottom: 8px;
+    .lead-text {
+      font-size: 13.5px;
+      line-height: 1.7;
+      color: var(--text-muted);
+      text-align: center;
     }
 
-    .quran-ref {
+    .card {
+      background: var(--bg-card);
+      border: 1px solid var(--border-gold);
+      border-radius: 20px;
+      padding: 20px;
+      box-shadow: var(--shadow-card);
+      margin-top: 16px;
+    }
+
+    /* QUOTE / DOA SECTION */
+    .quote-card {
+      background: linear-gradient(155deg, var(--primary-dark) 0%, var(--primary) 100%);
+      color: #faf6f0;
+      border-radius: 22px;
+      padding: 24px 20px;
+      text-align: center;
+      border: 1px solid rgba(226, 188, 76, 0.5);
+      box-shadow: 0 14px 32px rgba(17, 43, 32, 0.16);
+      margin-top: 12px;
+    }
+    .arabic-verse {
+      font-family: 'Amiri', serif;
+      font-size: 23px;
+      line-height: 1.85;
+      color: #f6dc8b;
+      margin-bottom: 12px;
+      direction: rtl;
+    }
+    .verse-translation {
+      font-size: 13px;
+      line-height: 1.68;
+      color: #f3eee3;
+      font-style: italic;
+    }
+    .verse-ref {
       display: inline-block;
+      margin-top: 10px;
       font-size: 11px;
       font-weight: 700;
       letter-spacing: 0.1em;
       text-transform: uppercase;
       color: #e7c258;
-      padding: 3px 12px;
-      border: 1px solid rgba(231, 194, 88, 0.4);
+      padding: 4px 12px;
       border-radius: 999px;
-      margin-bottom: 10px;
+      background: rgba(255, 255, 255, 0.08);
     }
 
-    .quran-note {
-      font-size: 12px;
-      line-height: 1.6;
-      color: rgba(250, 246, 240, 0.85);
-      border-top: 1px dashed rgba(231, 194, 88, 0.3);
-      padding-top: 10px;
-    }
-
-    /* SKELETON SHIMMER UNTUK FOTO */
-    .shimmer-box {
-      position: relative;
-      background: linear-gradient(110deg, var(--accent-soft) 25%, #fff9eb 45%, var(--accent-soft) 65%);
-      background-size: 220% 100%;
-      animation: skeletonShimmer 1.5s infinite linear;
-    }
-
-    .shimmer-box.loaded {
-      animation: none;
-      background: var(--accent-soft);
-    }
-
-    .shimmer-box img {
-      opacity: 0;
-      transition: opacity 0.45s ease, transform 0.35s ease;
-    }
-
-    .shimmer-box.loaded img {
-      opacity: 1;
-    }
-
-    @keyframes skeletonShimmer {
-      0% { background-position: 200% 0; }
-      100% { background-position: -200% 0; }
-    }
-
-    /* PROFILE GRID */
+    /* PROFILES */
     .profile-grid {
       display: grid;
       grid-template-columns: 1fr 1fr;
-      gap: 12px;
-      margin-bottom: 14px;
+      gap: 14px;
+      margin-top: 18px;
     }
-
     .profile-card {
-      background: var(--card-bg);
+      background: #ffffff;
       border: 1px solid var(--border-gold);
       border-radius: 18px;
-      padding: 12px 10px 14px;
+      padding: 12px;
       text-align: center;
-      box-shadow: 0 6px 18px rgba(0, 0, 0, 0.04);
+      box-shadow: var(--shadow-card);
     }
-
     .arch-frame {
       width: 100%;
       aspect-ratio: 3 / 4;
-      border-radius: 999px 999px 14px 14px;
+      border-radius: 999px 999px 18px 18px;
       overflow: hidden;
       border: 2px solid var(--accent);
+      background: var(--accent-soft);
       margin-bottom: 10px;
+      position: relative;
     }
-
+    .shimmer-bg::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(110deg, transparent 25%, rgba(255, 255, 255, 0.55) 50%, transparent 75%);
+      background-size: 200% 100%;
+      animation: shimmer 1.5s infinite linear;
+      pointer-events: none;
+    }
+    .shimmer-bg.loaded::after { display: none; }
+    @keyframes shimmer {
+      0% { background-position: 200% 0; }
+      100% { background-position: -200% 0; }
+    }
     .arch-frame img {
       width: 100%;
       height: 100%;
       object-fit: cover;
-      object-position: center 20%;
+      object-position: center 15%;
       display: block;
     }
-
     .profile-name {
       font-family: 'Cormorant Garamond', serif;
-      font-size: 18px;
-      line-height: 1.2;
+      font-size: 18.5px;
       font-weight: 700;
       color: var(--primary);
-      margin-bottom: 4px;
+      line-height: 1.22;
     }
-
     .profile-role {
       font-size: 11px;
-      font-weight: 600;
-      color: #9b7614;
-      text-transform: uppercase;
-      letter-spacing: 0.08em;
+      color: var(--text-muted);
+      margin-top: 4px;
     }
 
-    /* COUNTDOWN & BANNER HARI-H */
+    /* COUNTDOWN & LOCATION */
     .countdown-grid {
       display: grid;
       grid-template-columns: repeat(4, 1fr);
       gap: 8px;
-      margin-bottom: 16px;
+      margin-top: 16px;
     }
-
     .cd-box {
       background: var(--primary);
       color: #ffffff;
-      border: 1px solid var(--accent);
       border-radius: 14px;
-      padding: 10px 6px;
+      padding: 12px 6px;
       text-align: center;
+      border: 1px solid rgba(226, 188, 76, 0.45);
     }
-
     .cd-num {
-      display: block;
-      font-size: 20px;
+      font-size: 22px;
       font-weight: 700;
       color: #f4d67c;
+      display: block;
     }
-
     .cd-label {
       font-size: 10px;
       text-transform: uppercase;
       letter-spacing: 0.08em;
-      opacity: 0.85;
+      opacity: 0.88;
     }
-
     .hari-h-banner {
       display: none;
-      background: linear-gradient(135deg, var(--primary-dark), var(--primary));
-      color: #faf6f0;
-      border: 1.5px solid var(--accent);
-      border-radius: 16px;
+      margin-top: 16px;
       padding: 14px 16px;
-      text-align: center;
-      margin-bottom: 16px;
-      box-shadow: 0 8px 20px rgba(27, 67, 50, 0.14);
-    }
-
-    .hari-h-banner.show {
-      display: block;
-    }
-
-    .hari-h-banner strong {
-      display: block;
-      color: #f4d67c;
+      border-radius: 16px;
+      background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+      color: #f6dc8b;
+      font-weight: 700;
       font-size: 14px;
-      margin-bottom: 3px;
+      text-align: center;
+      border: 1px solid var(--accent);
     }
 
-    .hari-h-banner span {
-      font-size: 12px;
-      opacity: 0.92;
-    }
-
-    /* ADDRESS LANDMARK NOTE CALLOUT + 4-STEP ROUTE FLOW */
-    .address-note-box {
-      background: var(--accent-soft);
-      border: 1px solid var(--border-gold);
-      border-left: 4px solid var(--accent);
+    /* ROUTE / PATOKAN BOX */
+    .route-note-box {
+      margin: 14px 0 16px;
+      padding: 14px;
       border-radius: 14px;
-      padding: 12px 14px;
-      margin: 14px auto 16px;
+      background: var(--accent-soft);
+      border-left: 4px solid var(--accent);
       text-align: left;
-      max-width: 380px;
-      box-shadow: 0 4px 12px rgba(197, 155, 39, 0.08);
     }
-
-    .address-note-title {
+    .route-note-title {
+      font-size: 11px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--primary);
+      margin-bottom: 8px;
       display: flex;
       align-items: center;
       gap: 6px;
-      font-size: 11px;
-      font-weight: 700;
-      letter-spacing: 0.08em;
-      text-transform: uppercase;
-      color: var(--primary);
-      margin-bottom: 8px;
     }
-
-    .route-steps-flow {
+    .route-steps {
       display: flex;
       flex-wrap: wrap;
       align-items: center;
       gap: 5px;
       margin-bottom: 8px;
     }
-
     .route-step-chip {
-      display: inline-flex;
-      align-items: center;
-      gap: 5px;
+      font-size: 11px;
+      font-weight: 600;
+      color: var(--primary);
       background: #ffffff;
       border: 1px solid var(--border-gold);
-      border-radius: 8px;
       padding: 4px 8px;
-      font-size: 11.5px;
+      border-radius: 8px;
+    }
+    .route-arrow {
+      font-size: 11px;
+      color: var(--accent);
       font-weight: 700;
-      color: var(--primary);
+    }
+    .route-note-text {
+      font-size: 12.5px;
+      color: var(--text-main);
+      line-height: 1.5;
+      font-style: italic;
     }
 
-    .route-step-num {
+    /* GALLERY (FULL-WIDTH LANDSCAPE FAMILY PHOTOS) */
+    .family-gallery-list {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+      margin-top: 18px;
+    }
+    .gallery-item {
+      border-radius: 18px;
+      overflow: hidden;
+      border: 1px solid var(--border-gold);
+      background: #ffffff;
+      box-shadow: var(--shadow-card);
+      cursor: pointer;
+      position: relative;
+    }
+    .gallery-item.landscape-full img {
+      width: 100%;
+      aspect-ratio: 16 / 10;
+      object-fit: cover;
+      object-position: center 25%;
+      display: block;
+      transition: transform 0.35s ease;
+    }
+    .gallery-item:hover img {
+      transform: scale(1.025);
+    }
+    .gallery-cap {
+      padding: 10px 14px;
+      font-size: 12px;
+      font-weight: 600;
+      color: var(--primary);
+      background: #ffffff;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .gallery-cap span.zoom-hint {
+      font-size: 11px;
+      color: var(--text-muted);
+      font-weight: 500;
+    }
+
+    /* DIGITAL WALLET / AMPLOP DIGITAL (SUBTLE MOTION REVEAL) */
+    .gift-toggle-wrap {
+      margin-top: 16px;
+      text-align: center;
+    }
+    .gift-reveal-btn {
+      width: 100%;
+      padding: 13px 18px;
+      border-radius: 16px;
+      border: 1px solid var(--border-gold);
+      background: #ffffff;
+      color: var(--primary);
+      font-family: inherit;
+      font-size: 13.5px;
+      font-weight: 600;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      box-shadow: 0 4px 14px rgba(17, 43, 32, 0.05);
+      transition: background 0.25s ease, border-color 0.25s ease, transform 0.2s ease;
+    }
+    .gift-reveal-btn:hover {
+      background: var(--accent-soft);
+      border-color: var(--accent);
+    }
+    .gift-reveal-btn .chevron {
       display: inline-flex;
       align-items: center;
       justify-content: center;
-      width: 16px;
-      height: 16px;
+      width: 26px;
+      height: 26px;
       border-radius: 50%;
-      background: var(--primary);
-      color: #f4d67c;
-      font-size: 10px;
-      font-weight: 700;
-      flex-shrink: 0;
-    }
-
-    .route-step-arrow {
-      font-size: 11px;
-      font-weight: 700;
-      color: #9b7614;
-    }
-
-    .address-note-text {
+      background: var(--accent-soft);
+      color: var(--primary);
       font-size: 12px;
-      line-height: 1.5;
-      color: var(--text-muted);
-      font-weight: 500;
-      border-top: 1px dashed var(--border-gold);
-      padding-top: 6px;
+      transition: transform 0.4s cubic-bezier(0.22, 1, 0.36, 1);
+    }
+    .gift-reveal-btn[aria-expanded="true"] .chevron {
+      transform: rotate(180deg);
     }
 
-    /* GALLERY: FAMILY LANDSCAPE FULL + CHILDREN GRID */
-    .family-stack {
-      display: flex;
-      flex-direction: column;
-      gap: 12px;
-      margin-bottom: 12px;
-    }
-
-    .family-item {
-      position: relative;
-      border-radius: 16px;
-      overflow: hidden;
-      border: 1px solid var(--border-gold);
-      aspect-ratio: 16 / 9;
-      cursor: pointer;
-    }
-
-    .family-item img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      object-position: center 22%;
-      display: block;
-    }
-
-    .family-item:hover img {
-      transform: scale(1.03);
-    }
-
-    .gallery-grid {
+    .gift-drawer {
       display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 10px;
+      grid-template-rows: 0fr;
+      opacity: 0;
+      transform: translateY(-6px);
+      transition: grid-template-rows 0.45s cubic-bezier(0.22, 1, 0.36, 1),
+                  opacity 0.38s ease,
+                  transform 0.45s cubic-bezier(0.22, 1, 0.36, 1);
     }
-
-    .gallery-item {
-      position: relative;
-      border-radius: 14px;
+    .gift-drawer.open {
+      grid-template-rows: 1fr;
+      opacity: 1;
+      transform: translateY(0);
+    }
+    .gift-drawer-inner {
       overflow: hidden;
-      border: 1px solid var(--border-gold);
-      aspect-ratio: 3 / 4;
-      cursor: pointer;
     }
 
-    .gallery-item img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      object-position: center 20%;
-      display: block;
-    }
-
-    .gallery-item:hover img {
-      transform: scale(1.04);
-    }
-
-    .gallery-cap {
-      position: absolute;
-      inset: auto 0 0 0;
-      padding: 18px 10px 8px;
-      background: linear-gradient(to top, rgba(14, 36, 27, 0.85), transparent);
-      color: #faf6f0;
-      font-size: 11px;
-      font-weight: 600;
-    }
-
-    /* VIRTUAL BANK CARD & OPTIONAL E-WALLET/QRIS */
     .bank-card-virtual {
+      margin-top: 12px;
+      background: linear-gradient(135deg, var(--primary-dark) 0%, var(--primary) 65%, #23523d 100%);
+      color: #ffffff;
+      border-radius: 18px;
+      padding: 20px 18px;
+      border: 1px solid rgba(231, 194, 88, 0.45);
       position: relative;
       overflow: hidden;
-      background: linear-gradient(135deg, var(--primary-dark) 0%, var(--primary) 58%, #255842 100%);
-      color: #faf6f0;
-      border: 1.5px solid var(--accent);
-      border-radius: 20px;
-      padding: 20px 18px;
       text-align: left;
-      box-shadow: 0 14px 30px rgba(17, 43, 32, 0.22);
+      box-shadow: 0 10px 24px rgba(17, 43, 32, 0.14);
     }
-
     .bank-card-virtual::after {
       content: "";
       position: absolute;
       right: -32px;
-      bottom: -32px;
-      width: 140px;
-      height: 140px;
+      bottom: -38px;
+      width: 130px;
+      height: 130px;
       border-radius: 50%;
-      border: 18px solid rgba(231, 194, 88, 0.08);
+      border: 14px solid rgba(255, 255, 255, 0.05);
       pointer-events: none;
     }
-
-    .bank-card-top {
+    .card-top-row {
       display: flex;
       justify-content: space-between;
       align-items: center;
       margin-bottom: 14px;
     }
-
-    .bank-chip {
-      width: 36px;
-      height: 26px;
-      border-radius: 6px;
+    .emv-chip {
+      width: 34px;
+      height: 24px;
+      border-radius: 5px;
       background: linear-gradient(135deg, #f3d786 0%, #c59b27 100%);
-      border: 1px solid rgba(255, 255, 255, 0.45);
+      border: 1px solid rgba(255, 255, 255, 0.4);
       position: relative;
     }
-
-    .bank-chip::before {
+    .emv-chip::before {
       content: "";
       position: absolute;
       inset: 5px 8px;
       border: 1px solid rgba(19, 41, 31, 0.35);
       border-radius: 2px;
     }
-
-    .bank-acc {
-      font-size: 22px;
+    .bank-title-label {
+      font-size: 13px;
       font-weight: 700;
-      letter-spacing: 0.09em;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
       color: #f4d67c;
-      margin: 6px 0 4px;
+    }
+    .bank-acc-label {
+      font-size: 10px;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: rgba(255, 255, 255, 0.72);
+    }
+    .bank-acc-num {
+      font-size: 21px;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      color: #f4d67c;
+      margin: 4px 0 14px;
       font-variant-numeric: tabular-nums;
     }
-
-    .ewallet-card {
-      margin-top: 12px;
-      background: var(--card-bg);
-      border: 1px solid var(--border-gold);
-      border-radius: 16px;
-      padding: 14px 16px;
-      text-align: center;
-      display: none;
+    .card-bottom-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
+    .bank-holder-name {
+      font-size: 13px;
+      font-weight: 600;
+      color: #ffffff;
     }
 
-    .ewallet-card.show {
-      display: block;
-    }
-
-    /* FORMS */
+    /* FORM & WISHES */
     .form-group {
       margin-bottom: 12px;
       text-align: left;
     }
-
     .form-group label {
       display: block;
       font-size: 12px;
@@ -776,278 +701,207 @@
       color: var(--primary);
       margin-bottom: 5px;
     }
-
     .form-control {
       width: 100%;
       padding: 10px 12px;
       border-radius: 12px;
-      border: 1px solid var(--border-gold);
+      border: 1px solid #cfd8d2;
       font-family: inherit;
       font-size: 13px;
-      color: var(--text-main);
       background: #ffffff;
+      color: var(--text-main);
     }
-
     .form-control:focus {
-      outline: 2px solid var(--accent);
+      outline: none;
       border-color: var(--accent);
     }
 
-    /* WISH LIST & STATS */
-    .wish-stats {
+    .wishes-toolbar {
       display: flex;
       justify-content: space-between;
       align-items: center;
-      flex-wrap: wrap;
-      gap: 6px;
-      margin-top: 16px;
-      padding: 8px 12px;
-      background: var(--accent-soft);
-      border-radius: 12px;
+      margin-top: 18px;
+      padding-top: 14px;
+      border-top: 1px dashed var(--border-gold);
       font-size: 11.5px;
-      font-weight: 700;
-      color: var(--primary);
-    }
-
-    .wish-subbar {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      margin-top: 8px;
-      font-size: 11px;
       color: var(--text-muted);
     }
-
-    .wish-refresh-btn {
-      border: 1px solid var(--border-gold);
-      background: #ffffff;
-      color: var(--primary);
-      font-size: 11px;
+    .sync-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
       font-weight: 600;
-      padding: 3px 9px;
-      border-radius: 999px;
-      cursor: pointer;
+      color: var(--primary);
     }
-
-    .wish-refresh-btn:hover {
-      background: var(--accent-soft);
-    }
-
     .wish-list {
-      margin-top: 10px;
+      margin-top: 12px;
       display: flex;
       flex-direction: column;
       gap: 10px;
-      max-height: 360px;
+      max-height: 340px;
       overflow-y: auto;
+      padding-right: 2px;
     }
-
     .wish-item {
       background: var(--bg-cream);
       border: 1px solid var(--border-gold);
-      border-radius: 12px;
-      padding: 10px 12px;
+      border-radius: 14px;
+      padding: 12px 14px;
+      text-align: left;
     }
-
     .wish-header {
       display: flex;
       justify-content: space-between;
-      align-items: center;
+      align-items: flex-start;
       gap: 8px;
-      margin-bottom: 4px;
-      font-size: 12.5px;
+      margin-bottom: 5px;
+    }
+    .wish-author {
+      font-size: 13px;
+      font-weight: 700;
       color: var(--primary);
     }
-
+    .wish-time {
+      font-size: 10.5px;
+      color: var(--text-muted);
+      display: block;
+      margin-top: 1px;
+    }
     .wish-badge {
       font-size: 10px;
       font-weight: 700;
-      padding: 2px 8px;
+      padding: 3px 9px;
       border-radius: 999px;
       background: var(--accent-soft);
       color: var(--primary);
       white-space: nowrap;
     }
-
-    .wish-time {
-      display: inline-block;
-      margin-top: 5px;
-      font-size: 10.5px;
-      color: var(--text-muted);
-      opacity: 0.85;
+    .wish-msg {
+      font-size: 12.5px;
+      color: var(--text-main);
+      line-height: 1.55;
     }
 
-    /* BOTTOM NAV + SCROLL-SPY ACTIVE INDICATOR */
+    /* FOOTER */
+    .closing-footer {
+      text-align: center;
+      padding: 26px 20px 18px;
+      color: var(--text-muted);
+      font-size: 12.5px;
+      line-height: 1.65;
+    }
+
+    /* BOTTOM NAV */
     .bottom-nav {
-      display: none;
       position: fixed;
-      bottom: 12px;
+      bottom: 0;
       left: 50%;
       transform: translateX(-50%);
-      width: calc(100% - 28px);
-      max-width: 430px;
-      background: rgba(250, 246, 240, 0.96);
-      backdrop-filter: blur(10px);
-      border: 1px solid var(--accent);
-      border-radius: 999px;
-      padding: 6px 10px;
-      justify-content: space-around;
-      z-index: 40;
-      box-shadow: 0 10px 26px rgba(0, 0, 0, 0.22);
+      width: 100%;
+      max-width: 460px;
+      background: rgba(255, 255, 255, 0.95);
+      backdrop-filter: blur(12px);
+      border-top: 1px solid var(--border-gold);
+      display: none;
+      grid-template-columns: repeat(5, 1fr);
+      padding: 8px 4px;
+      z-index: 35;
     }
-
-    .bottom-nav.active {
-      display: flex;
-    }
-
+    .bottom-nav.visible { display: grid; }
     .bottom-nav a {
       text-decoration: none;
       color: var(--text-muted);
-      font-size: 11.5px;
-      font-weight: 700;
-      padding: 5px 10px;
-      border-radius: 999px;
-      transition: all 0.2s ease;
+      font-size: 11px;
+      font-weight: 600;
+      text-align: center;
+      padding: 5px 2px;
+      border-radius: 10px;
+      transition: color 0.2s ease, background 0.2s ease;
     }
-
-    .bottom-nav a:hover {
+    .bottom-nav a.active {
       color: var(--primary);
+      background: var(--accent-soft);
+      font-weight: 700;
     }
 
-    .bottom-nav a.nav-active {
-      background: var(--primary);
-      color: #f4d67c;
-    }
-
-    /* AUDIO FAB + MINI EQUALIZER */
+    /* FLOATING AUDIO BUTTON + EQUALIZER */
     .audio-fab {
       display: none;
       position: fixed;
       right: 16px;
-      bottom: 66px;
-      z-index: 45;
-      width: 46px;
-      height: 46px;
+      bottom: 64px;
+      z-index: 40;
+      width: 44px;
+      height: 44px;
       border-radius: 50%;
-      border: 1.5px solid var(--accent);
+      border: 1px solid var(--accent);
       background: var(--primary);
       color: #f4d67c;
-      font-size: 17px;
+      font-size: 16px;
       cursor: pointer;
-      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.28);
       align-items: center;
       justify-content: center;
-      transition: transform 0.2s ease;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.28);
     }
-
-    .audio-fab.active {
-      display: flex;
-    }
-
-    .audio-fab.playing {
-      animation: pulseGold 2.2s infinite;
-    }
-
+    .audio-fab.visible { display: flex; }
     .eq-bars {
-      display: none;
+      display: inline-flex;
       align-items: flex-end;
       gap: 2.5px;
-      height: 15px;
+      height: 14px;
     }
-
-    .audio-fab.playing .eq-bars {
-      display: inline-flex;
-    }
-
-    .audio-fab.playing .note-icon {
-      display: none;
-    }
-
-    .eq-bar {
+    .eq-bars span {
       width: 3px;
+      height: 5px;
       background: #f4d67c;
       border-radius: 2px;
-      animation: eqDance 0.85s ease-in-out infinite;
+      transition: height 0.2s ease;
+    }
+    .audio-fab.playing .eq-bars span:nth-child(1) { animation: eqBounce 0.7s infinite ease-in-out; }
+    .audio-fab.playing .eq-bars span:nth-child(2) { animation: eqBounce 0.55s infinite ease-in-out 0.15s; }
+    .audio-fab.playing .eq-bars span:nth-child(3) { animation: eqBounce 0.65s infinite ease-in-out 0.3s; }
+    @keyframes eqBounce {
+      0%, 100% { height: 4px; }
+      50% { height: 14px; }
     }
 
-    .eq-bar:nth-child(1) { height: 7px; animation-delay: 0s; }
-    .eq-bar:nth-child(2) { height: 14px; animation-delay: 0.2s; }
-    .eq-bar:nth-child(3) { height: 9px; animation-delay: 0.4s; }
-
-    @keyframes eqDance {
-      0%, 100% { height: 5px; }
-      50% { height: 15px; }
-    }
-
-    /* GOOGLE DRIVE AUDIO DOCK */
-    .drive-audio-dock {
+    /* DRIVE AUDIO FALLBACK BAR */
+    .drive-audio-bar {
       display: none;
       position: fixed;
       left: 50%;
-      bottom: 62px;
       transform: translateX(-50%);
-      width: calc(100% - 32px);
-      max-width: 420px;
-      z-index: 46;
+      bottom: 54px;
+      width: 100%;
+      max-width: 460px;
       background: var(--primary-dark);
-      border: 1.5px solid var(--accent);
-      border-radius: 16px;
-      padding: 6px 10px;
-      box-shadow: 0 12px 28px rgba(0, 0, 0, 0.35);
+      border-top: 1px solid var(--accent);
+      padding: 6px 12px;
+      z-index: 38;
       align-items: center;
+      justify-content: space-between;
       gap: 8px;
+      color: #faf6f0;
+      font-size: 11px;
     }
+    .drive-audio-bar.visible { display: flex; }
 
-    .drive-audio-dock.open {
-      display: flex;
-    }
-
-    .drive-audio-dock iframe {
-      flex: 1;
-      height: 54px;
-      border: none;
-      border-radius: 10px;
-      background: #162e23;
-    }
-
-    .dock-close-btn {
-      background: rgba(255, 255, 255, 0.12);
-      color: #f4d67c;
-      border: 1px solid rgba(231, 194, 88, 0.4);
-      border-radius: 50%;
-      width: 28px;
-      height: 28px;
-      font-size: 12px;
-      cursor: pointer;
-      flex-shrink: 0;
-    }
-
-    @keyframes pulseGold {
-      0% { box-shadow: 0 0 0 0 rgba(197, 155, 39, 0.55); }
-      70% { box-shadow: 0 0 0 10px rgba(197, 155, 39, 0); }
-      100% { box-shadow: 0 0 0 0 rgba(197, 155, 39, 0); }
-    }
-
-    /* MODAL */
+    /* MODAL / LIGHTBOX / ADMIN DRAWER */
     .modal-backdrop {
       display: none;
       position: fixed;
       inset: 0;
-      background: rgba(10, 22, 16, 0.76);
-      z-index: 70;
+      background: rgba(10, 22, 16, 0.78);
+      z-index: 60;
       justify-content: center;
       align-items: center;
       padding: 16px;
     }
-
-    .modal-backdrop.open {
-      display: flex;
-    }
-
+    .modal-backdrop.open { display: flex; }
     .modal-panel {
       width: 100%;
-      max-width: 430px;
-      max-height: 88vh;
+      max-width: 440px;
+      max-height: 90vh;
       overflow-y: auto;
       background: var(--bg-cream);
       border-radius: 22px;
@@ -1056,12 +910,37 @@
       box-shadow: 0 24px 50px rgba(0, 0, 0, 0.45);
     }
 
-    .tab-row {
+    .lightbox-img {
+      width: 100%;
+      max-height: 70vh;
+      object-fit: contain;
+      border-radius: 14px;
+      background: #0e241b;
+      display: block;
+    }
+    .lightbox-controls {
       display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-top: 12px;
       gap: 8px;
-      margin: 12px 0 16px;
     }
 
+    .status-note {
+      font-size: 12px;
+      margin-top: 10px;
+      padding: 8px 12px;
+      border-radius: 10px;
+      background: var(--accent-soft);
+      color: var(--primary);
+      display: none;
+      text-align: center;
+      font-weight: 600;
+    }
+    .status-note.show { display: block; }
+
+    /* ADMIN PANEL EXTRAS */
+    .tab-row { display: flex; gap: 8px; margin: 12px 0 16px; }
     .tab-btn {
       flex: 1;
       padding: 9px;
@@ -1073,167 +952,117 @@
       cursor: pointer;
       color: var(--primary);
     }
-
-    .tab-btn.active {
-      background: var(--primary);
-      color: #ffffff;
-    }
-
-    /* ADMIN RECAP & BULK GUEST LIST */
-    .admin-recap-grid {
+    .tab-btn.active { background: var(--primary); color: #ffffff; }
+    .admin-stats-grid {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
-      gap: 6px;
-      background: var(--accent-soft);
-      border: 1px solid var(--border-gold);
-      border-radius: 14px;
-      padding: 10px 8px;
-      margin: 10px 0 12px;
-      text-align: center;
-    }
-
-    .admin-recap-item strong {
-      display: block;
-      font-size: 16px;
-      color: var(--primary);
-    }
-
-    .admin-recap-item span {
-      font-size: 10px;
-      color: var(--text-muted);
-      font-weight: 600;
-    }
-
-    .bulk-list-wrap {
-      margin-top: 10px;
-      display: flex;
-      flex-direction: column;
       gap: 8px;
-      max-height: 230px;
-      overflow-y: auto;
+      margin-bottom: 14px;
     }
-
-    .bulk-guest-card {
+    .stat-mini-card {
       background: #ffffff;
       border: 1px solid var(--border-gold);
       border-radius: 12px;
-      padding: 9px 10px;
+      padding: 10px 6px;
+      text-align: center;
+    }
+    .stat-mini-card strong {
+      display: block;
+      font-size: 18px;
+      color: var(--primary);
+    }
+    .stat-mini-card span {
+      font-size: 10px;
+      color: var(--text-muted);
+    }
+    .bulk-guest-item {
+      background: #ffffff;
+      border: 1px solid var(--border-gold);
+      border-radius: 12px;
+      padding: 10px 12px;
+      margin-top: 8px;
       display: flex;
       justify-content: space-between;
       align-items: center;
       gap: 8px;
     }
-
-    .bulk-guest-card.sent {
-      background: #f0f9f4;
-      border-color: rgba(27, 67, 50, 0.35);
-    }
-
-    .status-note {
-      font-size: 12px;
-      margin-top: 8px;
-      padding: 8px 12px;
-      border-radius: 10px;
-      background: var(--accent-soft);
-      color: var(--primary);
-      display: none;
-    }
-
-    .status-note.show {
-      display: block;
-    }
-
-    .lightbox-img {
-      width: 100%;
-      max-height: 70vh;
-      object-fit: contain;
-      border-radius: 14px;
-      background: #102a1f;
-    }
-
-    .toast {
+    .toast-popup {
       position: fixed;
       top: 18px;
       left: 50%;
       transform: translateX(-50%) translateY(-20px);
       background: var(--primary-dark);
-      color: #f4d67c;
+      color: #f6dc8b;
       border: 1px solid var(--accent);
-      padding: 9px 16px;
+      padding: 9px 18px;
       border-radius: 999px;
       font-size: 12px;
       font-weight: 600;
       z-index: 90;
       opacity: 0;
       pointer-events: none;
-      transition: all 0.25s ease;
+      transition: opacity 0.25s ease, transform 0.25s ease;
     }
-
-    .toast.show {
+    .toast-popup.show {
       opacity: 1;
       transform: translateX(-50%) translateY(0);
     }
   </style>
 </head>
-<body data-theme="royal">
-  <div id="toast" class="toast"></div>
+<body>
+  <div class="toast-popup" id="toast-popup"></div>
 
-  <div class="app-shell batik-bg">
-    <!-- TOP BAR ADMIN (HANYA TAMPIL JIKA URL MEMILIKI ?admin=ariska123) -->
-    <div class="top-utility" id="admin-topbar">
-      <button type="button" class="pill-btn primary" id="btn-open-admin">
-        ⚙ Panel Admin &amp; Link Tamu
+  <div class="app-shell">
+    <!-- ADMIN BAR (ONLY SHOWN WITH ?admin=ariska123) -->
+    <div class="admin-bar" id="admin-bar">
+      <span>🔐 Mode Admin Aktif</span>
+      <button type="button" class="pill-btn gold" id="open-admin-btn" style="padding:5px 12px; font-size:11px;">
+        ⚙️ Kelola Tamu &amp; Template
       </button>
-      <span id="theme-badge" style="font-size:12px; font-weight:700; color:var(--primary);">Royal Sunda</span>
     </div>
 
     <!-- COVER SCREEN -->
     <div id="cover">
-      <!-- ORNAMEN SUDUT SUNDA SVG -->
-      <svg class="cover-corner tl" viewBox="0 0 60 60" fill="none" aria-hidden="true">
-        <path d="M4 54V16C4 9.37258 9.37258 4 16 4H54" stroke="#E7C258" stroke-width="1.6"/>
-        <path d="M10 42V18C10 13.5817 13.5817 10 18 10H42" stroke="#E7C258" stroke-width="1" stroke-dasharray="3 3"/>
-        <circle cx="16" cy="16" r="3" fill="#E7C258"/>
+      <!-- Corner Gold Ornaments -->
+      <svg class="corner-ornament corner-tl" viewBox="0 0 80 80" fill="none">
+        <path d="M6 74V18C6 11.3726 11.3726 6 18 6H74" stroke="#e5c158" stroke-width="2"/>
+        <path d="M14 66V22C14 17.5817 17.5817 14 22 14H66" stroke="#e5c158" stroke-width="1" stroke-dasharray="3 3"/>
+        <circle cx="14" cy="14" r="3.5" fill="#e5c158"/>
       </svg>
-      <svg class="cover-corner tr" viewBox="0 0 60 60" fill="none" aria-hidden="true">
-        <path d="M4 54V16C4 9.37258 9.37258 4 16 4H54" stroke="#E7C258" stroke-width="1.6"/>
-        <path d="M10 42V18C10 13.5817 13.5817 10 18 10H42" stroke="#E7C258" stroke-width="1" stroke-dasharray="3 3"/>
-        <circle cx="16" cy="16" r="3" fill="#E7C258"/>
+      <svg class="corner-ornament corner-tr" viewBox="0 0 80 80" fill="none">
+        <path d="M6 74V18C6 11.3726 11.3726 6 18 6H74" stroke="#e5c158" stroke-width="2"/>
+        <path d="M14 66V22C14 17.5817 17.5817 14 22 14H66" stroke="#e5c158" stroke-width="1" stroke-dasharray="3 3"/>
+        <circle cx="14" cy="14" r="3.5" fill="#e5c158"/>
       </svg>
-      <svg class="cover-corner bl" viewBox="0 0 60 60" fill="none" aria-hidden="true">
-        <path d="M4 54V16C4 9.37258 9.37258 4 16 4H54" stroke="#E7C258" stroke-width="1.6"/>
-        <path d="M10 42V18C10 13.5817 13.5817 10 18 10H42" stroke="#E7C258" stroke-width="1" stroke-dasharray="3 3"/>
-        <circle cx="16" cy="16" r="3" fill="#E7C258"/>
+      <svg class="corner-ornament corner-bl" viewBox="0 0 80 80" fill="none">
+        <path d="M6 74V18C6 11.3726 11.3726 6 18 6H74" stroke="#e5c158" stroke-width="2"/>
+        <path d="M14 66V22C14 17.5817 17.5817 14 22 14H66" stroke="#e5c158" stroke-width="1" stroke-dasharray="3 3"/>
+        <circle cx="14" cy="14" r="3.5" fill="#e5c158"/>
       </svg>
-      <svg class="cover-corner br" viewBox="0 0 60 60" fill="none" aria-hidden="true">
-        <path d="M4 54V16C4 9.37258 9.37258 4 16 4H54" stroke="#E7C258" stroke-width="1.6"/>
-        <path d="M10 42V18C10 13.5817 13.5817 10 18 10H42" stroke="#E7C258" stroke-width="1" stroke-dasharray="3 3"/>
-        <circle cx="16" cy="16" r="3" fill="#E7C258"/>
+      <svg class="corner-ornament corner-br" viewBox="0 0 80 80" fill="none">
+        <path d="M6 74V18C6 11.3726 11.3726 6 18 6H74" stroke="#e5c158" stroke-width="2"/>
+        <path d="M14 66V22C14 17.5817 17.5817 14 22 14H66" stroke="#e5c158" stroke-width="1" stroke-dasharray="3 3"/>
+        <circle cx="14" cy="14" r="3.5" fill="#e5c158"/>
       </svg>
 
-      <div style="width:100%;">
-        <span class="sunda-badge">Sampurasun • Walimatul Khitan</span>
-        <div class="siger-wrap" id="siger-trigger" title="Walimatul Khitan">
-          <svg width="118" height="44" viewBox="0 0 120 46" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-            <path d="M8 34C22 34 38 22 60 6C82 22 98 34 112 34C102 40 82 42 60 42C38 42 18 40 8 34Z" stroke="#E7C258" stroke-width="2" fill="rgba(231,194,88,0.12)"/>
-            <circle cx="60" cy="24" r="3.5" fill="#E7C258"/>
-            <circle cx="42" cy="29" r="2.2" fill="#E7C258"/>
-            <circle cx="78" cy="29" r="2.2" fill="#E7C258"/>
-            <path d="M24 44H96" stroke="#E7C258" stroke-width="1.4" stroke-dasharray="3 3"/>
+      <div>
+        <span class="sunda-badge" id="cover-badge">Sampurasun &bull; Walimatul Khitan</span>
+        <div class="siger-wrap" aria-hidden="true">
+          <svg viewBox="0 0 140 54" fill="none">
+            <path d="M12 44C26 44 36 32 48 18C56 26 63 14 70 6C77 14 84 26 92 18C104 32 114 44 128 44C108 48 32 48 12 44Z" stroke="#e7c258" stroke-width="2" fill="rgba(231,194,88,0.12)"/>
+            <circle cx="70" cy="27" r="4" fill="#e7c258"/>
+            <circle cx="48" cy="33" r="2.5" fill="#e7c258"/>
+            <circle cx="92" cy="33" r="2.5" fill="#e7c258"/>
           </svg>
         </div>
       </div>
 
       <div class="cover-names">
-        <p style="font-size:12.5px; letter-spacing:0.14em; text-transform:uppercase; color:#e6d8b0; margin-bottom:10px;">
-          Undangan Tasyakuran Khitanan
-        </p>
+        <p class="cover-subtitle">Undangan Tasyakuran Khitanan</p>
         <h1 id="cover-child-1">Rasyid Muhammad Aufar Rabbani</h1>
         <span class="amp-sunda">&amp;</span>
         <h1 id="cover-child-2">Rayhan Muhammad Alif Rabbani</h1>
-        <p id="cover-date" style="margin-top:16px; font-size:14.5px; color:#f4d67c; font-weight:600;">
-          Minggu, 20 Desember 2026
-        </p>
+        <p class="cover-date" id="cover-date">Minggu, 20 Desember 2026</p>
       </div>
 
       <div style="width:100%;">
@@ -1241,113 +1070,106 @@
           <small>Kepada Yth. Bapak / Ibu / Saudara/i</small>
           <strong id="guest-name-display">Tamu Undangan</strong>
         </div>
-        <button type="button" class="open-btn" id="btn-open-invitation">
-          Buka Undangan
+        <button type="button" class="open-btn" id="open-invitation-btn">
+          ✉️ Buka Undangan
         </button>
       </div>
     </div>
 
     <!-- MAIN INVITATION -->
     <main id="invitation-main">
-      <!-- KUTIPAN AYAT AL-QUR'AN TENTANG KHITAN / MILLAH IBRAHIM -->
-      <section id="ayat" data-spy-section="ayat">
-        <div class="section-tag">Kalam Ilahi • Syariat Fitrah</div>
-        <div class="quran-card reveal-item">
-          <span class="quran-ornament">✦ ﷽ ✦</span>
-          <p class="quran-arabic" lang="ar">
-            ثُمَّ أَوْحَيْنَآ إِلَيْكَ أَنِ ٱتَّبِعْ مِلَّةَ إِبْرَٰهِيمَ حَنِيفًا ۖ وَمَا كَانَ مِنَ ٱلْمُشْرِكِينَ
+      <!-- SECTION 1: AYAT / DOA KHITAN -->
+      <section id="ayat">
+        <div class="section-tag" id="ayat-tag">Doa &amp; Harapan &bull; Walimatul Khitan</div>
+        <h2 class="section-title" id="ayat-heading">Untaian Doa</h2>
+        <div class="quote-card">
+          <p class="arabic-verse">
+            ثُمَّ أَوْحَيْنَا إِلَيْكَ أَنِ اتَّبِعْ مِلَّةَ إِبْرَاهِيمَ حَنِيفًا ۖ وَمَا كَانَ مِنَ الْمُشْرِكِينَ
           </p>
-          <p class="quran-translation">
-            “Kemudian Kami wahyukan kepadamu (Muhammad): ‘Ikutilah agama Ibrahim seorang yang hanif (lurus),’ dan bukanlah dia termasuk orang-orang yang mempersekutukan Tuhan.”
+          <p class="verse-translation">
+            &ldquo;Kemudian Kami wahyukan kepadamu (Muhammad): Ikutilah agama Ibrahim seorang yang hanif, dan bukanlah dia termasuk orang-orang yang mempersekutukan Tuhan.&rdquo;
           </p>
-          <span class="quran-ref">QS. An-Nahl [16] : 123</span>
-          <p class="quran-note">
-            Khitan merupakan bagian dari syariat fitrah dan sunnah Nabi Ibrahim ‘Alaihissalam sebagai ikhtiar menjaga kesucian diri serta ketaatan putra-putra kami dalam menapaki masa aqil baligh.
-          </p>
+          <span class="verse-ref">QS. An-Nahl : 123</span>
         </div>
       </section>
 
-      <!-- PEMBATAS MOTIF KAWUNG SUNDA -->
-      <div class="sunda-divider" aria-hidden="true">
-        <svg width="240" height="18" viewBox="0 0 240 18" fill="none">
-          <line x1="0" y1="9" x2="94" y2="9" stroke="#C59B27" stroke-opacity="0.45" stroke-dasharray="3 3"/>
-          <path d="M120 2L126 9L120 16L114 9Z" stroke="#C59B27" stroke-width="1.3" fill="rgba(197,155,39,0.15)"/>
-          <circle cx="104" cy="9" r="2.2" fill="#C59B27"/>
-          <circle cx="136" cy="9" r="2.2" fill="#C59B27"/>
-          <line x1="146" y1="9" x2="240" y2="9" stroke="#C59B27" stroke-opacity="0.45" stroke-dasharray="3 3"/>
+      <div class="kawung-divider" aria-hidden="true">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+          <circle cx="12" cy="12" r="3" fill="#c59b27"/>
+          <ellipse cx="12" cy="5" rx="2.5" ry="4" stroke="#c59b27" stroke-width="1.2"/>
+          <ellipse cx="12" cy="19" rx="2.5" ry="4" stroke="#c59b27" stroke-width="1.2"/>
+          <ellipse cx="5" cy="12" rx="4" ry="2.5" stroke="#c59b27" stroke-width="1.2"/>
+          <ellipse cx="19" cy="12" rx="4" ry="2.5" stroke="#c59b27" stroke-width="1.2"/>
         </svg>
       </div>
 
-      <!-- PROFIL ANANDA -->
-      <section id="profil" data-spy-section="profil">
+      <!-- SECTION 2: PROFIL ANANDA -->
+      <section id="profil">
         <div class="section-tag">Bismillahirrahmanirrahim</div>
         <h2 class="section-title">Putra-Putra Kami</h2>
         <p class="lead-text" id="opening-text">
-          Assalamu’alaikum Warahmatullahi Wabarakatuh. Dengan memohon rahmat dan ridho Allah SWT, kami bermaksud menyelenggarakan Walimatul Khitan putra-putra kami:
+          Assalamu&rsquo;alaikum Warahmatullahi Wabarakatuh. Dengan memohon rahmat dan ridho Allah SWT, kami bermaksud menyelenggarakan Walimatul Khitan putra-putra kami:
         </p>
 
-        <div class="profile-grid reveal-item">
+        <div class="profile-grid">
           <div class="profile-card">
-            <div class="arch-frame shimmer-box">
+            <div class="arch-frame shimmer-bg">
               <img id="img-rasyid-profile" data-drive-id="13vOUCRAsltqH55jwHVLbnKL15MLetPgx" alt="Rasyid Muhammad Aufar Rabbani" loading="eager" />
             </div>
             <div class="profile-name" id="name-rasyid">Rasyid Muhammad Aufar Rabbani</div>
-            <div class="profile-role" id="role-rasyid">Putra Kedua Kami</div>
+            <div class="profile-role" id="role-rasyid">Putra Pertama</div>
           </div>
 
           <div class="profile-card">
-            <div class="arch-frame shimmer-box">
+            <div class="arch-frame shimmer-bg">
               <img id="img-raihan-profile" data-drive-id="1-DK0TVwYyw1qFlLRMq_8eBeRrDtJB1Nx" alt="Rayhan Muhammad Alif Rabbani" loading="eager" />
             </div>
             <div class="profile-name" id="name-raihan">Rayhan Muhammad Alif Rabbani</div>
-            <div class="profile-role" id="role-raihan">Putra Ketiga Kami</div>
+            <div class="profile-role" id="role-raihan">Putra Kedua</div>
           </div>
         </div>
 
-        <div class="card reveal-item" style="text-align:center;">
+        <div class="card" style="text-align:center;">
           <small style="font-size:11px; text-transform:uppercase; letter-spacing:0.1em; color:var(--text-muted);">
             Keluarga Besar Orang Tua
           </small>
-          <p id="parents-display" style="font-family:'Cormorant Garamond',serif; font-size:22px; font-weight:700; color:var(--primary); margin-top:4px;">
+          <p id="parents-display" style="font-family:'Cormorant Garamond',serif; font-size:21px; font-weight:700; color:var(--primary); margin-top:4px;">
             Bapak Riza Arvan Rabbani &amp; Ibu Siska Noeryulia
           </p>
         </div>
       </section>
 
-      <!-- PEMBATAS MOTIF KAWUNG SUNDA -->
-      <div class="sunda-divider" aria-hidden="true">
-        <svg width="240" height="18" viewBox="0 0 240 18" fill="none">
-          <line x1="0" y1="9" x2="94" y2="9" stroke="#C59B27" stroke-opacity="0.45" stroke-dasharray="3 3"/>
-          <path d="M120 2L126 9L120 16L114 9Z" stroke="#C59B27" stroke-width="1.3" fill="rgba(197,155,39,0.15)"/>
-          <circle cx="104" cy="9" r="2.2" fill="#C59B27"/>
-          <circle cx="136" cy="9" r="2.2" fill="#C59B27"/>
-          <line x1="146" y1="9" x2="240" y2="9" stroke="#C59B27" stroke-opacity="0.45" stroke-dasharray="3 3"/>
+      <div class="kawung-divider" aria-hidden="true">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+          <circle cx="12" cy="12" r="3" fill="#c59b27"/>
+          <ellipse cx="12" cy="5" rx="2.5" ry="4" stroke="#c59b27" stroke-width="1.2"/>
+          <ellipse cx="12" cy="19" rx="2.5" ry="4" stroke="#c59b27" stroke-width="1.2"/>
+          <ellipse cx="5" cy="12" rx="4" ry="2.5" stroke="#c59b27" stroke-width="1.2"/>
+          <ellipse cx="19" cy="12" rx="4" ry="2.5" stroke="#c59b27" stroke-width="1.2"/>
         </svg>
       </div>
 
-      <!-- WAKTU & LOKASI -->
-      <section id="acara" data-spy-section="acara">
-        <div class="section-tag">Detail &amp; Agenda</div>
+      <!-- SECTION 3: WAKTU & LOKASI -->
+      <section id="acara">
+        <div class="section-tag">Wanci &amp; Tempat</div>
         <h2 class="section-title">Waktu &amp; Lokasi Acara</h2>
         <p class="lead-text">
           Merupakan suatu kehormatan dan kebahagiaan bagi kami apabila Bapak/Ibu/Saudara/i berkenan hadir memberikan doa restu.
         </p>
 
-        <!-- BANNER HARI-H OTOMATIS SAAT COUNTDOWN 0 -->
-        <div class="hari-h-banner" id="hari-h-banner">
-          <strong>✨ Alhamdulillah, Hari Bahagia Telah Tiba ✨</strong>
-          <span>Terima kasih atas kehadiran &amp; doa restu Bapak/Ibu/Saudara/i di lokasi acara.</span>
-        </div>
-
-        <div class="countdown-grid reveal-item" id="countdown-grid" aria-label="Hitung Mundur Acara">
+        <div class="countdown-grid" id="countdown-grid" aria-label="Hitung Mundur Acara">
           <div class="cd-box"><span class="cd-num" id="cd-days">00</span><span class="cd-label">Hari</span></div>
           <div class="cd-box"><span class="cd-num" id="cd-hours">00</span><span class="cd-label">Jam</span></div>
           <div class="cd-box"><span class="cd-num" id="cd-mins">00</span><span class="cd-label">Menit</span></div>
           <div class="cd-box"><span class="cd-num" id="cd-secs">00</span><span class="cd-label">Detik</span></div>
         </div>
 
-        <div class="card reveal-item" style="text-align:center;">
-          <p style="font-weight:700; color:var(--primary); font-size:16px;" id="event-day-date">
+        <div class="hari-h-banner" id="hari-h-banner">
+          ✨ Alhamdulillah, Hari Bahagia Walimatul Khitan Telah Tiba ✨
+        </div>
+
+        <div class="card" style="text-align:center;">
+          <p style="font-weight:700; color:var(--primary); font-size:17px;" id="event-day-date">
             Minggu, 20 Desember 2026
           </p>
           <p style="font-size:13px; color:var(--text-muted); margin:4px 0 12px;" id="event-time">
@@ -1360,19 +1182,19 @@
             Jl. Gg. Mm Adi, Dago Pojok, Bandung
           </p>
 
-          <!-- CATATAN / PATOKAN RUTE LOKASI (4 LANGKAH BERPANAH + TEKS LENGKAP) -->
-          <div class="address-note-box" id="address-note-wrap">
-            <div class="address-note-title">🧭 Patokan / Catatan Lokasi</div>
-            <div class="route-steps-flow" id="route-steps-flow">
-              <span class="route-step-chip"><span class="route-step-num">1</span> Masuk gang</span>
-              <span class="route-step-arrow">➔</span>
-              <span class="route-step-chip"><span class="route-step-num">2</span> Belok kanan</span>
-              <span class="route-step-arrow">➔</span>
-              <span class="route-step-chip"><span class="route-step-num">3</span> Belok kiri sampai lapang</span>
-              <span class="route-step-arrow">➔</span>
-              <span class="route-step-chip"><span class="route-step-num">4</span> Sebelah rumah kayu</span>
+          <!-- PATOKAN / CATATAN LOKASI -->
+          <div class="route-note-box">
+            <div class="route-note-title">🧭 Patokan / Catatan Lokasi</div>
+            <div class="route-steps" aria-hidden="true">
+              <span class="route-step-chip">1. Masuk gang</span>
+              <span class="route-arrow">➔</span>
+              <span class="route-step-chip">2. Belok kanan</span>
+              <span class="route-arrow">➔</span>
+              <span class="route-step-chip">3. Belok kiri sampai lapang</span>
+              <span class="route-arrow">➔</span>
+              <span class="route-step-chip">4. Sebelah rumah kayu</span>
             </div>
-            <p class="address-note-text" id="event-address-note">
+            <p class="route-note-text" id="event-notes">
               Masuk gang belok kanan terus belok kiri sampai ada lapang, sebelah rumah kayu.
             </p>
           </div>
@@ -1381,145 +1203,150 @@
             <a id="maps-link" href="https://maps.app.goo.gl/Cf7Pqj61greFxXCi9" target="_blank" rel="noopener noreferrer" class="pill-btn primary">
               📍 Buka Google Maps
             </a>
-            <button type="button" class="pill-btn" id="btn-copy-address">
+            <button type="button" class="pill-btn" id="copy-address-btn">
               📋 Salin Alamat
             </button>
-            <a id="gcal-link" href="#" target="_blank" rel="noopener noreferrer" class="pill-btn">
-              🗓 Google Calendar
-            </a>
-            <button type="button" class="pill-btn" id="btn-download-ics">
-              📅 File Kalender (.ics)
+            <button type="button" class="pill-btn" id="download-ics-btn">
+              📅 Simpan Kalender
             </button>
           </div>
         </div>
       </section>
 
-      <!-- PEMBATAS MOTIF KAWUNG SUNDA -->
-      <div class="sunda-divider" aria-hidden="true">
-        <svg width="240" height="18" viewBox="0 0 240 18" fill="none">
-          <line x1="0" y1="9" x2="94" y2="9" stroke="#C59B27" stroke-opacity="0.45" stroke-dasharray="3 3"/>
-          <path d="M120 2L126 9L120 16L114 9Z" stroke="#C59B27" stroke-width="1.3" fill="rgba(197,155,39,0.15)"/>
-          <circle cx="104" cy="9" r="2.2" fill="#C59B27"/>
-          <circle cx="136" cy="9" r="2.2" fill="#C59B27"/>
-          <line x1="146" y1="9" x2="240" y2="9" stroke="#C59B27" stroke-opacity="0.45" stroke-dasharray="3 3"/>
+      <div class="kawung-divider" aria-hidden="true">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+          <circle cx="12" cy="12" r="3" fill="#c59b27"/>
+          <ellipse cx="12" cy="5" rx="2.5" ry="4" stroke="#c59b27" stroke-width="1.2"/>
+          <ellipse cx="12" cy="19" rx="2.5" ry="4" stroke="#c59b27" stroke-width="1.2"/>
+          <ellipse cx="5" cy="12" rx="4" ry="2.5" stroke="#c59b27" stroke-width="1.2"/>
+          <ellipse cx="19" cy="12" rx="4" ry="2.5" stroke="#c59b27" stroke-width="1.2"/>
         </svg>
       </div>
 
-      <!-- GALERI -->
-      <section id="galeri" data-spy-section="galeri">
-        <div class="section-tag">Potret Keluarga &amp; Ananda</div>
+      <!-- SECTION 4: GALERI KEBAHAGIAAN (4 FOTO KELUARGA LANDSCAPE PENUH) -->
+      <section id="galeri">
+        <div class="section-tag">Momen Hangat</div>
         <h2 class="section-title">Galeri Kebahagiaan</h2>
         <p class="lead-text">
-          Ketuk foto untuk memperbesar tampilan penuh.
+          Untaian kebersamaan keluarga dalam menyambut hari istimewa ananda Rasyid &amp; Rayhan. Ketuk foto untuk memperbesar tampilan.
         </p>
 
-        <!-- FOTO KELUARGA LANDSCAPE PENUH (1 BARIS 1 FOTO) -->
-        <div class="family-stack reveal-item">
-          <div class="family-item shimmer-box" data-lb-index="0">
-            <img id="gal-0" data-drive-id="1gRLn7fyUA7b7QcgVUW4MAgUvag8Nt9Ro" alt="Keluarga Besar Bpk. Riza &amp; Ibu Siska" loading="lazy" />
-            <div class="gallery-cap">Keluarga Besar • Bpk.Riza &amp; Ibu.Siska</div>
+        <div class="family-gallery-list">
+          <div class="gallery-item landscape-full shimmer-bg" data-lightbox-idx="0">
+            <img id="gal-0" data-drive-id="1gRLn7fyUA7b7QcgVUW4MAgUvag8Nt9Ro" alt="Foto Keluarga 1" loading="lazy" />
+            <div class="gallery-cap">
+              <span>Kebersamaan Keluarga &bull; 1</span>
+              <span class="zoom-hint">Ketuk untuk perbesar</span>
+            </div>
           </div>
-          <div class="family-item shimmer-box" data-lb-index="1">
-            <img id="gal-1" data-drive-id="109_3OZ_n9TlY5GKNVYJ5jVq9qs1ElKNL" alt="Kebersamaan Keluarga" loading="lazy" />
-            <div class="gallery-cap">Kebersamaan Keluarga</div>
-          </div>
-        </div>
 
-        <!-- FOTO ANANDA 2 KOLOM -->
-        <div class="gallery-grid reveal-item">
-          <div class="gallery-item shimmer-box" data-lb-index="2">
-            <img id="gal-2" data-drive-id="13vOUCRAsltqH55jwHVLbnKL15MLetPgx" alt="Rasyid" loading="lazy" />
-            <div class="gallery-cap">Rasyid</div>
+          <div class="gallery-item landscape-full shimmer-bg" data-lightbox-idx="1">
+            <img id="gal-1" data-drive-id="109_3OZ_n9TlY5GKNVYJ5jVq9qs1ElKNL" alt="Foto Keluarga 2" loading="lazy" />
+            <div class="gallery-cap">
+              <span>Kebersamaan Keluarga &bull; 2</span>
+              <span class="zoom-hint">Ketuk untuk perbesar</span>
+            </div>
           </div>
-          <div class="gallery-item shimmer-box" data-lb-index="3">
-            <img id="gal-3" data-drive-id="1-DK0TVwYyw1qFlLRMq_8eBeRrDtJB1Nx" alt="Raihan" loading="lazy" />
-            <div class="gallery-cap">Raihan</div>
+
+          <div class="gallery-item landscape-full shimmer-bg" data-lightbox-idx="2">
+            <img id="gal-2" data-drive-id="1NfwnPhfi0r8oygsRdnXd23huoZxNDJ4m" alt="Foto Keluarga 3" loading="lazy" />
+            <div class="gallery-cap">
+              <span>Kebersamaan Keluarga &bull; 3</span>
+              <span class="zoom-hint">Ketuk untuk perbesar</span>
+            </div>
           </div>
-          <div class="gallery-item shimmer-box" data-lb-index="4">
-            <img id="gal-4" data-drive-id="1DYdHiyj0CcqC5UQrAMsNSnDeY4c-ZE5h" alt="Rasyid" loading="lazy" />
-            <div class="gallery-cap">Rasyid</div>
-          </div>
-          <div class="gallery-item shimmer-box" data-lb-index="5">
-            <img id="gal-5" data-drive-id="1l3dgCH8xK5T4dXeiqnnVgpWqdSocbXsu" alt="Raihan" loading="lazy" />
-            <div class="gallery-cap">Raihan</div>
+
+          <div class="gallery-item landscape-full shimmer-bg" data-lightbox-idx="3">
+            <img id="gal-3" data-drive-id="1ju9Ih0NiK9UeSVK2PGM9fhWPdc8RnXW4" alt="Foto Keluarga 4" loading="lazy" />
+            <div class="gallery-cap">
+              <span>Kebersamaan Keluarga &bull; 4</span>
+              <span class="zoom-hint">Ketuk untuk perbesar</span>
+            </div>
           </div>
         </div>
       </section>
 
-      <!-- PEMBATAS MOTIF KAWUNG SUNDA -->
-      <div class="sunda-divider" aria-hidden="true">
-        <svg width="240" height="18" viewBox="0 0 240 18" fill="none">
-          <line x1="0" y1="9" x2="94" y2="9" stroke="#C59B27" stroke-opacity="0.45" stroke-dasharray="3 3"/>
-          <path d="M120 2L126 9L120 16L114 9Z" stroke="#C59B27" stroke-width="1.3" fill="rgba(197,155,39,0.15)"/>
-          <circle cx="104" cy="9" r="2.2" fill="#C59B27"/>
-          <circle cx="136" cy="9" r="2.2" fill="#C59B27"/>
-          <line x1="146" y1="9" x2="240" y2="9" stroke="#C59B27" stroke-opacity="0.45" stroke-dasharray="3 3"/>
+      <div class="kawung-divider" aria-hidden="true">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+          <circle cx="12" cy="12" r="3" fill="#c59b27"/>
+          <ellipse cx="12" cy="5" rx="2.5" ry="4" stroke="#c59b27" stroke-width="1.2"/>
+          <ellipse cx="12" cy="19" rx="2.5" ry="4" stroke="#c59b27" stroke-width="1.2"/>
+          <ellipse cx="5" cy="12" rx="4" ry="2.5" stroke="#c59b27" stroke-width="1.2"/>
+          <ellipse cx="19" cy="12" rx="4" ry="2.5" stroke="#c59b27" stroke-width="1.2"/>
         </svg>
       </div>
 
-      <!-- AMPLOP DIGITAL (KARTU PERBANKAN VIRTUAL + OPSIONAL E-WALLET) -->
-      <section id="amplop" data-spy-section="amplop">
+      <!-- SECTION 5: AMPLOP / DOMPET DIGITAL (SUBTLE MOTION ACCORDION) -->
+      <section id="amplop">
         <div class="section-tag">Tanda Kasih</div>
-        <h2 class="section-title">Amplop Digital</h2>
+        <h2 class="section-title">Dompet Digital</h2>
         <p class="lead-text">
-          Doa restu Anda merupakan karunia yang sangat berarti bagi kami. Apabila berkenan mengirimkan tanda kasih, dapat melalui rekening berikut:
+          Doa restu Bapak/Ibu/Saudara/i merupakan karunia yang sangat berarti bagi kami. Apabila berkenan mengirimkan tanda kasih secara nontunai, silakan ketuk tombol di bawah ini.
         </p>
 
-        <div class="bank-card-virtual reveal-item">
-          <div class="bank-card-top">
-            <div class="bank-chip" aria-hidden="true"></div>
-            <span style="font-size:13px; font-weight:700; letter-spacing:0.12em; text-transform:uppercase; color:#f4d67c;" id="bank-name">
-              Bank BRI
-            </span>
-          </div>
-          <small style="display:block; font-size:10px; letter-spacing:0.1em; text-transform:uppercase; opacity:0.75;">
-            Nomor Rekening
-          </small>
-          <div class="bank-acc" id="bank-number">067401004442506</div>
-          <div style="display:flex; justify-content:space-between; align-items:center; gap:8px; margin-top:10px; flex-wrap:wrap;">
-            <span style="font-size:13px; font-weight:600;" id="bank-holder">
-              a.n. Siska Noeryulia
-            </span>
-            <button type="button" class="pill-btn" id="btn-copy-bank">
-              📋 Salin Rekening
-            </button>
-          </div>
-          <div id="copy-note" class="status-note">Nomor rekening berhasil disalin.</div>
-        </div>
-
-        <!-- KARTU OPSIONAL E-WALLET / QRIS (TAMPIL OTOMATIS JIKA DIISI DI PANEL ADMIN) -->
-        <div class="ewallet-card reveal-item" id="ewallet-card-wrap">
-          <small style="font-size:11px; text-transform:uppercase; letter-spacing:0.1em; color:#9b7614; font-weight:700;" id="ewallet-name">
-            E-Wallet
-          </small>
-          <div style="font-size:19px; font-weight:700; color:var(--primary); margin:4px 0 2px;" id="ewallet-number"></div>
-          <div style="font-size:12.5px; color:var(--text-muted); margin-bottom:10px;" id="ewallet-holder"></div>
-          <button type="button" class="pill-btn primary sm" id="btn-copy-ewallet">
-            📋 Salin Nomor E-Wallet
+        <div class="gift-toggle-wrap">
+          <button type="button" class="gift-reveal-btn" id="toggle-gift-btn" aria-expanded="false" aria-controls="gift-drawer">
+            <span>🎁 Tampilkan Detail Dompet Digital</span>
+            <span class="chevron" aria-hidden="true">▾</span>
           </button>
+
+          <div class="gift-drawer" id="gift-drawer">
+            <div class="gift-drawer-inner">
+              <div class="bank-card-virtual">
+                <div class="card-top-row">
+                  <div class="emv-chip" aria-hidden="true"></div>
+                  <div class="bank-title-label" id="bank-name">BANK BRI</div>
+                </div>
+                <div class="bank-acc-label">Nomor Rekening</div>
+                <div class="bank-acc-num" id="bank-number">067401004442506</div>
+                <div class="card-bottom-row">
+                  <div class="bank-holder-name" id="bank-holder">a.n. Siska Noeryulia</div>
+                  <button type="button" class="pill-btn" id="copy-account-btn" style="padding:7px 14px; font-size:12px;">
+                    📋 Salin Rekening
+                  </button>
+                </div>
+              </div>
+
+              <div class="bank-card-virtual" id="ewallet-card" style="display:none; margin-top:10px;">
+                <div class="card-top-row">
+                  <div class="emv-chip" aria-hidden="true"></div>
+                  <div class="bank-title-label" id="ewallet-name">E-WALLET</div>
+                </div>
+                <div class="bank-acc-label">Nomor Tujuan</div>
+                <div class="bank-acc-num" id="ewallet-number"></div>
+                <div class="card-bottom-row">
+                  <div class="bank-holder-name" id="ewallet-holder"></div>
+                  <button type="button" class="pill-btn" id="copy-ewallet-btn" style="padding:7px 14px; font-size:12px;">
+                    📋 Salin Nomor
+                  </button>
+                </div>
+              </div>
+
+              <div id="copy-note" class="status-note">Nomor rekening berhasil disalin.</div>
+            </div>
+          </div>
         </div>
       </section>
 
-      <!-- PEMBATAS MOTIF KAWUNG SUNDA -->
-      <div class="sunda-divider" aria-hidden="true">
-        <svg width="240" height="18" viewBox="0 0 240 18" fill="none">
-          <line x1="0" y1="9" x2="94" y2="9" stroke="#C59B27" stroke-opacity="0.45" stroke-dasharray="3 3"/>
-          <path d="M120 2L126 9L120 16L114 9Z" stroke="#C59B27" stroke-width="1.3" fill="rgba(197,155,39,0.15)"/>
-          <circle cx="104" cy="9" r="2.2" fill="#C59B27"/>
-          <circle cx="136" cy="9" r="2.2" fill="#C59B27"/>
-          <line x1="146" y1="9" x2="240" y2="9" stroke="#C59B27" stroke-opacity="0.45" stroke-dasharray="3 3"/>
+      <div class="kawung-divider" aria-hidden="true">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+          <circle cx="12" cy="12" r="3" fill="#c59b27"/>
+          <ellipse cx="12" cy="5" rx="2.5" ry="4" stroke="#c59b27" stroke-width="1.2"/>
+          <ellipse cx="12" cy="19" rx="2.5" ry="4" stroke="#c59b27" stroke-width="1.2"/>
+          <ellipse cx="5" cy="12" rx="4" ry="2.5" stroke="#c59b27" stroke-width="1.2"/>
+          <ellipse cx="19" cy="12" rx="4" ry="2.5" stroke="#c59b27" stroke-width="1.2"/>
         </svg>
       </div>
 
-      <!-- RSVP & UCAPAN -->
-      <section id="rsvp" data-spy-section="rsvp">
+      <!-- SECTION 6: RSVP & UCAPAN (TANPA COUNTER JUMLAH DOA & KEHADIRAN) -->
+      <section id="rsvp">
         <div class="section-tag">Konfirmasi &amp; Doa</div>
         <h2 class="section-title">RSVP &amp; Ucapan</h2>
         <p class="lead-text">
           Sampaikan konfirmasi kehadiran serta untaian doa terbaik untuk Rasyid &amp; Rayhan.
         </p>
 
-        <div class="card reveal-item">
+        <div class="card">
           <form id="rsvp-form">
             <div class="form-group">
               <label for="rsvp-name">Nama Lengkap</label>
@@ -1530,7 +1357,7 @@
               <label for="rsvp-attendance">Konfirmasi Kehadiran</label>
               <select id="rsvp-attendance" class="form-control">
                 <option value="Hadir">Insya Allah Hadir</option>
-                <option value="Ragu">Masih Menyesuaikan</option>
+                <option value="Masih Ragu">Masih Menyesuaikan</option>
                 <option value="Tidak Hadir">Mohon Maaf Belum Dapat Hadir</option>
               </select>
             </div>
@@ -1550,975 +1377,615 @@
               <textarea id="rsvp-message" rows="3" class="form-control" placeholder="Tulis doa terbaik untuk ananda Rasyid &amp; Rayhan..." required></textarea>
             </div>
 
-            <button type="submit" id="rsvp-submit-btn" class="pill-btn primary" style="width:100%; justify-content:center; padding:11px;">
+            <button type="submit" class="pill-btn primary" id="rsvp-submit-btn" style="width:100%; padding:11px;">
               Kirim Konfirmasi &amp; Ucapan
             </button>
           </form>
 
           <div id="rsvp-status" class="status-note"></div>
 
-          <div class="wish-stats" id="wish-stats">
-            <span id="stat-total">💌 0 Doa &amp; Ucapan</span>
-            <span id="stat-hadir">✅ 0 Konfirmasi Hadir</span>
+          <div class="wishes-toolbar">
+            <span class="sync-pill" id="sync-status-text">🟢 Ucapan &amp; Doa Tamu</span>
+            <button type="button" class="pill-btn" id="refresh-wishes-btn" style="padding:4px 10px; font-size:11px;">
+              ↻ Segarkan
+            </button>
           </div>
 
-          <div class="wish-subbar">
-            <span id="sync-status-label">Menampilkan 10 ucapan terbaru</span>
-            <button type="button" class="wish-refresh-btn" id="btn-refresh-wishes">↻ Segarkan</button>
-          </div>
-
-          <div class="wish-list" id="wish-list">
-            <div class="wish-item" id="wish-placeholder">
-              <p style="font-size:12.5px; color:var(--text-muted); text-align:center;">
-                Memuat 10 doa &amp; ucapan terbaru...
-              </p>
-            </div>
-          </div>
+          <div class="wish-list" id="wish-list"></div>
         </div>
       </section>
+
+      <footer class="closing-footer">
+        <p>Atas kehadiran dan doa restu Bapak/Ibu/Saudara/i, kami sekeluarga mengucapkan terima kasih.</p>
+        <p style="font-family:'Cormorant Garamond',serif; font-size:19px; font-weight:700; color:var(--primary); margin-top:6px;">
+          Keluarga Bapak Riza Arvan Rabbani &amp; Ibu Siska Noeryulia
+        </p>
+      </footer>
     </main>
 
-    <!-- BOTTOM NAV (DENGAN SCROLL-SPY AKTIF) -->
+    <!-- BOTTOM NAV -->
     <nav class="bottom-nav" id="bottom-nav" aria-label="Navigasi Undangan">
-      <a href="#ayat" data-nav-target="ayat" class="nav-active">Ayat</a>
-      <a href="#profil" data-nav-target="profil">Profil</a>
-      <a href="#acara" data-nav-target="acara">Acara</a>
-      <a href="#galeri" data-nav-target="galeri">Galeri</a>
-      <a href="#rsvp" data-nav-target="rsvp">RSVP</a>
+      <a href="#ayat" data-nav="ayat">Doa</a>
+      <a href="#profil" data-nav="profil">Profil</a>
+      <a href="#acara" data-nav="acara">Acara</a>
+      <a href="#galeri" data-nav="galeri">Galeri</a>
+      <a href="#rsvp" data-nav="rsvp">RSVP</a>
     </nav>
 
-    <!-- MINI PLAYER GOOGLE DRIVE (CADANGAN OTOMATIS JIKA STREAM LANGSUNG DIBLOKIR BROWSER) -->
-    <div class="drive-audio-dock" id="drive-audio-dock">
-      <iframe id="drive-audio-iframe" allow="autoplay" title="Pemutar Sholawat"></iframe>
-      <button type="button" class="dock-close-btn" id="btn-close-dock" title="Sembunyikan Pemutar">✕</button>
-    </div>
-
-    <!-- AUDIO BUTTON DENGAN EQUALIZER MINI -->
-    <button type="button" class="audio-fab" id="audio-btn" title="Musik Sholawat">
-      <span class="note-icon">♪</span>
+    <!-- FLOATING AUDIO BUTTON -->
+    <button type="button" class="audio-fab" id="audio-btn" title="Putar / Jeda Musik Latar" aria-label="Musik Latar">
       <span class="eq-bars" aria-hidden="true">
-        <span class="eq-bar"></span>
-        <span class="eq-bar"></span>
-        <span class="eq-bar"></span>
+        <span></span><span></span><span></span>
       </span>
     </button>
-  </div>
 
-  <!-- AUDIO ELEMENT -->
-  <audio id="bg-audio" loop preload="auto" playsinline></audio>
+    <!-- FALLBACK DRIVE AUDIO BAR -->
+    <div class="drive-audio-bar" id="drive-audio-bar">
+      <span>🎵 Sholawat Pengiring</span>
+      <iframe id="drive-audio-iframe" title="Pemutar Sholawat" style="width:220px; height:32px; border:0; border-radius:8px;" allow="autoplay"></iframe>
+      <button type="button" id="close-drive-audio" style="background:none; border:none; color:#f4d67c; font-size:15px; cursor:pointer;">✕</button>
+    </div>
 
-  <!-- LIGHTBOX MODAL -->
-  <div class="modal-backdrop" id="lightbox-modal">
-    <div class="modal-panel" style="text-align:center;">
-      <img id="lightbox-img" class="lightbox-img" src="" alt="Pratinjau Foto" />
-      <p id="lightbox-caption" style="font-size:13px; font-weight:700; color:var(--primary); margin:10px 0;"></p>
-      <div style="display:flex; justify-content:center; gap:8px;">
-        <button type="button" class="pill-btn" id="lb-prev">◀ Sebelumnya</button>
-        <button type="button" class="pill-btn primary" id="lb-close">Tutup</button>
-        <button type="button" class="pill-btn" id="lb-next">Berikutnya ▶</button>
+    <audio id="bg-audio" loop preload="none"></audio>
+
+    <!-- LIGHTBOX MODAL -->
+    <div class="modal-backdrop" id="lightbox-modal" role="dialog" aria-modal="true" aria-label="Pratinjau Foto">
+      <div class="modal-panel" style="background:#10291e; color:#faf6f0; border-color:var(--accent);">
+        <img id="lightbox-img" class="lightbox-img" src="" alt="Pratinjau Foto Keluarga" />
+        <p id="lightbox-caption" style="text-align:center; font-size:13px; color:#f4d67c; margin-top:10px; font-weight:600;"></p>
+        <div class="lightbox-controls">
+          <button type="button" class="pill-btn" id="lb-prev-btn">‹ Sebelumnya</button>
+          <button type="button" class="pill-btn gold" id="lb-close-btn">Tutup ✕</button>
+          <button type="button" class="pill-btn" id="lb-next-btn">Berikutnya ›</button>
+        </div>
       </div>
     </div>
-  </div>
 
-  <!-- ADMIN MODAL (HANYA AKTIF DI MODE ADMIN ?admin=ariska123) -->
-  <div class="modal-backdrop" id="admin-modal">
-    <div class="modal-panel">
-      <div style="display:flex; justify-content:space-between; align-items:center;">
-        <h3 style="font-family:'Cormorant Garamond',serif; font-size:22px; color:var(--primary);">
-          Panel Admin &amp; Link Tamu
-        </h3>
-        <button type="button" class="pill-btn" id="btn-close-admin">✕</button>
-      </div>
-
-      <!-- REKAP ESTIMASI KEHADIRAN & PORSI TAMU DARI GOOGLE SHEETS -->
-      <div class="admin-recap-grid" id="admin-recap-grid">
-        <div class="admin-recap-item">
-          <strong id="admin-stat-wishes">0</strong>
-          <span>Total Ucapan</span>
-        </div>
-        <div class="admin-recap-item">
-          <strong id="admin-stat-hadir">0</strong>
-          <span>Keluarga Hadir</span>
-        </div>
-        <div class="admin-recap-item">
-          <strong id="admin-stat-pax">0</strong>
-          <span>Estimasi Porsi</span>
-        </div>
-      </div>
-
-      <div class="tab-row">
-        <button type="button" class="tab-btn active" id="tab-link-btn">Link Tamu WA</button>
-        <button type="button" class="tab-btn" id="tab-config-btn">Konfigurasi Template</button>
-      </div>
-
-      <!-- TAB 1: LINK TAMU (SATUAN + MASSAL / BULK) -->
-      <div id="tab-link-content">
-        <div class="form-group">
-          <label for="base-url-input">URL Dasar Undangan (Otomatis terdeteksi)</label>
-          <input type="text" id="base-url-input" class="form-control" placeholder="https://wanara.vercel.app" />
+    <!-- ADMIN MODAL (?admin=ariska123) -->
+    <div class="modal-backdrop" id="admin-modal" role="dialog" aria-modal="true" aria-label="Panel Admin Undangan">
+      <div class="modal-panel">
+        <div style="display:flex; justify-content:space-between; align-items:center;">
+          <strong style="font-size:16px; color:var(--primary);">Panel Admin &amp; Tamu</strong>
+          <button type="button" class="pill-btn" id="close-admin-btn" style="padding:5px 10px;">✕</button>
         </div>
 
-        <div class="form-group">
-          <label for="guest-input">Kirim Satuan — Nama Tamu</label>
-          <input type="text" id="guest-input" class="form-control" placeholder="Contoh: Teh Ratna &amp; Suami" />
+        <div class="tab-row">
+          <button type="button" class="tab-btn active" id="tab-guests-btn">Link Tamu &amp; Rekap</button>
+          <button type="button" class="tab-btn" id="tab-config-btn">Edit Konfigurasi</button>
         </div>
 
-        <div class="form-group">
-          <label for="generated-link">Tautan Personal Tamu (Bersih tanpa akses admin)</label>
-          <input type="text" id="generated-link" class="form-control" readonly />
-        </div>
-
-        <div style="display:flex; gap:8px; flex-wrap:wrap; margin-bottom:14px;">
-          <button type="button" class="pill-btn" id="btn-copy-guest-link">Salin Link Tamu</button>
-          <button type="button" class="pill-btn primary" id="btn-send-wa">Kirim ke WhatsApp</button>
-        </div>
-        <div id="link-note" class="status-note">Tautan personal berhasil disalin.</div>
-
-        <!-- GENERATOR LINK TAMU MASSAL (BULK WHATSAPP LIST) -->
-        <div style="margin-top:14px; padding-top:12px; border-top:1px dashed var(--border-gold);">
-          <div class="form-group" style="margin-bottom:8px;">
-            <label for="bulk-guests-input">Generator Link Massal (1 baris = 1 nama tamu)</label>
-            <textarea id="bulk-guests-input" rows="4" class="form-control" placeholder="Contoh:&#10;Keluarga Besar Kang Asep&#10;Teh Ratna &amp; Suami&#10;Bapak H. Dedi &amp; Ibu"></textarea>
+        <!-- TAB 1: BULK LINK GENERATOR & STATS -->
+        <div id="admin-tab-guests">
+          <div class="admin-stats-grid">
+            <div class="stat-mini-card">
+              <strong id="stat-total-wishes">0</strong>
+              <span>Total Ucapan</span>
+            </div>
+            <div class="stat-mini-card">
+              <strong id="stat-total-hadir">0</strong>
+              <span>Keluarga Hadir</span>
+            </div>
+            <div class="stat-mini-card">
+              <strong id="stat-total-pax">0</strong>
+              <span>Estimasi Porsi</span>
+            </div>
           </div>
-          <div style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:6px;">
-            <button type="button" class="pill-btn primary sm" id="btn-generate-bulk">Buat Daftar Link</button>
-            <span id="bulk-sent-counter" style="font-size:11px; font-weight:700; color:var(--primary);">Terkirim: 0 / 0</span>
-            <button type="button" class="pill-btn sm" id="btn-reset-bulk-sent">Reset Tanda</button>
+
+          <div class="form-group">
+            <label for="bulk-guest-input">Daftar Nama Tamu (1 baris = 1 nama)</label>
+            <textarea id="bulk-guest-input" rows="4" class="form-control" placeholder="Bapak Budi Santoso &amp; Keluarga&#10;Kang Asep Dago&#10;Teh Rina &amp; Suami"></textarea>
           </div>
-          <div class="bulk-list-wrap" id="bulk-list-container"></div>
+          <button type="button" class="pill-btn primary" id="generate-bulk-btn" style="width:100%;">
+            🔗 Buat Daftar Link WhatsApp Tamu
+          </button>
+
+          <div id="bulk-guest-results" style="margin-top:10px; max-height:240px; overflow-y:auto;"></div>
         </div>
 
-        <div class="form-group" style="margin-top:14px; padding-top:12px; border-top:1px dashed var(--border-gold);">
-          <label for="admin-secret-link">Tautan Khusus Admin Anda (Simpan pribadi)</label>
-          <div style="display:flex; gap:6px;">
-            <input type="text" id="admin-secret-link" class="form-control" readonly />
-            <button type="button" class="pill-btn" id="btn-copy-admin-link">Salin</button>
+        <!-- TAB 2: EDIT TEMPLATE CONFIG -->
+        <div id="admin-tab-config" style="display:none;">
+          <div class="form-group">
+            <label for="cfg-theme">Tema Warna Sunda</label>
+            <select id="cfg-theme" class="form-control">
+              <option value="royal">Royal Sunda (Hijau Zamrud)</option>
+              <option value="sogan">Sogan Priangan (Cokelat Batik)</option>
+              <option value="keraton">Keraton Pajajaran (Biru Nila)</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="cfg-child1">Nama Putra Pertama</label>
+            <input type="text" id="cfg-child1" class="form-control" />
+          </div>
+          <div class="form-group">
+            <label for="cfg-child2">Nama Putra Kedua</label>
+            <input type="text" id="cfg-child2" class="form-control" />
+          </div>
+          <div class="form-group">
+            <label for="cfg-parents">Nama Orang Tua</label>
+            <input type="text" id="cfg-parents" class="form-control" />
+          </div>
+          <div class="form-group">
+            <label for="cfg-notes">Patokan / Catatan Lokasi</label>
+            <textarea id="cfg-notes" rows="2" class="form-control"></textarea>
+          </div>
+          <div class="form-group">
+            <label for="cfg-bank">Nama Bank</label>
+            <input type="text" id="cfg-bank" class="form-control" />
+          </div>
+          <div class="form-group">
+            <label for="cfg-acc">Nomor Rekening</label>
+            <input type="text" id="cfg-acc" class="form-control" />
+          </div>
+          <div class="form-group">
+            <label for="cfg-holder">Atas Nama Rekening</label>
+            <input type="text" id="cfg-holder" class="form-control" />
+          </div>
+          <div class="form-group">
+            <label for="cfg-ewallet">E-Wallet Opsional (Format: DANA | 0812xxx | a.n. Nama)</label>
+            <input type="text" id="cfg-ewallet" class="form-control" placeholder="Kosongkan jika hanya memakai rekening bank" />
+          </div>
+          <div class="form-group">
+            <label for="cfg-webhook">URL Google Apps Script Web App (/exec)</label>
+            <input type="url" id="cfg-webhook" class="form-control" />
+          </div>
+          <div style="display:flex; gap:8px;">
+            <button type="button" class="pill-btn primary" id="save-cfg-btn" style="flex:1;">Simpan Perubahan</button>
+            <button type="button" class="pill-btn" id="download-html-btn" style="flex:1;">Unduh HTML</button>
           </div>
         </div>
-      </div>
-
-      <!-- TAB 2: KONFIGURASI REUSABLE -->
-      <div id="tab-config-content" style="display:none;">
-        <div class="form-group">
-          <label for="cfg-theme">Tema Warna Sunda</label>
-          <select id="cfg-theme" class="form-control">
-            <option value="royal">Royal Sunda (Hijau Zamrud)</option>
-            <option value="sogan">Sogan Priangan (Cokelat Batik)</option>
-            <option value="pajajaran">Keraton Pajajaran (Biru Nila)</option>
-          </select>
-        </div>
-
-        <div class="form-group">
-          <label for="cfg-webhook">Webhook RSVP URL (Google Apps Script /exec)</label>
-          <input type="text" id="cfg-webhook" class="form-control" placeholder="https://script.google.com/macros/s/.../exec" />
-        </div>
-
-        <div class="form-group">
-          <label for="cfg-audio">Link Google Drive Audio / URL MP3 Kustom</label>
-          <input type="text" id="cfg-audio" class="form-control" placeholder="ID Drive atau https://drive.google.com/... atau ./sholawat.mp3" />
-        </div>
-
-        <div class="form-group">
-          <label for="cfg-child1">Nama Ananda 1</label>
-          <input type="text" id="cfg-child1" class="form-control" />
-        </div>
-
-        <div class="form-group">
-          <label for="cfg-role1">Keterangan Ananda 1</label>
-          <input type="text" id="cfg-role1" class="form-control" />
-        </div>
-
-        <div class="form-group">
-          <label for="cfg-child2">Nama Ananda 2</label>
-          <input type="text" id="cfg-child2" class="form-control" />
-        </div>
-
-        <div class="form-group">
-          <label for="cfg-role2">Keterangan Ananda 2</label>
-          <input type="text" id="cfg-role2" class="form-control" />
-        </div>
-
-        <div class="form-group">
-          <label for="cfg-parents">Nama Orang Tua</label>
-          <input type="text" id="cfg-parents" class="form-control" />
-        </div>
-
-        <div class="form-group">
-          <label for="cfg-date-iso">Tanggal &amp; Jam Acara (ISO)</label>
-          <input type="text" id="cfg-date-iso" class="form-control" />
-        </div>
-
-        <div class="form-group">
-          <label for="cfg-address">Alamat Lokasi</label>
-          <input type="text" id="cfg-address" class="form-control" />
-        </div>
-
-        <div class="form-group">
-          <label for="cfg-address-note">Patokan / Catatan Rute Lokasi</label>
-          <textarea id="cfg-address-note" rows="2" class="form-control"></textarea>
-        </div>
-
-        <div class="form-group">
-          <label for="cfg-maps">Link Google Maps</label>
-          <input type="text" id="cfg-maps" class="form-control" />
-        </div>
-
-        <div class="form-group">
-          <label for="cfg-bank-name">Nama Bank</label>
-          <input type="text" id="cfg-bank-name" class="form-control" />
-        </div>
-
-        <div class="form-group">
-          <label for="cfg-bank">Nomor Rekening</label>
-          <input type="text" id="cfg-bank" class="form-control" />
-        </div>
-
-        <div class="form-group">
-          <label for="cfg-bank-holder">Nama Pemilik Rekening</label>
-          <input type="text" id="cfg-bank-holder" class="form-control" />
-        </div>
-
-        <div class="form-group">
-          <label for="cfg-ewallet-name">Nama E-Wallet Opsional (Kosongkan jika tidak dipakai)</label>
-          <input type="text" id="cfg-ewallet-name" class="form-control" placeholder="Contoh: DANA / GoPay / BCA" />
-        </div>
-
-        <div class="form-group">
-          <label for="cfg-ewallet-number">Nomor E-Wallet / Rekening Tambahan</label>
-          <input type="text" id="cfg-ewallet-number" class="form-control" placeholder="0812xxxxxxxx" />
-        </div>
-
-        <div class="form-group">
-          <label for="cfg-ewallet-holder">Atas Nama E-Wallet</label>
-          <input type="text" id="cfg-ewallet-holder" class="form-control" placeholder="a.n. Siska Noeryulia" />
-        </div>
-
-        <div style="display:flex; gap:8px; flex-wrap:wrap;">
-          <button type="button" class="pill-btn primary" id="btn-save-config">Terapkan Perubahan</button>
-          <button type="button" class="pill-btn" id="btn-download-html">Unduh index.html</button>
-        </div>
-        <div id="cfg-note" class="status-note">Konfigurasi berhasil diterapkan.</div>
       </div>
     </div>
   </div>
 
   <script>
-    /* CONFIG_START */
-    var EVENT_CONFIG = {
+    const DEFAULT_CONFIG = {
       theme: "royal",
-      rsvpWebhookUrl: "https://script.google.com/macros/s/AKfycbx52FO8p40NnAbxhQPxaqVl_3EKwFCtiaYCleo_N5eADLf1U8xx8faLpYExoW8ctbL0UA/exec",
-      audioSource: "1ehg4CFVjquvmxBqp0B1PvF1wg-JWXAA1",
+      coverBadge: "Sampurasun • Walimatul Khitan",
+      ayatTag: "Doa & Harapan • Walimatul Khitan",
+      ayatHeading: "Untaian Doa",
       child1: "Rasyid Muhammad Aufar Rabbani",
-      role1: "Putra Kedua Kami",
       child2: "Rayhan Muhammad Alif Rabbani",
-      role2: "Putra Ketiga Kami",
       parents: "Bapak Riza Arvan Rabbani & Ibu Siska Noeryulia",
       eventDateDisplay: "Minggu, 20 Desember 2026",
-      eventTimeDisplay: "Pukul 09.00 WIB – Selesai",
-      eventDateISO: "2026-12-20T09:00:00+07:00",
+      eventIso: "2026-12-20T09:00:00+07:00",
+      eventTime: "Pukul 09.00 WIB – Selesai",
       venue: "Kediaman Keluarga",
       address: "Jl. Gg. Mm Adi, Dago Pojok, Bandung",
-      addressNote: "Masuk gang belok kanan terus belok kiri sampai ada lapang, sebelah rumah kayu.",
+      locationNotes: "Masuk gang belok kanan terus belok kiri sampai ada lapang, sebelah rumah kayu.",
       mapsUrl: "https://maps.app.goo.gl/Cf7Pqj61greFxXCi9",
-      bankName: "Bank BRI",
-      bankNumber: "067401004442506",
+      bankName: "BANK BRI",
+      bankAccount: "067401004442506",
       bankHolder: "a.n. Siska Noeryulia",
-      ewalletName: "",
-      ewalletNumber: "",
-      ewalletHolder: ""
+      ewalletRaw: "",
+      localAudioPath: "./sholawat.mp3",
+      driveAudioId: "1ehg4CFVjquvmxBqp0B1PvF1wg-JWXAA1",
+      rsvpWebhookUrl: "https://script.google.com/macros/s/AKfycbz_REPLACE_WITH_YOUR_DEPLOYED_WEB_APP_ID/exec",
+      gallery: [
+        { id: "1gRLn7fyUA7b7QcgVUW4MAgUvag8Nt9Ro", caption: "Kebersamaan Keluarga • 1" },
+        { id: "109_3OZ_n9TlY5GKNVYJ5jVq9qs1ElKNL", caption: "Kebersamaan Keluarga • 2" },
+        { id: "1NfwnPhfi0r8oygsRdnXd23huoZxNDJ4m", caption: "Kebersamaan Keluarga • 3" },
+        { id: "1ju9Ih0NiK9UeSVK2PGM9fhWPdc8RnXW4", caption: "Kebersamaan Keluarga • 4" }
+      ]
     };
-    /* CONFIG_END */
 
-    var ADMIN_SECRET_KEY = "ariska123";
-    var MAX_DISPLAY_WISHES = 10;
-    var cleanHtmlSnapshot = "";
-    var isAdminMode = false;
-    var isAudioPlaying = false;
-    var activeAudioMode = "none"; // "native" | "drive-dock" | "none"
-    var audioSourceIndex = 0;
-    var audioSourcesList = [];
-    var currentDriveAudioId = "";
-    var currentLightboxIndex = 0;
-    var wishesState = [];
-    var sheetStats = { total: 0, hadir: 0, pax: 0 };
+    let EVENT_CONFIG = loadConfig();
+    let isAudioPlaying = false;
+    let currentLightboxIndex = 0;
+    const NL = String.fromCharCode(10);
+    const CRLF = String.fromCharCode(13, 10);
 
-    var GALLERY_ITEMS = [
-      { id: "1gRLn7fyUA7b7QcgVUW4MAgUvag8Nt9Ro", caption: "Keluarga Besar • Bpk.Riza & Ibu.Siska" },
-      { id: "109_3OZ_n9TlY5GKNVYJ5jVq9qs1ElKNL", caption: "Kebersamaan Keluarga" },
-      { id: "13vOUCRAsltqH55jwHVLbnKL15MLetPgx", caption: "Rasyid" },
-      { id: "1-DK0TVwYyw1qFlLRMq_8eBeRrDtJB1Nx", caption: "Raihan" },
-      { id: "1DYdHiyj0CcqC5UQrAMsNSnDeY4c-ZE5h", caption: "Rasyid" },
-      { id: "1l3dgCH8xK5T4dXeiqnnVgpWqdSocbXsu", caption: "Raihan" }
-    ];
+    function loadConfig() {
+      try {
+        const saved = localStorage.getItem("khitan_rasyid_rayhan_cfg_v4");
+        if (saved) {
+          return Object.assign({}, DEFAULT_CONFIG, JSON.parse(saved));
+        }
+      } catch (e) {}
+      return Object.assign({}, DEFAULT_CONFIG);
+    }
 
     function showToast(msg) {
-      var t = document.getElementById("toast");
-      if (!t) return;
-      t.textContent = msg;
-      t.classList.add("show");
-      setTimeout(function () {
-        t.classList.remove("show");
-      }, 2800);
+      const el = document.getElementById("toast-popup");
+      if (!el) return;
+      el.textContent = msg;
+      el.classList.add("show");
+      clearTimeout(el._timer);
+      el._timer = setTimeout(function () {
+        el.classList.remove("show");
+      }, 2400);
     }
 
-    function escapeHTML(str) {
-      return String(str)
-        .replace(/&/g, "&amp;")
-        .replace(/</g, "&lt;")
-        .replace(/>/g, "&gt;")
-        .replace(/"/g, "&quot;")
-        .replace(/'/g, "&#39;");
-    }
-
-    function formatRelativeTime(isoStr) {
-      if (!isoStr) return "";
-      var date = new Date(isoStr);
-      if (isNaN(date.getTime())) return "";
-      var diffSec = Math.floor((Date.now() - date.getTime()) / 1000);
-      if (diffSec < 60) return "Baru saja";
-      var diffMin = Math.floor(diffSec / 60);
-      if (diffMin < 60) return diffMin + " menit lalu";
-      var diffHour = Math.floor(diffMin / 60);
-      if (diffHour < 24) return diffHour + " jam lalu";
-      var diffDay = Math.floor(diffHour / 24);
-      if (diffDay === 1) return "Kemarin";
-      if (diffDay < 7) return diffDay + " hari lalu";
-      var months = ["Jan", "Feb", "Mar", "Apr", "Mei", "Jun", "Jul", "Agu", "Sep", "Okt", "Nov", "Des"];
-      return date.getDate() + " " + months[date.getMonth()] + " " + date.getFullYear();
-    }
-
-    function initAdminSeparation() {
-      var params = new URLSearchParams(window.location.search);
-      isAdminMode = params.get("admin") === ADMIN_SECRET_KEY;
-      var topBar = document.getElementById("admin-topbar");
-      var adminModal = document.getElementById("admin-modal");
-
-      if (isAdminMode) {
-        if (topBar) topBar.style.display = "flex";
-      } else {
-        if (topBar) topBar.remove();
-        if (adminModal) adminModal.remove();
-      }
-
-      var siger = document.getElementById("siger-trigger");
-      if (siger && !isAdminMode) {
-        var tapCount = 0;
-        var tapTimer = null;
-        siger.addEventListener("click", function () {
-          tapCount++;
-          clearTimeout(tapTimer);
-          tapTimer = setTimeout(function () { tapCount = 0; }, 1600);
-          if (tapCount >= 5) {
-            tapCount = 0;
-            var code = window.prompt("Masukkan kode akses admin:");
-            if (code === ADMIN_SECRET_KEY) {
-              var url = new URL(window.location.href);
-              url.searchParams.set("admin", ADMIN_SECRET_KEY);
-              window.location.href = url.toString();
-            }
-          }
-        });
-      }
-    }
-
-    function initGuestName() {
-      var params = new URLSearchParams(window.location.search);
-      var guest = params.get("to");
-      var displayEl = document.getElementById("guest-name-display");
-      var rsvpNameEl = document.getElementById("rsvp-name");
-      if (guest && guest.trim() !== "") {
-        var cleanGuest = guest.trim();
-        if (displayEl) displayEl.textContent = cleanGuest;
-        if (rsvpNameEl) rsvpNameEl.value = cleanGuest;
-      }
-    }
-
-    function applyDriveImages() {
-      var imgs = document.querySelectorAll("img[data-drive-id]");
-      imgs.forEach(function (img) {
-        var fileId = img.getAttribute("data-drive-id");
-        var urls = [
-          "https://lh3.googleusercontent.com/d/" + fileId + "=w1000",
-          "https://drive.google.com/thumbnail?id=" + fileId + "&sz=w1000",
-          "https://drive.google.com/uc?export=view&id=" + fileId
-        ];
-        var attempt = 0;
-        img.onload = function () {
-          if (img.parentElement) {
-            img.parentElement.classList.add("loaded");
-          }
-        };
-        img.onerror = function () {
-          attempt++;
-          if (attempt < urls.length) {
-            img.src = urls[attempt];
-          } else if (img.parentElement) {
-            img.parentElement.classList.add("loaded");
-          }
-        };
-        img.src = urls[0];
-        if (img.complete && img.naturalWidth > 0 && img.parentElement) {
-          img.parentElement.classList.add("loaded");
-        }
+    function escapeHtml(str) {
+      const map = {
+        "&": "&amp;",
+        "<": "&lt;",
+        ">": "&gt;",
+        '"': "&quot;",
+        "'": "&#39;"
+      };
+      return String(str || "").replace(/[&<>"']/g, function (m) {
+        return map[m];
       });
     }
 
-    function renderRouteStepsFlow(noteText) {
-      var flowWrap = document.getElementById("route-steps-flow");
-      if (!flowWrap) return;
-      var clean = (noteText || "").trim().replace(/\.$/, "");
-      if (!clean) {
-        flowWrap.innerHTML = "";
-        return;
-      }
-
-      var defaultPhrase = "Masuk gang belok kanan terus belok kiri sampai ada lapang, sebelah rumah kayu";
-      var steps = [];
-      if (clean.toLowerCase() === defaultPhrase.toLowerCase()) {
-        steps = [
-          "Masuk gang",
-          "Belok kanan",
-          "Belok kiri sampai lapang",
-          "Sebelah rumah kayu"
-        ];
-      } else if (clean.indexOf("->") !== -1) {
-        steps = clean.split("->").map(function (s) { return s.trim(); }).filter(Boolean);
-      } else if (clean.indexOf(",") !== -1) {
-        steps = clean.split(",").map(function (s) { return s.trim(); }).filter(Boolean);
-      } else {
-        steps = [clean];
-      }
-
-      flowWrap.innerHTML = steps.map(function (step, idx) {
-        var chip = '<span class="route-step-chip"><span class="route-step-num">' + (idx + 1) + '</span> ' + escapeHTML(step) + '</span>';
-        return idx < steps.length - 1 ? chip + '<span class="route-step-arrow">➔</span>' : chip;
-      }).join("");
+    function getDriveImageUrls(fileId) {
+      return [
+        "https://lh3.googleusercontent.com/d/" + fileId + "=w1400",
+        "https://drive.google.com/thumbnail?id=" + fileId + "&sz=w1400",
+        "https://drive.google.com/uc?export=view&id=" + fileId
+      ];
     }
 
-    function updateGoogleCalendarLink() {
-      var gcalEl = document.getElementById("gcal-link");
-      if (!gcalEl) return;
-      var startObj = new Date(EVENT_CONFIG.eventDateISO);
-      if (isNaN(startObj.getTime())) startObj = new Date("2026-12-20T09:00:00+07:00");
-      var endObj = new Date(startObj.getTime() + 5 * 60 * 60 * 1000);
-      var fmt = function (d) {
-        return d.toISOString().replace(/[-:]/g, "").split(".")[0] + "Z";
+    function bindDriveImage(imgEl, fileId) {
+      if (!imgEl || !fileId) return;
+      const urls = getDriveImageUrls(fileId);
+      let attempt = 0;
+      const parent = imgEl.parentElement;
+
+      imgEl.onload = function () {
+        if (parent) parent.classList.add("loaded");
       };
-      var title = "Walimatul Khitan " + EVENT_CONFIG.child1 + " & " + EVENT_CONFIG.child2;
-      var notePart = EVENT_CONFIG.addressNote ? " (Patokan: " + EVENT_CONFIG.addressNote + ")" : "";
-      var details = "Undangan Tasyakuran Walimatul Khitan putra " + EVENT_CONFIG.parents + "." + notePart;
-      gcalEl.href =
-        "https://calendar.google.com/calendar/render?action=TEMPLATE" +
-        "&text=" + encodeURIComponent(title) +
-        "&dates=" + fmt(startObj) + "/" + fmt(endObj) +
-        "&details=" + encodeURIComponent(details) +
-        "&location=" + encodeURIComponent(EVENT_CONFIG.address);
-    }
-
-    function applyEventConfigToDOM() {
-      document.body.setAttribute("data-theme", EVENT_CONFIG.theme || "royal");
-      var badgeMap = { royal: "Royal Sunda", sogan: "Sogan Priangan", pajajaran: "Keraton Pajajaran" };
-      var badgeEl = document.getElementById("theme-badge");
-      if (badgeEl) badgeEl.textContent = badgeMap[EVENT_CONFIG.theme] || "Royal Sunda";
-
-      var setText = function (id, val) {
-        var el = document.getElementById(id);
-        if (el && val !== undefined) el.textContent = val;
+      imgEl.onerror = function () {
+        attempt++;
+        if (attempt < urls.length) {
+          imgEl.src = urls[attempt];
+        } else if (parent) {
+          parent.classList.add("loaded");
+        }
       };
-
-      setText("cover-child-1", EVENT_CONFIG.child1);
-      setText("cover-child-2", EVENT_CONFIG.child2);
-      setText("name-rasyid", EVENT_CONFIG.child1);
-      setText("role-rasyid", EVENT_CONFIG.role1 || "Putra Kedua Kami");
-      setText("name-raihan", EVENT_CONFIG.child2);
-      setText("role-raihan", EVENT_CONFIG.role2 || "Putra Ketiga Kami");
-      setText("parents-display", EVENT_CONFIG.parents);
-      setText("cover-date", EVENT_CONFIG.eventDateDisplay);
-      setText("event-day-date", EVENT_CONFIG.eventDateDisplay);
-      setText("event-time", EVENT_CONFIG.eventTimeDisplay);
-      setText("event-venue", EVENT_CONFIG.venue);
-      setText("event-address", EVENT_CONFIG.address);
-      setText("event-address-note", EVENT_CONFIG.addressNote || "");
-      setText("bank-name", EVENT_CONFIG.bankName);
-      setText("bank-number", EVENT_CONFIG.bankNumber);
-      setText("bank-holder", EVENT_CONFIG.bankHolder);
-
-      var noteWrap = document.getElementById("address-note-wrap");
-      if (noteWrap) {
-        var hasNote = EVENT_CONFIG.addressNote && EVENT_CONFIG.addressNote.trim() !== "";
-        noteWrap.style.display = hasNote ? "block" : "none";
-        if (hasNote) renderRouteStepsFlow(EVENT_CONFIG.addressNote);
-      }
-
-      // E-Wallet Opsional
-      var ewWrap = document.getElementById("ewallet-card-wrap");
-      if (ewWrap) {
-        var hasEw = EVENT_CONFIG.ewalletNumber && EVENT_CONFIG.ewalletNumber.trim() !== "";
-        if (hasEw) {
-          ewWrap.classList.add("show");
-          setText("ewallet-name", EVENT_CONFIG.ewalletName || "E-Wallet");
-          setText("ewallet-number", EVENT_CONFIG.ewalletNumber);
-          setText("ewallet-holder", EVENT_CONFIG.ewalletHolder || "");
-        } else {
-          ewWrap.classList.remove("show");
-        }
-      }
-
-      var mapsEl = document.getElementById("maps-link");
-      if (mapsEl) mapsEl.href = EVENT_CONFIG.mapsUrl;
-      updateGoogleCalendarLink();
+      imgEl.src = urls[0];
     }
 
-    function startCountdown() {
-      function tick() {
-        var target = new Date(EVENT_CONFIG.eventDateISO).getTime();
-        var now = Date.now();
-        var diff = Math.max(0, target - now);
+    function applyConfigToDOM() {
+      document.body.classList.remove("theme-sogan", "theme-keraton");
+      if (EVENT_CONFIG.theme === "sogan") document.body.classList.add("theme-sogan");
+      if (EVENT_CONFIG.theme === "keraton") document.body.classList.add("theme-keraton");
 
-        var cdGrid = document.getElementById("countdown-grid");
-        var hariHBanner = document.getElementById("hari-h-banner");
+      document.getElementById("cover-badge").textContent = EVENT_CONFIG.coverBadge;
+      document.getElementById("ayat-tag").textContent = EVENT_CONFIG.ayatTag;
+      document.getElementById("ayat-heading").textContent = EVENT_CONFIG.ayatHeading;
+      document.getElementById("cover-child-1").textContent = EVENT_CONFIG.child1;
+      document.getElementById("cover-child-2").textContent = EVENT_CONFIG.child2;
+      document.getElementById("name-rasyid").textContent = EVENT_CONFIG.child1;
+      document.getElementById("name-raihan").textContent = EVENT_CONFIG.child2;
+      document.getElementById("parents-display").textContent = EVENT_CONFIG.parents;
+      document.getElementById("cover-date").textContent = EVENT_CONFIG.eventDateDisplay;
+      document.getElementById("event-day-date").textContent = EVENT_CONFIG.eventDateDisplay;
+      document.getElementById("event-time").textContent = EVENT_CONFIG.eventTime;
+      document.getElementById("event-venue").textContent = EVENT_CONFIG.venue;
+      document.getElementById("event-address").textContent = EVENT_CONFIG.address;
+      document.getElementById("event-notes").textContent = EVENT_CONFIG.locationNotes;
+      document.getElementById("maps-link").href = EVENT_CONFIG.mapsUrl;
 
-        if (diff === 0) {
-          if (cdGrid) cdGrid.style.display = "none";
-          if (hariHBanner) hariHBanner.classList.add("show");
-          return;
-        } else {
-          if (cdGrid) cdGrid.style.display = "grid";
-          if (hariHBanner) hariHBanner.classList.remove("show");
-        }
+      document.getElementById("bank-name").textContent = EVENT_CONFIG.bankName;
+      document.getElementById("bank-number").textContent = EVENT_CONFIG.bankAccount;
+      document.getElementById("bank-holder").textContent = EVENT_CONFIG.bankHolder;
 
-        var days = Math.floor(diff / (1000 * 60 * 60 * 24));
-        var hours = Math.floor((diff / (1000 * 60 * 60)) % 24);
-        var mins = Math.floor((diff / 1000 / 60) % 60);
-        var secs = Math.floor((diff / 1000) % 60);
-
-        var pad = function (n) { return n < 10 ? "0" + n : String(n); };
-        var dEl = document.getElementById("cd-days");
-        if (dEl) {
-          dEl.textContent = pad(days);
-          document.getElementById("cd-hours").textContent = pad(hours);
-          document.getElementById("cd-mins").textContent = pad(mins);
-          document.getElementById("cd-secs").textContent = pad(secs);
-        }
-      }
-      tick();
-      setInterval(tick, 1000);
-    }
-
-    /* =====================================================================
-       PEMUTAR SHOLAWAT.MP3 ASLI (PRIORITAS LOKAL + GOOGLE DRIVE STREAM + PLAYER)
-       ===================================================================== */
-    function extractDriveId(input) {
-      if (!input) return "";
-      var s = input.trim();
-      var m1 = s.match(/\/file\/d\/([a-zA-Z0-9_-]+)/);
-      if (m1 && m1[1]) return m1[1];
-      var m2 = s.match(/[?&]id=([a-zA-Z0-9_-]+)/);
-      if (m2 && m2[1]) return m2[1];
-      if (/^[a-zA-Z0-9_-]{20,}$/.test(s)) return s;
-      return "";
-    }
-
-    function resolveAudioSources(src) {
-      var candidates = [];
-      var s = (src || "").trim();
-      currentDriveAudioId = "";
-
-      if (s.indexOf("./") === 0 || s.indexOf("/") === 0) {
-        candidates.push(s);
-        return candidates;
-      }
-
-      var driveId = extractDriveId(s);
-      if (driveId) {
-        currentDriveAudioId = driveId;
-        candidates.push("./sholawat.mp3");
-        candidates.push("https://docs.google.com/uc?export=download&id=" + driveId);
-        candidates.push("https://drive.usercontent.google.com/download?id=" + driveId + "&export=download&confirm=t");
-        candidates.push("https://drive.google.com/uc?export=open&id=" + driveId);
-        return candidates;
-      }
-
-      if (s.indexOf("http") === 0) {
-        candidates.push(s);
-      }
-      return candidates;
-    }
-
-    function updateAudioButtonUI(playing) {
-      var btn = document.getElementById("audio-btn");
-      if (!btn) return;
-      if (playing) {
-        btn.classList.add("playing");
-        btn.setAttribute("aria-label", "Jeda Musik Sholawat");
+      const ewCard = document.getElementById("ewallet-card");
+      if (EVENT_CONFIG.ewalletRaw && EVENT_CONFIG.ewalletRaw.trim()) {
+        const parts = EVENT_CONFIG.ewalletRaw.split("|").map(function (s) { return s.trim(); });
+        document.getElementById("ewallet-name").textContent = parts[0] || "E-WALLET";
+        document.getElementById("ewallet-number").textContent = parts[1] || "";
+        document.getElementById("ewallet-holder").textContent = parts[2] || EVENT_CONFIG.bankHolder;
+        ewCard.style.display = "block";
       } else {
-        btn.classList.remove("playing");
-        btn.setAttribute("aria-label", "Putar Musik Sholawat");
+        ewCard.style.display = "none";
+      }
+
+      document.querySelectorAll("img[data-drive-id]").forEach(function (img) {
+        bindDriveImage(img, img.getAttribute("data-drive-id"));
+      });
+    }
+
+    function parseGuestName() {
+      const params = new URLSearchParams(window.location.search);
+      const guest = params.get("to") || params.get("kepada");
+      if (guest && guest.trim()) {
+        const clean = guest.replace(/\+/g, " ").trim();
+        document.getElementById("guest-name-display").textContent = clean;
+        const rsvpNameInput = document.getElementById("rsvp-name");
+        if (rsvpNameInput && !rsvpNameInput.value) {
+          rsvpNameInput.value = clean;
+        }
+      }
+      if (params.get("admin") === "ariska123") {
+        document.getElementById("admin-bar").classList.add("visible");
       }
     }
 
-    function openDriveAudioDock(driveId) {
-      var dock = document.getElementById("drive-audio-dock");
-      var iframe = document.getElementById("drive-audio-iframe");
-      if (!dock || !iframe || !driveId) return;
-      iframe.src = "https://drive.google.com/file/d/" + driveId + "/preview?autoplay=1";
-      dock.classList.add("open");
-      activeAudioMode = "drive-dock";
-      isAudioPlaying = true;
-      updateAudioButtonUI(true);
-    }
-
-    function closeDriveAudioDock() {
-      var dock = document.getElementById("drive-audio-dock");
-      var iframe = document.getElementById("drive-audio-iframe");
-      if (iframe) iframe.src = "about:blank";
-      if (dock) dock.classList.remove("open");
-      activeAudioMode = "none";
-      isAudioPlaying = false;
-      updateAudioButtonUI(false);
-    }
-
-    function tryNextAudioEndpoint() {
-      var audio = document.getElementById("bg-audio");
+    function startBackgroundAudio() {
+      const audio = document.getElementById("bg-audio");
+      const btn = document.getElementById("audio-btn");
       if (!audio) return;
 
-      if (audioSourceIndex >= audioSourcesList.length) {
-        if (currentDriveAudioId) {
-          openDriveAudioDock(currentDriveAudioId);
-        } else {
-          isAudioPlaying = false;
-          updateAudioButtonUI(false);
-          showToast("Ketuk tombol musik untuk memutar sholawat.mp3");
-        }
-        return;
-      }
+      audio.src = EVENT_CONFIG.localAudioPath || "./sholawat.mp3";
+      audio.volume = 0.75;
 
-      var candidateUrl = audioSourcesList[audioSourceIndex];
-      audioSourceIndex++;
-      audio.src = candidateUrl;
-      audio.load();
-
-      var playPromise = audio.play();
+      const playPromise = audio.play();
       if (playPromise !== undefined) {
         playPromise.then(function () {
-          activeAudioMode = "native";
           isAudioPlaying = true;
-          updateAudioButtonUI(true);
+          btn.classList.add("playing");
         }).catch(function () {
-          tryNextAudioEndpoint();
+          // Fallback ke pemutar resmi Google Drive jika file lokal tidak ada
+          const bar = document.getElementById("drive-audio-bar");
+          const iframe = document.getElementById("drive-audio-iframe");
+          if (bar && iframe && EVENT_CONFIG.driveAudioId) {
+            iframe.src = "https://drive.google.com/file/d/" + EVENT_CONFIG.driveAudioId + "/preview";
+            bar.classList.add("visible");
+          }
         });
-      }
-    }
-
-    function playBackgroundAudio() {
-      var audio = document.getElementById("bg-audio");
-      if (!audio) return;
-
-      if (activeAudioMode === "native" && audio.src) {
-        audio.play().then(function () {
-          isAudioPlaying = true;
-          updateAudioButtonUI(true);
-        }).catch(function () {
-          audioSourceIndex = 0;
-          audioSourcesList = resolveAudioSources(EVENT_CONFIG.audioSource);
-          tryNextAudioEndpoint();
-        });
-        return;
-      }
-
-      if (activeAudioMode === "drive-dock" && currentDriveAudioId) {
-        openDriveAudioDock(currentDriveAudioId);
-        return;
-      }
-
-      audioSourcesList = resolveAudioSources(EVENT_CONFIG.audioSource);
-      audioSourceIndex = 0;
-      if (audioSourcesList.length > 0) {
-        tryNextAudioEndpoint();
       }
     }
 
     function toggleAudio() {
-      var audio = document.getElementById("bg-audio");
+      const audio = document.getElementById("bg-audio");
+      const btn = document.getElementById("audio-btn");
+      if (!audio) return;
+
       if (isAudioPlaying) {
-        if (activeAudioMode === "native" && audio) {
-          audio.pause();
-          isAudioPlaying = false;
-          updateAudioButtonUI(false);
-        } else if (activeAudioMode === "drive-dock") {
-          closeDriveAudioDock();
-        }
+        audio.pause();
+        isAudioPlaying = false;
+        btn.classList.remove("playing");
+        showToast("Musik latar dijeda");
       } else {
-        playBackgroundAudio();
+        if (!audio.src) {
+          startBackgroundAudio();
+          return;
+        }
+        audio.play().then(function () {
+          isAudioPlaying = true;
+          btn.classList.add("playing");
+          showToast("Musik latar diputar");
+        }).catch(function () {
+          const bar = document.getElementById("drive-audio-bar");
+          if (bar) bar.classList.add("visible");
+        });
       }
     }
 
     function openInvitation() {
-      var cover = document.getElementById("cover");
-      var main = document.getElementById("invitation-main");
-      var nav = document.getElementById("bottom-nav");
-      var audioBtn = document.getElementById("audio-btn");
+      const cover = document.getElementById("cover");
+      const main = document.getElementById("invitation-main");
+      const nav = document.getElementById("bottom-nav");
+      const audioFab = document.getElementById("audio-btn");
 
-      if (main) main.classList.add("active");
-      if (nav) nav.classList.add("active");
-      if (audioBtn) audioBtn.classList.add("active");
+      cover.classList.add("curtain-up");
+      main.classList.add("active");
+      nav.classList.add("visible");
+      audioFab.classList.add("visible");
 
-      if (cover) {
-        cover.classList.add("opening");
-        setTimeout(function () {
-          cover.classList.remove("opening");
-          cover.classList.add("opened");
-        }, 720);
-      }
+      setTimeout(function () {
+        cover.classList.add("hidden");
+      }, 820);
 
+      startBackgroundAudio();
       window.scrollTo({ top: 0, behavior: "smooth" });
-      playBackgroundAudio();
-      triggerScrollReveal();
-      initScrollSpy();
     }
 
-    function copyToClipboard(text, successMsg) {
+    function updateCountdown() {
+      const target = new Date(EVENT_CONFIG.eventIso).getTime();
+      const now = Date.now();
+      const diff = target - now;
+
+      const grid = document.getElementById("countdown-grid");
+      const banner = document.getElementById("hari-h-banner");
+
+      if (diff <= 0) {
+        if (grid) grid.style.display = "none";
+        if (banner) banner.style.display = "block";
+        return;
+      }
+
+      const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+      const hours = Math.floor((diff / (1000 * 60 * 60)) % 24);
+      const mins = Math.floor((diff / (1000 * 60)) % 60);
+      const secs = Math.floor((diff / 1000) % 60);
+
+      document.getElementById("cd-days").textContent = String(days).padStart(2, "0");
+      document.getElementById("cd-hours").textContent = String(hours).padStart(2, "0");
+      document.getElementById("cd-mins").textContent = String(mins).padStart(2, "0");
+      document.getElementById("cd-secs").textContent = String(secs).padStart(2, "0");
+    }
+
+    function copyTextFallback(text, onSuccess) {
       if (navigator.clipboard && navigator.clipboard.writeText) {
-        navigator.clipboard.writeText(text).then(function () {
-          showToast(successMsg);
-        }).catch(function () {
-          fallbackCopy(text, successMsg);
+        navigator.clipboard.writeText(text).then(onSuccess).catch(function () {
+          legacyCopy(text, onSuccess);
         });
       } else {
-        fallbackCopy(text, successMsg);
+        legacyCopy(text, onSuccess);
       }
     }
 
-    function fallbackCopy(text, successMsg) {
-      var ta = document.createElement("textarea");
+    function legacyCopy(text, onSuccess) {
+      const ta = document.createElement("textarea");
       ta.value = text;
+      ta.style.position = "fixed";
+      ta.style.opacity = "0";
       document.body.appendChild(ta);
       ta.select();
-      document.execCommand("copy");
+      try {
+        document.execCommand("copy");
+        if (onSuccess) onSuccess();
+      } catch (e) {}
       document.body.removeChild(ta);
-      showToast(successMsg);
     }
 
     function downloadICS() {
-      var startObj = new Date(EVENT_CONFIG.eventDateISO);
-      if (isNaN(startObj.getTime())) startObj = new Date("2026-12-20T09:00:00+07:00");
-      var endObj = new Date(startObj.getTime() + 5 * 60 * 60 * 1000);
-      var fmt = function (d) {
-        return d.toISOString().replace(/[-:]/g, "").split(".")[0] + "Z";
-      };
-
-      var fullLoc = EVENT_CONFIG.address + (EVENT_CONFIG.addressNote ? " (" + EVENT_CONFIG.addressNote + ")" : "");
-      var NL = String.fromCharCode(13, 10);
-      var icsLines = [
+      const icsLines = [
         "BEGIN:VCALENDAR",
         "VERSION:2.0",
         "PRODID:-//Walimatul Khitan//Rasyid & Rayhan//ID",
         "BEGIN:VEVENT",
-        "DTSTART:" + fmt(startObj),
-        "DTEND:" + fmt(endObj),
+        "DTSTART:20261220T020000Z",
+        "DTEND:20261220T070000Z",
         "SUMMARY:Walimatul Khitan " + EVENT_CONFIG.child1 + " & " + EVENT_CONFIG.child2,
-        "LOCATION:" + fullLoc,
-        "DESCRIPTION:Undangan Tasyakuran Walimatul Khitan putra " + EVENT_CONFIG.parents + ".",
+        "LOCATION:" + EVENT_CONFIG.address + " (" + EVENT_CONFIG.locationNotes + ")",
+        "DESCRIPTION:Undangan Tasyakuran Khitanan putra Bapak Riza Arvan Rabbani & Ibu Siska Noeryulia.",
         "END:VEVENT",
         "END:VCALENDAR"
       ];
-      var blob = new Blob([icsLines.join(NL)], { type: "text/calendar;charset=utf-8" });
-      var url = URL.createObjectURL(blob);
-      var a = document.createElement("a");
+      const blob = new Blob([icsLines.join(CRLF)], { type: "text/calendar;charset=utf-8" });
+      const url = URL.createObjectURL(blob);
+      const a = document.createElement("a");
       a.href = url;
       a.download = "Walimatul-Khitan-Rasyid-Rayhan.ics";
       document.body.appendChild(a);
       a.click();
       document.body.removeChild(a);
       URL.revokeObjectURL(url);
-      showToast("File kalender (.ics) diunduh.");
+      showToast("File kalender (.ics) diunduh");
     }
 
-    function openLightbox(index) {
-      currentLightboxIndex = index;
-      updateLightboxView();
+    function openLightbox(idx) {
+      const items = EVENT_CONFIG.gallery;
+      currentLightboxIndex = (idx + items.length) % items.length;
+      const item = items[currentLightboxIndex];
+      const imgEl = document.getElementById("lightbox-img");
+      const capEl = document.getElementById("lightbox-caption");
+
+      bindDriveImage(imgEl, item.id);
+      capEl.textContent = item.caption;
       document.getElementById("lightbox-modal").classList.add("open");
     }
 
-    function updateLightboxView() {
-      var item = GALLERY_ITEMS[currentLightboxIndex];
-      if (!item) return;
-      var img = document.getElementById("lightbox-img");
-      var cap = document.getElementById("lightbox-caption");
-      img.src = "https://lh3.googleusercontent.com/d/" + item.id + "=w1400";
-      cap.textContent = item.caption;
+    function formatRelativeTime(isoStr) {
+      if (!isoStr) return "";
+      const date = new Date(isoStr);
+      if (isNaN(date.getTime())) return "";
+      const diffSec = Math.floor((Date.now() - date.getTime()) / 1000);
+      if (diffSec < 60) return "Baru saja";
+      const diffMin = Math.floor(diffSec / 60);
+      if (diffMin < 60) return diffMin + " menit lalu";
+      const diffHour = Math.floor(diffMin / 60);
+      if (diffHour < 24) return diffHour + " jam lalu";
+      const diffDay = Math.floor(diffHour / 24);
+      if (diffDay === 1) return "Kemarin";
+      if (diffDay < 7) return diffDay + " hari lalu";
+      return date.toLocaleDateString("id-ID", { day: "numeric", month: "short", year: "numeric" });
     }
 
-    /* =====================================================================
-       SINKRONISASI RSVP & 10 UCAPAN TERATAS DARI GOOGLE APPS SCRIPT
-       ===================================================================== */
-    function updateAdminRecapUI() {
-      if (!isAdminMode) return;
-      var wEl = document.getElementById("admin-stat-wishes");
-      var hEl = document.getElementById("admin-stat-hadir");
-      var pEl = document.getElementById("admin-stat-pax");
-      if (wEl) wEl.textContent = String(sheetStats.total || 0);
-      if (hEl) hEl.textContent = String(sheetStats.hadir || 0);
-      if (pEl) pEl.textContent = String(sheetStats.pax || sheetStats.hadir || 0) + " Org";
-    }
+    const DEFAULT_WISHES = [
+      {
+        name: "Keluarga Besar Dago Pojok",
+        attendance: "Hadir",
+        guests: "4",
+        message: "Mugiya janten murangkalih anu soleh, pinter, sareng bagja dunya akherat kanggo Rasyid & Rayhan.",
+        timestamp: ""
+      }
+    ];
 
-    function renderTop10Wishes(items, customStats) {
-      var list = document.getElementById("wish-list");
-      var totalEl = document.getElementById("stat-total");
-      var hadirEl = document.getElementById("stat-hadir");
-      if (!list) return;
+    function renderWishes(wishesList) {
+      const container = document.getElementById("wish-list");
+      if (!container) return;
 
-      var top10 = (items || []).slice(0, MAX_DISPLAY_WISHES);
-      var totalCount = (customStats && typeof customStats.total === "number") ? customStats.total : items.length;
-      var hadirCount = (customStats && typeof customStats.hadir === "number")
-        ? customStats.hadir
-        : items.filter(function (w) { return w.attendance === "Hadir"; }).length;
-
-      if (totalEl) totalEl.textContent = "💌 " + totalCount + " Doa & Ucapan";
-      if (hadirEl) hadirEl.textContent = "✅ " + hadirCount + " Konfirmasi Hadir";
-      updateAdminRecapUI();
-
-      list.innerHTML = "";
-      if (top10.length === 0) {
-        list.innerHTML =
+      const list = (wishesList && wishesList.length) ? wishesList : DEFAULT_WISHES;
+      container.innerHTML = list.map(function (w) {
+        const badgeLabel = w.attendance === "Hadir"
+          ? "Insya Allah Hadir"
+          : (w.attendance === "Tidak Hadir" ? "Berhalangan Hadir" : "Menyesuaikan");
+        const relTime = formatRelativeTime(w.timestamp);
+        return (
           '<div class="wish-item">' +
-            '<p style="font-size:12.5px; color:var(--text-muted); text-align:center;">' +
-              "Belum ada ucapan. Jadilah yang pertama mengirimkan doa restu untuk Rasyid &amp; Rayhan." +
-            "</p>" +
-          "</div>";
-        return;
-      }
-
-      var labelMap = {
-        "Hadir": "Insya Allah Hadir",
-        "Ragu": "Masih Menyesuaikan",
-        "Tidak Hadir": "Belum Dapat Hadir"
-      };
-
-      top10.forEach(function (w) {
-        var relTime = formatRelativeTime(w.timestamp);
-        var timeHtml = relTime ? '<span class="wish-time">🕒 ' + escapeHTML(relTime) + "</span>" : "";
-        var div = document.createElement("div");
-        div.className = "wish-item";
-        div.innerHTML =
-          '<div class="wish-header">' +
-            "<strong>" + escapeHTML(w.name) + "</strong>" +
-            '<span class="wish-badge">' + escapeHTML(labelMap[w.attendance] || w.attendance) + "</span>" +
-          "</div>" +
-          '<p style="font-size:12.5px; color:var(--text-muted); line-height:1.5;">' +
-            escapeHTML(w.message) +
-          "</p>" +
-          timeHtml;
-        list.appendChild(div);
-      });
+            '<div class="wish-header">' +
+              '<div>' +
+                '<div class="wish-author">' + escapeHtml(w.name) + '</div>' +
+                (relTime ? '<span class="wish-time">' + escapeHtml(relTime) + '</span>' : '') +
+              '</div>' +
+              '<span class="wish-badge">' + escapeHtml(badgeLabel) + '</span>' +
+            '</div>' +
+            '<p class="wish-msg">' + escapeHtml(w.message) + '</p>' +
+          '</div>'
+        );
+      }).join("");
     }
 
-    function applySheetResponse(res) {
-      if (!res || !Array.isArray(res.wishes)) return;
-      var deduped = [];
-      var seen = {};
-      var computedPax = 0;
+    function updateAdminStats(data) {
+      if (!data) return;
+      const elW = document.getElementById("stat-total-wishes");
+      const elH = document.getElementById("stat-total-hadir");
+      const elP = document.getElementById("stat-total-pax");
+      if (elW && typeof data.totalWishes !== "undefined") elW.textContent = data.totalWishes;
+      if (elH && typeof data.totalHadir !== "undefined") elH.textContent = data.totalHadir;
+      if (elP && typeof data.totalPax !== "undefined") elP.textContent = data.totalPax;
+    }
 
-      res.wishes.forEach(function (w) {
-        if (!w || !w.name || !w.message) return;
-        var key = (w.name + "|" + w.message).toLowerCase().trim();
-        if (!seen[key]) {
-          seen[key] = true;
-          var att = String(w.attendance || "Hadir");
-          var gCount = parseInt(w.guests, 10) || 1;
-          if (att === "Hadir") computedPax += gCount;
-          deduped.push({
-            name: String(w.name),
-            attendance: att,
-            guests: String(w.guests || "1"),
-            message: String(w.message),
-            timestamp: w.timestamp ? String(w.timestamp) : ""
-          });
-        }
-      });
-
-      wishesState = deduped;
-      sheetStats = {
-        total: typeof res.totalWishes === "number" ? res.totalWishes : deduped.length,
-        hadir: typeof res.totalHadir === "number"
-          ? res.totalHadir
-          : deduped.filter(function (x) { return x.attendance === "Hadir"; }).length,
-        pax: typeof res.totalPax === "number" ? res.totalPax : computedPax
-      };
-
+    function getLocalWishes() {
       try {
-        localStorage.setItem("khitan_wishes_v3", JSON.stringify(deduped.slice(0, MAX_DISPLAY_WISHES)));
+        const raw = localStorage.getItem("khitan_local_wishes_v4");
+        return raw ? JSON.parse(raw) : [];
+      } catch (e) {
+        return [];
+      }
+    }
+
+    function saveLocalWish(wishObj) {
+      const current = getLocalWishes();
+      current.unshift(wishObj);
+      try {
+        localStorage.setItem("khitan_local_wishes_v4", JSON.stringify(current.slice(0, 10)));
       } catch (e) {}
-
-      renderTop10Wishes(deduped, sheetStats);
-      var syncLabel = document.getElementById("sync-status-label");
-      if (syncLabel) syncLabel.textContent = "🟢 Tersinkron • 10 ucapan teratas";
     }
 
-    function loadWishesViaJSONP(baseUrl) {
-      var cbName = "khitanJsonpCb_" + Date.now();
-      var script = document.createElement("script");
-      window[cbName] = function (data) {
-        applySheetResponse(data);
-        delete window[cbName];
-        if (script.parentNode) script.parentNode.removeChild(script);
-      };
-      script.onerror = function () {
-        delete window[cbName];
-        if (script.parentNode) script.parentNode.removeChild(script);
-      };
-      var sep = baseUrl.indexOf("?") === -1 ? "?" : "&";
-      script.src = baseUrl + sep + "action=list&limit=" + MAX_DISPLAY_WISHES + "&callback=" + cbName + "&t=" + Date.now();
-      document.body.appendChild(script);
-    }
+    function fetchWishesFromSheet() {
+      const syncLabel = document.getElementById("sync-status-text");
+      const localWishes = getLocalWishes();
+      renderWishes(localWishes.length ? localWishes : DEFAULT_WISHES);
 
-    function fetchLiveWishesFromSheet() {
-      var syncLabel = document.getElementById("sync-status-label");
-      if (!EVENT_CONFIG.rsvpWebhookUrl) {
-        if (syncLabel) syncLabel.textContent = "Menampilkan 10 ucapan terbaru";
+      const url = EVENT_CONFIG.rsvpWebhookUrl;
+      if (!url || url.indexOf("REPLACE_WITH") !== -1) {
+        if (syncLabel) syncLabel.textContent = "🟢 Ucapan & Doa Tamu";
         return;
       }
 
-      if (syncLabel) syncLabel.textContent = "Menyinkronkan data Google Sheets...";
-      var sep = EVENT_CONFIG.rsvpWebhookUrl.indexOf("?") === -1 ? "?" : "&";
-      var url = EVENT_CONFIG.rsvpWebhookUrl + sep + "action=list&limit=" + MAX_DISPLAY_WISHES + "&t=" + Date.now();
+      if (syncLabel) syncLabel.textContent = "⏳ Memuat ucapan...";
 
-      fetch(url, { method: "GET", redirect: "follow" })
-        .then(function (r) { return r.json(); })
-        .then(function (res) {
-          applySheetResponse(res);
+      const sep = url.indexOf("?") === -1 ? "?" : "&";
+      const fetchUrl = url + sep + "limit=10&_t=" + Date.now();
+
+      fetch(fetchUrl)
+        .then(function (res) { return res.json(); })
+        .then(function (data) {
+          if (data && Array.isArray(data.wishes)) {
+            renderWishes(data.wishes.length ? data.wishes : (localWishes.length ? localWishes : DEFAULT_WISHES));
+            updateAdminStats(data);
+            if (syncLabel) syncLabel.textContent = "🟢 Tersinkron • 10 ucapan teratas";
+          }
         })
         .catch(function () {
-          loadWishesViaJSONP(EVENT_CONFIG.rsvpWebhookUrl);
+          // Cadangan JSONP jika fetch terkena kebijakan CORS
+          const cbName = "rsvpJsonpCb_" + Date.now();
+          window[cbName] = function (data) {
+            if (data && Array.isArray(data.wishes)) {
+              renderWishes(data.wishes.length ? data.wishes : (localWishes.length ? localWishes : DEFAULT_WISHES));
+              updateAdminStats(data);
+              if (syncLabel) syncLabel.textContent = "🟢 Tersinkron • 10 ucapan teratas";
+            }
+            delete window[cbName];
+          };
+          const script = document.createElement("script");
+          script.src = fetchUrl + "&callback=" + cbName;
+          script.onerror = function () {
+            if (syncLabel) syncLabel.textContent = "🟢 Ucapan & Doa Tamu";
+            delete window[cbName];
+          };
+          document.body.appendChild(script);
         });
-    }
-
-    function loadSavedWishes() {
-      try {
-        var cached = JSON.parse(localStorage.getItem("khitan_wishes_v3") || "[]");
-        if (Array.isArray(cached) && cached.length > 0) {
-          wishesState = cached;
-          renderTop10Wishes(cached);
-        }
-      } catch (e) {}
-
-      fetchLiveWishesFromSheet();
     }
 
     function handleRSVPSubmit(e) {
       e.preventDefault();
-      var btn = document.getElementById("rsvp-submit-btn");
-      var statusEl = document.getElementById("rsvp-status");
-      var name = document.getElementById("rsvp-name").value.trim();
-      var attendance = document.getElementById("rsvp-attendance").value;
-      var guests = document.getElementById("rsvp-guests").value;
-      var message = document.getElementById("rsvp-message").value.trim();
+      const name = document.getElementById("rsvp-name").value.trim();
+      const attendance = document.getElementById("rsvp-attendance").value;
+      const guests = document.getElementById("rsvp-guests").value;
+      const message = document.getElementById("rsvp-message").value.trim();
+      const statusBox = document.getElementById("rsvp-status");
+      const submitBtn = document.getElementById("rsvp-submit-btn");
 
       if (!name || !message) return;
-      btn.disabled = true;
-      btn.textContent = "Mengirim...";
 
-      var payload = {
+      const newWish = {
         name: name,
         attendance: attendance,
         guests: guests,
@@ -2526,472 +1993,291 @@
         timestamp: new Date().toISOString()
       };
 
-      wishesState.unshift(payload);
-      sheetStats.total = Math.max(sheetStats.total + 1, wishesState.length);
-      if (attendance === "Hadir") {
-        sheetStats.hadir = Math.max(sheetStats.hadir + 1, 1);
-        sheetStats.pax = (sheetStats.pax || 0) + (parseInt(guests, 10) || 1);
-      }
-      renderTop10Wishes(wishesState, sheetStats);
+      saveLocalWish(newWish);
+      renderWishes(getLocalWishes());
 
-      try {
-        localStorage.setItem("khitan_wishes_v3", JSON.stringify(wishesState.slice(0, MAX_DISPLAY_WISHES)));
-      } catch (err) {}
+      submitBtn.disabled = true;
+      submitBtn.textContent = "Mengirim...";
 
-      if (EVENT_CONFIG.rsvpWebhookUrl) {
-        fetch(EVENT_CONFIG.rsvpWebhookUrl, {
-          method: "POST",
-          mode: "no-cors",
-          headers: { "Content-Type": "text/plain;charset=utf-8" },
-          body: JSON.stringify(payload)
-        }).finally(function () {
-          btn.disabled = false;
-          btn.textContent = "Kirim Konfirmasi & Ucapan";
-          document.getElementById("rsvp-message").value = "";
-          statusEl.textContent = "Terima kasih, konfirmasi dan doa Anda telah tersimpan di Google Sheets.";
-          statusEl.classList.add("show");
-          setTimeout(fetchLiveWishesFromSheet, 1800);
-        });
-      } else {
-        btn.disabled = false;
-        btn.textContent = "Kirim Konfirmasi & Ucapan";
+      const url = EVENT_CONFIG.rsvpWebhookUrl;
+      if (!url || url.indexOf("REPLACE_WITH") !== -1) {
+        statusBox.textContent = "Terima kasih, ucapan & konfirmasi Anda telah tersimpan.";
+        statusBox.classList.add("show");
         document.getElementById("rsvp-message").value = "";
-        statusEl.textContent = "Terima kasih, ucapan Anda telah ditampilkan.";
-        statusEl.classList.add("show");
-      }
-    }
-
-    function triggerScrollReveal() {
-      var items = document.querySelectorAll(".reveal-item");
-      if (!("IntersectionObserver" in window)) {
-        items.forEach(function (el) { el.classList.add("visible"); });
+        submitBtn.disabled = false;
+        submitBtn.textContent = "Kirim Konfirmasi & Ucapan";
         return;
       }
-      var observer = new IntersectionObserver(function (entries) {
-        entries.forEach(function (entry) {
-          if (entry.isIntersecting) {
-            entry.target.classList.add("visible");
-            observer.unobserve(entry.target);
-          }
-        });
-      }, { threshold: 0.12 });
-      items.forEach(function (el) { observer.observe(el); });
+
+      fetch(url, {
+        method: "POST",
+        mode: "no-cors",
+        headers: { "Content-Type": "text/plain;charset=utf-8" },
+        body: JSON.stringify(newWish)
+      }).then(function () {
+        statusBox.textContent = "Alhamdulillah, konfirmasi kehadiran & doa Anda berhasil terkirim.";
+        statusBox.classList.add("show");
+        document.getElementById("rsvp-message").value = "";
+        setTimeout(fetchWishesFromSheet, 1200);
+      }).catch(function () {
+        statusBox.textContent = "Terima kasih, doa dan ucapan Anda telah tercatat.";
+        statusBox.classList.add("show");
+      }).finally(function () {
+        submitBtn.disabled = false;
+        submitBtn.textContent = "Kirim Konfirmasi & Ucapan";
+      });
     }
 
-    function initScrollSpy() {
-      var sections = document.querySelectorAll("[data-spy-section]");
-      var navLinks = document.querySelectorAll(".bottom-nav a[data-nav-target]");
-      if (!sections.length || !navLinks.length) return;
+    function setupScrollSpy() {
+      const sections = ["ayat", "profil", "acara", "galeri", "rsvp"];
+      const navLinks = document.querySelectorAll(".bottom-nav a");
 
-      function onScroll() {
-        var currentId = "ayat";
-        var scrollPos = window.scrollY + window.innerHeight * 0.35;
-        sections.forEach(function (sec) {
-          if (sec.offsetTop <= scrollPos) {
-            currentId = sec.getAttribute("data-spy-section");
+      window.addEventListener("scroll", function () {
+        const scrollPos = window.scrollY + 180;
+        let currentId = sections[0];
+        sections.forEach(function (id) {
+          const sec = document.getElementById(id);
+          if (sec && sec.offsetTop <= scrollPos) {
+            currentId = id;
           }
         });
-        navLinks.forEach(function (a) {
-          if (a.getAttribute("data-nav-target") === currentId) {
-            a.classList.add("nav-active");
+        navLinks.forEach(function (link) {
+          if (link.getAttribute("data-nav") === currentId) {
+            link.classList.add("active");
           } else {
-            a.classList.remove("nav-active");
+            link.classList.remove("active");
           }
         });
-      }
-
-      window.addEventListener("scroll", onScroll, { passive: true });
-      onScroll();
+      }, { passive: true });
     }
 
-    /* =====================================================================
-       ADMIN PANEL + GENERATOR LINK TAMU MASSAL (BULK WHATSAPP LIST)
-       ===================================================================== */
-    function getSentGuestsMap() {
-      try {
-        return JSON.parse(localStorage.getItem("khitan_sent_guests_v1") || "{}");
-      } catch (e) {
-        return {};
-      }
-    }
-
-    function setGuestSentStatus(guestName, isSent) {
-      var map = getSentGuestsMap();
-      var key = guestName.toLowerCase().trim();
-      if (isSent) {
-        map[key] = true;
-      } else {
-        delete map[key];
-      }
-      try {
-        localStorage.setItem("khitan_sent_guests_v1", JSON.stringify(map));
-      } catch (e) {}
-    }
-
-    function buildWhatsAppUrlForGuest(guestName, personalLink) {
-      var NL = String.fromCharCode(10);
-      var noteLine = EVENT_CONFIG.addressNote ? ("🧭 _Patokan: " + EVENT_CONFIG.addressNote + "_" + NL) : "";
-      var msg =
-        "Sampurasun 🙏✨" + NL +
-        "Assalamu’alaikum Warahmatullahi Wabarakatuh" + NL + NL +
-        "Kepada Yth. *" + guestName + "*" + NL + NL +
-        "Dengan memohon rahmat dan ridho Allah SWT, kami mengundang Bapak/Ibu/Saudara/i untuk hadir pada acara *Walimatul Khitan* putra-putra kami:" + NL +
-        "👦 *" + EVENT_CONFIG.child1 + "*" + NL +
-        "👦 *" + EVENT_CONFIG.child2 + "*" + NL + NL +
-        "📅 " + EVENT_CONFIG.eventDateDisplay + NL +
-        "⏰ " + EVENT_CONFIG.eventTimeDisplay + NL +
-        "📍 " + EVENT_CONFIG.address + NL +
-        noteLine + NL +
-        "🔗 *Buka Undangan Digital:*" + NL +
-        personalLink + NL + NL +
-        "Hatur nuhun atas kehadiran dan doa restunya." + NL +
-        "*" + EVENT_CONFIG.parents + "*";
-      return "https://wa.me/?text=" + encodeURIComponent(msg);
+    function buildWhatsAppShareUrl(guestName) {
+      const baseUrl = window.location.origin + window.location.pathname;
+      const personalUrl = baseUrl + "?to=" + encodeURIComponent(guestName);
+      const lines = [
+        "*Sampurasun* 🙏✨",
+        "Assalamu’alaikum Warahmatullahi Wabarakatuh",
+        "",
+        "Kepada Yth. *" + guestName + "*",
+        "",
+        "Dengan memohon rahmat dan ridho Allah SWT, kami bermaksud mengundang Bapak/Ibu/Saudara/i pada acara *Walimatul Khitan* putra-putra kami:",
+        "👦 *" + EVENT_CONFIG.child1 + "*",
+        "👦 *" + EVENT_CONFIG.child2 + "*",
+        "",
+        "📅 *Hari/Tanggal:* " + EVENT_CONFIG.eventDateDisplay,
+        "⏰ *Waktu:* " + EVENT_CONFIG.eventTime,
+        "📍 *Lokasi:* " + EVENT_CONFIG.address,
+        "",
+        "🔗 *Buka Undangan Digital:*",
+        personalUrl,
+        "",
+        "Merupakan kehormatan dan kebahagiaan bagi keluarga kami (" + EVENT_CONFIG.parents + "). *Hatur nuhun.*"
+      ];
+      return {
+        personalUrl: personalUrl,
+        waUrl: "https://wa.me/?text=" + encodeURIComponent(lines.join(NL))
+      };
     }
 
     function renderBulkGuestList() {
-      var textarea = document.getElementById("bulk-guests-input");
-      var container = document.getElementById("bulk-list-container");
-      var counterEl = document.getElementById("bulk-sent-counter");
-      if (!textarea || !container) return;
+      const raw = document.getElementById("bulk-guest-input").value;
+      const names = raw.split(/?
+/).map(function (s) { return s.trim(); }).filter(Boolean);
+      const container = document.getElementById("bulk-guest-results");
+      if (!names.length) {
+        showToast("Masukkan minimal 1 nama tamu");
+        return;
+      }
 
-      var base = document.getElementById("base-url-input").value.trim().replace(/\/+$/, "");
-      var lines = textarea.value.split(/\r?\n/).map(function (l) { return l.trim(); }).filter(Boolean);
-      var sentMap = getSentGuestsMap();
+      let sentMap = {};
+      try {
+        sentMap = JSON.parse(localStorage.getItem("khitan_sent_guests_v4") || "{}");
+      } catch (e) {}
 
-      container.innerHTML = "";
-      var sentCount = 0;
+      container.innerHTML = names.map(function (name) {
+        const links = buildWhatsAppShareUrl(name);
+        const isSent = !!sentMap[name];
+        return (
+          '<div class="bulk-guest-item">' +
+            '<div style="font-size:12px; font-weight:600; color:var(--primary);">' +
+              escapeHtml(name) + (isSent ? ' <span style="color:#1b7a43;">✅</span>' : '') +
+            '</div>' +
+            '<div style="display:flex; gap:6px;">' +
+              '<button type="button" class="pill-btn copy-guest-link-btn" data-url="' + escapeHtml(links.personalUrl) + '" style="padding:5px 9px; font-size:11px;">Salin</button>' +
+              '<a href="' + escapeHtml(links.waUrl) + '" target="_blank" rel="noopener noreferrer" class="pill-btn primary send-guest-wa-btn" data-guest="' + escapeHtml(name) + '" style="padding:5px 9px; font-size:11px;">WA</a>' +
+            '</div>' +
+          '</div>'
+        );
+      }).join("");
 
-      lines.forEach(function (guestName) {
-        var key = guestName.toLowerCase().trim();
-        var isSent = !!sentMap[key];
-        if (isSent) sentCount++;
-
-        var personalLink = base + "/?to=" + encodeURIComponent(guestName);
-        var card = document.createElement("div");
-        card.className = "bulk-guest-card" + (isSent ? " sent" : "");
-
-        var infoDiv = document.createElement("div");
-        infoDiv.style.minWidth = "0";
-        infoDiv.style.flex = "1";
-        infoDiv.innerHTML =
-          '<div style="font-size:12.5px; font-weight:700; color:var(--primary); white-space:nowrap; overflow:hidden; text-overflow:ellipsis;">' +
-            (isSent ? "✅ " : "") + escapeHTML(guestName) +
-          "</div>" +
-          '<div style="font-size:10.5px; color:var(--text-muted); white-space:nowrap; overflow:hidden; text-overflow:ellipsis;">' +
-            escapeHTML(personalLink) +
-          "</div>";
-
-        var actionsDiv = document.createElement("div");
-        actionsDiv.style.display = "flex";
-        actionsDiv.style.gap = "5px";
-        actionsDiv.style.flexShrink = "0";
-
-        var copyBtn = document.createElement("button");
-        copyBtn.type = "button";
-        copyBtn.className = "pill-btn sm";
-        copyBtn.textContent = "Salin";
-        copyBtn.addEventListener("click", function () {
-          copyToClipboard(personalLink, "Link untuk " + guestName + " disalin.");
+      container.querySelectorAll(".copy-guest-link-btn").forEach(function (btn) {
+        btn.addEventListener("click", function () {
+          copyTextFallback(btn.getAttribute("data-url"), function () {
+            showToast("Link tamu berhasil disalin");
+          });
         });
-
-        var waBtn = document.createElement("button");
-        waBtn.type = "button";
-        waBtn.className = "pill-btn primary sm";
-        waBtn.textContent = isSent ? "Kirim Ulang" : "Kirim WA";
-        waBtn.addEventListener("click", function () {
-          setGuestSentStatus(guestName, true);
-          renderBulkGuestList();
-          window.open(buildWhatsAppUrlForGuest(guestName, personalLink), "_blank");
-        });
-
-        actionsDiv.appendChild(copyBtn);
-        actionsDiv.appendChild(waBtn);
-        card.appendChild(infoDiv);
-        card.appendChild(actionsDiv);
-        container.appendChild(card);
       });
 
-      if (counterEl) {
-        counterEl.textContent = "Terkirim: " + sentCount + " / " + lines.length;
-      }
+      container.querySelectorAll(".send-guest-wa-btn").forEach(function (btn) {
+        btn.addEventListener("click", function () {
+          const g = btn.getAttribute("data-guest");
+          sentMap[g] = true;
+          try {
+            localStorage.setItem("khitan_sent_guests_v4", JSON.stringify(sentMap));
+          } catch (e) {}
+        });
+      });
     }
 
-    function initAdminPanel() {
-      if (!isAdminMode) return;
-
-      var cleanBase = window.location.origin + window.location.pathname;
-      if (cleanBase.indexOf("file://") === 0) {
-        cleanBase = "https://wanara.vercel.app";
-      }
-      cleanBase = cleanBase.replace(/\/+$/, "");
-      document.getElementById("base-url-input").value = cleanBase;
-      updateGeneratedGuestLink();
-      updateAdminRecapUI();
-
+    function openAdminModal() {
       document.getElementById("cfg-theme").value = EVENT_CONFIG.theme || "royal";
-      document.getElementById("cfg-webhook").value = EVENT_CONFIG.rsvpWebhookUrl || "";
-      document.getElementById("cfg-audio").value = EVENT_CONFIG.audioSource || "";
       document.getElementById("cfg-child1").value = EVENT_CONFIG.child1;
-      document.getElementById("cfg-role1").value = EVENT_CONFIG.role1 || "Putra Kedua Kami";
       document.getElementById("cfg-child2").value = EVENT_CONFIG.child2;
-      document.getElementById("cfg-role2").value = EVENT_CONFIG.role2 || "Putra Ketiga Kami";
       document.getElementById("cfg-parents").value = EVENT_CONFIG.parents;
-      document.getElementById("cfg-date-iso").value = EVENT_CONFIG.eventDateISO;
-      document.getElementById("cfg-address").value = EVENT_CONFIG.address;
-      document.getElementById("cfg-address-note").value = EVENT_CONFIG.addressNote || "";
-      document.getElementById("cfg-maps").value = EVENT_CONFIG.mapsUrl;
-      document.getElementById("cfg-bank-name").value = EVENT_CONFIG.bankName;
-      document.getElementById("cfg-bank").value = EVENT_CONFIG.bankNumber;
-      document.getElementById("cfg-bank-holder").value = EVENT_CONFIG.bankHolder;
-      document.getElementById("cfg-ewallet-name").value = EVENT_CONFIG.ewalletName || "";
-      document.getElementById("cfg-ewallet-number").value = EVENT_CONFIG.ewalletNumber || "";
-      document.getElementById("cfg-ewallet-holder").value = EVENT_CONFIG.ewalletHolder || "";
-    }
-
-    function updateGeneratedGuestLink() {
-      var base = document.getElementById("base-url-input").value.trim().replace(/\/+$/, "");
-      var guest = document.getElementById("guest-input").value.trim();
-      var link = guest ? base + "/?to=" + encodeURIComponent(guest) : base + "/";
-      document.getElementById("generated-link").value = link;
-      var adminSecretEl = document.getElementById("admin-secret-link");
-      if (adminSecretEl) adminSecretEl.value = base + "/?admin=" + ADMIN_SECRET_KEY;
-    }
-
-    function sendGuestWhatsApp() {
-      var guest = document.getElementById("guest-input").value.trim() || "Bapak/Ibu/Saudara/i";
-      var link = document.getElementById("generated-link").value;
-      window.open(buildWhatsAppUrlForGuest(guest, link), "_blank");
+      document.getElementById("cfg-notes").value = EVENT_CONFIG.locationNotes;
+      document.getElementById("cfg-bank").value = EVENT_CONFIG.bankName;
+      document.getElementById("cfg-acc").value = EVENT_CONFIG.bankAccount;
+      document.getElementById("cfg-holder").value = EVENT_CONFIG.bankHolder;
+      document.getElementById("cfg-ewallet").value = EVENT_CONFIG.ewalletRaw || "";
+      document.getElementById("cfg-webhook").value = EVENT_CONFIG.rsvpWebhookUrl || "";
+      document.getElementById("admin-modal").classList.add("open");
     }
 
     function saveAdminConfig() {
       EVENT_CONFIG.theme = document.getElementById("cfg-theme").value;
+      EVENT_CONFIG.child1 = document.getElementById("cfg-child1").value.trim() || DEFAULT_CONFIG.child1;
+      EVENT_CONFIG.child2 = document.getElementById("cfg-child2").value.trim() || DEFAULT_CONFIG.child2;
+      EVENT_CONFIG.parents = document.getElementById("cfg-parents").value.trim() || DEFAULT_CONFIG.parents;
+      EVENT_CONFIG.locationNotes = document.getElementById("cfg-notes").value.trim() || DEFAULT_CONFIG.locationNotes;
+      EVENT_CONFIG.bankName = document.getElementById("cfg-bank").value.trim() || DEFAULT_CONFIG.bankName;
+      EVENT_CONFIG.bankAccount = document.getElementById("cfg-acc").value.trim() || DEFAULT_CONFIG.bankAccount;
+      EVENT_CONFIG.bankHolder = document.getElementById("cfg-holder").value.trim() || DEFAULT_CONFIG.bankHolder;
+      EVENT_CONFIG.ewalletRaw = document.getElementById("cfg-ewallet").value.trim();
       EVENT_CONFIG.rsvpWebhookUrl = document.getElementById("cfg-webhook").value.trim();
-      EVENT_CONFIG.audioSource = document.getElementById("cfg-audio").value.trim();
-      EVENT_CONFIG.child1 = document.getElementById("cfg-child1").value.trim();
-      EVENT_CONFIG.role1 = document.getElementById("cfg-role1").value.trim();
-      EVENT_CONFIG.child2 = document.getElementById("cfg-child2").value.trim();
-      EVENT_CONFIG.role2 = document.getElementById("cfg-role2").value.trim();
-      EVENT_CONFIG.parents = document.getElementById("cfg-parents").value.trim();
-      EVENT_CONFIG.eventDateISO = document.getElementById("cfg-date-iso").value.trim();
-      EVENT_CONFIG.address = document.getElementById("cfg-address").value.trim();
-      EVENT_CONFIG.addressNote = document.getElementById("cfg-address-note").value.trim();
-      EVENT_CONFIG.mapsUrl = document.getElementById("cfg-maps").value.trim();
-      EVENT_CONFIG.bankName = document.getElementById("cfg-bank-name").value.trim();
-      EVENT_CONFIG.bankNumber = document.getElementById("cfg-bank").value.trim();
-      EVENT_CONFIG.bankHolder = document.getElementById("cfg-bank-holder").value.trim();
-      EVENT_CONFIG.ewalletName = document.getElementById("cfg-ewallet-name").value.trim();
-      EVENT_CONFIG.ewalletNumber = document.getElementById("cfg-ewallet-number").value.trim();
-      EVENT_CONFIG.ewalletHolder = document.getElementById("cfg-ewallet-holder").value.trim();
 
-      applyEventConfigToDOM();
+      try {
+        localStorage.setItem("khitan_rasyid_rayhan_cfg_v4", JSON.stringify(EVENT_CONFIG));
+      } catch (e) {}
 
-      var audio = document.getElementById("bg-audio");
-      if (audio) {
-        audio.pause();
-        audio.removeAttribute("src");
-      }
-      closeDriveAudioDock();
-      activeAudioMode = "none";
-      isAudioPlaying = false;
-      updateAudioButtonUI(false);
-
-      var note = document.getElementById("cfg-note");
-      note.textContent = "Perubahan diterapkan! Klik 'Unduh index.html' untuk menyimpan permanen ke file.";
-      note.classList.add("show");
+      applyConfigToDOM();
+      fetchWishesFromSheet();
+      showToast("Konfigurasi disimpan");
     }
 
-    function downloadUpdatedHTML() {
-      saveAdminConfig();
-      var startMarker = "/* CONFIG_START */";
-      var endMarker = "/* CONFIG_END */";
-      var sIdx = cleanHtmlSnapshot.indexOf(startMarker);
-      var eIdx = cleanHtmlSnapshot.indexOf(endMarker);
-
-      if (sIdx === -1 || eIdx === -1) {
-        showToast("Gagal memproses template HTML.");
-        return;
-      }
-
-      var NL = String.fromCharCode(10);
-      var newConfigBlock =
-        startMarker + NL +
-        "    var EVENT_CONFIG = " + JSON.stringify(EVENT_CONFIG, null, 6) + ";" + NL +
-        "    ";
-
-      var updatedHTML =
-        cleanHtmlSnapshot.slice(0, sIdx) +
-        newConfigBlock +
-        cleanHtmlSnapshot.slice(eIdx);
-
-      var blob = new Blob([updatedHTML], { type: "text/html;charset=utf-8" });
-      var url = URL.createObjectURL(blob);
-      var a = document.createElement("a");
+    function downloadCurrentHTML() {
+      const htmlStr = "<!DOCTYPE html>" + NL + document.documentElement.outerHTML;
+      const blob = new Blob([htmlStr], { type: "text/html;charset=utf-8" });
+      const url = URL.createObjectURL(blob);
+      const a = document.createElement("a");
       a.href = url;
       a.download = "index.html";
       document.body.appendChild(a);
       a.click();
       document.body.removeChild(a);
       URL.revokeObjectURL(url);
-      showToast("File index.html terbaru berhasil diunduh.");
+      showToast("File index.html diunduh");
     }
 
     document.addEventListener("DOMContentLoaded", function () {
-      cleanHtmlSnapshot = "<!DOCTYPE html>" + String.fromCharCode(10) + document.documentElement.outerHTML;
+      applyConfigToDOM();
+      parseGuestName();
+      updateCountdown();
+      setInterval(updateCountdown, 1000);
+      setupScrollSpy();
+      fetchWishesFromSheet();
 
-      initAdminSeparation();
-      initGuestName();
-      applyEventConfigToDOM();
-      applyDriveImages();
-      startCountdown();
-      loadSavedWishes();
-      initAdminPanel();
-
-      var bgAudio = document.getElementById("bg-audio");
-      if (bgAudio) {
-        bgAudio.addEventListener("error", function () {
-          if (activeAudioMode !== "drive-dock") {
-            tryNextAudioEndpoint();
-          }
-        });
-      }
-
-      document.getElementById("btn-open-invitation").addEventListener("click", openInvitation);
+      document.getElementById("open-invitation-btn").addEventListener("click", openInvitation);
       document.getElementById("audio-btn").addEventListener("click", toggleAudio);
-      document.getElementById("btn-close-dock").addEventListener("click", closeDriveAudioDock);
-      document.getElementById("btn-download-ics").addEventListener("click", downloadICS);
-      document.getElementById("btn-copy-address").addEventListener("click", function () {
-        var fullAddr = EVENT_CONFIG.address + (EVENT_CONFIG.addressNote ? " (Patokan: " + EVENT_CONFIG.addressNote + ")" : "");
-        copyToClipboard(fullAddr, "Alamat & patokan lokasi berhasil disalin.");
+      document.getElementById("close-drive-audio").addEventListener("click", function () {
+        document.getElementById("drive-audio-bar").classList.remove("visible");
       });
-      document.getElementById("btn-copy-bank").addEventListener("click", function () {
-        copyToClipboard(EVENT_CONFIG.bankNumber, "Nomor rekening berhasil disalin.");
-        var note = document.getElementById("copy-note");
-        if (note) note.classList.add("show");
+
+      // Subtle motion toggle for Dompet Digital
+      const toggleGiftBtn = document.getElementById("toggle-gift-btn");
+      const giftDrawer = document.getElementById("gift-drawer");
+      toggleGiftBtn.addEventListener("click", function () {
+        const isOpen = giftDrawer.classList.toggle("open");
+        toggleGiftBtn.setAttribute("aria-expanded", isOpen ? "true" : "false");
+        toggleGiftBtn.querySelector("span").textContent = isOpen
+          ? "🎁 Sembunyikan Detail Dompet Digital"
+          : "🎁 Tampilkan Detail Dompet Digital";
       });
-      document.getElementById("btn-copy-ewallet").addEventListener("click", function () {
-        if (EVENT_CONFIG.ewalletNumber) {
-          copyToClipboard(EVENT_CONFIG.ewalletNumber, "Nomor E-Wallet berhasil disalin.");
-        }
+
+      document.getElementById("copy-account-btn").addEventListener("click", function () {
+        copyTextFallback(EVENT_CONFIG.bankAccount, function () {
+          const note = document.getElementById("copy-note");
+          note.textContent = "Nomor rekening " + EVENT_CONFIG.bankAccount + " berhasil disalin.";
+          note.classList.add("show");
+          showToast("Nomor rekening disalin");
+        });
       });
+
+      document.getElementById("copy-ewallet-btn").addEventListener("click", function () {
+        const num = document.getElementById("ewallet-number").textContent.trim();
+        if (!num) return;
+        copyTextFallback(num, function () {
+          const note = document.getElementById("copy-note");
+          note.textContent = "Nomor tujuan " + num + " berhasil disalin.";
+          note.classList.add("show");
+          showToast("Nomor tujuan disalin");
+        });
+      });
+
+      document.getElementById("copy-address-btn").addEventListener("click", function () {
+        const fullAddr = EVENT_CONFIG.address + " (" + EVENT_CONFIG.locationNotes + ")";
+        copyTextFallback(fullAddr, function () {
+          showToast("Alamat & patokan lokasi disalin");
+        });
+      });
+
+      document.getElementById("download-ics-btn").addEventListener("click", downloadICS);
+
+      // Gallery Lightbox
+      document.querySelectorAll(".gallery-item[data-lightbox-idx]").forEach(function (card) {
+        card.addEventListener("click", function () {
+          openLightbox(parseInt(card.getAttribute("data-lightbox-idx"), 10) || 0);
+        });
+      });
+      document.getElementById("lb-prev-btn").addEventListener("click", function () {
+        openLightbox(currentLightboxIndex - 1);
+      });
+      document.getElementById("lb-next-btn").addEventListener("click", function () {
+        openLightbox(currentLightboxIndex + 1);
+      });
+      document.getElementById("lb-close-btn").addEventListener("click", function () {
+        document.getElementById("lightbox-modal").classList.remove("open");
+      });
+      document.getElementById("lightbox-modal").addEventListener("click", function (e) {
+        if (e.target === this) this.classList.remove("open");
+      });
+
+      // RSVP & Refresh
       document.getElementById("rsvp-form").addEventListener("submit", handleRSVPSubmit);
-      document.getElementById("btn-refresh-wishes").addEventListener("click", function () {
-        fetchLiveWishesFromSheet();
-        showToast("Memuat ulang 10 ucapan terbaru...");
+      document.getElementById("refresh-wishes-btn").addEventListener("click", function () {
+        fetchWishesFromSheet();
+        showToast("Menyegarkan daftar ucapan...");
       });
 
-      // Lightbox controls + Touch Swipe + Keyboard
-      var lbModal = document.getElementById("lightbox-modal");
-      document.querySelectorAll("[data-lb-index]").forEach(function (el) {
-        el.addEventListener("click", function () {
-          openLightbox(parseInt(el.getAttribute("data-lb-index"), 10));
-        });
+      // Admin Modal Controls
+      document.getElementById("open-admin-btn").addEventListener("click", openAdminModal);
+      document.getElementById("close-admin-btn").addEventListener("click", function () {
+        document.getElementById("admin-modal").classList.remove("open");
       });
-      document.getElementById("lb-prev").addEventListener("click", function () {
-        currentLightboxIndex = (currentLightboxIndex - 1 + GALLERY_ITEMS.length) % GALLERY_ITEMS.length;
-        updateLightboxView();
+      document.getElementById("tab-guests-btn").addEventListener("click", function () {
+        this.classList.add("active");
+        document.getElementById("tab-config-btn").classList.remove("active");
+        document.getElementById("admin-tab-guests").style.display = "block";
+        document.getElementById("admin-tab-config").style.display = "none";
       });
-      document.getElementById("lb-next").addEventListener("click", function () {
-        currentLightboxIndex = (currentLightboxIndex + 1) % GALLERY_ITEMS.length;
-        updateLightboxView();
+      document.getElementById("tab-config-btn").addEventListener("click", function () {
+        this.classList.add("active");
+        document.getElementById("tab-guests-btn").classList.remove("active");
+        document.getElementById("admin-tab-config").style.display = "block";
+        document.getElementById("admin-tab-guests").style.display = "none";
       });
-      document.getElementById("lb-close").addEventListener("click", function () {
-        lbModal.classList.remove("open");
-      });
-      lbModal.addEventListener("click", function (ev) {
-        if (ev.target === lbModal) lbModal.classList.remove("open");
-      });
-
-      var touchStartX = 0;
-      lbModal.addEventListener("touchstart", function (ev) {
-        if (ev.changedTouches && ev.changedTouches[0]) touchStartX = ev.changedTouches[0].screenX;
-      }, { passive: true });
-      lbModal.addEventListener("touchend", function (ev) {
-        if (!ev.changedTouches || !ev.changedTouches[0]) return;
-        var dx = ev.changedTouches[0].screenX - touchStartX;
-        if (Math.abs(dx) > 45) {
-          if (dx < 0) {
-            currentLightboxIndex = (currentLightboxIndex + 1) % GALLERY_ITEMS.length;
-          } else {
-            currentLightboxIndex = (currentLightboxIndex - 1 + GALLERY_ITEMS.length) % GALLERY_ITEMS.length;
-          }
-          updateLightboxView();
-        }
-      }, { passive: true });
-
-      document.addEventListener("keydown", function (ev) {
-        if (!lbModal.classList.contains("open")) return;
-        if (ev.key === "Escape") lbModal.classList.remove("open");
-        if (ev.key === "ArrowLeft") {
-          currentLightboxIndex = (currentLightboxIndex - 1 + GALLERY_ITEMS.length) % GALLERY_ITEMS.length;
-          updateLightboxView();
-        }
-        if (ev.key === "ArrowRight") {
-          currentLightboxIndex = (currentLightboxIndex + 1) % GALLERY_ITEMS.length;
-          updateLightboxView();
-        }
-      });
-
-      if (isAdminMode) {
-        var adminModalEl = document.getElementById("admin-modal");
-        document.getElementById("btn-open-admin").addEventListener("click", function () {
-          updateAdminRecapUI();
-          adminModalEl.classList.add("open");
-        });
-        document.getElementById("btn-close-admin").addEventListener("click", function () {
-          adminModalEl.classList.remove("open");
-        });
-        adminModalEl.addEventListener("click", function (ev) {
-          if (ev.target === adminModalEl) adminModalEl.classList.remove("open");
-        });
-        document.getElementById("tab-link-btn").addEventListener("click", function () {
-          document.getElementById("tab-link-btn").classList.add("active");
-          document.getElementById("tab-config-btn").classList.remove("active");
-          document.getElementById("tab-link-content").style.display = "block";
-          document.getElementById("tab-config-content").style.display = "none";
-        });
-        document.getElementById("tab-config-btn").addEventListener("click", function () {
-          document.getElementById("tab-config-btn").classList.add("active");
-          document.getElementById("tab-link-btn").classList.remove("active");
-          document.getElementById("tab-config-content").style.display = "block";
-          document.getElementById("tab-link-content").style.display = "none";
-        });
-        document.getElementById("base-url-input").addEventListener("input", function () {
-          updateGeneratedGuestLink();
-          renderBulkGuestList();
-        });
-        document.getElementById("guest-input").addEventListener("input", updateGeneratedGuestLink);
-        document.getElementById("btn-copy-guest-link").addEventListener("click", function () {
-          copyToClipboard(document.getElementById("generated-link").value, "Link tamu berhasil disalin.");
-          document.getElementById("link-note").classList.add("show");
-        });
-        document.getElementById("btn-copy-admin-link").addEventListener("click", function () {
-          copyToClipboard(document.getElementById("admin-secret-link").value, "Link admin rahasia disalin.");
-        });
-        document.getElementById("btn-send-wa").addEventListener("click", sendGuestWhatsApp);
-
-        document.getElementById("btn-generate-bulk").addEventListener("click", function () {
-          renderBulkGuestList();
-          showToast("Daftar link tamu massal siap dikirim.");
-        });
-        document.getElementById("btn-reset-bulk-sent").addEventListener("click", function () {
-          try { localStorage.removeItem("khitan_sent_guests_v1"); } catch (e) {}
-          renderBulkGuestList();
-          showToast("Tanda terkirim berhasil direset.");
-        });
-
-        document.getElementById("btn-save-config").addEventListener("click", saveAdminConfig);
-        document.getElementById("btn-download-html").addEventListener("click", downloadUpdatedHTML);
-      }
-
-      document.addEventListener("visibilitychange", function () {
-        var audio = document.getElementById("bg-audio");
-        if (document.hidden && isAudioPlaying && activeAudioMode === "native" && audio) {
-          audio.pause();
-        } else if (!document.hidden && isAudioPlaying && activeAudioMode === "native" && audio) {
-          audio.play().catch(function () {});
-        }
-      });
+      document.getElementById("generate-bulk-btn").addEventListener("click", renderBulkGuestList);
+      document.getElementById("save-cfg-btn").addEventListener("click", saveAdminConfig);
+      document.getElementById("download-html-btn").addEventListener("click", downloadCurrentHTML);
     });
   </script>
 </body>
