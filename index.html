@@ -625,12 +625,11 @@
       padding-top: 6px;
     }
 
-    /* GALLERY: FAMILY LANDSCAPE FULL + CHILDREN GRID */
+    /* GALLERY: 4 FOTO KELUARGA LANDSCAPE PENUH (1 BARIS 1 FOTO, TANPA FOTO CLOSEUP) */
     .family-stack {
       display: flex;
       flex-direction: column;
       gap: 12px;
-      margin-bottom: 12px;
     }
 
     .family-item {
@@ -654,33 +653,6 @@
       transform: scale(1.03);
     }
 
-    .gallery-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 10px;
-    }
-
-    .gallery-item {
-      position: relative;
-      border-radius: 14px;
-      overflow: hidden;
-      border: 1px solid var(--border-gold);
-      aspect-ratio: 3 / 4;
-      cursor: pointer;
-    }
-
-    .gallery-item img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      object-position: center 20%;
-      display: block;
-    }
-
-    .gallery-item:hover img {
-      transform: scale(1.04);
-    }
-
     .gallery-cap {
       position: absolute;
       inset: auto 0 0 0;
@@ -689,6 +661,71 @@
       color: #faf6f0;
       font-size: 11px;
       font-weight: 600;
+    }
+
+    /* DOMPET DIGITAL TOGGLE + SMOOTH ACCORDION MOTION */
+    .gift-toggle-wrap {
+      text-align: center;
+    }
+
+    .gift-toggle-btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      background: #ffffff;
+      color: var(--primary);
+      border: 1.5px solid var(--accent);
+      border-radius: 999px;
+      padding: 11px 22px;
+      font-family: inherit;
+      font-size: 13px;
+      font-weight: 700;
+      cursor: pointer;
+      box-shadow: 0 6px 18px rgba(27, 67, 50, 0.08);
+      transition: all 0.25s ease;
+    }
+
+    .gift-toggle-btn:hover {
+      background: var(--accent-soft);
+      transform: translateY(-1px);
+    }
+
+    .gift-toggle-btn .chevron-icon {
+      display: inline-block;
+      font-size: 11px;
+      transition: transform 0.35s cubic-bezier(0.22, 1, 0.36, 1);
+    }
+
+    .gift-toggle-btn[aria-expanded="true"] .chevron-icon {
+      transform: rotate(180deg);
+    }
+
+    .gift-accordion {
+      display: grid;
+      grid-template-rows: 0fr;
+      opacity: 0;
+      transform: translateY(-8px);
+      transition:
+        grid-template-rows 0.48s cubic-bezier(0.22, 1, 0.36, 1),
+        opacity 0.38s ease,
+        transform 0.45s cubic-bezier(0.22, 1, 0.36, 1),
+        margin-top 0.42s ease;
+      margin-top: 0;
+      pointer-events: none;
+    }
+
+    .gift-accordion.open {
+      grid-template-rows: 1fr;
+      opacity: 1;
+      transform: translateY(0);
+      margin-top: 16px;
+      pointer-events: auto;
+    }
+
+    .gift-accordion-inner {
+      overflow: hidden;
+      padding: 2px;
     }
 
     /* VIRTUAL BANK CARD & OPTIONAL E-WALLET/QRIS */
@@ -793,27 +830,14 @@
       border-color: var(--accent);
     }
 
-    /* WISH LIST & STATS */
-    .wish-stats {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      flex-wrap: wrap;
-      gap: 6px;
-      margin-top: 16px;
-      padding: 8px 12px;
-      background: var(--accent-soft);
-      border-radius: 12px;
-      font-size: 11.5px;
-      font-weight: 700;
-      color: var(--primary);
-    }
-
+    /* WISH LIST SUBBAR */
     .wish-subbar {
       display: flex;
       justify-content: space-between;
       align-items: center;
-      margin-top: 8px;
+      margin-top: 16px;
+      padding-top: 12px;
+      border-top: 1px dashed var(--border-gold);
       font-size: 11px;
       color: var(--text-muted);
     }
@@ -1249,9 +1273,10 @@
 
     <!-- MAIN INVITATION -->
     <main id="invitation-main">
-      <!-- KUTIPAN AYAT AL-QUR'AN TENTANG KHITAN / MILLAH IBRAHIM -->
+      <!-- UNTAIAAN DOA & HARAPAN -->
       <section id="ayat" data-spy-section="ayat">
-        <div class="section-tag">Kalam Ilahi • Syariat Fitrah</div>
+        <div class="section-tag">Doa &amp; Harapan • Walimatul Khitan</div>
+        <h2 class="section-title">Untaian Doa</h2>
         <div class="quran-card reveal-item">
           <span class="quran-ornament">✦ ﷽ ✦</span>
           <p class="quran-arabic" lang="ar">
@@ -1262,7 +1287,7 @@
           </p>
           <span class="quran-ref">QS. An-Nahl [16] : 123</span>
           <p class="quran-note">
-            Khitan merupakan bagian dari syariat fitrah dan sunnah Nabi Ibrahim ‘Alaihissalam sebagai ikhtiar menjaga kesucian diri serta ketaatan putra-putra kami dalam menapaki masa aqil baligh.
+            Semoga kedua putra kami tumbuh menjadi anak yang saleh, berbakti kepada kedua orang tua, cerdas, serta berguna bagi agama, nusa, dan bangsa.
           </p>
         </div>
       </section>
@@ -1405,43 +1430,30 @@
         </svg>
       </div>
 
-      <!-- GALERI -->
+      <!-- GALERI KEBAHAGIAAN (4 FOTO KELUARGA LANDSCAPE PENUH, TANPA FOTO CLOSEUP) -->
       <section id="galeri" data-spy-section="galeri">
-        <div class="section-tag">Potret Keluarga &amp; Ananda</div>
+        <div class="section-tag">Potret Kebersamaan</div>
         <h2 class="section-title">Galeri Kebahagiaan</h2>
         <p class="lead-text">
           Ketuk foto untuk memperbesar tampilan penuh.
         </p>
 
-        <!-- FOTO KELUARGA LANDSCAPE PENUH (1 BARIS 1 FOTO) -->
         <div class="family-stack reveal-item">
           <div class="family-item shimmer-box" data-lb-index="0">
-            <img id="gal-0" data-drive-id="1gRLn7fyUA7b7QcgVUW4MAgUvag8Nt9Ro" alt="Keluarga Besar Bpk. Riza &amp; Ibu Siska" loading="lazy" />
-            <div class="gallery-cap">Keluarga Besar • Bpk.Riza &amp; Ibu.Siska</div>
+            <img id="gal-0" data-drive-id="1gRLn7fyUA7b7QcgVUW4MAgUvag8Nt9Ro" alt="Foto Keluarga 1" loading="lazy" />
+            <div class="gallery-cap">Foto Keluarga 1 • Bpk. Riza &amp; Ibu Siska</div>
           </div>
           <div class="family-item shimmer-box" data-lb-index="1">
-            <img id="gal-1" data-drive-id="109_3OZ_n9TlY5GKNVYJ5jVq9qs1ElKNL" alt="Kebersamaan Keluarga" loading="lazy" />
-            <div class="gallery-cap">Kebersamaan Keluarga</div>
+            <img id="gal-1" data-drive-id="109_3OZ_n9TlY5GKNVYJ5jVq9qs1ElKNL" alt="Foto Keluarga 2" loading="lazy" />
+            <div class="gallery-cap">Foto Keluarga 2 • Kebersamaan Keluarga</div>
           </div>
-        </div>
-
-        <!-- FOTO ANANDA 2 KOLOM -->
-        <div class="gallery-grid reveal-item">
-          <div class="gallery-item shimmer-box" data-lb-index="2">
-            <img id="gal-2" data-drive-id="13vOUCRAsltqH55jwHVLbnKL15MLetPgx" alt="Rasyid" loading="lazy" />
-            <div class="gallery-cap">Rasyid</div>
+          <div class="family-item shimmer-box" data-lb-index="2">
+            <img id="gal-2" data-drive-id="1NfwnPhfi0r8oygsRdnXd23huoZxNDJ4m" alt="Foto Keluarga 3" loading="lazy" />
+            <div class="gallery-cap">Foto Keluarga 3 • Momen Hangat</div>
           </div>
-          <div class="gallery-item shimmer-box" data-lb-index="3">
-            <img id="gal-3" data-drive-id="1-DK0TVwYyw1qFlLRMq_8eBeRrDtJB1Nx" alt="Raihan" loading="lazy" />
-            <div class="gallery-cap">Raihan</div>
-          </div>
-          <div class="gallery-item shimmer-box" data-lb-index="4">
-            <img id="gal-4" data-drive-id="1DYdHiyj0CcqC5UQrAMsNSnDeY4c-ZE5h" alt="Rasyid" loading="lazy" />
-            <div class="gallery-cap">Rasyid</div>
-          </div>
-          <div class="gallery-item shimmer-box" data-lb-index="5">
-            <img id="gal-5" data-drive-id="1l3dgCH8xK5T4dXeiqnnVgpWqdSocbXsu" alt="Raihan" loading="lazy" />
-            <div class="gallery-cap">Raihan</div>
+          <div class="family-item shimmer-box" data-lb-index="3">
+            <img id="gal-3" data-drive-id="1ju9Ih0NiK9UeSVK2PGM9fhWPdc8RnXW4" alt="Foto Keluarga 4" loading="lazy" />
+            <div class="gallery-cap">Foto Keluarga 4 • Tasyakuran Khitan</div>
           </div>
         </div>
       </section>
@@ -1457,46 +1469,57 @@
         </svg>
       </div>
 
-      <!-- AMPLOP DIGITAL (KARTU PERBANKAN VIRTUAL + OPSIONAL E-WALLET) -->
+      <!-- DOMPET DIGITAL (TERSEMBUNYI HALUS HINGGA DIKLIK) -->
       <section id="amplop" data-spy-section="amplop">
         <div class="section-tag">Tanda Kasih</div>
-        <h2 class="section-title">Amplop Digital</h2>
+        <h2 class="section-title">Dompet Digital</h2>
         <p class="lead-text">
-          Doa restu Anda merupakan karunia yang sangat berarti bagi kami. Apabila berkenan mengirimkan tanda kasih, dapat melalui rekening berikut:
+          Doa restu Anda merupakan karunia yang sangat berarti bagi kami. Apabila berkenan mengirimkan tanda kasih secara digital, silakan ketuk tombol di bawah ini:
         </p>
 
-        <div class="bank-card-virtual reveal-item">
-          <div class="bank-card-top">
-            <div class="bank-chip" aria-hidden="true"></div>
-            <span style="font-size:13px; font-weight:700; letter-spacing:0.12em; text-transform:uppercase; color:#f4d67c;" id="bank-name">
-              Bank BRI
-            </span>
-          </div>
-          <small style="display:block; font-size:10px; letter-spacing:0.1em; text-transform:uppercase; opacity:0.75;">
-            Nomor Rekening
-          </small>
-          <div class="bank-acc" id="bank-number">067401004442506</div>
-          <div style="display:flex; justify-content:space-between; align-items:center; gap:8px; margin-top:10px; flex-wrap:wrap;">
-            <span style="font-size:13px; font-weight:600;" id="bank-holder">
-              a.n. Siska Noeryulia
-            </span>
-            <button type="button" class="pill-btn" id="btn-copy-bank">
-              📋 Salin Rekening
-            </button>
-          </div>
-          <div id="copy-note" class="status-note">Nomor rekening berhasil disalin.</div>
+        <div class="gift-toggle-wrap reveal-item">
+          <button type="button" class="gift-toggle-btn" id="btn-toggle-gift" aria-expanded="false" aria-controls="gift-accordion">
+            <span>🎁 Tampilkan Detail Dompet Digital</span>
+            <span class="chevron-icon" aria-hidden="true">▼</span>
+          </button>
         </div>
 
-        <!-- KARTU OPSIONAL E-WALLET / QRIS (TAMPIL OTOMATIS JIKA DIISI DI PANEL ADMIN) -->
-        <div class="ewallet-card reveal-item" id="ewallet-card-wrap">
-          <small style="font-size:11px; text-transform:uppercase; letter-spacing:0.1em; color:#9b7614; font-weight:700;" id="ewallet-name">
-            E-Wallet
-          </small>
-          <div style="font-size:19px; font-weight:700; color:var(--primary); margin:4px 0 2px;" id="ewallet-number"></div>
-          <div style="font-size:12.5px; color:var(--text-muted); margin-bottom:10px;" id="ewallet-holder"></div>
-          <button type="button" class="pill-btn primary sm" id="btn-copy-ewallet">
-            📋 Salin Nomor E-Wallet
-          </button>
+        <div class="gift-accordion" id="gift-accordion">
+          <div class="gift-accordion-inner">
+            <div class="bank-card-virtual">
+              <div class="bank-card-top">
+                <div class="bank-chip" aria-hidden="true"></div>
+                <span style="font-size:13px; font-weight:700; letter-spacing:0.12em; text-transform:uppercase; color:#f4d67c;" id="bank-name">
+                  Bank BRI
+                </span>
+              </div>
+              <small style="display:block; font-size:10px; letter-spacing:0.1em; text-transform:uppercase; opacity:0.75;">
+                Nomor Rekening
+              </small>
+              <div class="bank-acc" id="bank-number">067401004442506</div>
+              <div style="display:flex; justify-content:space-between; align-items:center; gap:8px; margin-top:10px; flex-wrap:wrap;">
+                <span style="font-size:13px; font-weight:600;" id="bank-holder">
+                  a.n. Siska Noeryulia
+                </span>
+                <button type="button" class="pill-btn" id="btn-copy-bank">
+                  📋 Salin Rekening
+                </button>
+              </div>
+              <div id="copy-note" class="status-note">Nomor rekening berhasil disalin.</div>
+            </div>
+
+            <!-- KARTU OPSIONAL E-WALLET / QRIS (TAMPIL OTOMATIS JIKA DIISI DI PANEL ADMIN) -->
+            <div class="ewallet-card" id="ewallet-card-wrap">
+              <small style="font-size:11px; text-transform:uppercase; letter-spacing:0.1em; color:#9b7614; font-weight:700;" id="ewallet-name">
+                E-Wallet
+              </small>
+              <div style="font-size:19px; font-weight:700; color:var(--primary); margin:4px 0 2px;" id="ewallet-number"></div>
+              <div style="font-size:12.5px; color:var(--text-muted); margin-bottom:10px;" id="ewallet-holder"></div>
+              <button type="button" class="pill-btn primary sm" id="btn-copy-ewallet">
+                📋 Salin Nomor E-Wallet
+              </button>
+            </div>
+          </div>
         </div>
       </section>
 
@@ -1511,7 +1534,7 @@
         </svg>
       </div>
 
-      <!-- RSVP & UCAPAN -->
+      <!-- RSVP & UCAPAN (TANPA TAMPILAN JUMLAH DOA & KEHADIRAN DI AREA TAMU) -->
       <section id="rsvp" data-spy-section="rsvp">
         <div class="section-tag">Konfirmasi &amp; Doa</div>
         <h2 class="section-title">RSVP &amp; Ucapan</h2>
@@ -1557,20 +1580,15 @@
 
           <div id="rsvp-status" class="status-note"></div>
 
-          <div class="wish-stats" id="wish-stats">
-            <span id="stat-total">💌 0 Doa &amp; Ucapan</span>
-            <span id="stat-hadir">✅ 0 Konfirmasi Hadir</span>
-          </div>
-
           <div class="wish-subbar">
-            <span id="sync-status-label">Menampilkan 10 ucapan terbaru</span>
+            <span id="sync-status-label">Doa &amp; Ucapan Terbaru</span>
             <button type="button" class="wish-refresh-btn" id="btn-refresh-wishes">↻ Segarkan</button>
           </div>
 
           <div class="wish-list" id="wish-list">
             <div class="wish-item" id="wish-placeholder">
               <p style="font-size:12.5px; color:var(--text-muted); text-align:center;">
-                Memuat 10 doa &amp; ucapan terbaru...
+                Memuat doa &amp; ucapan terbaru...
               </p>
             </div>
           </div>
@@ -1580,7 +1598,7 @@
 
     <!-- BOTTOM NAV (DENGAN SCROLL-SPY AKTIF) -->
     <nav class="bottom-nav" id="bottom-nav" aria-label="Navigasi Undangan">
-      <a href="#ayat" data-nav-target="ayat" class="nav-active">Ayat</a>
+      <a href="#ayat" data-nav-target="ayat" class="nav-active">Doa</a>
       <a href="#profil" data-nav-target="profil">Profil</a>
       <a href="#acara" data-nav-target="acara">Acara</a>
       <a href="#galeri" data-nav-target="galeri">Galeri</a>
@@ -1630,7 +1648,7 @@
         <button type="button" class="pill-btn" id="btn-close-admin">✕</button>
       </div>
 
-      <!-- REKAP ESTIMASI KEHADIRAN & PORSI TAMU DARI GOOGLE SHEETS -->
+      <!-- REKAP ESTIMASI KEHADIRAN & PORSI TAMU DARI GOOGLE SHEETS (KHUSUS ADMIN) -->
       <div class="admin-recap-grid" id="admin-recap-grid">
         <div class="admin-recap-item">
           <strong id="admin-stat-wishes">0</strong>
@@ -1834,7 +1852,7 @@
     var cleanHtmlSnapshot = "";
     var isAdminMode = false;
     var isAudioPlaying = false;
-    var activeAudioMode = "none"; // "native" | "drive-dock" | "none"
+    var activeAudioMode = "none";
     var audioSourceIndex = 0;
     var audioSourcesList = [];
     var currentDriveAudioId = "";
@@ -1842,13 +1860,12 @@
     var wishesState = [];
     var sheetStats = { total: 0, hadir: 0, pax: 0 };
 
+    /* 4 FOTO KELUARGA LANDSCAPE (TANPA FOTO CLOSEUP) */
     var GALLERY_ITEMS = [
-      { id: "1gRLn7fyUA7b7QcgVUW4MAgUvag8Nt9Ro", caption: "Keluarga Besar • Bpk.Riza & Ibu.Siska" },
-      { id: "109_3OZ_n9TlY5GKNVYJ5jVq9qs1ElKNL", caption: "Kebersamaan Keluarga" },
-      { id: "13vOUCRAsltqH55jwHVLbnKL15MLetPgx", caption: "Rasyid" },
-      { id: "1-DK0TVwYyw1qFlLRMq_8eBeRrDtJB1Nx", caption: "Raihan" },
-      { id: "1DYdHiyj0CcqC5UQrAMsNSnDeY4c-ZE5h", caption: "Rasyid" },
-      { id: "1l3dgCH8xK5T4dXeiqnnVgpWqdSocbXsu", caption: "Raihan" }
+      { id: "1gRLn7fyUA7b7QcgVUW4MAgUvag8Nt9Ro", caption: "Foto Keluarga 1 • Bpk. Riza & Ibu Siska" },
+      { id: "109_3OZ_n9TlY5GKNVYJ5jVq9qs1ElKNL", caption: "Foto Keluarga 2 • Kebersamaan Keluarga" },
+      { id: "1NfwnPhfi0r8oygsRdnXd23huoZxNDJ4m", caption: "Foto Keluarga 3 • Momen Hangat" },
+      { id: "1ju9Ih0NiK9UeSVK2PGM9fhWPdc8RnXW4", caption: "Foto Keluarga 4 • Tasyakuran Khitan" }
     ];
 
     function showToast(msg) {
@@ -2050,7 +2067,6 @@
         if (hasNote) renderRouteStepsFlow(EVENT_CONFIG.addressNote);
       }
 
-      // E-Wallet Opsional
       var ewWrap = document.getElementById("ewallet-card-wrap");
       if (ewWrap) {
         var hasEw = EVENT_CONFIG.ewalletNumber && EVENT_CONFIG.ewalletNumber.trim() !== "";
@@ -2106,7 +2122,7 @@
     }
 
     /* =====================================================================
-       PEMUTAR SHOLAWAT.MP3 ASLI (PRIORITAS LOKAL + GOOGLE DRIVE STREAM + PLAYER)
+       PEMUTAR SHOLAWAT.MP3 ASLI
        ===================================================================== */
     function extractDriveId(input) {
       if (!input) return "";
@@ -2277,6 +2293,20 @@
       initScrollSpy();
     }
 
+    function toggleGiftAccordion() {
+      var btn = document.getElementById("btn-toggle-gift");
+      var acc = document.getElementById("gift-accordion");
+      if (!btn || !acc) return;
+      var isOpen = acc.classList.toggle("open");
+      btn.setAttribute("aria-expanded", isOpen ? "true" : "false");
+      var labelSpan = btn.querySelector("span");
+      if (labelSpan) {
+        labelSpan.textContent = isOpen
+          ? "🎁 Sembunyikan Detail Dompet Digital"
+          : "🎁 Tampilkan Detail Dompet Digital";
+      }
+    }
+
     function copyToClipboard(text, successMsg) {
       if (navigator.clipboard && navigator.clipboard.writeText) {
         navigator.clipboard.writeText(text).then(function () {
@@ -2362,20 +2392,11 @@
       if (pEl) pEl.textContent = String(sheetStats.pax || sheetStats.hadir || 0) + " Org";
     }
 
-    function renderTop10Wishes(items, customStats) {
+    function renderTop10Wishes(items) {
       var list = document.getElementById("wish-list");
-      var totalEl = document.getElementById("stat-total");
-      var hadirEl = document.getElementById("stat-hadir");
       if (!list) return;
 
       var top10 = (items || []).slice(0, MAX_DISPLAY_WISHES);
-      var totalCount = (customStats && typeof customStats.total === "number") ? customStats.total : items.length;
-      var hadirCount = (customStats && typeof customStats.hadir === "number")
-        ? customStats.hadir
-        : items.filter(function (w) { return w.attendance === "Hadir"; }).length;
-
-      if (totalEl) totalEl.textContent = "💌 " + totalCount + " Doa & Ucapan";
-      if (hadirEl) hadirEl.textContent = "✅ " + hadirCount + " Konfirmasi Hadir";
       updateAdminRecapUI();
 
       list.innerHTML = "";
@@ -2450,9 +2471,9 @@
         localStorage.setItem("khitan_wishes_v3", JSON.stringify(deduped.slice(0, MAX_DISPLAY_WISHES)));
       } catch (e) {}
 
-      renderTop10Wishes(deduped, sheetStats);
+      renderTop10Wishes(deduped);
       var syncLabel = document.getElementById("sync-status-label");
-      if (syncLabel) syncLabel.textContent = "🟢 Tersinkron • 10 ucapan teratas";
+      if (syncLabel) syncLabel.textContent = "Doa & Ucapan Terbaru";
     }
 
     function loadWishesViaJSONP(baseUrl) {
@@ -2475,11 +2496,11 @@
     function fetchLiveWishesFromSheet() {
       var syncLabel = document.getElementById("sync-status-label");
       if (!EVENT_CONFIG.rsvpWebhookUrl) {
-        if (syncLabel) syncLabel.textContent = "Menampilkan 10 ucapan terbaru";
+        if (syncLabel) syncLabel.textContent = "Doa & Ucapan Terbaru";
         return;
       }
 
-      if (syncLabel) syncLabel.textContent = "Menyinkronkan data Google Sheets...";
+      if (syncLabel) syncLabel.textContent = "Menyinkronkan doa & ucapan...";
       var sep = EVENT_CONFIG.rsvpWebhookUrl.indexOf("?") === -1 ? "?" : "&";
       var url = EVENT_CONFIG.rsvpWebhookUrl + sep + "action=list&limit=" + MAX_DISPLAY_WISHES + "&t=" + Date.now();
 
@@ -2532,7 +2553,7 @@
         sheetStats.hadir = Math.max(sheetStats.hadir + 1, 1);
         sheetStats.pax = (sheetStats.pax || 0) + (parseInt(guests, 10) || 1);
       }
-      renderTop10Wishes(wishesState, sheetStats);
+      renderTop10Wishes(wishesState);
 
       try {
         localStorage.setItem("khitan_wishes_v3", JSON.stringify(wishesState.slice(0, MAX_DISPLAY_WISHES)));
@@ -2548,7 +2569,7 @@
           btn.disabled = false;
           btn.textContent = "Kirim Konfirmasi & Ucapan";
           document.getElementById("rsvp-message").value = "";
-          statusEl.textContent = "Terima kasih, konfirmasi dan doa Anda telah tersimpan di Google Sheets.";
+          statusEl.textContent = "Terima kasih, konfirmasi dan doa Anda telah tersimpan.";
           statusEl.classList.add("show");
           setTimeout(fetchLiveWishesFromSheet, 1800);
         });
@@ -2857,6 +2878,7 @@
       }
 
       document.getElementById("btn-open-invitation").addEventListener("click", openInvitation);
+      document.getElementById("btn-toggle-gift").addEventListener("click", toggleGiftAccordion);
       document.getElementById("audio-btn").addEventListener("click", toggleAudio);
       document.getElementById("btn-close-dock").addEventListener("click", closeDriveAudioDock);
       document.getElementById("btn-download-ics").addEventListener("click", downloadICS);
@@ -2877,7 +2899,7 @@
       document.getElementById("rsvp-form").addEventListener("submit", handleRSVPSubmit);
       document.getElementById("btn-refresh-wishes").addEventListener("click", function () {
         fetchLiveWishesFromSheet();
-        showToast("Memuat ulang 10 ucapan terbaru...");
+        showToast("Memuat ulang doa & ucapan terbaru...");
       });
 
       // Lightbox controls + Touch Swipe + Keyboard
